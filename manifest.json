@@ -2,7 +2,7 @@
   "name": "Schulheft",
   "short_name": "Schulheft",
   "description": "Vorbereitung auf den MSA und die BBR – Deutsch",
-  "start_url": "/deutsch/",
+  "start_url": "/schulheft/",
   "scope": "/schulheft/",
   "display": "standalone",
   "background_color": "#1a1a2e",
