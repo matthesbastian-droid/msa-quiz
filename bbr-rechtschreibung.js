@@ -1,16 +1,4 @@
-// ================================================================
-// BBR-RECHTSCHREIBUNG.JS – Häufige Rechtschreibprobleme (extra)
-// Thema 9 aus bbr-extra-aufgaben.js wurde hierher ausgelagert,
-// damit es unabhängig bearbeitet werden kann.
-//
-// Variable: BBR_RECHTSCHREIBUNG_THEMES  (Array mit einem Thema)
-// Wird in index.html per concat() an BBR_EXTRA_THEMES angehängt.
-// ================================================================
-
 var BBR_RECHTSCHREIBUNG_THEMES = [
-  // ─────────────────────────────────────────────────────────────
-  // Thema: Häufige Rechtschreibprobleme (extra)
-  // ─────────────────────────────────────────────────────────────
   {
     id: "bbr_extra_rechtschreibung",
     title: "Häufige Rechtschreibprobleme (extra)",
@@ -30,7 +18,7 @@ var BBR_RECHTSCHREIBUNG_THEMES = [
         ],
         cols: ["das", "dass"],
         correct: [1, 0, 0, 1, 1],
-        model: "dass leitet Nebensatz ein; das als Artikel oder Relativpronomen",
+        model: "dass leitet Nebensatz ein; das als Artikel oder Relativpronomen.",
         rule: "<div class=rbox>Ersatzprobe: Kann man 'dieses' oder 'welches' einsetzen? → das. Sonst → dass.</div>"
       },
       {
@@ -46,7 +34,7 @@ var BBR_RECHTSCHREIBUNG_THEMES = [
         ],
         cols: ["wieder", "wider"],
         correct: [0, 1, 0, 1, 0],
-        model: "wieder = noch einmal, zurück; wider = gegen",
+        model: "wieder = noch einmal, zurück; wider = gegen.",
         rule: "<div class=rbox><span class=hl>wieder</span> bedeutet 'noch einmal' oder 'zurück', <span class=hl>wider</span> bedeutet 'gegen'.</div>"
       },
       {
@@ -62,7 +50,7 @@ var BBR_RECHTSCHREIBUNG_THEMES = [
         ],
         cols: ["seid", "seit"],
         correct: [1, 0, 1, 0, 1],
-        model: "seit = zeitlich, seid = 2. Pers. Pl. von sein",
+        model: "seit = zeitlich, seid = 2. Pers. Pl. von sein.",
         rule: "<div class=rbox>Probe: Kann man 'seid' durch 'ihr' ersetzen? Ja → seid. Sonst zeitlich → seit.</div>"
       },
       {
@@ -78,7 +66,7 @@ var BBR_RECHTSCHREIBUNG_THEMES = [
         ],
         cols: ["end", "ent"],
         correct: [0, 1, 0, 1, 0],
-        model: "end = Ende (Nomen); ent = Vorsilbe (entdecken, entscheiden)",
+        model: "end = Ende (Nomen); ent = Vorsilbe (entdecken, entscheiden).",
         rule: "<div class=rbox><span class=hl>End</span> kommt von Ende, <span class=hl>ent</span> ist eine Vorsilbe wie in entdecken.</div>"
       },
       {
@@ -94,7 +82,7 @@ var BBR_RECHTSCHREIBUNG_THEMES = [
         ],
         cols: ["fiel", "viel"],
         correct: [0, 1, 0, 1, 0],
-        model: "fiel = Präteritum von fallen; viel = Menge",
+        model: "fiel = Präteritum von fallen; viel = Menge.",
         rule: "<div class=rbox><span class=hl>fiel</span> ist die Vergangenheit von fallen, <span class=hl>viel</span> bedeutet 'eine große Menge'.</div>"
       },
       {
@@ -110,23 +98,23 @@ var BBR_RECHTSCHREIBUNG_THEMES = [
         ],
         cols: ["mal", "Mahl"],
         correct: [0, 1, 0, 1, 0],
-        model: "mal = Multiplikation oder Partikel; Mahl = Mahlzeit",
+        model: "mal = Multiplikation oder Partikel; Mahl = Mahlzeit.",
         rule: "<div class=rbox><span class=hl>mal</span> (klein) ist ein Adverb oder Multiplikationszeichen, <span class=hl>Mahl</span> (groß) ist das Essen.</div>"
       },
       {
         sub: "Doppelkonsonanten",
         type: "cross",
-        q: "Ist die Schreibweise korrekt?",
+        q: "Ist die Schreibweise korrekt? (Die Wörter stehen ohne Klammern – entscheide allein aufgrund der Rechtschreibung.)",
         rows: [
-          "Komm mit (kommen)",
-          "renen (rennen)",
+          "Komm mit",
+          "renen",
           "Schwimmen",
-          "Tip (Tipp)",
+          "Tip",
           "Schifffahrt"
         ],
         cols: ["korrekt", "falsch"],
         correct: [0, 1, 0, 1, 0],
-        model: "Komm, Schwimmen, Schifffahrt sind korrekt; renen und Tip falsch.",
+        model: "Komm, Schwimmen, Schifffahrt sind korrekt; renen und Tip falsch (richtig: rennen, Tipp).",
         rule: "<div class=rbox>Nach kurzem Vokal wird der Konsonant verdoppelt. Bei drei gleichen Buchstaben bleiben alle (Schifffahrt).</div>"
       },
       {
@@ -135,14 +123,14 @@ var BBR_RECHTSCHREIBUNG_THEMES = [
         q: "Ist die Schreibweise mit h korrekt?",
         rows: [
           "fahren",
-          "sehren (sehr)",
+          "sehren",
           "Zahl",
           "Kohle",
-          "Mal (im Sinne von Zeitpunkt, ohne h)"
+          "Das erste Mal war er dabei." // ohne h, korrekt
         ],
         cols: ["korrekt", "falsch"],
         correct: [0, 1, 0, 0, 0],
-        model: "fahren, Zahl, Kohle, Mal sind korrekt; sehren falsch (richtig: sehr)",
+        model: "fahren, Zahl, Kohle, Mal sind korrekt; sehren falsch (richtig: sehr).",
         rule: "<div class=rbox>Dehnungs-h steht nach langem Vokal oft bei bestimmten Wörtern (fahren, Zahl, Kohle). Es gibt aber Ausnahmen (Mal ohne h).</div>"
       },
       {
@@ -153,35 +141,40 @@ var BBR_RECHTSCHREIBUNG_THEMES = [
           "Das ist das Beste.",
           "Er fährt rad.",
           "Heute Abend.",
-          "Sie hat recht.",
+          "Sie hat recht.", // nach aktueller Rechtschreibung korrekt (klein)
           "Ich bin der Meinung."
         ],
         cols: ["korrekt", "falsch"],
-        correct: [0, 1, 0, 1, 0],
-        model: "Das Beste (groß) korrekt; rad (klein) falsch; heute Abend (groß) korrekt; recht haben (klein) in Schule oft falsch; Meinung (groß) korrekt.",
-        rule: "<div class=rbox>Achtung bei Groß- und Kleinschreibung: Substantive groß, Adjektive/Verben klein.</div>"
+        correct: [0, 1, 0, 0, 0],
+        model: "Das Beste (groß) korrekt; rad (klein) falsch; heute Abend (groß) korrekt; recht haben (klein) korrekt; Meinung (groß) korrekt.",
+        rule: "<div class=rbox>Achtung bei Groß- und Kleinschreibung: Substantive groß, Adjektive/Verben klein. 'recht haben' ist eine feste Wendung mit kleinem Adjektiv.</div>"
       },
       {
         sub: "Fremdwörter",
         type: "cross",
         q: "Ist die Schreibweise korrekt?",
         rows: [
-          "Telephon (Telefon)",
-          "Fotographie (Fotografie)",
+          "Telephon",
+          "Fotographie",
           "Portemonnaie",
-          "Spagetti (Spaghetti)",
-          "Mayonaise (Mayonnaise)"
+          "Spagetti",
+          "Mayonaise"
         ],
         cols: ["korrekt", "falsch"],
         correct: [1, 1, 0, 1, 1],
-        model: "Telephon, Fotographie, Spagetti, Mayonaise sind falsch; Portemonnaie ist korrekt.",
+        model: "Telephon (heute: Telefon), Fotographie (heute: Fotografie), Spagetti (heute: Spaghetti), Mayonaise (heute: Mayonnaise) sind falsch; Portemonnaie ist korrekt.",
         rule: "<div class=rbox>Bei Fremdwörtern auf die korrekte Schreibung achten: Telefon, Fotografie, Spaghetti, Mayonnaise.</div>"
       },
       {
         sub: "Gemischte Übung (Multiple Choice)",
         type: "mc",
         q: "Welcher Satz ist korrekt geschrieben?\n\n(A) Er hat viel Geld.\n(B) Er viel vom Fahrrad.\n(C) Seid wann wart ihr da?\n(D) Das ist wieder die Regeln.",
-        o: ["nur A", "A und C", "B und D", "alle"],
+        o: [
+          "nur A",
+          "A und C",
+          "B und D",
+          "A und B (aber B enthält einen Fehler)"
+        ],
         c: 0,
         model: "A ist korrekt (viel). B falsch (fiel), C falsch (seit), D falsch (wider).",
         rule: "<div class=rbox>Übung zu häufigen Fehlerwörtern.</div>"

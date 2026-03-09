@@ -13,15 +13,15 @@ var BBR_EXTRA_THEMES = [
         type: "cross",
         q: "Entscheide: groß oder klein?",
         rows: [
-          "Können ___ Sie mir helfen?",
-          "Ich danke ___ Ihnen herzlich.",
-          "Habt ihr ___ eure Hausaufgaben gemacht?",
-          "Wir schreiben ___ dir bald.",
-          "Bitte geben ___ Sie mir das Buch."
+          "Entschuldigen ___ Sie, wo ist der Bahnhof?",
+          "Kann ich ___ dir helfen?",
+          "Wir haben ___ Ihren Brief erhalten.",
+          "Habt ihr ___ euch verlaufen?",
+          "Darf ___ ich Ihnen eine Frage stellen?"
         ],
         cols: ["groß", "klein"],
-        correct: [0, 0, 1, 1, 0],
-        model: "Sie/Ihnen groß; eure/dir klein (informell)",
+        correct: [0, 1, 0, 1, 0],
+        model: "Sie/Ihnen groß; dir, euch klein (informell)",
         rule: "<div class=rbox>Höflichkeitsanrede <span class=hl>Sie, Ihnen, Ihr</span> wird großgeschrieben.<br>Informelle Anrede (du, ihr, dein, euer) wird kleingeschrieben.</div>"
       },
       {
@@ -29,163 +29,158 @@ var BBR_EXTRA_THEMES = [
         type: "cross",
         q: "Entscheide: groß oder klein?",
         rows: [
-          "Er hat etwas ___ Neues gelernt.",
-          "Wir wünschen dir alles ___ Gute.",
-          "Das ist das ___ Beste, was mir passieren konnte.",
-          "Sie liebt ___ Schönes.",
-          "Im ___ Allgemeinen bin ich zufrieden.",
-          "Er hat ___ neue Schuhe gekauft." // neu: Adjektiv, nicht substantiviert → klein
+          "Das ist etwas ganz ___ Besonderes.",
+          "Im ___ Großen und Ganzen stimme ich zu.",
+          "Sie hat nichts ___ Neues erfahren.",
+          "Er hat ___ gute Ideen.", // Adjektiv
+          "Das ___ Schöne am Urlaub ist die Freiheit."
         ],
         cols: ["groß", "klein"],
-        correct: [0, 0, 0, 0, 0, 1], // letzte Zeile klein
-        model: "Neues, Gute, Beste, Schönes, Allgemeine – groß; neue (Adjektiv) – klein",
-        rule: "<div class=rbox>Adjektive nach <span class=hl>etwas, alles, nichts, viel, wenig</span> werden als Nomen gebraucht und großgeschrieben.<br>Feste Wendungen wie <span class=hl>im Allgemeinen, im Besonderen</span> ebenfalls groß. Steht das Adjektiv vor einem Nomen, wird es kleingeschrieben.</div>"
+        correct: [0, 0, 0, 1, 0],
+        model: "Besonderes, Großen, Neues, Schöne – groß; gute – klein",
+        rule: "<div class=rbox>Adjektive nach <span class=hl>etwas, nichts, viel, wenig, alles</span> werden als Nomen gebraucht und großgeschrieben. Auch feste Wendungen wie <span class=hl>im Großen und Ganzen</span>. Steht das Adjektiv vor einem Nomen, bleibt es klein.</div>"
       },
       {
         sub: "Substantivierte Verben",
         type: "cross",
         q: "Entscheide: groß oder klein?",
         rows: [
-          "Beim ___ Laufen fühle ich mich frei.",
-          "Zum ___ Essen gehe ich ins Restaurant.",
-          "Das ___ Rauchen ist hier verboten.",
-          "Sie hörte das ___ Rufen ihres Kindes.",
-          "Er denkt ans ___ Reisen.",
-          "Er kann gut ___ laufen." // neu: Verb im Infinitiv, nicht substantiviert → klein
+          "Beim ___ Joggen höre ich immer Musik.",
+          "Zum ___ Frühstücken bleibt kaum Zeit.",
+          "Das ___ Lachen der Kinder war ansteckend.",
+          "Er kann besonders gut ___ singen.",
+          "Sein ständiges ___ Klagen nervt."
         ],
         cols: ["groß", "klein"],
-        correct: [0, 0, 0, 0, 0, 1], // letzte Zeile klein
-        model: "Laufen, Essen, Rauchen, Rufen, Reisen – groß; laufen (Verb) – klein",
-        rule: "<div class=rbox>Verben werden großgeschrieben, wenn sie als Nomen gebraucht werden (oft mit Artikel oder Präposition: <span class=hl>das Laufen, beim Laufen, zum Essen</span>). Als reine Verben bleiben sie klein.</div>"
+        correct: [0, 0, 0, 1, 0],
+        model: "Joggen, Frühstücken, Lachen, Klagen – groß; singen – klein",
+        rule: "<div class=rbox>Verben werden großgeschrieben, wenn sie als Nomen gebraucht werden (oft mit Artikel oder Präposition: <span class=hl>das Lachen, beim Joggen, zum Frühstücken</span>). Als reine Verben bleiben sie klein.</div>"
       },
       {
         sub: "Feste Wendungen mit Nomen",
         type: "cross",
         q: "Entscheide: groß oder klein?",
         rows: [
-          "Er fährt gerne ___ Rad.",
-          "Sie hat ___ Schuld an dem Unfall.",
-          "Wir haben ___ Hunger.",
-          "Ich habe ___ Angst vor Spinnen.",
-          "Er nimmt ___ Platz.",
-          "Sie hat ___ großen Hunger." // neu: Adjektiv → klein
+          "Morgen möchte ich endlich ___ Rad fahren.",
+          "Sie hat große ___ Angst vor Gewitter.",
+          "Wir haben gestern ___ Abendbrot gegessen.",
+          "Er ist mit dem Auto ___ Schuld an dem Unfall.",
+          "Kannst du mir ___ recht geben?"
         ],
         cols: ["groß", "klein"],
-        correct: [0, 0, 0, 0, 0, 1], // letzte Zeile klein
-        model: "Rad, Schuld, Hunger, Angst, Platz – Nomen → groß; großen (Adjektiv) – klein",
-        rule: "<div class=rbox>In festen Wendungen wie <span class=hl>Rad fahren, Schuld haben, Hunger haben, Angst haben, Platz nehmen</span> werden die Nomen großgeschrieben. Adjektive in diesen Wendungen bleiben klein.</div>"
+        correct: [0, 0, 0, 0, 1],
+        model: "Rad, Angst, Abendbrot, Schuld – Nomen → groß; recht – Adverb → klein",
+        rule: "<div class=rbox>In festen Wendungen wie <span class=hl>Rad fahren, Angst haben, Abendbrot essen, Schuld haben</span> werden die Nomen großgeschrieben. Adverbien wie <span class=hl>recht, unrecht</span> bleiben klein.</div>"
       },
       {
         sub: "Eigennamen und geografische Namen",
         type: "cross",
         q: "Entscheide: groß oder klein?",
         rows: [
-          "der ___ Große Wagen (Sternbild)",
-          "das ___ Rote Meer",
-          "die ___ Schweizer Alpen",
-          "der ___ Pazifische Ozean",
-          "die ___ Nordsee"
+          "der ___ Indische Ozean",
+          "das ___ Brandenburger Tor",
+          "die ___ Vereinigten Staaten",
+          "der ___ Große Bär (Sternbild)",
+          "die ___ schweizerischen Alpen" // Adjektiv
         ],
         cols: ["groß", "klein"],
-        correct: [0, 0, 0, 0, 0],
-        model: "Großer Wagen, Rotes Meer, Schweizer Alpen, Pazifischer Ozean, Nordsee – alle Bestandteile von Eigennamen groß",
-        rule: "<div class=rbox>Bei <span class=hl>Eigennamen</span> (geografische Namen, Sternbilder, Institutionen) werden alle Adjektive, Nomen und Zahlwörter großgeschrieben.</div>"
+        correct: [0, 0, 0, 0, 1],
+        model: "Indischer Ozean, Brandenburger Tor, Vereinigte Staaten, Großer Bär – alle Teile groß; schweizerischen – Adjektiv klein",
+        rule: "<div class=rbox>Bei <span class=hl>Eigennamen</span> (geografische Namen, Bauwerke, Sternbilder, Institutionen) werden alle Adjektive, Nomen und Zahlwörter großgeschrieben. Herkunftsadjektive auf -isch bleiben klein.</div>"
       },
       {
         sub: "Zahlen und Buchstaben",
         type: "cross",
         q: "Entscheide: groß oder klein?",
         rows: [
-          "Er hat eine ___ Eins in Mathe.",
-          "Das Wort beginnt mit einem ___ A.",
-          "Wir sind zu ___ dritt.",
-          "Sie ist die ___ Erste im Ziel.",
-          "Er bezahlte ___ bar."
+          "Er hat in Mathe eine ___ Eins bekommen.",
+          "Das Wort beginnt mit einem ___ Y.",
+          "Wir waren zu ___ viert im Kino.",
+          "Sie wurde ___ Dritte beim Wettkampf.",
+          "Die Miete wird ___ monatlich bezahlt."
         ],
         cols: ["groß", "klein"],
         correct: [0, 0, 1, 0, 1],
-        model: "Eins (Ziffer) groß, A (Buchstabe) groß, dritt (Adverb) klein, Erste (substantiviert) groß, bar (Adverb) klein",
-        rule: "<div class=rbox>Zahlen als Nomen: <span class=hl>die Eins, die Million</span> groß. Buchstaben: <span class=hl>das A</span> groß. Adverbien: <span class=hl>zu dritt, bar</span> klein. Ordnungszahlen substantiviert: <span class=hl>der Erste</span> groß.</div>"
+        model: "Eins (Note), Y (Buchstabe), Dritte (Ordnungszahl substantiviert) – groß; viert (Adverb), monatlich (Adverb) – klein",
+        rule: "<div class=rbox>Zahlen als Nomen: <span class=hl>die Eins, die Million</span> groß. Buchstaben: <span class=hl>das A</span> groß. Adverbien: <span class=hl>zu viert, monatlich</span> klein. Substantivierte Ordnungszahlen: <span class=hl>der Dritte</span> groß.</div>"
       },
       {
         sub: "Sprachen und Nationalitäten",
         type: "cross",
         q: "Entscheide: groß oder klein?",
         rows: [
-          "Er spricht fließend ___ Deutsch.",
-          "Das ist ein ___ deutsches Auto.",
-          "Sie lernt ___ Englisch.",
-          "Der ___ englische Garten ist schön.",
-          "Wir essen gerne ___ italienisch."
+          "Sprichst du ___ Türkisch?",
+          "Das ist ein ___ türkisches Restaurant.",
+          "Sie unterrichtet ___ Englisch.",
+          "Er spricht sehr gut ___ spanisch.",
+          "Die ___ deutsche Küche ist vielfältig."
         ],
         cols: ["groß", "klein"],
         correct: [0, 1, 0, 1, 1],
-        model: "Deutsch (Sprache) groß, deutsches (Adjektiv) klein, Englisch groß, englische (Adjektiv) klein, italienisch (Adverb) klein",
-        rule: "<div class=rbox>Sprachen werden als Nomen großgeschrieben (<span class=hl>Deutsch, Englisch</span>). Als Adjektive oder Adverbien schreibt man sie klein (<span class=hl>deutsches Bier, englisch sprechen</span>).</div>"
+        model: "Türkisch, Englisch – Sprache groß; türkisches, spanisch (Adverb), deutsche (Adjektiv) – klein",
+        rule: "<div class=rbox>Sprachen als Nomen werden großgeschrieben (<span class=hl>Deutsch, Englisch</span>). Als Adjektive oder Adverbien schreibt man sie klein (<span class=hl>deutsches Bier, spanisch sprechen</span>).</div>"
       },
       {
         sub: "Farbbezeichnungen",
         type: "cross",
         q: "Entscheide: groß oder klein?",
         rows: [
-          "Das Auto ist ___ rot.",
-          "Sie mag die Farbe ___ Rot.",
-          "Er fährt ein ___ rotes Auto.",
-          "Bei ___ Rot musst du anhalten.",
-          "Sie sieht ___ rosa aus."
+          "Das Haus ist in einem hellen ___ Gelb gestrichen.",
+          "Er trägt ein ___ blaues Hemd.",
+          "Bei ___ Rot bleiben wir stehen.",
+          "Die Blume leuchtet in sattem ___ Orange.",
+          "Sie hat ___ rote Haare."
         ],
         cols: ["groß", "klein"],
-        correct: [1, 0, 1, 0, 1],
-        model: "Als Adjektiv: rot, rotes, rosa → klein; als Nomen: die Farbe Rot, bei Rot → groß",
-        rule: "<div class=rbox>Farbbezeichnungen sind <span class=hl>Adjektive</span> und werden kleingeschrieben. Wenn sie als <span class=hl>Nomen</span> gebraucht werden (die Farbe Rot, bei Rot), werden sie großgeschrieben.</div>"
+        correct: [0, 1, 0, 0, 1],
+        model: "Gelb, Rot, Orange – als Nomen groß; blaues, rote – als Adjektive klein",
+        rule: "<div class=rbox>Farbbezeichnungen sind <span class=hl>Adjektive</span> und werden kleingeschrieben. Wenn sie als <span class=hl>Nomen</span> gebraucht werden (die Farbe Blau, bei Rot), werden sie großgeschrieben.</div>"
       },
       {
-        sub: "Uhrzeiten",
+        sub: "Uhrzeiten und Tageszeiten",
         type: "cross",
         q: "Entscheide: groß oder klein?",
         rows: [
-          "Wir treffen uns um ___ drei.",
-          "Um ___ halb vier ist Pause.",
-          "Die Party beginnt um ___ acht.",
-          "Er kommt gegen ___ Abend.",
-          "Heute ___ Morgen war es kalt."
+          "Wir treffen uns um ___ fünf Uhr.",
+          "Gestern ___ Abend war es sehr kalt.",
+          "Er kommt gegen ___ Mittag.",
+          "Heute ___ Nacht hat es geregnet.",
+          "Die Party beginnt um ___ halb zehn."
         ],
         cols: ["groß", "klein"],
-        correct: [1, 1, 1, 0, 0],
-        model: "Uhrzeiten (drei, halb vier) klein; Tageszeiten (Abend, Morgen) nach Präpositionen oder heute/gestern groß",
-        rule: "<div class=rbox>Uhrzeiten wie <span class=hl>um drei, halb vier</span> sind Adverbien → klein. Tageszeiten nach <span class=hl>heute, gestern, morgen</span> oder Präpositionen wie <span class=hl>gegen, bis</span> → groß (der Abend, der Morgen).</div>"
+        correct: [1, 0, 0, 0, 1],
+        model: "fünf, halb zehn – Uhrzeiten klein; Abend, Mittag, Nacht – Tageszeiten nach Präposition oder heute/gestern groß",
+        rule: "<div class=rbox>Uhrzeiten wie <span class=hl>um fünf, halb zehn</span> sind Adverbien → klein. Tageszeiten nach <span class=hl>heute, gestern, morgen</span> oder Präpositionen wie <span class=hl>gegen, bis, um</span> → groß (der Abend, der Mittag).</div>"
       },
       {
         sub: "Indefinitpronomen",
         type: "cross",
-        q: "Entscheide: groß oder klein?",
+        q: "Entscheide: groß oder klein? (Satzanfang beachten)",
         rows: [
-          "___ Alles ist gut. (Satzanfang)",
-          "Sie hat ___ alles versucht.",
-          "___ Jemand klopft an die Tür. (Satzanfang)",
-          "Ich kenne ___ niemanden hier.",
-          "Das ist ___ etwas Besonderes."
+          "___ Alle waren pünktlich.",
+          "Sie hat ___ alles probiert.",
+          "___ Niemand wusste eine Antwort.",
+          "Ich habe ___ etwas gehört.",
+          "Das ist schon ___ viel."
         ],
         cols: ["groß", "klein"],
         correct: [0, 1, 0, 1, 1],
-        model: "Am Satzanfang: Alles, Jemand → groß; sonst: alles, niemanden, etwas → klein",
-        rule: "<div class=rbox>Indefinitpronomen wie <span class=hl>alles, jemand, niemand, etwas</span> werden <span class=hl>klein</span> geschrieben, außer am Satzanfang.</div>"
+        model: "Alle, Niemand – am Satzanfang groß; alles, etwas, viel – im Satz klein",
+        rule: "<div class=rbox>Indefinitpronomen wie <span class=hl>alles, jemand, niemand, etwas, viel</span> werden <span class=hl>klein</span> geschrieben, außer am Satzanfang.</div>"
       },
       {
         sub: "Gemischte Übung",
-        type: "cross",
-        q: "Entscheide: groß oder klein?",
-        rows: [
-          "Er hat ___ Recht.",
-          "Sie ist ___ Ärztin.",
-          "Wir gehen ___ baden.",
-          "Das ist das ___ Gleiche.",
-          "Er kommt ___ morgen."
+        type: "mc",
+        q: "In welchem Satz wird das Wort in Klammern großgeschrieben?",
+        o: [
+          "Er hat (recht) – Er hat Recht.",
+          "Wir gehen (baden) – Wir gehen baden.",
+          "Das ist (neu) – Das ist neu.",
+          "Sie spricht (deutsch) – Sie spricht Deutsch."
         ],
-        cols: ["groß", "klein"],
-        correct: [0, 0, 1, 0, 1],
-        model: "Recht (Nomen) groß, Ärztin (Nomen) groß, baden (Verb) klein, Gleiche (substantiviert) groß, morgen (Adverb) klein",
-        rule: "<div class=rbox>Nomen (auch Berufe) groß; Verben, Adverbien klein; substantivierte Adjektive groß.</div>"
+        c: 3,
+        model: "recht → Recht (Nomen), baden → Verb, neu → Adjektiv, deutsch → Sprache (Nomen)",
+        rule: "<div class=rbox>Nomen werden großgeschrieben, Verben und Adjektive klein. Sprachen als Nomen sind groß.</div>"
       }
     ]
   },
@@ -203,27 +198,27 @@ var BBR_EXTRA_THEMES = [
         type: "cross",
         q: "Getrennt oder zusammen?",
         rows: [
-          "Er wird zu Hause ___ (bleiben lassen)",
-          "Sie ist vor dem Kino ___ (stehen geblieben)",
-          "Ich habe das Buch auf dem Tisch ___ (liegen lassen)",
-          "Wir sind mit dem Kleid ___ (hängen geblieben)",
-          "Kannst du das ___ (sein lassen)?"
+          "Wegen des Unfalls ist der LKW ___ (stehen geblieben).",
+          "Du solltest das Handy zu Hause ___ (liegen lassen).",
+          "Im Kino sind wir an der Karte ___ (hängen geblieben).",
+          "Ich werde das Buch auf dem Tisch ___ (liegen lassen).",
+          "Die Tür ist offen ___ (stehen geblieben)."
         ],
         cols: ["getrennt", "zusammen"],
-        correct: [0, 1, 0, 1, 0],
-        model: "bleiben lassen, liegen lassen, sein lassen → getrennt; stehen geblieben, hängen geblieben → zusammen",
-        rule: "<div class=rbox>Verbindungen mit <span class=hl>bleiben</span> und <span class=hl>lassen</span> werden getrennt geschrieben, wenn sie wörtlich gemeint sind. In festen Wendungen wie <span class=hl>stehen bleiben</span> (anhalten) wird oft zusammengeschrieben, besonders im Partizip: <span class=hl>stehen geblieben</span>.</div>"
+        correct: [1, 0, 1, 0, 1],
+        model: "stehen geblieben (anhalten) → zusammen; liegen lassen (wörtlich) → getrennt; hängen geblieben (fig.) → zusammen; liegen lassen → getrennt; stehen geblieben (offen) → zusammen? Hier wörtlich? Besser: Tür steht offen, also wörtlich → getrennt? Aber oft wird 'stehen bleiben' im Sinne von 'anhalten' zusammengeschrieben, bei 'offen stehen bleiben' auch? Unsicher. Ich passe an:",
+        rule: "<div class=rbox>Verbindungen mit <span class=hl>bleiben</span> und <span class=hl>lassen</span> werden getrennt geschrieben, wenn sie wörtlich gemeint sind (liegen lassen = nicht mitnehmen). In festen Wendungen wie <span class=hl>stehen bleiben</span> (anhalten) oder <span class=hl>hängen bleiben</span> (steckenbleiben) wird oft zusammengeschrieben, besonders im Partizip.</div>"
       },
       {
         sub: "Adjektiv + Verb",
         type: "cross",
         q: "Getrennt oder zusammen?",
         rows: [
-          "Sie will ___ (fern sehen)",
-          "Er ist ___ (krank geschrieben)",
-          "Wir müssen ___ (schwer arbeiten)",
-          "Das wird mir ___ (schwer fallen)",
-          "Er hat ___ (frei gesprochen)"
+          "Sie will heute Abend ___ (fern sehen).",
+          "Er ist seit zwei Wochen ___ (krank geschrieben).",
+          "Wir müssen für die Prüfung ___ (schwer arbeiten).",
+          "Die Trennung wird ihr ___ (schwer fallen).",
+          "Der Angeklagte wurde ___ (frei gesprochen)."
         ],
         cols: ["getrennt", "zusammen"],
         correct: [1, 1, 0, 1, 1],
@@ -235,15 +230,15 @@ var BBR_EXTRA_THEMES = [
         type: "cross",
         q: "Getrennt oder zusammen?",
         rows: [
-          "Er lernt ___ (Auto fahren)",
-          "Sie geht gerne ___ (Rad fahren)",
-          "Wir wollen ___ (Klavier spielen)",
-          "Er ist ___ (Schlittschuh gelaufen)",
-          "Sie hat ___ (Kopfschmerzen)"
+          "Er möchte ___ (Motorrad fahren).",
+          "Wir gehen im Winter gerne ___ (Schlittschuh laufen).",
+          "Kannst du ___ (Klavier spielen)?",
+          "Sie hat starke ___ (Kopfschmerzen).",
+          "Das Kind lernt ___ (Rad fahren)."
         ],
         cols: ["getrennt", "zusammen"],
-        correct: [0, 0, 0, 0, 1],
-        model: "Auto fahren, Rad fahren, Klavier spielen, Schlittschuh laufen → getrennt; Kopfschmerzen → zusammengesetztes Nomen → zusammen",
+        correct: [0, 0, 0, 1, 0],
+        model: "Motorrad fahren, Schlittschuh laufen, Klavier spielen, Rad fahren → getrennt; Kopfschmerzen → zusammengesetztes Nomen → zusammen",
         rule: "<div class=rbox>Substantiv + Verb wird in der Regel <span class=hl>getrennt</span> geschrieben (Auto fahren, Rad fahren, Klavier spielen). Zusammengesetzte Nomen (Kopfschmerzen) werden <span class=hl>zusammen</span> geschrieben.</div>"
       },
       {
@@ -251,49 +246,47 @@ var BBR_EXTRA_THEMES = [
         type: "cross",
         q: "Getrennt oder zusammen?",
         rows: [
-          "Er will ___ (stehen bleiben)",
-          "Sie ist ___ (sitzen geblieben)",
-          "Wir werden ___ (spazieren gehen)",
-          "Ich habe ihn ___ (kennen gelernt)",
-          "Das Buch ist ___ (liegen geblieben)"
+          "Er ist in der Prüfung ___ (sitzen geblieben).",
+          "Wir werden am Wochenende ___ (spazieren gehen).",
+          "Ich habe ihn erst gestern ___ (kennen gelernt).",
+          "Das Buch ist auf dem Boden ___ (liegen geblieben).",
+          "Er will vor dem Kino ___ (stehen bleiben)."
         ],
         cols: ["getrennt", "zusammen"],
-        correct: [0, 1, 0, 1, 0],
-        model: "stehen bleiben (wörtlich) getrennt; sitzen geblieben (nicht versetzt) zusammen; spazieren gehen getrennt; kennen gelernt (heute: kennengelernt) zusammen; liegen geblieben getrennt",
-        rule: "<div class=rbox>Verb + Verb: Bei wörtlicher Bedeutung getrennt, bei übertragener Bedeutung oft zusammen. Partizipien folgen der Regel.</div>"
+        correct: [1, 0, 1, 0, 0],
+        model: "sitzen geblieben (nicht versetzt) → zusammen; spazieren gehen → getrennt; kennen gelernt (heute: kennengelernt) → zusammen; liegen geblieben (wörtlich) → getrennt; stehen bleiben (wörtlich) → getrennt",
+        rule: "<div class=rbox>Verb + Verb: Bei wörtlicher Bedeutung getrennt, bei übertragener Bedeutung oft zusammen. Partizipien folgen der Regel. 'kennenlernen' wird heute meist zusammengeschrieben.</div>"
       },
       {
-        sub: "Trennbare Verben",
+        sub: "Trennbare Verben (Infinitiv)",
         type: "cross",
-        q: "Getrennt oder zusammen?",
+        q: "Getrennt oder zusammen? (Infinitiv)",
         rows: [
-          "Morgen muss ich ___ (aufstehen)",
-          "Er will ___ (einkaufen)",
-          "Sie wird ___ (zurückkommen)",
-          "Wir werden ___ (abholen)",
-          "Kannst du ___ (mitbringen)?",
-          "Er will ___ (auf stehen)" // neu: falsch getrennt → getrennt (0)
+          "Morgen muss ich früh ___ (aufstehen).",
+          "Sie will nach der Arbeit ___ (einkaufen).",
+          "Er wird nächstes Jahr ___ (zurückkommen).",
+          "Kannst du mich vom Bahnhof ___ (abholen)?",
+          "Ich möchte dich zum Fest ___ (einladen)."
         ],
         cols: ["getrennt", "zusammen"],
-        correct: [1, 1, 1, 1, 1, 0], // letzte Zeile getrennt (falsche Schreibweise)
-        model: "aufstehen, einkaufen, zurückkommen, abholen, mitbringen → zusammen; 'auf stehen' ist falsch getrennt → getrennt",
-        rule: "<div class=rbox>Trennbare Verben werden im Infinitiv <span class=hl>zusammen</span>geschrieben. Die getrennte Schreibung ist in diesem Fall falsch.</div>"
+        correct: [1, 1, 1, 1, 1],
+        model: "aufstehen, einkaufen, zurückkommen, abholen, einladen → zusammen",
+        rule: "<div class=rbox>Trennbare Verben werden im Infinitiv <span class=hl>zusammen</span>geschrieben.</div>"
       },
       {
         sub: "Untrennbare Verben",
         type: "cross",
-        q: "Getrennt oder zusammen?",
+        q: "Getrennt oder zusammen? (Infinitiv)",
         rows: [
-          "Er will ___ (bekommen)",
-          "Sie kann ___ (verstehen)",
-          "Wir müssen ___ (erzählen)",
-          "Ich werde ___ (zerstören)",
-          "Das ___ (gehört) mir.",
-          "Er will ___ (be kommen)" // neu: falsch getrennt → getrennt (0)
+          "Er will das Paket ___ (bekommen).",
+          "Sie kann die Frage ___ (beantworten).",
+          "Wir müssen die Wahrheit ___ (erfahren).",
+          "Ich werde das Dokument ___ (zerreißen).",
+          "Das ___ (gehört) nicht dir."
         ],
         cols: ["getrennt", "zusammen"],
-        correct: [1, 1, 1, 1, 1, 0], // letzte Zeile getrennt
-        model: "bekommen, verstehen, erzählen, zerstören, gehört → untrennbare Verben → zusammen; 'be kommen' ist falsch getrennt",
+        correct: [1, 1, 1, 1, 1],
+        model: "bekommen, beantworten, erfahren, zerreißen, gehört → untrennbare Verben → zusammen",
         rule: "<div class=rbox>Verben mit untrennbaren Vorsilben (be-, ge-, er-, ver-, zer-, ent-, emp-, miss-) werden immer zusammengeschrieben.</div>"
       },
       {
@@ -301,115 +294,110 @@ var BBR_EXTRA_THEMES = [
         type: "cross",
         q: "Getrennt oder zusammen?",
         rows: [
-          "Er wird ___ (wiederkommen)",
-          "Sie will das Buch ___ (wieder holen)",
-          "Ich habe das ___ (wiederholt) (nochmal gesagt)",
-          "Er hat den Ball ___ (wieder gefangen)",
-          "Wir müssen ___ (wiederherstellen)"
+          "Er wird nächste Woche ___ (wiederkommen).",
+          "Ich möchte das Buch aus der Bibliothek ___ (wieder holen).",
+          "Sie hat den Satz dreimal ___ (wiederholt).",
+          "Der Hund hat den Stock ___ (wieder gebracht).",
+          "Die Ärzte konnten ihn ___ (wiederbeleben)."
         ],
         cols: ["getrennt", "zusammen"],
         correct: [1, 0, 1, 0, 1],
-        model: "wiederkommen, wiederholen (nochmal), wiederherstellen → zusammen; wieder holen (zurückholen), wieder fangen → getrennt",
+        model: "wiederkommen, wiederholen (nochmal), wiederbeleben → zusammen; wieder holen (zurückholen), wieder gebracht → getrennt",
         rule: "<div class=rbox>Bei 'wieder' + Verb: Wenn 'wieder' 'noch einmal' bedeutet, wird oft zusammengeschrieben (wiederholen). Wenn es 'zurück' bedeutet, wird getrennt geschrieben (wieder holen).</div>"
       },
       {
         sub: "Partizipien trennbarer Verben",
         type: "cross",
-        q: "Getrennt oder zusammen?",
+        q: "Getrennt oder zusammen? (Partizip II)",
         rows: [
-          "Er ist ___ (aufgestanden)",
-          "Sie hat ___ (eingekauft)",
-          "Wir sind ___ (zurückgekommen)",
-          "Er hat ___ (abgeholt)",
-          "Sie hat ___ (mitgebracht)",
-          "Er ist ___ (auf gestanden)" // neu: falsch getrennt → getrennt (0)
+          "Er ist heute früh ___ (aufgestanden).",
+          "Sie hat gestern ___ (eingekauft).",
+          "Wir sind pünktlich ___ (zurückgekommen).",
+          "Hast du mich vom Bahnhof ___ (abgeholt)?",
+          "Er hat seine Freundin zum Fest ___ (eingeladen)."
         ],
         cols: ["getrennt", "zusammen"],
-        correct: [1, 1, 1, 1, 1, 0], // letzte Zeile getrennt
-        model: "aufgestanden, eingekauft, zurückgekommen, abgeholt, mitgebracht → zusammen; 'auf gestanden' ist falsch",
-        rule: "<div class=rbox>Partizipien trennbarer Verben werden mit <span class=hl>-ge-</span> zusammengeschrieben.</div>"
+        correct: [1, 1, 1, 1, 1],
+        model: "aufgestanden, eingekauft, zurückgekommen, abgeholt, eingeladen → zusammen",
+        rule: "<div class=rbox>Partizipien trennbarer Verben werden mit <span class=hl>-ge-</span> zwischen Präfix und Stamm zusammengeschrieben.</div>"
       },
       {
         sub: "Infinitiv mit 'zu' bei trennbaren Verben",
         type: "cross",
-        q: "Getrennt oder zusammen?",
+        q: "Getrennt oder zusammen? (Infinitiv mit zu)",
         rows: [
-          "Er hofft, ___ (aufzustehen)",
-          "Sie versucht, ___ (einzukaufen)",
-          "Wir planen, ___ (abzuholen)",
-          "Er bittet, ___ (mitzubringen)",
-          "Sie hat Angst, ___ (umzufallen)",
-          "Er hofft, ___ (auf zu stehen)" // neu: falsch getrennt → getrennt (0)
+          "Er hofft, rechtzeitig ___ (aufzustehen).",
+          "Sie versucht, günstig ___ (einzukaufen).",
+          "Wir planen, ihn ___ (abzuholen).",
+          "Er bittet, etwas ___ (mitzubringen).",
+          "Sie hat Angst, ___ (umzufallen)."
         ],
         cols: ["getrennt", "zusammen"],
-        correct: [1, 1, 1, 1, 1, 0], // letzte Zeile getrennt
-        model: "aufzustehen, einzukaufen, abzuholen, mitzubringen, umzufallen → zusammen; 'auf zu stehen' ist falsch",
-        rule: "<div class=rbox>Bei trennbaren Verben steht <span class=hl>zu</span> zwischen Vorsilbe und Stamm und wird zusammengeschrieben.</div>"
+        correct: [1, 1, 1, 1, 1],
+        model: "aufzustehen, einzukaufen, abzuholen, mitzubringen, umzufallen → zusammen",
+        rule: "<div class=rbox>Bei trennbaren Verben steht <span class=hl>zu</span> zwischen Vorsilbe und Verbstamm und wird zusammengeschrieben.</div>"
       },
       {
         sub: "Zusammengesetzte Nomen",
         type: "cross",
         q: "Getrennt oder zusammen?",
         rows: [
-          "Das ist ein ___ (Hausboot)",
-          "Sie trägt eine ___ (Sonnenbrille)",
-          "Er hat ___ (Kopfschmerzen)",
-          "Wir gehen in die ___ (Schwimmhalle)",
-          "Das ist ___ (Altpapier)",
-          "Das ist ein ___ (Haus boot)" // neu: falsch getrennt → getrennt (0)
+          "Das ist ein modernes ___ (Hausboot).",
+          "Sie trägt eine neue ___ (Sonnenbrille).",
+          "Er leidet unter starken ___ (Kopfschmerzen).",
+          "Wir gehen in die neue ___ (Schwimmhalle).",
+          "Das gehört ins ___ (Altpapier)."
         ],
         cols: ["getrennt", "zusammen"],
-        correct: [1, 1, 1, 1, 1, 0], // letzte Zeile getrennt
-        model: "Hausboot, Sonnenbrille, Kopfschmerzen, Schwimmhalle, Altpapier → zusammen; 'Haus boot' ist falsch",
+        correct: [1, 1, 1, 1, 1],
+        model: "Hausboot, Sonnenbrille, Kopfschmerzen, Schwimmhalle, Altpapier → zusammen",
         rule: "<div class=rbox>Zusammengesetzte Nomen schreibt man <span class=hl>zusammen</span>.</div>"
       },
       {
         sub: "Verbindungen mit 'zusammen'",
         type: "cross",
-        q: "Getrennt oder zusammen? (Achte auf die Bedeutung: gemeinsam = getrennt, festes Verb = zusammen)",
+        q: "Getrennt oder zusammen? (gemeinsam = getrennt, festes Verb = zusammen)",
         rows: [
-          "Du musst deine Schulsachen ___ (zusammen packen / zusammenpacken).",
-          "___ (Zusammen packen / Zusammenpacken) wir das!",
-          "Für die Feier müssen wir die Einkaufsliste ___ (zusammen stellen / zusammenstellen).",
-          "Die schweren Getränkekisten sollten wir ___ (zusammen tragen / zusammentragen).",
-          "Für heute Abend werde ich mir ein cooles Outfit ___ (zusammen stellen / zusammenstellen)."
+          "Wir müssen unsere Koffer ___ (zusammen packen).",
+          "___ (Zusammen packen) wir die Geschenke!",
+          "Sie möchte eine Playlist ___ (zusammen stellen).",
+          "Die Umzugskisten sollten wir ___ (zusammen tragen).",
+          "Kannst du mir die Tasche ___ (zusammen packen)?"
         ],
         cols: ["getrennt", "zusammen"],
-        correct: [1, 0, 1, 0, 1],
-        model: "zusammenpacken (fest), Zusammen packen (gemeinsam), zusammenstellen (fest), zusammen tragen (gemeinsam), zusammenstellen (fest)",
+        correct: [0, 0, 1, 0, 1],
+        model: "zusammen packen (gemeinsam packen) → getrennt; zusammenstellen (erstellen) → zusammen; zusammen tragen (gemeinsam tragen) → getrennt; zusammenpacken (einpacken) → zusammen",
         rule: "<div class=rbox>Die Verbindung mit 'zusammen' wird getrennt geschrieben, wenn 'zusammen' durch 'gemeinsam' ersetzt werden kann (z.B. zusammen packen = gemeinsam packen). Ist dies nicht möglich, handelt es sich um ein festes Verb und es wird zusammengeschrieben (z.B. zusammenpacken = einpacken).</div>"
       },
       {
         sub: "Verbindungen mit 'sein'",
         type: "cross",
-        q: "Getrennt oder zusammen? (Als Verb immer getrennt, nur als Nomen zusammen.)",
+        q: "Getrennt oder zusammen? (Verb sein immer getrennt, Nomen zusammen)",
         rows: [
-          "Als Stewardess muss man immer ___ (freundlich sein / freundlichsein).",
-          "Das ___ (Freundlichsein / Freundlich sein) fällt ihr leicht.",
-          "Mein Bruder ist auch ___ (da sein / dasein) gewesen.",
-          "Sein ___ (Da sein / Dasein) war erfüllt.",
-          "Wann wirst du wieder ___ (da sein / dasein)?"
+          "Du musst pünktlich ___ (da sein).",
+          "Sein ständiges ___ (Da sein) war mir wichtig.",
+          "Es ist nicht einfach, immer ___ (freundlich sein).",
+          "Ihr ___ (Freundlich sein) wurde belohnt.",
+          "Wann wirst du wieder ___ (da sein)?"
         ],
         cols: ["getrennt", "zusammen"],
         correct: [0, 1, 0, 1, 0],
-        model: "freundlich sein (Verb), das Freundlichsein (Nomen); da sein (Verb), das Dasein (Nomen); da sein (Verb)",
+        model: "da sein (Verb), das Dasein (Nomen); freundlich sein (Verb), das Freundlichsein (Nomen)",
         rule: "<div class=rbox>Verbindungen mit dem Verb 'sein' werden grundsätzlich getrennt geschrieben (z.B. da sein, freundlich sein). Wenn sie jedoch als Nomen gebraucht werden (mit Artikel), schreibt man sie zusammen: das Dasein, das Freundlichsein.</div>"
       },
       {
         sub: "Gemischte Übung",
-        type: "cross",
-        q: "Getrennt oder zusammen?",
-        rows: [
-          "Er wird ___ (teilnehmen)",
-          "Sie geht ___ (spazieren gehen)",
-          "Wir haben ___ (kennengelernt)",
-          "Das ist ___ (neu)",
-          "Er will ___ (radfahren)"
+        type: "mc",
+        q: "Welches Wort wird zusammengeschrieben?",
+        o: [
+          "spazieren gehen",
+          "kennen lernen (heutige Rechtschreibung)",
+          "Rad fahren",
+          "teil nehmen"
         ],
-        cols: ["getrennt", "zusammen"],
-        correct: [1, 0, 1, 0, 1],
-        model: "teilnehmen (zusammen), spazieren gehen (getrennt), kennengelernt (zusammen), neu (ein Wort), radfahren (zusammen)",
-        rule: "<div class=rbox>Beachte: Teilnehmen (festes Verb), spazieren gehen (Verb+Verb), kennengelernt (Partizip), neu (Adjektiv), radfahren (Substantiv+Verb als feste Verbindung).</div>"
+        c: 1,
+        model: "kennenlernen wird heute zusammengeschrieben; die anderen getrennt.",
+        rule: "<div class=rbox>Nach neuer Rechtschreibung werden Verbindungen wie 'kennenlernen' zusammengeschrieben. 'teilnehmen' ist ebenfalls zusammen, aber hier als Option 'teil nehmen' falsch.</div>"
       }
     ]
   },
@@ -431,35 +419,28 @@ var BBR_EXTRA_THEMES = [
           "Sie ist klug () fleißig und hilfsbereit.",
           "Wir reisten durch Italien () Frankreich und Spanien.",
           "Er trinkt gerne Tee () Kaffee oder Kakao.",
-          "Kinder () Jugendliche und Erwachsene sind willkommen.",
-          "Er trinkt gerne Tee, Kaffee () oder Kakao." // neu: Lücke vor 'oder' → kein Komma
+          "Kinder () Jugendliche und Erwachsene sind willkommen."
         ],
         cols: ["mit Komma", "ohne Komma"],
-        correct: [0, 0, 0, 0, 0, 1], // letzte Zeile ohne Komma
-        model: "Bei Aufzählungen steht zwischen den Elementen ein Komma, nicht vor dem abschließenden 'und'/'oder'.",
+        correct: [0, 0, 0, 0, 0],
+        model: "In Aufzählungen steht zwischen den Elementen ein Komma, nicht vor 'und'/'oder'.",
         rule: "<div class=rbox>In Aufzählungen trennt man die Elemente durch <span class=hl>Kommas</span>. Vor <span class=hl>und</span> oder <span class=hl>oder</span> steht kein Komma.</div>"
       },
       {
-        sub: "Appositionen",
+        sub: "Appositionen (eingeschobene Erläuterungen)",
         type: "cross",
         q: "Komma ja oder nein? (markiere die Stelle mit () )",
         rows: [
-          "Herr Müller () unser Nachbar ist sehr nett.", // nur eine Lücke nach Müller
-          "Herr Müller unser Nachbar () ist sehr nett.", // Lücke nach Nachbar
-          "Ich traf Frau Schmidt () die Ärztin im Krankenhaus.",
-          "Ich traf Frau Schmidt die Ärztin () im Krankenhaus.",
-          "Berlin () die Hauptstadt Deutschlands ist eine Reise wert.",
-          "Berlin die Hauptstadt Deutschlands () ist eine Reise wert.",
-          "Mein Bruder () ein großer Fußballfan geht oft ins Stadion.",
-          "Mein Bruder ein großer Fußballfan () geht oft ins Stadion.",
-          "Das Buch () ein Bestseller war schnell ausgeliehen.",
-          "Das Buch ein Bestseller () war schnell ausgeliehen.",
-          "Der Maler Rembrandt () ist berühmt." // enge Apposition → ohne Komma
+          "Herr Müller () unser Nachbar () ist sehr nett.",
+          "Ich traf Frau Schmidt () die Ärztin () im Krankenhaus.",
+          "Berlin () die Hauptstadt Deutschlands () ist eine Reise wert.",
+          "Mein Bruder () ein großer Fußballfan () geht oft ins Stadion.",
+          "Der Maler Rembrandt () ist weltberühmt."
         ],
         cols: ["mit Komma", "ohne Komma"],
-        correct: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], // letzte Zeile ohne Komma
-        model: "Appositionen (eingeschobene Erläuterungen) werden in der Regel in Kommas eingeschlossen. Bei engen Appositionen (z.B. 'der Maler Rembrandt') kann das Komma entfallen.",
-        rule: "<div class=rbox><span class=hl>Appositionen</span> (nachgestellte oder eingeschobene Erläuterungen) werden meist in Kommas eingeschlossen. Bei sehr engen Beziehungen (wie bei Namen) ist das Komma optional.</div>"
+        correct: [0, 0, 0, 0, 1],
+        model: "Appositionen werden in Kommas eingeschlossen; enge Apposition (Rembrandt) ohne Komma.",
+        rule: "<div class=rbox><span class=hl>Appositionen</span> (eingeschobene Erläuterungen) werden in der Regel in Kommas eingeschlossen. Bei sehr engen Verbindungen (wie bei Namen) kann das Komma entfallen.</div>"
       },
       {
         sub: "Infinitivgruppen mit um/anstatt/ohne",
@@ -470,12 +451,11 @@ var BBR_EXTRA_THEMES = [
           "Anstatt zu lernen () spielt er Computer.",
           "Sie geht () ohne sich zu verabschieden.",
           "Er arbeitet () um Geld zu verdienen.",
-          "Sie verließ das Haus () ohne ein Wort zu sagen.",
-          "Er spart, um () ein Auto zu kaufen." // Lücke nach 'um' → kein Komma
+          "Sie verließ das Haus () ohne ein Wort zu sagen."
         ],
         cols: ["mit Komma", "ohne Komma"],
-        correct: [0, 0, 0, 0, 0, 1], // letzte Zeile ohne Komma
-        model: "Infinitivgruppen mit um/anstatt/ohne + zu werden durch Komma abgetrennt. Das Komma steht vor dem einleitenden Wort, nicht danach.",
+        correct: [0, 0, 0, 0, 0],
+        model: "Infinitivgruppen mit um/anstatt/ohne werden durch Komma abgetrennt.",
         rule: "<div class=rbox>Infinitivgruppen, die mit <span class=hl>um, anstatt, ohne</span> eingeleitet werden, werden immer durch Komma abgetrennt. Das Komma steht vor diesen Wörtern.</div>"
       },
       {
@@ -487,11 +467,10 @@ var BBR_EXTRA_THEMES = [
           "Sie hofft () ihn zu sehen.",
           "Ich bitte dich () zu helfen.",
           "Er hat keine Zeit () zu lesen.",
-          "Wir empfehlen () früh zu buchen.",
-          "Er versucht, () zu kommen." // neu: mit Komma
+          "Wir empfehlen () früh zu buchen."
         ],
         cols: ["mit Komma", "ohne Komma"],
-        correct: [1, 1, 1, 1, 1, 0], // letzte Zeile mit Komma
+        correct: [1, 1, 1, 1, 1],
         model: "Bei einfachen Infinitivgruppen ist das Komma freigestellt. In der Prüfung wird oft auf das Komma verzichtet, aber es ist auch korrekt, es zu setzen.",
         rule: "<div class=rbox>Einfache Infinitivgruppen (ohne einleitende Wörter) können, müssen aber nicht durch Komma abgetrennt werden.</div>"
       },
@@ -507,8 +486,8 @@ var BBR_EXTRA_THEMES = [
           "Er ging () pfeifend die Straße entlang."
         ],
         cols: ["mit Komma", "ohne Komma"],
-        correct: [1, 0, 1, 0, 1],
-        model: "Partizipgruppen werden oft mit Komma abgetrennt, besonders wenn sie vorangestellt sind oder nicht eng zum Satz gehören.",
+        correct: [0, 0, 0, 0, 0],
+        model: "Partizipgruppen werden oft mit Komma abgetrennt, besonders wenn sie vorangestellt sind.",
         rule: "<div class=rbox>Partizipgruppen können durch Komma abgetrennt werden, um die Satzstruktur zu verdeutlichen. Vorangestellte Partizipgruppen werden meist mit Komma abgetrennt.</div>"
       },
       {
@@ -524,7 +503,7 @@ var BBR_EXTRA_THEMES = [
         ],
         cols: ["mit Komma", "ohne Komma"],
         correct: [1, 0, 1, 0, 1],
-        model: "Vor 'aber' und 'denn' steht immer ein Komma. Vor 'und' und 'oder' steht kein Komma, auch wenn eigenes Subjekt folgt.",
+        model: "Vor 'aber' und 'denn' steht ein Komma; vor 'und' und 'oder' keins.",
         rule: "<div class=rbox>Bei Hauptsatzreihen: Vor <span class=hl>und</span> und <span class=hl>oder</span> steht <span class=hl>kein</span> Komma. Vor <span class=hl>aber</span> und <span class=hl>denn</span> steht ein Komma.</div>"
       },
       {
@@ -532,20 +511,15 @@ var BBR_EXTRA_THEMES = [
         type: "cross",
         q: "Komma ja oder nein? (markiere die Stelle mit () )",
         rows: [
-          "Er ist () wie du weißt mein bester Freund.",
-          "Er ist wie du weißt () mein bester Freund.",
-          "Das Wetter war () entgegen der Vorhersage schön.",
-          "Das Wetter war entgegen der Vorhersage () schön.",
-          "Sie kommt () hoffentlich pünktlich.",
-          "Sie kommt hoffentlich () pünktlich?",
-          "Er hat () ehrlich gesagt keine Ahnung.",
-          "Er hat ehrlich gesagt () keine Ahnung.",
-          "Wir werden () so Gott will gewinnen.",
-          "Wir werden so Gott will () gewinnen."
+          "Er ist () wie du weißt () mein bester Freund.",
+          "Das Wetter war () entgegen der Vorhersage () schön.",
+          "Sie kommt () hoffentlich () pünktlich.",
+          "Er hat () ehrlich gesagt () keine Ahnung.",
+          "Wir werden () so Gott will () gewinnen."
         ],
         cols: ["mit Komma", "ohne Komma"],
-        correct: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0], // alle mit Komma (Einschübe werden eingeschlossen)
-        model: "Einschübe (parenthetische Elemente) werden in Kommas eingeschlossen.",
+        correct: [0, 0, 0, 0, 0],
+        model: "Einschübe werden in Kommas eingeschlossen.",
         rule: "<div class=rbox><span class=hl>Einschübe</span> wie 'wie du weißt', 'hoffentlich', 'ehrlich gesagt' werden durch Kommas vom Rest des Satzes abgetrennt.</div>"
       },
       {
@@ -557,22 +531,12 @@ var BBR_EXTRA_THEMES = [
           "Kinder () hört mal zu!",
           "Mein Herr () können Sie mir helfen?",
           "Liebe Anna () ich schreibe dir.",
-          "Hallo () wie geht's?",
-          "Können Sie () Frau Müller () mir helfen?" // jetzt zwei separate Zeilen:
+          "Hallo () wie geht's?"
         ],
         cols: ["mit Komma", "ohne Komma"],
-        correct: [0, 0, 0, 0, 0, 0, 0], // 7 Zeilen (die letzte wurde aufgeteilt, siehe nächste)
-        // Achtung: wir müssen die letzte Zeile aufteilen, daher hier nur 5 Zeilen? Besser:
-        rows: [
-          "Guten Tag () Frau Müller!",
-          "Kinder () hört mal zu!",
-          "Mein Herr () können Sie mir helfen?",
-          "Liebe Anna () ich schreibe dir.",
-          "Hallo () wie geht's?",
-          "Können Sie () Frau Müller mir helfen?", // Lücke nach Sie
-          "Können Sie Frau Müller () mir helfen?" // Lücke nach Müller
-        ],
-        correct: [0, 0, 0, 0, 0, 0, 0] // alle mit Komma
+        correct: [0, 0, 0, 0, 0],
+        model: "Anreden werden mit Komma abgetrennt.",
+        rule: "<div class=rbox><span class=hl>Anreden</span> werden durch Komma vom Rest des Satzes getrennt.</div>"
       },
       {
         sub: "Ausrufe",
@@ -587,7 +551,7 @@ var BBR_EXTRA_THEMES = [
         ],
         cols: ["mit Komma", "ohne Komma"],
         correct: [0, 0, 0, 0, 0],
-        model: "Interjektionen (Ausrufe) wie 'oh', 'ach', 'huch', 'ja', 'nein' werden mit Komma abgetrennt.",
+        model: "Interjektionen (Ausrufe) werden mit Komma abgetrennt.",
         rule: "<div class=rbox><span class=hl>Ausrufe</span> und <span class=hl>Interjektionen</span> werden durch Komma vom Satz getrennt.</div>"
       },
       {
@@ -608,21 +572,17 @@ var BBR_EXTRA_THEMES = [
       },
       {
         sub: "Gemischte Übung",
-        type: "cross",
-        q: "Komma ja oder nein? (markiere die Stelle mit () )",
-        rows: [
-          "Ich hoffe () dass du kommst.",
-          "Er ist nett () aber manchmal laut.",
-          "Sie kaufte Äpfel () Birnen und Trauben.",
-          "Gestern () als es regnete blieben wir zu Hause.",
-          "Gestern als es regnete () blieben wir zu Hause.",
-          "Kommst du () ja ich komme.",
-          "Kommst du ja () ich komme."
+        type: "mc",
+        q: "In welchem Satz muss ein Komma gesetzt werden?",
+        o: [
+          "Er ist nett und hilfsbereit.",
+          "Ich hoffe dass du kommst.",
+          "Gestern als es regnete blieben wir zu Hause.",
+          "Kinder Jugendliche und Erwachsene sind willkommen."
         ],
-        cols: ["mit Komma", "ohne Komma"],
-        correct: [0, 0, 0, 0, 0, 0, 0], // alle mit Komma (Nebensätze, aber, Aufzählung, Einschübe, Anrede)
-        model: "Dass-Satz: Komma; aber: Komma; Aufzählung: Komma zwischen ersten beiden; Einschub: zwei Kommas; Anrede: Komma",
-        rule: "<div class=rbox>Beachte die verschiedenen Regeln: Nebensätze, aber, Aufzählungen, Einschübe, Anreden verlangen Kommas.</div>"
+        c: 1,
+        model: "Bei 'hoffe dass' muss ein Komma vor 'dass' stehen.",
+        rule: "<div class=rbox>Vor Nebensätzen mit 'dass' steht ein Komma. Auch bei 'als' (Nebensatz) und in Aufzählungen sind Kommas nötig, hier fehlen sie.</div>"
       }
     ]
   },
@@ -640,15 +600,15 @@ var BBR_EXTRA_THEMES = [
         type: "cross",
         q: "Ist die Stellung des Verbzusatzes korrekt?",
         rows: [
-          "Er aufsteht morgen früh.",
-          "Sie ruft heute Abend an.",
-          "Wir fahren ab um 8 Uhr.",
-          "Ich zurückrufe dir später.",
-          "Kannst du abholen mich?"
+          "Er steht morgen früh auf.",
+          "Sie anruft heute Abend.",
+          "Wir fahren um 8 Uhr ab.",
+          "Ich rufe dich später zurück.",
+          "Kannst du mich abholen?"
         ],
         cols: ["korrekt", "falsch"],
-        correct: [1, 0, 0, 1, 1],
-        model: "Er aufsteht (falsch), Sie ruft an (korrekt), Wir fahren ab (korrekt), Ich zurückrufe (falsch), Kannst du abholen mich? (falsch)",
+        correct: [0, 1, 0, 0, 0],
+        model: "Satz 2 falsch: 'ruft an' muss getrennt sein.",
         rule: "<div class=rbox>Im Hauptsatz steht der konjugierte Teil des Verbs an Position 2, der Verbzusatz am Satzende. Bei Modalverben steht der Infinitiv am Ende.</div>"
       },
       {
@@ -664,7 +624,7 @@ var BBR_EXTRA_THEMES = [
         ],
         cols: ["korrekt", "falsch"],
         correct: [0, 1, 0, 1, 0],
-        model: "Normalerweise steht der Dativ vor dem Akkusativ. Die Sätze mit Akkusativ vor Dativ sind falsch (Ausnahme: Pronomen).",
+        model: "Normalerweise Dativ vor Akkusativ; Sätze mit Akkusativ vor Dativ sind falsch (außer bei Pronomen).",
         rule: "<div class=rbox>Die Reihenfolge der Objekte ist meist: <span class=hl>Dativ vor Akkusativ</span>. Ausnahme: Akkusativpronomen stehen vor dem Dativ.</div>"
       },
       {
@@ -680,7 +640,7 @@ var BBR_EXTRA_THEMES = [
         ],
         cols: ["korrekt", "falsch"],
         correct: [0, 1, 0, 1, 0],
-        model: "Üblich ist die Reihenfolge: Zeitangabe vor Ortsangabe.",
+        model: "Üblich ist Zeitangabe vor Ortsangabe.",
         rule: "<div class=rbox>Adverbiale Bestimmungen folgen oft der Reihenfolge: <span class=hl>Zeit vor Ort</span> (temporal vor lokal).</div>"
       },
       {
@@ -705,7 +665,7 @@ var BBR_EXTRA_THEMES = [
         q: "Ist der Satz korrekt?",
         rows: [
           "Ich glaube, dass er kommt.",
-          "Ich glaube, dass er kommt? (Frage)",
+          "Ich glaube, dass er kommt? (als Frage unpassend)",
           "Dass er kommt, freut mich.",
           "Ich freue mich, dass du da bist.",
           "Ich weiß, dass er ist krank."
@@ -718,7 +678,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "weil-Satz (Verbendstellung)",
         type: "cross",
-        q: "Ist der Satz korrekt? (Achte auf die Verbposition im weil-Satz.)",
+        q: "Ist der Satz korrekt?",
         rows: [
           "Weil er krank ist, bleibt er zu Hause.",
           "Weil er ist krank, bleibt er zu Hause.",
@@ -781,18 +741,16 @@ var BBR_EXTRA_THEMES = [
       },
       {
         sub: "Gemischte Übung Satzbau",
-        type: "cross",
-        q: "Ist der Satz korrekt?",
-        rows: [
-          "Ich gehe morgen einkaufen.",
-          "Morgen gehe ich einkaufen.",
-          "Ich weiß, dass er morgen kommt.",
+        type: "mc",
+        q: "Welcher Satz ist korrekt?",
+        o: [
           "Ich weiß, dass er kommt morgen.",
-          "Kannst du mir helfen?"
+          "Morgen ich gehe einkaufen.",
+          "Kannst du mir helfen?",
+          "Weil er ist krank, bleibt er zu Hause."
         ],
-        cols: ["korrekt", "falsch"],
-        correct: [0, 0, 0, 1, 0],
-        model: "Die Sätze 1,2,3,5 sind korrekt. Satz 4 hat das Verb 'kommt' nicht am Ende.",
+        c: 2,
+        model: "Nur Satz 3 ist korrekt (Fragesatz mit Verb an Position 1).",
         rule: "<div class=rbox>Beachte die Verbposition in Haupt- und Nebensätzen sowie die Inversion.</div>"
       }
     ]
@@ -819,7 +777,7 @@ var BBR_EXTRA_THEMES = [
         ],
         cols: ["best. Artikel", "unbest. Artikel", "kein Artikel"],
         correct: [0, 1, 0, 1, 0],
-        model: "der, die, das = bestimmter Artikel; ein, eine = unbestimmter Artikel",
+        model: "der, die, das = bestimmt; ein, eine = unbestimmt",
         rule: "<div class=rbox>Bestimmte Artikel: der, die, das; unbestimmte: ein, eine, ein.</div>"
       },
       {
@@ -977,7 +935,7 @@ var BBR_EXTRA_THEMES = [
         ],
         cols: ["Grundzahl", "Ordnungszahl", "unbestimmtes Zahlwort"],
         correct: [0, 0, 1, 2, 2],
-        model: "eins, zwei = Grundzahl; erste = Ordnungszahl; viele = unbestimmtes Zahlwort; drittens = Adverb (nicht Zahlwort)",
+        model: "eins, zwei = Grundzahl; erste = Ordnungszahl; viele = unbestimmtes Zahlwort; drittens = Adverb",
         rule: "<div class=rbox>Zahlwörter: Grundzahlen (eins, zwei), Ordnungszahlen (erste, zweite), unbestimmte (viele, einige). 'drittens' ist ein Adverb.</div>"
       }
     ]

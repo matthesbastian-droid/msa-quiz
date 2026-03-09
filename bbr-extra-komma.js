@@ -1,167 +1,402 @@
-var BBR_EXTRA_THEMES = [
+// ================================================================
+// bbr-extra-komma.js – interaktive Kommaübungen (Textüberarbeitung)
+// ================================================================
+// HINWEIS: Diese Datei ersetzt die alte Ankreuzversion durch
+// interaktive Aufgaben vom Typ "komma", bei denen die Lernenden
+// Kommas direkt im Satz setzen können (angelehnt an msa-10Pkt.js).
+// ================================================================
+
+var BBR_KOMMA_INTERAKTIV = [
   {
-    id: "bbr_extra_kommasetzung",
-    title: "Kommasetzung üben",
+    id: "bbr_extra_komma_interaktiv",
+    title: "Kommasetzung üben (interaktiv)",
     emoji: "🔍",
     color: "#0f766e",
     qs: [
-      // Aufgabe 1: Einfache Kommaregeln (Aufzählungen, Anreden, Einschübe)
+      // ========== Aufgabe 1: Einfache Kommaregeln ==========
       {
-        sub: "Einfache Kommaregeln",
-        type: "cross",
-        q: "Entscheide, ob an der markierten Stelle ( ) ein Komma gesetzt werden muss.",
-        rows: [
-          "Michelle ( ) Fabienne und Lea sind gute Freundinnen.",
-          "Kevin ( ) er ist mein bester Freund ( ) kommt mit.",
-          "Mia will mitkommen ( ) aber nicht Nelli.",
-          "Lars kommt mit ( ) Marc bleibt zu Hause.",
-          "Wie ( ) du kannst das alles schon?",
-          "Nein ( ) ich komme nicht mit."
-        ],
-        cols: ["Komma", "kein Komma"],
-        correct: [0, 0, 0, 0, 0, 0],
-        model: "Aufzählung: Komma nach Michelle; Einschub: Kommas um 'er ist mein bester Freund'; entgegenstellende Konjunktion 'aber': Komma davor; Hauptsätze: Komma dazwischen; Ausruf 'Wie': Komma; Verneinung 'Nein': Komma.",
-        rule: "<div class=rbox>Regeln: <br>1. Aufzählungen werden durch Kommas getrennt, vor 'und'/'oder' kein Komma.<br>2. Einschübe werden in Kommas eingeschlossen.<br>3. Vor entgegenstellenden Konjunktionen wie 'aber', 'sondern' steht ein Komma.<br>4. Zwischen Hauptsätzen steht ein Komma.<br>5. Ausrufe, Anreden, Bejahungen/Verneinungen werden mit Komma abgetrennt.</div>"
+        sub: "1.1 Aufzählung",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz:",
+        sentence: "Michelle Fabienne und Lea sind gute Freundinnen.",
+        correctPositions: [8],
+        acceptedAnswers: ["Michelle, Fabienne und Lea sind gute Freundinnen."],
+        model: "Nach 'Michelle' muss ein Komma, da es sich um eine Aufzählung handelt (Michelle, Fabienne und Lea).",
+        rule: "<div class=rbox>Regeln: <br>1. Aufzählungen trennt man mit Komma (vor 'und'/'oder' kein Komma).<br>2. Einschübe werden in Kommas eingeschlossen.<br>3. Vor entgegenstellenden Konjunktionen (aber, sondern) steht ein Komma.<br>4. Zwischen Hauptsätzen steht ein Komma.</div>"
       },
-      // Aufgabe 2: Kommaregeln zuordnen (wie in der PDF Seite 1, Aufgabe 1.1)
       {
-        sub: "Welche Kommaregel passt?",
-        type: "cross",
-        q: "Ordne jedem Satz die richtige Regelnummer zu (1-7 aus der Übersicht).",
-        rows: [
-          "Noah mag es mit seinen Freunden ins Kino zu gehen.",
-          "Ja ich komme morgen zur Klassenfete.",
-          "Weil ein großer Teil der Klasse am Freitag keine Zeit hat wird die Klassenfete auf Montag verlegt.",
-          "Toni Johannes Miriam und Max wollen alles vorbereiten: Grill Würstchen Limo.",
-          "Kati Jonas' Freundin will auch mitkommen.",
-          "Max will zwar eher kommen aber auch nicht zu früh.",
-          "Lili baut ihre Anlage auf Tim bringt seine CD-Sammlung mit.",
-          "Emmi die im Augenblick krank ist weiß noch nicht genau ob sie am Montag kommen kann weil der Arzt noch kein grünes Licht gegeben hat.",
-          "Du findest immer eine Ausrede anstatt deine Aufgaben zu erledigen."
-        ],
-        cols: ["Regel 1", "Regel 2", "Regel 3", "Regel 4", "Regel 5", "Regel 6", "Regel 7"],
-        correct: [5, 6, 4, 0, 1, 2, 3, 1, 5], // Indizes: 0=Regel1,1=Regel2,... Bitte prüfen: Regel1=Aufzählungen, Regel2=Einschübe, Regel3=entgegenstellende Konjunktionen, Regel4=Hauptsätze, Regel5=Nebensätze, Regel6=Infinitivgruppen, Regel7=Anreden/Ausrufe. 
-        // Sätze: 1: Infinitivgruppe (Regel6) -> Index5; 2: "Ja" (Regel7) -> Index6; 3: Weil-Satz (Regel5) -> Index4; 4: Aufzählung (Regel1) -> Index0; 5: Einschub (Jonas' Freundin) (Regel2) -> Index1; 6: aber (Regel3) -> Index2; 7: Hauptsätze (Regel4) -> Index3; 8: zwei Einschübe und weil (Regel2 und 5) – aber wir ordnen nur eine Regel? Schwierig. Vielleicht lassen wir diesen Satz weg. Besser: Wir nehmen einfachere Sätze. Ich passe an.
-        // Stattdessen neu:
+        sub: "1.2 Einschub",
+        type: "komma",
+        q: "Setzen Sie die fehlenden Kommas im folgenden Satz:",
+        sentence: "Kevin er ist mein bester Freund kommt mit.",
+        correctPositions: [5, 31],
+        acceptedAnswers: ["Kevin, er ist mein bester Freund, kommt mit."],
+        model: "Der Einschub 'er ist mein bester Freund' wird mit Kommas eingeschlossen.",
+        rule: "<div class=rbox>Regeln: <br>1. Aufzählungen trennt man mit Komma (vor 'und'/'oder' kein Komma).<br>2. Einschübe werden in Kommas eingeschlossen.<br>3. Vor entgegenstellenden Konjunktionen (aber, sondern) steht ein Komma.<br>4. Zwischen Hauptsätzen steht ein Komma.</div>"
       },
-      // Wir ersetzen Aufgabe 2 durch eine mit klar zuordbaren Sätzen:
       {
-        sub: "Welche Kommaregel passt?",
-        type: "cross",
-        q: "Ordne jedem Satz die richtige Regelnummer zu (1-7).",
-        rows: [
-          "Äpfel Birnen und Bananen sind Obst.",
-          "Mein Bruder der gerade kommt ist müde.",
-          "Er ist klug aber manchmal faul.",
-          "Ich lese gerne mein Bruder spielt Fußball.",
-          "Ich hoffe dass du kommst.",
-          "Er spart um ein Auto zu kaufen.",
-          "Guten Tag Frau Müller!"
-        ],
-        cols: ["Regel 1", "Regel 2", "Regel 3", "Regel 4", "Regel 5", "Regel 6", "Regel 7"],
-        correct: [0, 1, 2, 3, 4, 5, 6], // Regel1=Aufzählung, Regel2=Einschub, Regel3=entgegenstellend, Regel4=Hauptsätze, Regel5=Nebensatz, Regel6=Infinitivgruppe, Regel7=Anrede
-        model: "1: Aufzählung (Regel 1), 2: Einschub (Regel 2), 3: aber (Regel 3), 4: Hauptsätze (Regel 4), 5: dass-Satz (Regel 5), 6: um-zu (Regel 6), 7: Anrede (Regel 7)",
+        sub: "1.3 Konjunktion 'aber'",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz:",
+        sentence: "Mia will mitkommen aber nicht Nelli.",
+        correctPositions: [18],
+        acceptedAnswers: ["Mia will mitkommen, aber nicht Nelli."],
+        model: "Vor der entgegenstellenden Konjunktion 'aber' steht ein Komma.",
+        rule: "<div class=rbox>Regeln: <br>1. Aufzählungen trennt man mit Komma (vor 'und'/'oder' kein Komma).<br>2. Einschübe werden in Kommas eingeschlossen.<br>3. Vor entgegenstellenden Konjunktionen (aber, sondern) steht ein Komma.<br>4. Zwischen Hauptsätzen steht ein Komma.</div>"
+      },
+      {
+        sub: "1.4 Hauptsätze",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz:",
+        sentence: "Lars kommt mit Marc bleibt zu Hause.",
+        correctPositions: [14],
+        acceptedAnswers: ["Lars kommt mit, Marc bleibt zu Hause."],
+        model: "Zwischen zwei Hauptsätzen steht ein Komma.",
+        rule: "<div class=rbox>Regeln: <br>1. Aufzählungen trennt man mit Komma (vor 'und'/'oder' kein Komma).<br>2. Einschübe werden in Kommas eingeschlossen.<br>3. Vor entgegenstellenden Konjunktionen (aber, sondern) steht ein Komma.<br>4. Zwischen Hauptsätzen steht ein Komma.</div>"
+      },
+      {
+        sub: "1.5 Ausruf",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz:",
+        sentence: "Wie du kannst das alles schon?",
+        correctPositions: [3],
+        acceptedAnswers: ["Wie, du kannst das alles schon?"],
+        model: "Nach einem Ausruf (hier 'Wie') steht ein Komma.",
+        rule: "<div class=rbox>Regeln: <br>1. Aufzählungen trennt man mit Komma (vor 'und'/'oder' kein Komma).<br>2. Einschübe werden in Kommas eingeschlossen.<br>3. Vor entgegenstellenden Konjunktionen (aber, sondern) steht ein Komma.<br>4. Zwischen Hauptsätzen steht ein Komma.</div>"
+      },
+      {
+        sub: "1.6 Verneinung",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz:",
+        sentence: "Nein ich komme nicht mit.",
+        correctPositions: [4],
+        acceptedAnswers: ["Nein, ich komme nicht mit."],
+        model: "Nach einer Verneinung (hier 'Nein') steht ein Komma.",
+        rule: "<div class=rbox>Regeln: <br>1. Aufzählungen trennt man mit Komma (vor 'und'/'oder' kein Komma).<br>2. Einschübe werden in Kommas eingeschlossen.<br>3. Vor entgegenstellenden Konjunktionen (aber, sondern) steht ein Komma.<br>4. Zwischen Hauptsätzen steht ein Komma.</div>"
+      },
+
+      // ========== Aufgabe 2: Einfache Regeln (ohne Klammern) ==========
+      {
+        sub: "2.1 Aufzählung",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz:",
+        sentence: "Äpfel Birnen und Bananen sind Obst.",
+        correctPositions: [5],
+        acceptedAnswers: ["Äpfel, Birnen und Bananen sind Obst."],
+        model: "In einer Aufzählung wird nach dem ersten Element ein Komma gesetzt (vor 'und' kein Komma).",
         rule: "<div class=rbox>Regeln: 1=Aufzählungen, 2=Einschübe, 3=entgegenstellende Konjunktionen, 4=Hauptsätze, 5=Nebensätze, 6=Infinitivgruppen, 7=Anreden/Ausrufe.</div>"
       },
-      // Aufgabe 3: Kommas in Satzgefügen (Nebensätze)
       {
-        sub: "Kommas in Satzgefügen",
-        type: "cross",
-        q: "Setze das Komma an der richtigen Stelle (ja/nein).",
-        rows: [
-          "Jonas nimmt an der Foto-AG teil ( ) weil Merle auch kommt.",
-          "Anne verabredet sich mit Rany ( ) den sie mag ( ) weil er ihr geholfen hat.",
-          "Weil ein großer Teil der Klasse keine Zeit hat ( ) wird die Fete verlegt.",
-          "Emmi ( ) die im Augenblick krank ist ( ) weiß noch nicht ( ) ob sie kommen kann.",
-          "Als die Führung zu Ende war ( ) kauften sich einige Andenken.",
-          "Der Höhleneingang ist so niedrig ( ) dass man sich stoßen kann."
-        ],
-        cols: ["Komma", "kein Komma"],
-        correct: [0, 0, 0, 0, 0, 0], // alle benötigen Kommas
-        model: "Vor Nebensätzen (weil, den, ob, als, dass) steht ein Komma. Einschübe werden in Kommas eingeschlossen.",
+        sub: "2.2 Relativsatz",
+        type: "komma",
+        q: "Setzen Sie die fehlenden Kommas im folgenden Satz:",
+        sentence: "Mein Bruder der gerade kommt ist müde.",
+        correctPositions: [11, 28],
+        acceptedAnswers: ["Mein Bruder, der gerade kommt, ist müde."],
+        model: "Der Relativsatz 'der gerade kommt' wird in Kommas eingeschlossen.",
+        rule: "<div class=rbox>Regeln: 1=Aufzählungen, 2=Einschübe, 3=entgegenstellende Konjunktionen, 4=Hauptsätze, 5=Nebensätze, 6=Infinitivgruppen, 7=Anreden/Ausrufe.</div>"
+      },
+      {
+        sub: "2.3 Konjunktion 'aber'",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz:",
+        sentence: "Er ist klug aber manchmal faul.",
+        correctPositions: [12],
+        acceptedAnswers: ["Er ist klug, aber manchmal faul."],
+        model: "Vor der entgegenstellenden Konjunktion 'aber' steht ein Komma.",
+        rule: "<div class=rbox>Regeln: 1=Aufzählungen, 2=Einschübe, 3=entgegenstellende Konjunktionen, 4=Hauptsätze, 5=Nebensätze, 6=Infinitivgruppen, 7=Anreden/Ausrufe.</div>"
+      },
+      {
+        sub: "2.4 Hauptsätze",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz:",
+        sentence: "Ich lese gerne mein Bruder spielt Fußball.",
+        correctPositions: [15],
+        acceptedAnswers: ["Ich lese gerne, mein Bruder spielt Fußball."],
+        model: "Zwischen zwei Hauptsätzen wird ein Komma gesetzt.",
+        rule: "<div class=rbox>Regeln: 1=Aufzählungen, 2=Einschübe, 3=entgegenstellende Konjunktionen, 4=Hauptsätze, 5=Nebensätze, 6=Infinitivgruppen, 7=Anreden/Ausrufe.</div>"
+      },
+      {
+        sub: "2.5 Nebensatz mit 'dass'",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz:",
+        sentence: "Ich hoffe dass du kommst.",
+        correctPositions: [10],
+        acceptedAnswers: ["Ich hoffe, dass du kommst."],
+        model: "Vor der unterordnenden Konjunktion 'dass' steht ein Komma.",
+        rule: "<div class=rbox>Regeln: 1=Aufzählungen, 2=Einschübe, 3=entgegenstellende Konjunktionen, 4=Hauptsätze, 5=Nebensätze, 6=Infinitivgruppen, 7=Anreden/Ausrufe.</div>"
+      },
+      {
+        sub: "2.6 Infinitivgruppe mit 'um'",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz:",
+        sentence: "Er spart um ein Auto zu kaufen.",
+        correctPositions: [9],
+        acceptedAnswers: ["Er spart, um ein Auto zu kaufen."],
+        model: "Vor der Infinitivgruppe mit 'um' steht ein Komma.",
+        rule: "<div class=rbox>Regeln: 1=Aufzählungen, 2=Einschübe, 3=entgegenstellende Konjunktionen, 4=Hauptsätze, 5=Nebensätze, 6=Infinitivgruppen, 7=Anreden/Ausrufe.</div>"
+      },
+      {
+        sub: "2.7 Anrede",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz:",
+        sentence: "Guten Tag Frau Müller!",
+        correctPositions: [9],
+        acceptedAnswers: ["Guten Tag, Frau Müller!"],
+        model: "Bei einer Anrede wird nach der Anredeformel ein Komma gesetzt.",
+        rule: "<div class=rbox>Regeln: 1=Aufzählungen, 2=Einschübe, 3=entgegenstellende Konjunktionen, 4=Hauptsätze, 5=Nebensätze, 6=Infinitivgruppen, 7=Anreden/Ausrufe.</div>"
+      },
+
+      // ========== Aufgabe 3: Satzgefüge ==========
+      {
+        sub: "3.1 Kausalsatz mit 'weil'",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz:",
+        sentence: "Jonas nimmt an der Foto-AG teil weil Merle auch kommt.",
+        correctPositions: [31],
+        acceptedAnswers: ["Jonas nimmt an der Foto-AG teil, weil Merle auch kommt."],
+        model: "Vor dem Nebensatz mit 'weil' steht ein Komma.",
         rule: "<div class=rbox>Nebensätze werden durch Komma vom Hauptsatz getrennt. Relativsätze (die, den) werden in Kommas eingeschlossen.</div>"
       },
-      // Aufgabe 4: Infinitivgruppen mit um/ohne/anstatt
       {
-        sub: "Infinitivgruppen",
-        type: "cross",
-        q: "Muss an der markierten Stelle ein Komma stehen?",
-        rows: [
-          "Felix dachte nicht daran ( ) sich bei seinem Freund zu entschuldigen.",
-          "Wir fahren ans Meer ( ) um uns zu erholen.",
-          "Der Junge überquerte die Straße ( ) ohne auf den Verkehr zu achten.",
-          "Anstatt zu lernen ( ) spielt er Computer.",
-          "Ich hatte nie die Absicht ( ) diesen Film zu sehen.",
-          "Er kam nicht auf die Idee ( ) einen Schraubenzieher zu benutzen."
-        ],
-        cols: ["Komma", "kein Komma"],
-        correct: [0, 0, 0, 0, 0, 0],
-        model: "Infinitivgruppen mit 'um zu', 'ohne zu', 'anstatt zu' sowie wenn ein hinweisendes Wort (daran, die Absicht) im Hauptsatz steht, werden durch Komma abgetrennt.",
+        sub: "3.2 Relativsatz + Kausalsatz",
+        type: "komma",
+        q: "Setzen Sie die fehlenden Kommas im folgenden Satz:",
+        sentence: "Anne verabredet sich mit Rany den sie mag weil er ihr geholfen hat.",
+        correctPositions: [29, 41],
+        acceptedAnswers: ["Anne verabredet sich mit Rany, den sie mag, weil er ihr geholfen hat."],
+        model: "Vor dem Relativsatz und vor dem Kausalsatz steht jeweils ein Komma.",
+        rule: "<div class=rbox>Nebensätze werden durch Komma vom Hauptsatz getrennt. Relativsätze (die, den) werden in Kommas eingeschlossen.</div>"
+      },
+      {
+        sub: "3.3 Vorangestellter Nebensatz",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz:",
+        sentence: "Weil ein großer Teil der Klasse keine Zeit hat wird die Fete verlegt.",
+        correctPositions: [46],
+        acceptedAnswers: ["Weil ein großer Teil der Klasse keine Zeit hat, wird die Fete verlegt."],
+        model: "Nach einem vorangestellten Nebensatz wird das Komma gesetzt.",
+        rule: "<div class=rbox>Nebensätze werden durch Komma vom Hauptsatz getrennt. Relativsätze (die, den) werden in Kommas eingeschlossen.</div>"
+      },
+      {
+        sub: "3.4 Relativsatz + 'ob'-Satz",
+        type: "komma",
+        q: "Setzen Sie die fehlenden Kommas im folgenden Satz:",
+        sentence: "Emmi die im Augenblick krank ist weiß noch nicht ob sie kommen kann.",
+        correctPositions: [4, 32, 48],
+        acceptedAnswers: ["Emmi, die im Augenblick krank ist, weiß noch nicht, ob sie kommen kann."],
+        model: "Der Relativsatz wird in Kommas eingeschlossen, und vor dem 'ob'-Nebensatz steht ein Komma.",
+        rule: "<div class=rbox>Nebensätze werden durch Komma vom Hauptsatz getrennt. Relativsätze (die, den) werden in Kommas eingeschlossen.</div>"
+      },
+      {
+        sub: "3.5 Temporalsatz mit 'als'",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz:",
+        sentence: "Als die Führung zu Ende war kauften sich einige Andenken.",
+        correctPositions: [27],
+        acceptedAnswers: ["Als die Führung zu Ende war, kauften sich einige Andenken."],
+        model: "Nach dem Nebensatz mit 'als' steht ein Komma.",
+        rule: "<div class=rbox>Nebensätze werden durch Komma vom Hauptsatz getrennt. Relativsätze (die, den) werden in Kommas eingeschlossen.</div>"
+      },
+      {
+        sub: "3.6 Konsekutivsatz mit 'dass'",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz:",
+        sentence: "Der Höhleneingang ist so niedrig dass man sich stoßen kann.",
+        correctPositions: [32],
+        acceptedAnswers: ["Der Höhleneingang ist so niedrig, dass man sich stoßen kann."],
+        model: "Vor dem 'dass'-Nebensatz steht ein Komma.",
+        rule: "<div class=rbox>Nebensätze werden durch Komma vom Hauptsatz getrennt. Relativsätze (die, den) werden in Kommas eingeschlossen.</div>"
+      },
+
+      // ========== Aufgabe 4: Infinitivgruppen ==========
+      {
+        sub: "4.1 Hinweiswort 'daran'",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz:",
+        sentence: "Felix dachte nicht daran sich bei seinem Freund zu entschuldigen.",
+        correctPositions: [24],
+        acceptedAnswers: ["Felix dachte nicht daran, sich bei seinem Freund zu entschuldigen."],
+        model: "Bei einem hinweisenden Wort (daran) wird die Infinitivgruppe mit Komma abgetrennt.",
         rule: "<div class=rbox>Infinitivgruppen werden durch Komma abgetrennt, wenn sie mit 'um', 'ohne', 'anstatt', 'statt', 'außer', 'als' eingeleitet werden oder wenn ein korrelierendes Wort (daran, die Absicht, es) im Hauptsatz auf sie verweist.</div>"
       },
-      // Aufgabe 5: Kommas in wörtlicher Rede und Anreden
       {
-        sub: "Wörtliche Rede und Anreden",
-        type: "cross",
-        q: "Entscheide über das Komma.",
-        rows: [
-          "„Na ( ) wie wird denn der Winter?“ fragte der Siedler.",
-          "„Kalt ( ) sehr kalt!“ antwortete der Indianer.",
-          "Der Siedler fragte ( ) „Wird der Winter wirklich so kalt?“",
-          "„Und woher weißt du das?“ ( ) wollte der Siedler wissen.",
-          "„Das ist eine uralte Weisheit“ ( ) rief er ihm zu.",
-          "Guten Tag ( ) Frau Müller!"
-        ],
-        cols: ["Komma", "kein Komma"],
-        correct: [0, 0, 1, 0, 0, 0], // Bei Frage 3: "fragte" und dann wörtliche Rede: kein Komma? Regel: Nach Begleitsatz vor wörtlicher Rede steht oft ein Doppelpunkt, aber wenn der Begleitsatz vorangestellt ist, kann auch ein Komma stehen. In der Schule oft Komma. Aber hier ist "fragte" mit nachfolgender wörtlicher Rede: Normalerweise setzt man ein Komma oder einen Doppelpunkt. In vielen Übungen wird Komma verlangt. Ich setze auf Komma. Also korrigiere: 3 auch Komma. 5: Nach wörtlicher Rede vor Begleitsatz: Komma. Also alle außer vielleicht 3? Ich belasse es bei 0 für alle.
-        // Besser: Wir einigen uns: Vor wörtlicher Rede nach Begleitsatz: Komma oder Doppelpunkt, aber hier wird Komma akzeptiert. Also alle 0.
-        correct: [0, 0, 0, 0, 0, 0],
-        model: "Bei wörtlicher Rede wird der Begleitsatz durch Komma abgetrennt. Anreden werden ebenfalls mit Komma abgetrennt.",
+        sub: "4.2 Infinitiv mit 'um'",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz:",
+        sentence: "Wir fahren ans Meer um uns zu erholen.",
+        correctPositions: [19],
+        acceptedAnswers: ["Wir fahren ans Meer, um uns zu erholen."],
+        model: "Vor einer Infinitivgruppe mit 'um' steht ein Komma.",
+        rule: "<div class=rbox>Infinitivgruppen werden durch Komma abgetrennt, wenn sie mit 'um', 'ohne', 'anstatt', 'statt', 'außer', 'als' eingeleitet werden oder wenn ein korrelierendes Wort (daran, die Absicht, es) im Hauptsatz auf sie verweist.</div>"
+      },
+      {
+        sub: "4.3 Infinitiv mit 'ohne'",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz:",
+        sentence: "Der Junge überquerte die Straße ohne auf den Verkehr zu achten.",
+        correctPositions: [31],
+        acceptedAnswers: ["Der Junge überquerte die Straße, ohne auf den Verkehr zu achten."],
+        model: "Vor einer Infinitivgruppe mit 'ohne' steht ein Komma.",
+        rule: "<div class=rbox>Infinitivgruppen werden durch Komma abgetrennt, wenn sie mit 'um', 'ohne', 'anstatt', 'statt', 'außer', 'als' eingeleitet werden oder wenn ein korrelierendes Wort (daran, die Absicht, es) im Hauptsatz auf sie verweist.</div>"
+      },
+      {
+        sub: "4.4 Infinitiv mit 'anstatt'",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz:",
+        sentence: "Anstatt zu lernen spielt er Computer.",
+        correctPositions: [17],
+        acceptedAnswers: ["Anstatt zu lernen, spielt er Computer."],
+        model: "Vor einer Infinitivgruppe mit 'anstatt' (nachgestellt) steht ein Komma.",
+        rule: "<div class=rbox>Infinitivgruppen werden durch Komma abgetrennt, wenn sie mit 'um', 'ohne', 'anstatt', 'statt', 'außer', 'als' eingeleitet werden oder wenn ein korrelierendes Wort (daran, die Absicht, es) im Hauptsatz auf sie verweist.</div>"
+      },
+      {
+        sub: "4.5 Hinweiswort 'die Absicht'",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz:",
+        sentence: "Ich hatte nie die Absicht diesen Film zu sehen.",
+        correctPositions: [25],
+        acceptedAnswers: ["Ich hatte nie die Absicht, diesen Film zu sehen."],
+        model: "Bei einem hinweisenden Wort (die Absicht) wird die Infinitivgruppe mit Komma abgetrennt.",
+        rule: "<div class=rbox>Infinitivgruppen werden durch Komma abgetrennt, wenn sie mit 'um', 'ohne', 'anstatt', 'statt', 'außer', 'als' eingeleitet werden oder wenn ein korrelierendes Wort (daran, die Absicht, es) im Hauptsatz auf sie verweist.</div>"
+      },
+      {
+        sub: "4.6 Hinweiswort 'die Idee'",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz:",
+        sentence: "Er kam nicht auf die Idee einen Schraubenzieher zu benutzen.",
+        correctPositions: [25],
+        acceptedAnswers: ["Er kam nicht auf die Idee, einen Schraubenzieher zu benutzen."],
+        model: "Bei einem hinweisenden Wort (die Idee) wird die Infinitivgruppe mit Komma abgetrennt.",
+        rule: "<div class=rbox>Infinitivgruppen werden durch Komma abgetrennt, wenn sie mit 'um', 'ohne', 'anstatt', 'statt', 'außer', 'als' eingeleitet werden oder wenn ein korrelierendes Wort (daran, die Absicht, es) im Hauptsatz auf sie verweist.</div>"
+      },
+
+      // ========== Aufgabe 5: Wörtliche Rede und Anreden ==========
+      {
+        sub: "5.1 Ausruf in wörtlicher Rede",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz:",
+        sentence: "„Na wie wird denn der Winter?“ fragte der Siedler.",
+        correctPositions: [3],
+        acceptedAnswers: ["„Na, wie wird denn der Winter?“ fragte der Siedler."],
+        model: "Nach einem Ausruf in der wörtlichen Rede steht ein Komma.",
         rule: "<div class=rbox>Wörtliche Rede wird durch Komma vom Begleitsatz getrennt, wenn der Begleitsatz vorangestellt ist (Er sagte: „...“) oder nachgestellt („...“, sagte er). Anreden wie 'Frau Müller' werden durch Komma abgetrennt.</div>"
       },
-      // Aufgabe 6: Gemischte Übung (längere Sätze mit mehreren Stellen)
       {
-        sub: "Gemischte Übung",
-        type: "cross",
-        q: "Entscheide an jeder markierten Stelle, ob ein Komma nötig ist.",
-        rows: [
-          "Als die Führung zu Ende war ( ) kauften sich einige von uns noch Andenken ( ) die allerdings ziemlich kitschig waren.",
-          "Am Ende der Woche ( ) die wie im Fluge verging ( ) bedauerten alle ( ) dass wir wieder nach Hause mussten.",
-          "Der alte Siedler ( ) der die Naturverbundenheit der Indianer zu kennen meinte ( ) hackte eifrig weiter.",
-          "Jetzt wurde es dem Siedler angst und bange ( ) sodass er wie wild draufloshackte.",
-          "Ich habe meine Tante besucht ( ) und die war froh darüber ( ) mich am Abend nicht mehr zu sehen!",
-          "Die Flügel ( ) die Daidalos baute ( ) waren aus Federn und Wachs."
-        ],
-        cols: ["Komma", "kein Komma"],
-        correct: [0, 0, 0, 0, 0, 0], // Überall Kommas nötig
-        model: "Nebensätze (als, die, dass, sodass) werden durch Komma abgetrennt. Relativsätze in Kommas einschließen. Vor 'und' in Hauptsatzreihen kein Komma? Hier: 'und die war froh' – 'und' verbindet zwei Hauptsätze, davor kein Komma? In der Regel: Vor 'und' kein Komma, wenn es zwei Hauptsätze verbindet. Aber hier: 'Ich habe meine Tante besucht und die war froh' – das ist eine Hauptsatzreihe, also kein Komma vor 'und'. Also muss ich das korrigieren. Zeile 5: 'besucht ( ) und' – hier sollte kein Komma sein. Also correct[4] = 1 (kein Komma). Auch bei 'sodass' ist Komma nötig. Also insgesamt: 
-        // 1: Komma nach 'war' (Nebensatz), Komma vor 'die' (Relativsatz) -> beide Komma
-        // 2: Komma vor 'die' (Einschub), Komma nach 'verging' (Einschubende), Komma vor 'dass' (Nebensatz) -> alle Komma
-        // 3: Komma vor 'der', Komma nach 'meinte' -> beide Komma
-        // 4: Komma vor 'sodass' -> Komma
-        // 5: vor 'und' kein Komma (Hauptsatzreihe), vor 'mich' (Infinitivgruppe mit 'darüber')? 'darüber' verweist auf die Infinitivgruppe, also Komma. Also: 'besucht ( ) und' = kein Komma; 'darüber ( ) mich' = Komma.
-        // 6: Komma vor 'die', Komma nach 'baute' -> beide Komma
-        // Also correct: [0,0, 0,0, 0,0, 0, 1,0, 0,0] – aber wir haben pro Zeile zwei Stellen. In rows haben wir pro Zeile zwei Stellen, also müssen wir für jede Stelle einen Wert in correct haben. Wir machen correct als Array, das für jede Stelle in der Reihenfolge der rows eine 0 oder 1 enthält. rows hat 6 Zeilen, jede mit zwei Stellen, also 12 Stellen. Wir geben die Werte in der Reihenfolge an.
-        // Daher:
+        sub: "5.2 Ausruf in wörtlicher Rede",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz:",
+        sentence: "„Kalt sehr kalt!“ antwortete der Indianer.",
+        correctPositions: [5],
+        acceptedAnswers: ["„Kalt, sehr kalt!“ antwortete der Indianer."],
+        model: "Nach einem Ausruf in der wörtlichen Rede steht ein Komma.",
+        rule: "<div class=rbox>Wörtliche Rede wird durch Komma vom Begleitsatz getrennt, wenn der Begleitsatz vorangestellt ist (Er sagte: „...“) oder nachgestellt („...“, sagte er). Anreden wie 'Frau Müller' werden durch Komma abgetrennt.</div>"
       },
-      // Wir ersetzen Aufgabe 6 durch eine mit expliziten Stellen:
       {
-        sub: "Gemischte Übung (mehrere Kommas)",
-        type: "cross",
-        q: "Entscheide für jede markierte Stelle, ob ein Komma gesetzt werden muss.",
-        rows: [
-          "Als die Führung zu Ende war (1) kauften sich einige von uns noch Andenken (2) die allerdings ziemlich kitschig waren.",
-          "Am Ende der Woche (3) die wie im Fluge verging (4) bedauerten alle (5) dass wir wieder nach Hause mussten.",
-          "Der alte Siedler (6) der die Naturverbundenheit der Indianer zu kennen meinte (7) hackte eifrig weiter.",
-          "Jetzt wurde es dem Siedler angst und bange (8) sodass er wie wild draufloshackte.",
-          "Ich habe meine Tante besucht (9) und die war froh darüber (10) mich am Abend nicht mehr zu sehen!",
-          "Die Flügel (11) die Daidalos baute (12) waren aus Federn und Wachs."
-        ],
-        cols: ["Komma", "kein Komma"],
-        correct: [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0], // Stelle 9 (vor 'und') = kein Komma, alle anderen Komma
-        model: "1,2: Komma nach Nebensatz und vor Relativsatz; 3,4: Kommas um den Einschub; 5: Komma vor dass-Satz; 6,7: Kommas um Relativsatz; 8: Komma vor sodass; 9: kein Komma vor 'und' (Hauptsatzreihe); 10: Komma vor Infinitivgruppe (verweist auf 'darüber'); 11,12: Kommas um Relativsatz.",
+        sub: "5.3 Begleitsatz vor der Rede",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz:",
+        sentence: "Der Siedler fragte „Wird der Winter wirklich so kalt?“",
+        correctPositions: [18],
+        acceptedAnswers: ["Der Siedler fragte, „Wird der Winter wirklich so kalt?“"],
+        model: "Vor der wörtlichen Rede steht ein Komma.",
+        rule: "<div class=rbox>Wörtliche Rede wird durch Komma vom Begleitsatz getrennt, wenn der Begleitsatz vorangestellt ist (Er sagte: „...“) oder nachgestellt („...“, sagte er). Anreden wie 'Frau Müller' werden durch Komma abgetrennt.</div>"
+      },
+      {
+        sub: "5.4 Begleitsatz nach der Rede",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz:",
+        sentence: "„Und woher weißt du das?“ wollte der Siedler wissen.",
+        correctPositions: [25],
+        acceptedAnswers: ["„Und woher weißt du das?“, wollte der Siedler wissen."],
+        model: "Nach der wörtlichen Rede steht vor dem Begleitsatz ein Komma.",
+        rule: "<div class=rbox>Wörtliche Rede wird durch Komma vom Begleitsatz getrennt, wenn der Begleitsatz vorangestellt ist (Er sagte: „...“) oder nachgestellt („...“, sagte er). Anreden wie 'Frau Müller' werden durch Komma abgetrennt.</div>"
+      },
+      {
+        sub: "5.5 Begleitsatz nach der Rede",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz:",
+        sentence: "„Das ist eine uralte Weisheit“ rief er ihm zu.",
+        correctPositions: [30],
+        acceptedAnswers: ["„Das ist eine uralte Weisheit“, rief er ihm zu."],
+        model: "Nach der wörtlichen Rede steht vor dem Begleitsatz ein Komma.",
+        rule: "<div class=rbox>Wörtliche Rede wird durch Komma vom Begleitsatz getrennt, wenn der Begleitsatz vorangestellt ist (Er sagte: „...“) oder nachgestellt („...“, sagte er). Anreden wie 'Frau Müller' werden durch Komma abgetrennt.</div>"
+      },
+      {
+        sub: "5.6 Anrede",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz:",
+        sentence: "Guten Tag Frau Müller!",
+        correctPositions: [9],
+        acceptedAnswers: ["Guten Tag, Frau Müller!"],
+        model: "Bei einer Anrede wird nach der Anredeformel ein Komma gesetzt.",
+        rule: "<div class=rbox>Wörtliche Rede wird durch Komma vom Begleitsatz getrennt, wenn der Begleitsatz vorangestellt ist (Er sagte: „...“) oder nachgestellt („...“, sagte er). Anreden wie 'Frau Müller' werden durch Komma abgetrennt.</div>"
+      },
+
+      // ========== Aufgabe 6: Gemischte Übung ==========
+      {
+        sub: "6.1 Nebensatz und Relativsatz",
+        type: "komma",
+        q: "Setzen Sie die fehlenden Kommas im folgenden Satz:",
+        sentence: "Als die Führung zu Ende war kauften sich einige von uns noch Andenken die allerdings ziemlich kitschig waren.",
+        correctPositions: [27, 69],
+        acceptedAnswers: ["Als die Führung zu Ende war, kauften sich einige von uns noch Andenken, die allerdings ziemlich kitschig waren."],
+        model: "Komma nach dem Nebensatz und vor dem Relativsatz.",
+        rule: "<div class=rbox>Achte auf Nebensätze (als, die, dass, sodass), die immer ein Komma verlangen. Einschübe und Relativsätze werden in Kommas eingeschlossen. Vor 'und' in Hauptsatzreihen steht kein Komma. Infinitivgruppen werden abgetrennt, wenn ein Hinweiswort (darüber) im Hauptsatz steht.</div>"
+      },
+      {
+        sub: "6.2 Relativsatz und dass-Satz",
+        type: "komma",
+        q: "Setzen Sie die fehlenden Kommas im folgenden Satz:",
+        sentence: "Am Ende der Woche die wie im Fluge verging bedauerten alle dass wir wieder nach Hause mussten.",
+        correctPositions: [17, 42, 58],
+        acceptedAnswers: ["Am Ende der Woche, die wie im Fluge verging, bedauerten alle, dass wir wieder nach Hause mussten."],
+        model: "Kommas um den Relativsatz und vor dem 'dass'-Nebensatz.",
+        rule: "<div class=rbox>Achte auf Nebensätze (als, die, dass, sodass), die immer ein Komma verlangen. Einschübe und Relativsätze werden in Kommas eingeschlossen. Vor 'und' in Hauptsatzreihen steht kein Komma. Infinitivgruppen werden abgetrennt, wenn ein Hinweiswort (darüber) im Hauptsatz steht.</div>"
+      },
+      {
+        sub: "6.3 Relativsatz",
+        type: "komma",
+        q: "Setzen Sie die fehlenden Kommas im folgenden Satz:",
+        sentence: "Der alte Siedler der die Naturverbundenheit der Indianer zu kennen meinte hackte eifrig weiter.",
+        correctPositions: [16, 73],
+        acceptedAnswers: ["Der alte Siedler, der die Naturverbundenheit der Indianer zu kennen meinte, hackte eifrig weiter."],
+        model: "Der Relativsatz wird in Kommas eingeschlossen.",
+        rule: "<div class=rbox>Achte auf Nebensätze (als, die, dass, sodass), die immer ein Komma verlangen. Einschübe und Relativsätze werden in Kommas eingeschlossen. Vor 'und' in Hauptsatzreihen steht kein Komma. Infinitivgruppen werden abgetrennt, wenn ein Hinweiswort (darüber) im Hauptsatz steht.</div>"
+      },
+      {
+        sub: "6.4 Konsekutivsatz mit 'sodass'",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz:",
+        sentence: "Jetzt wurde es dem Siedler angst und bange sodass er wie wild draufloshackte.",
+        correctPositions: [43],
+        acceptedAnswers: ["Jetzt wurde es dem Siedler angst und bange, sodass er wie wild draufloshackte."],
+        model: "Vor der Konjunktion 'sodass' (die einen Nebensatz einleitet) steht ein Komma.",
+        rule: "<div class=rbox>Achte auf Nebensätze (als, die, dass, sodass), die immer ein Komma verlangen. Einschübe und Relativsätze werden in Kommas eingeschlossen. Vor 'und' in Hauptsatzreihen steht kein Komma. Infinitivgruppen werden abgetrennt, wenn ein Hinweiswort (darüber) im Hauptsatz steht.</div>"
+      },
+      {
+        sub: "6.5 Hauptsatzreihe und Infinitiv",
+        type: "komma",
+        q: "Setzen Sie das fehlende Komma im folgenden Satz (an einer Stelle):",
+        sentence: "Ich habe meine Tante besucht und die war froh darüber mich am Abend nicht mehr zu sehen!",
+        correctPositions: [53],
+        acceptedAnswers: ["Ich habe meine Tante besucht und die war froh darüber, mich am Abend nicht mehr zu sehen!"],
+        model: "Vor 'und' in einer Hauptsatzreihe steht kein Komma; vor der Infinitivgruppe mit Hinweiswort 'darüber' steht ein Komma.",
+        rule: "<div class=rbox>Achte auf Nebensätze (als, die, dass, sodass), die immer ein Komma verlangen. Einschübe und Relativsätze werden in Kommas eingeschlossen. Vor 'und' in Hauptsatzreihen steht kein Komma. Infinitivgruppen werden abgetrennt, wenn ein Hinweiswort (darüber) im Hauptsatz steht.</div>"
+      },
+      {
+        sub: "6.6 Relativsatz",
+        type: "komma",
+        q: "Setzen Sie die fehlenden Kommas im folgenden Satz:",
+        sentence: "Die Flügel die Daidalos baute waren aus Federn und Wachs.",
+        correctPositions: [10, 29],
+        acceptedAnswers: ["Die Flügel, die Daidalos baute, waren aus Federn und Wachs."],
+        model: "Der Relativsatz wird in Kommas eingeschlossen.",
         rule: "<div class=rbox>Achte auf Nebensätze (als, die, dass, sodass), die immer ein Komma verlangen. Einschübe und Relativsätze werden in Kommas eingeschlossen. Vor 'und' in Hauptsatzreihen steht kein Komma. Infinitivgruppen werden abgetrennt, wenn ein Hinweiswort (darüber) im Hauptsatz steht.</div>"
       }
     ]
   }
 ];
+
+// Alias für Integration in die bestehende App (falls benötigt)
+var BBR_KOMMA_THEMES = BBR_KOMMA_INTERAKTIV;
