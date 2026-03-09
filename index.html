@@ -954,7 +954,7 @@ function renderZehnPanel() {
             '</div>';
   });
   if(html === '') {
-    html = '<div class="coming-soon"><div class="coming-soon-icon">📋</div><h3>Keine Tabellen vorhanden</h3><p>Die msa-10Pkt.js Datei wird benötigt.</p></div>';
+    html = '<div class="coming-soon"><div class="coming-soon-icon">📋</div><h3>Keine Tabellen vorhanden</h3><p>Die msa-ueberarbeitung.js Datei wird benötigt.</p></div>';
   }
   grid.innerHTML = html;
 }
@@ -1090,7 +1090,7 @@ function scCol(p) {
 function openStatPage(themeId, area) {
   currentArea = area || currentArea;
   var allThemes = (currentArea==='msa') 
-    ? (window.MSA_THEMES||[]).concat(MSA_EXTRA_THEMES||EXTRA_THEMES||[]).concat(typeof MSA_UEBERARBEITUNG_THEMES!=='undefined'?MSA_UEBERARBEITUNG_THEMES:[]) 
+    ? (window.MSA_THEMES||[]).concat(typeof MSA_EXTRA_THEMES!=='undefined'?MSA_EXTRA_THEMES:(typeof EXTRA_THEMES!=='undefined'?EXTRA_THEMES:[])).concat(typeof MSA_UEBERARBEITUNG_THEMES!=='undefined'?MSA_UEBERARBEITUNG_THEMES:[]) 
     : (window.BBR_THEMES||[]).concat(typeof BBR_EXTRA_THEMES!=="undefined"?BBR_EXTRA_THEMES:[]).concat(typeof BBR_RECHTSCHREIBUNG_THEMES!=="undefined"?BBR_RECHTSCHREIBUNG_THEMES:[]).concat(typeof BBR_WIEDER_THEMES!=="undefined"?BBR_WIEDER_THEMES:[]);
   var theme = allThemes.filter(function(t){ return t.id===themeId; })[0];
   if(!theme) return;
@@ -1173,7 +1173,7 @@ function startFromStat() {
 // ================================ QUIZ-START ================================
 function startTheme(id) {
   var allThemes = (currentArea==='msa') 
-    ? (window.MSA_THEMES||[]).concat(MSA_EXTRA_THEMES||EXTRA_THEMES||[]).concat(typeof MSA_UEBERARBEITUNG_THEMES!=='undefined'?MSA_UEBERARBEITUNG_THEMES:[]) 
+    ? (window.MSA_THEMES||[]).concat(typeof MSA_EXTRA_THEMES!=='undefined'?MSA_EXTRA_THEMES:(typeof EXTRA_THEMES!=='undefined'?EXTRA_THEMES:[])).concat(typeof MSA_UEBERARBEITUNG_THEMES!=='undefined'?MSA_UEBERARBEITUNG_THEMES:[]) 
     : (window.BBR_THEMES||[]).concat(typeof BBR_EXTRA_THEMES!=="undefined"?BBR_EXTRA_THEMES:[]).concat(typeof BBR_RECHTSCHREIBUNG_THEMES!=="undefined"?BBR_RECHTSCHREIBUNG_THEMES:[]).concat(typeof BBR_WIEDER_THEMES!=="undefined"?BBR_WIEDER_THEMES:[]);
   var theme = allThemes.filter(function(t){ return t.id===id; })[0];
   if(!theme) return;
@@ -1818,7 +1818,7 @@ function continueQuiz() {
   S.answered = false;
   S.savedQs = null;
   var allThemes = (currentArea==='msa') 
-    ? MSA_THEMES.concat(MSA_EXTRA_THEMES||EXTRA_THEMES||[]).concat(typeof MSA_UEBERARBEITUNG_THEMES!=='undefined'?MSA_UEBERARBEITUNG_THEMES:[]) 
+    ? (typeof MSA_THEMES!=='undefined'?MSA_THEMES:[]).concat(typeof MSA_EXTRA_THEMES!=='undefined'?MSA_EXTRA_THEMES:(typeof EXTRA_THEMES!=='undefined'?EXTRA_THEMES:[])).concat(typeof MSA_UEBERARBEITUNG_THEMES!=='undefined'?MSA_UEBERARBEITUNG_THEMES:[]) 
     : (typeof BBR_THEMES!=="undefined"?BBR_THEMES:[]).concat(typeof BBR_EXTRA_THEMES!=="undefined"?BBR_EXTRA_THEMES:[]).concat(typeof BBR_RECHTSCHREIBUNG_THEMES!=="undefined"?BBR_RECHTSCHREIBUNG_THEMES:[]).concat(typeof BBR_WIEDER_THEMES!=="undefined"?BBR_WIEDER_THEMES:[]);
   var theme = allThemes.filter(function(t){ return t.id===S.themeId; })[0];
   if(theme) document.getElementById("hdr-theme").textContent = theme.title;
@@ -1831,7 +1831,7 @@ function showResult(aborted) {
   var tot = S.answers.length;
   var pct = Math.round(okCount/tot*100);
   var allThemes = (currentArea==='msa') 
-    ? MSA_THEMES.concat(MSA_EXTRA_THEMES||EXTRA_THEMES||[]).concat(typeof MSA_UEBERARBEITUNG_THEMES!=='undefined'?MSA_UEBERARBEITUNG_THEMES:[]) 
+    ? (typeof MSA_THEMES!=='undefined'?MSA_THEMES:[]).concat(typeof MSA_EXTRA_THEMES!=='undefined'?MSA_EXTRA_THEMES:(typeof EXTRA_THEMES!=='undefined'?EXTRA_THEMES:[])).concat(typeof MSA_UEBERARBEITUNG_THEMES!=='undefined'?MSA_UEBERARBEITUNG_THEMES:[]) 
     : (typeof BBR_THEMES!=="undefined"?BBR_THEMES:[]).concat(typeof BBR_EXTRA_THEMES!=="undefined"?BBR_EXTRA_THEMES:[]).concat(typeof BBR_RECHTSCHREIBUNG_THEMES!=="undefined"?BBR_RECHTSCHREIBUNG_THEMES:[]).concat(typeof BBR_WIEDER_THEMES!=="undefined"?BBR_WIEDER_THEMES:[]);
   var theme = allThemes.filter(function(t){ return t.id===S.themeId; })[0];
   var totalQs = theme ? theme.qs.length : tot;
@@ -1947,7 +1947,8 @@ document.addEventListener("keydown", function(e){
 <script src="msa-aufgaben.js"></script>
 <script src="bbr-aufgaben.js"></script>
 <script src="msa-extra-aufgaben.js"></script>
-<script src="msa-10Pkt.js"></script>
+<!-- HIER WURDE ERSETZT: msa-10Pkt.js -> msa-ueberarbeitung.js -->
+<script src="msa-ueberarbeitung.js"></script>
 <!-- BBR Extra-Themen: jede Datei überschreibt BBR_EXTRA_THEMES – wir sichern nach jeder Datei -->
 <script src="bbr-extra-aufgaben.js"></script>
 <script>var _bbr0 = (typeof BBR_EXTRA_THEMES!=='undefined') ? BBR_EXTRA_THEMES.slice() : [];</script>
@@ -1986,7 +1987,8 @@ var UPDATE_SCRIPTS = [
   'msa-aufgaben.js',
   'bbr-aufgaben.js',
   'msa-extra-aufgaben.js',
-  'msa-10Pkt.js',
+  // HIER WURDE ERSETZT: msa-10Pkt.js -> msa-ueberarbeitung.js
+  'msa-ueberarbeitung.js',
   'bbr-extra-aufgaben.js',
   'bbr-rechtschreibung.js',
   'bbr-extra-wieder.js',
