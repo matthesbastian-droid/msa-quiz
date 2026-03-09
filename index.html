@@ -88,9 +88,9 @@ body{font-family:"DM Sans",sans-serif;background:var(--paper);color:var(--ink);m
 .legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin-bottom:16px;font-size:.74rem;font-weight:500;}
 .legend span{display:flex;align-items:center;gap:5px;}
 .dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;display:inline-block;}
-#theme-grid, #bbr-grid, #msa-extra-grid, #bbr-extra-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
-@media(min-width:600px){#theme-grid, #bbr-grid, #msa-extra-grid, #bbr-extra-grid{grid-template-columns:repeat(3,1fr);}}
-@media(min-width:900px){#theme-grid, #bbr-grid, #msa-extra-grid, #bbr-extra-grid{grid-template-columns:repeat(5,1fr);}}
+#theme-grid, #bbr-grid, #msa-extra-grid, #bbr-extra-grid, #msa-10pkt-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+@media(min-width:600px){#theme-grid, #bbr-grid, #msa-extra-grid, #bbr-extra-grid, #msa-10pkt-grid{grid-template-columns:repeat(3,1fr);}}
+@media(min-width:900px){#theme-grid, #bbr-grid, #msa-extra-grid, #bbr-extra-grid, #msa-10pkt-grid{grid-template-columns:repeat(5,1fr);}}
 .tc{cursor:pointer;padding:18px;border-left:4px solid var(--blue);transition:all .18s;}
 .tc:hover{transform:translateY(-2px);box-shadow:5px 5px 0 rgba(26,26,46,.12);}
 .tc-emoji{font-size:1.9rem;margin-bottom:8px;}
@@ -439,6 +439,11 @@ body{font-family:"DM Sans",sans-serif;background:var(--paper);color:var(--ink);m
         <span class="nav-tab-label">Weitere Übungsaufgaben</span>
         <span class="nav-tab-sub">Zusätzlich</span>
       </div>
+      <div class="nav-tab" id="msa-tab-10pkt" onclick="switchAreaTab('msa','10pkt')">
+        <span class="nav-tab-icon">🏆</span>
+        <span class="nav-tab-label">10-Punkte-Tabelle</span>
+        <span class="nav-tab-sub">Prüfungsübungen</span>
+      </div>
     </div>
     <div id="msa-panel-aufgaben">
       <div class="legend">
@@ -463,6 +468,38 @@ body{font-family:"DM Sans",sans-serif;background:var(--paper);color:var(--ink);m
         <span><span class="dot" style="background:#16a34a"></span>90%+</span>
       </div>
       <div id="msa-extra-grid"></div>
+    </div>
+    <div id="msa-panel-10pkt" style="display:none">
+      <div class="nav-tabs" style="margin-bottom:18px">
+        <div class="nav-tab active-tab" id="msa-10pkt-tab-1" onclick="switch10PktTab(1)">
+          <span class="nav-tab-icon">📋</span>
+          <span class="nav-tab-label">1. Tabelle</span>
+        </div>
+        <div class="nav-tab" id="msa-10pkt-tab-2" onclick="switch10PktTab(2)">
+          <span class="nav-tab-icon">📋</span>
+          <span class="nav-tab-label">2. Tabelle</span>
+        </div>
+        <div class="nav-tab" id="msa-10pkt-tab-3" onclick="switch10PktTab(3)">
+          <span class="nav-tab-icon">📋</span>
+          <span class="nav-tab-label">3. Tabelle</span>
+        </div>
+        <div class="nav-tab" id="msa-10pkt-tab-4" onclick="switch10PktTab(4)">
+          <span class="nav-tab-icon">📋</span>
+          <span class="nav-tab-label">4. Tabelle</span>
+        </div>
+        <div class="nav-tab" id="msa-10pkt-tab-5" onclick="switch10PktTab(5)">
+          <span class="nav-tab-icon">📋</span>
+          <span class="nav-tab-label">5. Tabelle</span>
+        </div>
+      </div>
+      <div class="legend">
+        <span><span class="dot" style="background:#d1d5db"></span>Nicht geübt</span>
+        <span><span class="dot" style="background:#ef4444"></span>&lt;60%</span>
+        <span><span class="dot" style="background:#f97316"></span>60–79%</span>
+        <span><span class="dot" style="background:#eab308"></span>80–89%</span>
+        <span><span class="dot" style="background:#16a34a"></span>90%+</span>
+      </div>
+      <div id="msa-10pkt-grid"></div>
     </div>
     <div style="margin-top:24px">
       <button onclick="goStart()" class="btn btn-ol">← Zurück</button>
@@ -870,7 +907,8 @@ function renderStart() {
 
 // ================================ BEREICH (MSA/BBR) ================================
 function switchAreaTab(area, tab) {
-  ['aufgaben','regeln','extra'].forEach(function(t) {
+  var allTabs = (area === 'msa') ? ['aufgaben','regeln','extra','10pkt'] : ['aufgaben','regeln','extra'];
+  allTabs.forEach(function(t) {
     var tabEl = document.getElementById(area+'-tab-'+t);
     var panelEl = document.getElementById(area+'-panel-'+t);
     if(tabEl) tabEl.classList.toggle('active-tab', t===tab);
@@ -883,6 +921,43 @@ function switchAreaTab(area, tab) {
   if(tab==='extra') {
     renderExtraPanel(area);
   }
+  if(tab==='10pkt') {
+    switch10PktTab(1);
+  }
+}
+
+var current10PktTab = 1;
+function switch10PktTab(nr) {
+  current10PktTab = nr;
+  for (var i = 1; i <= 5; i++) {
+    var el = document.getElementById('msa-10pkt-tab-'+i);
+    if (el) el.classList.toggle('active-tab', i === nr);
+  }
+  render10PktGrid(nr);
+}
+
+function render10PktGrid(nr) {
+  var themes = (typeof MSA_10PKT_THEMES !== 'undefined')
+    ? MSA_10PKT_THEMES.filter(function(t){ return t.tabelle === nr; })
+    : [];
+  var s = sc();
+  var html = '';
+  themes.forEach(function(t) {
+    var st = s[t.id];
+    var pct = st ? st.pct : undefined;
+    var lastDate = st ? fmtDate(st.ts) : '';
+    html += '<div class="card tc" style="border-left-color:'+t.color+'" onclick="openStatPage(\''+t.id+'\',\'msa\')">' +
+            '<div class="tc-emoji">'+t.emoji+'</div>' +
+            '<div class="tc-title">'+t.title+'</div>' +
+            '<div class="tc-meta">'+t.qs.length+' Aufgaben</div>' +
+            '<div class="tc-score"><span class="dot" style="background:'+scCol(pct)+'"></span><span>'+(pct!==undefined?pct+'%':'—')+'</span></div>' +
+            (lastDate?'<div class="tc-lastdate">📅 '+lastDate+'</div>':'') +
+            '</div>';
+  });
+  if (html === '') {
+    html = '<div class="coming-soon"><div class="coming-soon-icon">🏆</div><h3>Noch keine Aufgaben</h3><p>Füge Aufgaben in msa-10Pkt.js mit <code>tabelle: '+nr+'</code> hinzu.</p></div>';
+  }
+  document.getElementById('msa-10pkt-grid').innerHTML = html;
 }
 
 function renderArea(area) {
@@ -912,6 +987,8 @@ function renderExtraPanel(area) {
                   (typeof EXTRA_THEMES !== 'undefined') ? EXTRA_THEMES : [];
   } else {
     extraThemes = (typeof BBR_EXTRA_THEMES !== 'undefined') ? BBR_EXTRA_THEMES : [];
+    if (typeof BBR_RECHTSCHREIBUNG_THEMES !== 'undefined') extraThemes = extraThemes.concat(BBR_RECHTSCHREIBUNG_THEMES);
+    if (typeof BBR_WIEDER_THEMES !== 'undefined')          extraThemes = extraThemes.concat(BBR_WIEDER_THEMES);
   }
   var gridId = (area==='msa') ? 'msa-extra-grid' : 'bbr-extra-grid';
   var s = sc();
@@ -1035,7 +1112,7 @@ function scCol(p) {
 function openStatPage(themeId, area) {
   currentArea = area || currentArea;
   var allThemes = (currentArea==='msa') 
-    ? MSA_THEMES.concat((MSA_EXTRA_THEMES || EXTRA_THEMES || [])) 
+    ? MSA_THEMES.concat((MSA_EXTRA_THEMES || EXTRA_THEMES || [])).concat(MSA_10PKT_THEMES || []) 
     : BBR_THEMES.concat(BBR_EXTRA_THEMES || []).concat(BBR_RECHTSCHREIBUNG_THEMES || []).concat(BBR_WIEDER_THEMES || []);
   var theme = allThemes.filter(function(t){ return t.id===themeId; })[0];
   if(!theme) return;
@@ -1118,7 +1195,7 @@ function startFromStat() {
 // ================================ QUIZ-START ================================
 function startTheme(id) {
   var allThemes = (currentArea==='msa') 
-    ? MSA_THEMES.concat((MSA_EXTRA_THEMES || EXTRA_THEMES || [])) 
+    ? MSA_THEMES.concat((MSA_EXTRA_THEMES || EXTRA_THEMES || [])).concat(MSA_10PKT_THEMES || []) 
     : BBR_THEMES.concat(BBR_EXTRA_THEMES || []).concat(BBR_RECHTSCHREIBUNG_THEMES || []).concat(BBR_WIEDER_THEMES || []);
   var theme = allThemes.filter(function(t){ return t.id===id; })[0];
   if(!theme) return;
@@ -1428,7 +1505,7 @@ function continueQuiz() {
   S.answered = false;
   S.savedQs = null;
   var allThemes = (currentArea==='msa') 
-    ? MSA_THEMES.concat((MSA_EXTRA_THEMES || EXTRA_THEMES || [])) 
+    ? MSA_THEMES.concat((MSA_EXTRA_THEMES || EXTRA_THEMES || [])).concat(MSA_10PKT_THEMES || []) 
     : BBR_THEMES.concat(BBR_EXTRA_THEMES || []).concat(BBR_RECHTSCHREIBUNG_THEMES || []).concat(BBR_WIEDER_THEMES || []);
   var theme = allThemes.filter(function(t){ return t.id===S.themeId; })[0];
   if(theme) document.getElementById("hdr-theme").textContent = theme.title;
@@ -1441,7 +1518,7 @@ function showResult(aborted) {
   var tot = S.answers.length;
   var pct = Math.round(okCount/tot*100);
   var allThemes = (currentArea==='msa') 
-    ? MSA_THEMES.concat((MSA_EXTRA_THEMES || EXTRA_THEMES || [])) 
+    ? MSA_THEMES.concat((MSA_EXTRA_THEMES || EXTRA_THEMES || [])).concat(MSA_10PKT_THEMES || []) 
     : BBR_THEMES.concat(BBR_EXTRA_THEMES || []).concat(BBR_RECHTSCHREIBUNG_THEMES || []).concat(BBR_WIEDER_THEMES || []);
   var theme = allThemes.filter(function(t){ return t.id===S.themeId; })[0];
   var totalQs = theme ? theme.qs.length : tot;
@@ -1561,6 +1638,8 @@ document.addEventListener("keydown", function(e){
 <!-- BBR-Sondermodule: separat bearbeitbare Themen -->
 <script src="bbr-rechtschreibung.js"></script>
 <script src="bbr-extra-wieder.js"></script>
+<!-- MSA-Sondermodule -->
+<script src="msa-10Pkt.js"></script>
 
 <!-- ═══ INITIALISIERUNG ════════════════════════════════════════════ -->
 <script>
@@ -1578,7 +1657,8 @@ var UPDATE_SCRIPTS = [
   'msa-extra-aufgaben.js',
   'bbr-extra-aufgaben.js',
   'bbr-rechtschreibung.js',
-  'bbr-extra-wieder.js'
+  'bbr-extra-wieder.js',
+  'msa-10Pkt.js'
 ];
 
 function showToast(msg, type, duration) {
