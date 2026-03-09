@@ -328,7 +328,7 @@ body{font-family:"DM Sans",sans-serif;background:var(--paper);color:var(--ink);m
 
 /* ─── UPDATE-BUTTON ─────────────────────────────────────────────── */
 .update-btn{
-  margin-left:auto;display:flex;align-items:center;gap:6px;
+  margin-left:auto;margin-top:8px;display:flex;align-items:center;gap:6px;
   background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.18);
   color:#fff;border-radius:100px;padding:5px 13px;font-size:.76rem;font-weight:600;
   cursor:pointer;font-family:"DM Sans",sans-serif;transition:all .2s;white-space:nowrap;
@@ -961,7 +961,9 @@ function render10PktGrid(nr) {
 }
 
 function renderArea(area) {
-  var themes = (area==='msa') ? MSA_THEMES : BBR_THEMES;
+  var themes = (area==='msa')
+    ? (typeof MSA_THEMES !== 'undefined' ? MSA_THEMES : [])
+    : (typeof BBR_THEMES !== 'undefined' ? BBR_THEMES : []);
   var gridId = (area==='msa') ? 'theme-grid' : 'bbr-grid';
   var s = sc();
   var html = '';
@@ -1111,9 +1113,17 @@ function scCol(p) {
 
 function openStatPage(themeId, area) {
   currentArea = area || currentArea;
-  var allThemes = (currentArea==='msa') 
-    ? MSA_THEMES.concat((MSA_EXTRA_THEMES || EXTRA_THEMES || [])).concat(MSA_10PKT_THEMES || []) 
-    : BBR_THEMES.concat(BBR_EXTRA_THEMES || []).concat(BBR_RECHTSCHREIBUNG_THEMES || []).concat(BBR_WIEDER_THEMES || []);
+  var _msaBase  = typeof MSA_THEMES              !== 'undefined' ? MSA_THEMES              : [];
+  var _msaExtra = typeof MSA_EXTRA_THEMES        !== 'undefined' ? MSA_EXTRA_THEMES        :
+                  typeof EXTRA_THEMES            !== 'undefined' ? EXTRA_THEMES            : [];
+  var _msa10pkt = typeof MSA_10PKT_THEMES        !== 'undefined' ? MSA_10PKT_THEMES        : [];
+  var _bbrBase  = typeof BBR_THEMES              !== 'undefined' ? BBR_THEMES              : [];
+  var _bbrExtra = typeof BBR_EXTRA_THEMES        !== 'undefined' ? BBR_EXTRA_THEMES        : [];
+  var _bbrRecht = typeof BBR_RECHTSCHREIBUNG_THEMES !== 'undefined' ? BBR_RECHTSCHREIBUNG_THEMES : [];
+  var _bbrWieder= typeof BBR_WIEDER_THEMES       !== 'undefined' ? BBR_WIEDER_THEMES       : [];
+  var allThemes = (currentArea==='msa')
+    ? _msaBase.concat(_msaExtra).concat(_msa10pkt)
+    : _bbrBase.concat(_bbrExtra).concat(_bbrRecht).concat(_bbrWieder);
   var theme = allThemes.filter(function(t){ return t.id===themeId; })[0];
   if(!theme) return;
   pendingThemeId = themeId;
@@ -1194,9 +1204,17 @@ function startFromStat() {
 
 // ================================ QUIZ-START ================================
 function startTheme(id) {
-  var allThemes = (currentArea==='msa') 
-    ? MSA_THEMES.concat((MSA_EXTRA_THEMES || EXTRA_THEMES || [])).concat(MSA_10PKT_THEMES || []) 
-    : BBR_THEMES.concat(BBR_EXTRA_THEMES || []).concat(BBR_RECHTSCHREIBUNG_THEMES || []).concat(BBR_WIEDER_THEMES || []);
+  var _msaBase  = typeof MSA_THEMES              !== 'undefined' ? MSA_THEMES              : [];
+  var _msaExtra = typeof MSA_EXTRA_THEMES        !== 'undefined' ? MSA_EXTRA_THEMES        :
+                  typeof EXTRA_THEMES            !== 'undefined' ? EXTRA_THEMES            : [];
+  var _msa10pkt = typeof MSA_10PKT_THEMES        !== 'undefined' ? MSA_10PKT_THEMES        : [];
+  var _bbrBase  = typeof BBR_THEMES              !== 'undefined' ? BBR_THEMES              : [];
+  var _bbrExtra = typeof BBR_EXTRA_THEMES        !== 'undefined' ? BBR_EXTRA_THEMES        : [];
+  var _bbrRecht = typeof BBR_RECHTSCHREIBUNG_THEMES !== 'undefined' ? BBR_RECHTSCHREIBUNG_THEMES : [];
+  var _bbrWieder= typeof BBR_WIEDER_THEMES       !== 'undefined' ? BBR_WIEDER_THEMES       : [];
+  var allThemes = (currentArea==='msa')
+    ? _msaBase.concat(_msaExtra).concat(_msa10pkt)
+    : _bbrBase.concat(_bbrExtra).concat(_bbrRecht).concat(_bbrWieder);
   var theme = allThemes.filter(function(t){ return t.id===id; })[0];
   if(!theme) return;
   S.themeId = id;
