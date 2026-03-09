@@ -2,6 +2,38 @@
   "name": "Schulheft",
   "short_name": "Schulheft",
   "description": "Vorbereitung auf den MSA und die BBR – Deutsch",
+  "start_url": "/deutsch/",
+  "scope": "/deutsch/",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#1a1a2e",
+  "orientation": "portrait-primary",
+  "lang": "de",
+  "categories": ["education"],
+  "icons": [
+    {
+      "src": "/deutsch/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/deutsch/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/deutsch/icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}{
+  "name": "Schulheft",
+  "short_name": "Schulheft",
+  "description": "Vorbereitung auf den MSA und die BBR – Deutsch",
   "start_url": "/schulheft/",
   "scope": "/schulheft/",
   "display": "standalone",
