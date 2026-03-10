@@ -89,7 +89,6 @@ function renderThemeGrid(containerId, themesArray, area) {
         card.appendChild(dateEl);
       }
 
-      // Event-Listener statt onclick-Attribut
       card.addEventListener('click', () => openStatPage(t.id, area || AppState.currentArea));
       card.addEventListener('keydown', e => {
         if (e.key === 'Enter' || e.key === ' ') openStatPage(t.id, area || AppState.currentArea);
@@ -360,11 +359,40 @@ function renderQ() {
   const abortBtn = el('btn-abort'); if (abortBtn) abortBtn.style.display = 'block';
 
   if      (cur.type === 'mc')                                    renderMC(cur);
+  else if (cur.type === 'mc3')                                   renderMC3(cur);
   else if (cur.type === 'match')                                  renderMatch(cur);
   else if (cur.type === 'cross')                                  renderCross(cur);
+  else if (cur.type === 'sort')                                   renderSort(cur);
+  else if (cur.type === 'choose')                                 renderChoose(cur);
+  else if (cur.type === 'fill')                                   renderFill(cur);
   else if (cur.type === 'komma')                                  renderKomma(cur);
   else if (NEW_TYPES.includes(cur.type) && cur.type !== 'komma') renderWortklick(cur);
   else                                                            renderText(cur);
+}
+
+/* ── HILFSFUNKTION: Wortkasten + Satzliste in ans-wrap einfügen ─ */
+function _appendWordbox(aw, q) {
+  if (!q.wordbox) return;
+  const wb = document.createElement('div');
+  wb.style.cssText = [
+    'background:#f0f5fb','border:1.5px solid var(--border)','border-radius:9px',
+    'padding:8px 14px','font-size:.83rem','margin-bottom:12px',
+    'text-align:center','white-space:pre-wrap','line-height:1.7',
+  ].join(';');
+  wb.textContent = q.wordbox;
+  aw.appendChild(wb);
+}
+
+function _appendSentenceList(aw, q) {
+  if (!q.sentences || q.sentences.length === 0) return;
+  const box = document.createElement('div');
+  box.style.cssText = [
+    'background:#fafbfc','border:1.5px solid var(--border)','border-radius:9px',
+    'padding:10px 14px','font-size:.9rem','margin-bottom:12px',
+    'line-height:2','white-space:pre-wrap',
+  ].join(';');
+  box.textContent = q.sentences.join('\n');
+  aw.appendChild(box);
 }
 
 /* ── MC ──────────────────────────────────────────────────────── */
@@ -517,13 +545,324 @@ function checkCross(q) {
   return allOk;
 }
 
+/* ── MC3 (3 Optionen je Zeile, eine korrekt) ─────────────────── */
+function renderMC3(q) {
+  const aw = el('ans-wrap'); if (!aw) return;
+
+  const qp = document.createElement('p');
+  qp.style.cssText = 'font-size:.93rem;margin-bottom:14px;white-space:pre-line;';
+  qp.textContent = q.q || '';
+  aw.appendChild(qp);
+
+  const tbl = document.createElement('table');
+  tbl.className = 'cross-table';
+  tbl.id = 'mc3-table';
+
+  (q.rows || []).forEach((row, ri) => {
+    const options = Array.isArray(row) ? row : [row];
+    const label   = q.labels ? q.labels[ri] : `${ri + 1})`;
+    // Optional: ein ganzer Kontext-Satz über der Zeile (z.B. für "das / dass")
+    const rowText = q.rowTexts ? q.rowTexts[ri] : null;
+
+    // Wenn rowTexts vorhanden: Kontext-Zeile einfügen
+    if (rowText) {
+      const ctxTr = document.createElement('tr');
+      const ctxTd = document.createElement('td');
+      ctxTd.colSpan = options.length + 1;
+      ctxTd.style.cssText = 'font-size:.88rem;padding:8px 4px 2px 4px;opacity:.75;font-style:italic;border-bottom:none;';
+      ctxTd.textContent = rowText;
+      ctxTr.appendChild(ctxTd);
+      tbl.appendChild(ctxTr);
+    }
+
+    const tr = document.createElement('tr');
+    tr.setAttribute('data-correct', q.correct[ri]);
+
+    const td0 = document.createElement('td');
+    td0.textContent = label;
+    td0.style.cssText = 'font-weight:600;white-space:nowrap;padding-right:6px;';
+    tr.appendChild(td0);
+
+    options.forEach((opt, ci) => {
+      const td  = document.createElement('td');
+      const btn = document.createElement('button');
+      btn.className = 'cross-btn';
+      btn.setAttribute('data-row', ri);
+      btn.setAttribute('data-col', ci);
+      btn.setAttribute('aria-label', `${label} Option ${ci + 1}: ${opt}`);
+      btn.style.cssText = 'width:100%;text-align:left;padding:4px 8px;font-size:.88rem;';
+      btn.textContent = opt;
+      btn.addEventListener('click', () => {
+        if (AppState.quiz.answered) return;
+        tr.querySelectorAll('.cross-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+      });
+      td.appendChild(btn);
+      tr.appendChild(td);
+    });
+
+    tbl.appendChild(tr);
+  });
+
+  aw.appendChild(tbl);
+  const ok = el('btn-ok'); if (ok) { ok.style.display = ''; ok.disabled = false; }
+  setHint('Richtige Schreibweise ankreuzen · Bestätigen');
+}
+
+function checkMC3(q) {
+  const rows = document.querySelectorAll('#mc3-table tr');
+  let allOk  = true;
+  rows.forEach((row, ri) => {
+    const cor  = parseInt(row.getAttribute('data-correct'));
+    const btns = row.querySelectorAll('.cross-btn');
+    let chosen = -1;
+    btns.forEach((b, bi) => { if (b.classList.contains('selected')) chosen = bi; b.disabled = true; });
+    const ok2 = chosen === cor;
+    if (!ok2) allOk = false;
+    if (chosen >= 0) btns[chosen].classList.add(ok2 ? 'ok' : 'err');
+    if (btns[cor]) btns[cor].classList.add('ok');
+  });
+  return allOk;
+}
+
+/* ── FILL (Lückentext – Freitexteingabe je Lücke) ────────────── */
+function renderFill(q) {
+  const aw = el('ans-wrap'); if (!aw) return;
+
+  const qp = document.createElement('p');
+  qp.style.cssText = 'font-size:.93rem;margin-bottom:12px;font-weight:600;';
+  qp.textContent = q.q || '';
+  aw.appendChild(qp);
+
+  _appendWordbox(aw, q);
+
+  const sentences = q.sentences || [];
+  sentences.forEach((sent, si) => {
+    const p = document.createElement('p');
+    p.style.cssText = 'font-size:.93rem;margin-bottom:6px;line-height:2;';
+    const parts = sent.split(/_{2,}/);
+    parts.forEach((part, pi) => {
+      p.appendChild(document.createTextNode(part));
+      if (pi < parts.length - 1) {
+        const inp = document.createElement('input');
+        inp.type = 'text';
+        inp.setAttribute('data-fill', `${si}-${pi}`);
+        inp.setAttribute('aria-label', `Lücke ${si + 1}-${pi + 1}`);
+        inp.autocomplete = 'off';
+        inp.autocorrect  = 'off';
+        inp.style.cssText = [
+          'display:inline-block','width:90px','margin:0 4px',
+          'padding:2px 6px','border:none','border-bottom:2px solid var(--blue)',
+          'background:transparent','font-family:inherit','font-size:.93rem',
+          'outline:none','text-align:center','color:var(--ink)',
+        ].join(';');
+        inp.addEventListener('keydown', e => {
+          if (e.key === 'Enter') { e.preventDefault(); doConfirm(); }
+        });
+        p.appendChild(inp);
+      }
+    });
+    aw.appendChild(p);
+  });
+
+  const ok = el('btn-ok'); if (ok) { ok.style.display = ''; ok.disabled = false; }
+  setHint('Lücken ausfüllen · Enter oder Bestätigen');
+
+  setTimeout(() => {
+    const first = aw.querySelector('input[data-fill]');
+    if (first) first.focus();
+  }, 60);
+}
+
+function checkFill(_q) { return true; }
+
+/* ── CHOOSE (richtige von zwei Varianten unterstreichen/wählen) ─ */
+/*
+ * renderChoose – Aufgabe „Unterstreichen / Durchstreichen"
+ *
+ * Datenformat (bbr-aufgaben.js):
+ *   rows    : Array von Satz-Strings (ganzer Satz ohne Varianten, z.B. "a)  In einem Vortrag …")
+ *   variants: Array von [VarianteA, VarianteB] je Zeile
+ *   correct : Array der korrekten Varianten-Strings
+ *
+ * Darstellung: Ganzer Satz als Text, darunter/daneben zwei klickbare Buttons.
+ */
+function renderChoose(q) {
+  const aw = el('ans-wrap'); if (!aw) return;
+
+  const qp = document.createElement('p');
+  qp.style.cssText = 'font-size:.93rem;margin-bottom:14px;font-weight:600;';
+  qp.textContent = q.q || '';
+  aw.appendChild(qp);
+
+  _appendWordbox(aw, q);
+
+  const container = document.createElement('div');
+  container.id = 'choose-table';
+
+  (q.rows || []).forEach((rowText, ri) => {
+    const block = document.createElement('div');
+    block.setAttribute('data-row', ri);
+    block.setAttribute('data-correct', q.correct[ri]);
+    block.style.cssText = [
+      'margin-bottom:14px',
+      'padding:10px 12px',
+      'border-radius:10px',
+      'border:1.5px solid var(--border)',
+      'background:#fafbfc',
+    ].join(';');
+
+    // Ganzer Satz als Lesetext
+    const sentenceEl = document.createElement('p');
+    sentenceEl.style.cssText = 'font-size:.9rem;margin:0 0 8px 0;line-height:1.5;color:var(--ink);';
+    sentenceEl.textContent = rowText;
+    block.appendChild(sentenceEl);
+
+    // Varianten-Buttons
+    const btnRow = document.createElement('div');
+    btnRow.style.cssText = 'display:flex;gap:8px;flex-wrap:wrap;';
+
+    const variants = (q.variants && q.variants[ri]) || [];
+    variants.forEach((opt, ci) => {
+      const btn = document.createElement('button');
+      btn.className = 'cross-btn';
+      btn.textContent = opt;
+      btn.setAttribute('data-row', ri);
+      btn.setAttribute('data-col', ci);
+      btn.setAttribute('data-value', opt);
+      btn.setAttribute('aria-label', `Zeile ${ri + 1}: ${opt}`);
+      btn.style.cssText = 'font-size:.88rem;padding:5px 14px;border-radius:8px;';
+      btn.addEventListener('click', () => {
+        if (AppState.quiz.answered) return;
+        btnRow.querySelectorAll('.cross-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+      });
+      btnRow.appendChild(btn);
+    });
+
+    block.appendChild(btnRow);
+    container.appendChild(block);
+  });
+
+  aw.appendChild(container);
+  const ok = el('btn-ok'); if (ok) { ok.style.display = ''; ok.disabled = false; }
+  setHint('Richtige Variante wählen · Bestätigen');
+}
+
+function checkChoose(q) {
+  const blocks = document.querySelectorAll('#choose-table [data-row]');
+  let allOk = true;
+  blocks.forEach((block, ri) => {
+    const correctText = (q.correct && q.correct[ri]) || '';
+    const btns = block.querySelectorAll('.cross-btn');
+    let chosen = null;
+    btns.forEach(b => {
+      b.disabled = true;
+      if (b.classList.contains('selected')) chosen = b;
+    });
+    const chosenVal = chosen ? chosen.getAttribute('data-value') : '';
+    const ok2 = chosenVal === correctText;
+    if (!ok2) allOk = false;
+    if (chosen) chosen.classList.add(ok2 ? 'ok' : 'err');
+    btns.forEach(b => { if (b.getAttribute('data-value') === correctText) b.classList.add('ok'); });
+
+    // Wenn falsch: korrekte Antwort als Hinweis anzeigen
+    if (!ok2) {
+      const hint = document.createElement('div');
+      hint.style.cssText = 'font-size:.8rem;color:#d94f4f;margin-top:6px;';
+      hint.textContent = '✓ Richtig: ' + correctText;
+      block.appendChild(hint);
+    }
+  });
+  return allOk;
+}
+
+/* ── SORT (Wörter in Tabellenspalten einordnen) ──────────────── */
+function renderSort(q) {
+  const aw = el('ans-wrap'); if (!aw) return;
+
+  const qp = document.createElement('p');
+  qp.style.cssText = 'font-size:.93rem;margin-bottom:10px;font-weight:600;';
+  qp.textContent = q.q || '';
+  aw.appendChild(qp);
+
+  _appendWordbox(aw, q);
+
+  const tbl = document.createElement('table');
+  tbl.className = 'cross-table';
+  tbl.id = 'sort-table';
+  tbl.style.cssText = 'width:100%;';
+
+  const headTr = document.createElement('tr');
+  const th0 = document.createElement('th'); th0.textContent = 'Wort'; headTr.appendChild(th0);
+  (q.cols || []).forEach(c => {
+    const th = document.createElement('th'); th.textContent = c; headTr.appendChild(th);
+  });
+  tbl.appendChild(headTr);
+
+  (q.rows || []).forEach((word, ri) => {
+    const tr = document.createElement('tr');
+    tr.setAttribute('data-correct', q.correct[ri]);
+    const td0 = document.createElement('td'); td0.textContent = word; tr.appendChild(td0);
+    (q.cols || []).forEach((col, ci) => {
+      const td  = document.createElement('td'); td.style.textAlign = 'center';
+      const btn = document.createElement('button');
+      btn.className = 'cross-btn';
+      btn.setAttribute('data-row', ri);
+      btn.setAttribute('data-col', ci);
+      btn.setAttribute('aria-label', `${word} → ${col}`);
+      btn.textContent = '☐';
+      btn.style.cssText = 'font-size:1.1rem;padding:2px 8px;';
+      btn.addEventListener('click', () => {
+        if (AppState.quiz.answered) return;
+        tr.querySelectorAll('.cross-btn').forEach(b => { b.classList.remove('selected'); b.textContent = '☐'; });
+        btn.classList.add('selected');
+        btn.textContent = '☑';
+      });
+      td.appendChild(btn); tr.appendChild(td);
+    });
+    tbl.appendChild(tr);
+  });
+
+  aw.appendChild(tbl);
+  const ok = el('btn-ok'); if (ok) { ok.style.display = ''; ok.disabled = false; }
+  setHint('Wörter in die richtige Spalte einordnen · Bestätigen');
+}
+
+function checkSort(q) {
+  const rows = document.querySelectorAll('#sort-table tr:not(:first-child)');
+  let allOk  = true;
+  rows.forEach((row, ri) => {
+    const cor  = parseInt(row.getAttribute('data-correct'));
+    const btns = row.querySelectorAll('.cross-btn');
+    let chosen = -1;
+    btns.forEach((b, bi) => {
+      b.disabled = true;
+      if (b.classList.contains('selected')) chosen = bi;
+    });
+    const ok2 = chosen === cor;
+    if (!ok2) allOk = false;
+    if (chosen >= 0) { btns[chosen].classList.add(ok2 ? 'ok' : 'err'); btns[chosen].textContent = ok2 ? '✓' : '✗'; }
+    if (btns[cor])   { btns[cor].classList.add('ok'); btns[cor].textContent = '✓'; }
+    row.classList.add(ok2 ? 'row-ok' : 'row-err');
+  });
+  return allOk;
+}
+
 /* ── TEXT ────────────────────────────────────────────────────── */
 function renderText(q) {
-  const isLong = q.type === 'self' || (q.q.match(/\n/g) || []).length > 2;
-  const inp    = document.createElement('textarea');
+  const aw = el('ans-wrap'); if (!aw) return;
+
+  // Wortkasten und Satzliste anzeigen – z.B. bei Homonyme, Antonyme, Satzgefüge
+  _appendWordbox(aw, q);
+  _appendSentenceList(aw, q);
+
+  const isLong = q.type === 'self' || (q.q.match(/\n/g) || []).length > 2
+    || (q.sentences && q.sentences.length > 3);
+  const inp = document.createElement('textarea');
   inp.className = 'ans-input';
   inp.id        = 'main-inp';
-  inp.rows      = isLong ? 4 : 2;
+  inp.rows      = isLong ? 5 : 2;
   inp.placeholder = q.type === 'self' ? 'Deine Antwort / Erklärung …' : 'Antwort eingeben …';
   inp.setAttribute('data-qtype', q.type);
   inp.setAttribute('aria-label', 'Antwort eingeben');
@@ -539,8 +878,8 @@ function renderText(q) {
     }
   });
 
-  const aw = el('ans-wrap'); if (aw) aw.appendChild(inp);
-  const ok = el('btn-ok');   if (ok) { ok.style.display = ''; ok.disabled = true; }
+  aw.appendChild(inp);
+  const ok = el('btn-ok'); if (ok) { ok.style.display = ''; ok.disabled = true; }
   setHint(q.type === 'self'
     ? 'Shift+Enter = bestätigen  ·  Enter = neue Zeile  ·  → = weiter'
     : 'Enter = bestätigen  ·  → = weiter');
@@ -706,15 +1045,30 @@ function checkWortklick(q) {
 }
 
 /* ── KOMMA ───────────────────────────────────────────────────── */
+/*
+ * Komma-Aufgabe: Der Nutzer tippt Kommas in einen editierbaren Satz.
+ *
+ * Bewertung: Wir vergleichen den eingegebenen Text ausschließlich mit
+ * `acceptedAnswers` (Array von korrekten Lösungsstrings).  Die alte
+ * positionsbasierte Logik mit `correctPositions` entfällt vollständig –
+ * sie war fehleranfällig, weil contentEditable White-Space und
+ * Sonderzeichen anders behandelt als reiner Zeichenindex-Code.
+ *
+ * Normalisierung vor dem Vergleich:
+ *   - mehrfache Leerzeichen → einzelnes Leerzeichen
+ *   - Leerzeichen um Kommas → kein Leerzeichen vor, eines nach Komma
+ *   - führende/abschließende Leerzeichen entfernen
+ */
 function renderKomma(q) {
   const aw = el('ans-wrap'); if (!aw) return;
   aw.innerHTML = '';
 
   const hint = document.createElement('p');
   hint.style.cssText = 'font-size:.83rem;opacity:.55;margin-bottom:10px;';
-  hint.textContent   = 'Tippen Sie auf die Stelle im Satz und setzen Sie das fehlende Komma.';
+  hint.textContent   = 'Klicken Sie auf die Stelle im Satz und setzen Sie das fehlende Komma.';
   aw.appendChild(hint);
 
+  // Satz anzeigen
   const box = document.createElement('div');
   box.id              = 'komma-box';
   box.contentEditable = 'true';
@@ -743,29 +1097,46 @@ function renderKomma(q) {
   setTimeout(() => box.focus(), 80);
 }
 
+/**
+ * Normalisiert einen Satz für den Komma-Vergleich:
+ *  - trimmt
+ *  - kollabiert mehrfache Leerzeichen
+ *  - entfernt Leerzeichen VOR einem Komma
+ *  - stellt sicher, dass nach jedem Komma genau ein Leerzeichen steht
+ */
+function _normKomma(s) {
+  return s
+    .trim()
+    .replace(/\s+/g, ' ')           // mehrfache Spaces → einen
+    .replace(/\s*,\s*/g, ', ')      // Spaces um Komma normieren: ", "
+    .replace(/,\s+/g, ', ')         // doppelte Spaces nach Komma
+    .trim();
+}
+
 function checkKomma(q) {
   const box = el('komma-box'); if (!box) return false;
-  const userText = (box.innerText || box.textContent || '').trim();
+  const userRaw  = (box.innerText || box.textContent || '').trim();
   box.contentEditable = 'false';
 
-  const normComma = s => s.replace(/\s*,\s*/g, ',').replace(/\s+/g, ' ').trim();
-  const sentence  = q.sentence || '';
-  const positions = q.correctPositions || [];
-  let expected    = sentence;
-  let offset      = 0;
-  positions.forEach(pos => {
-    expected = expected.slice(0, pos + offset) + ',' + expected.slice(pos + offset);
-    offset++;
-  });
+  const userNorm = _normKomma(userRaw);
 
-  const ok = normComma(userText) === normComma(expected);
+  // acceptedAnswers ist ein Array von Strings (mind. eine Lösung muss passen)
+  const answers  = q.acceptedAnswers || [];
+  const ok       = answers.some(a => _normKomma(a) === userNorm);
+
   box.style.background  = ok ? '#edfaf4' : '#fdf0f0';
   box.style.borderColor = ok ? 'var(--green)' : 'var(--red)';
 
   if (!ok) {
+    // Lösung anzeigen
+    const solutionText = q.model || answers[0] || '';
     const hint = document.createElement('div');
-    hint.style.cssText = 'margin-top:10px;padding:10px 14px;border-radius:10px;background:#e8f4ff;border:1.5px solid var(--blue);font-size:.88rem;color:var(--ink);';
-    hint.innerHTML = `<strong style="color:var(--blue)">✓ Lösung:</strong> ${q.model || expected}`;
+    hint.style.cssText = [
+      'margin-top:10px','padding:10px 14px','border-radius:10px',
+      'background:#e8f4ff','border:1.5px solid var(--blue)',
+      'font-size:.88rem','color:var(--ink)',
+    ].join(';');
+    hint.innerHTML = `<strong style="color:var(--blue)">✓ Lösung:</strong> ${solutionText}`;
     box.insertAdjacentElement('afterend', hint);
   }
   return ok;
@@ -813,6 +1184,37 @@ function doConfirm() {
     hideActRow(); showNext(); return;
   }
 
+  if (cur.type === 'mc3') {
+    q.answered = true;
+    const ok2 = checkMC3(cur);
+    flash(ok2); showFB(ok2, cur);
+    q.answers.push({ ok: ok2, q: (cur.q || '').split('\n')[0] });
+    hideActRow(); showNext(); return;
+  }
+
+  if (cur.type === 'sort') {
+    q.answered = true;
+    const ok2 = checkSort(cur);
+    flash(ok2); showFB(ok2, cur);
+    q.answers.push({ ok: ok2, q: (cur.q || '').split('\n')[0] });
+    hideActRow(); showNext(); return;
+  }
+
+  if (cur.type === 'choose') {
+    q.answered = true;
+    const ok2 = checkChoose(cur);
+    flash(ok2); showFB(ok2, cur);
+    q.answers.push({ ok: ok2, q: (cur.q || '').split('\n')[0] });
+    hideActRow(); showNext(); return;
+  }
+
+  if (cur.type === 'fill') {
+    const aw2 = el('ans-wrap');
+    if (aw2) aw2.querySelectorAll('input[data-fill]').forEach(i => { i.disabled = true; });
+    showModel(cur);
+    return;
+  }
+
   const inp = el('main-inp');
   if (!inp || inp.value.trim() === '') return;
   q.answered  = true;
@@ -856,7 +1258,7 @@ function doSelf(ok) {
 function flash(ok) {
   const c = el('q-card'); if (!c) return;
   c.classList.remove('flash-g', 'flash-r');
-  void c.offsetWidth; // Reflow um Animation neu zu starten
+  void c.offsetWidth;
   c.classList.add(ok ? 'flash-g' : 'flash-r');
 }
 
@@ -920,7 +1322,6 @@ function showResult(aborted) {
   const isIncomplete = aborted && tot < totalQs;
 
   Storage.saveScore(q.themeId, okCount, tot);
-  // Kalender-Cache invalidieren damit die neue Übung sofort erscheint
   AppState.calendarCacheKey = null;
 
   const badgeWrap = el('incomplete-badge-wrap');

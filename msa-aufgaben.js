@@ -1,268 +1,488 @@
 // ================================================================
-// MSA-AUFGABEN.JS – Übungsaufgaben für den MSA
-// Überarbeitet gemäß der PDF "MSA Aufgaben richtig.pdf"
-// und den anschließenden Korrekturwünschen.
+// AUFGABEN_2022.JS – Übungsaufgaben MSA 2022
+// Thematisch sortiert nach den Varianten der Mittleren-Schulabschluss-
+// Prüfung 2022 (Sprachwissen & Rechtschreibung)
 // ================================================================
 
 var MSA_THEMES = [
-{id:"msa_wortarten",title:"Wortarten & Pronomen",emoji:"🔤",color:"#3d6b8f",qs:[
-{sub:"Wortart bestimmen",type:"mc",q:'Bestimmen Sie die Wortart des unterstrichenen Wortes:\n\n„Für die Generation, <u>die</u> jetzt heranwächst, wird das nicht mehr gelten.”',o:["Artikel","Demonstrativpronomen","Relativpronomen","Personalpronomen"],c:2,model:"Relativpronomen",rule:"<div class=rbox>Das Wort „die” leitet hier einen Relativsatz ein und bezieht sich auf das vorangegangene Nomen „Generation”. Relativpronomen ersetzen ein Nomen aus dem Hauptsatz und leiten einen Nebensatz ein. Man erfragt sie mit „welche/r/s?”. </div>"},
 
-{sub:"Bezugswort",type:"mc",q:'Notieren Sie das Bezugswort des unterstrichenen Wortes:\n\n„Da stand die Kiste, <u>die</u> die Fotos enthielt.”',o:["Kiste","Fotos","stand","die"],c:0,model:"Kiste",rule:"<div class=rbox>Das Relativpronomen „die” bezieht sich auf das Nomen „Kiste” und leitet den Relativsatz ein. Das Bezugswort steht immer vor dem Relativpronomen.</div>"},
+// ────────────────────────────────────────────────────────────────────
+// 1. STILMITTEL & BILDSPRACHE
+// ────────────────────────────────────────────────────────────────────
+{id:'msa_stilmittel_2022', title:'Stilmittel & Bildsprache', emoji:'🎭', color:'#8f3d3d', qs:[
 
-{sub:"Wortart bestimmen",type:"cross",q:'Bestimmen Sie in den folgenden Teilsätzen jeweils die Wortart des unterstrichenen Wortes:\n(a) „Ihre Abneigung war vermutlich <u>das Einzige</u>,”\n(b) „<u>das</u> sie gemeinsam hatten,”\n(c) „und <u>das</u> war ihr klar.”',rows:["(a) <u>das Einzige</u>","(b) <u>das</u>","(c) <u>das</u>"],cols:["Artikel","Demonstrativpronomen","Relativpronomen"],correct:[0,2,1],model:"(a) Artikel · (b) Relativpronomen · (c) Demonstrativpronomen",rule:"<div class=rbox>„das” als Artikel begleitet ein Nomen.<br>„das” als Relativpronomen leitet einen Relativsatz ein und kann durch „welches” ersetzt werden.<br>„das” als Demonstrativpronomen weist auf etwas hin und kann durch „dieses” ersetzt werden.</div>"},
-{sub:"Pronomenart",type:"cross",q:'Bestimmen Sie die Pronomenart:\n(a) „<u>Deine</u> Zebras sind weg.”\n(b) „<u>Dieser</u> widerliche alte Hector Blaney.”',rows:["(a) <u>Deine</u>","(b) <u>Dieser</u>"],cols:["Relativpronomen","Possessivpronomen","Personalpronomen","Demonstrativpronomen"],correct:[1,3],model:"(a) Possessivpronomen · (b) Demonstrativpronomen",rule:"<div class=rbox>Possessivpronomen drücken Besitz oder Zugehörigkeit aus (mein, dein, sein...). Demonstrativpronomen heben etwas hervor oder weisen darauf hin (dieser, jener, derjenige...).</div>"},
-{sub:"das / dass",type:"cross",q:'Bestimmen Sie die Wortart:\n(a) „All das krude Zeug, <u>das</u> er dann übertragen muss.”\n(b) „So gesehen ist es dann doch wieder gar nicht so schlecht, <u>dass</u> es das Internet gibt.”',rows:["(a) <u>das</u>","(b) <u>dass</u>"],cols:["Relativpronomen","Konjunktion","Artikel"],correct:[0,1],model:"(a) Relativpronomen · (b) unterordnende Konjunktion",rule:"<div class=rbox>„das” als Relativpronomen bezieht sich auf ein Nomen und kann durch „welches” ersetzt werden. „dass” als Konjunktion leitet einen Nebensatz ein und kann nicht durch ein anderes Wort ersetzt werden.</div>"},
-{sub:"Wortarten bestimmen",type:"self",q:'Bestimmen Sie die Wortarten des folgenden Satzes:\n\n„Ich weigere mich, Angst zu haben aus bloßer Fantasie, ...”',model:"Ich → Personalpronomen\nweigere → Verb\nmich → Reflexivpronomen\nAngst → Nomen\nzu → Partikel\nhaben → Verb\naus → Präposition\nbloßer → Adjektiv\nFantasie → Nomen",rule:"<div class=rbox>Wortarten bestimmt man nach Form und Funktion im Satz: Personalpronomen: ich, du, er... Reflexivpronomen: mich, dich, sich... Verb: Tätigkeitswort, Nomen: Namenwort, Partikel: nicht flektierbare Wortart (hier: zu), Präposition: Verhältniswort (aus, bei, mit...), Adjektiv: Eigenschaftswort (bloßer).</div>"},
+{sub:'Metapher erklären', type:'self',
+q:'Der folgende Satz enthält eine Metapher. Erklären Sie diese Metapher.\n\n\u201eDer Film fesselt die Zuschauer.\u201c',
+model:'Das Verb \u201efesseln\u201c wird in übertragener Bedeutung verwendet: Der Film zieht die Zuschauer so stark in seinen Bann, als würde er sie buchstäblich mit Fesseln binden.',
+rule:'<div class=rbox>Eine Metapher überträgt ein Wort aus seinem wörtlichen Bedeutungszusammenhang in einen bildlichen \u2013 ohne Vergleichswörter wie \u201ewie\u201c oder \u201eals\u201c.</div>'},
 
-{sub:"Bezugswort",type:"mc",q:'Auf welches Wort bezieht sich „die jüngere”?\n\n„Schon immer hat die ältere Generation <u>die jüngere</u> nicht verstanden.”',o:["Generation","jüngere","ältere","Menschen"],c:0,model:"Generation",rule:"<div class=rbox>„die jüngere” ist eine Kurzform für „die jüngere Generation”. Es bezieht sich auf das vorher genannte Nomen „Generation”. Solche Ellipsen sind sprachökonomisch.</div>"},
+{sub:'Bedeutung erklären', type:'self',
+q:'Erklären Sie die Bedeutung des folgenden Satzes.\n\n\u201eDas T-Shirt riecht streng.\u201c',
+model:'Das T-Shirt hat einen unangenehm intensiven, schlechten Geruch \u2013 es riecht nach Schweiß.',
+rule:'<div class=rbox>\u201eStreng riechen\u201c ist eine idiomatische Wendung für einen intensiven, üblen Körpergeruch.</div>'},
 
-{sub:"Demonstrativpronomen",type:"self",q:'Notieren Sie, worauf die unterstrichenen Demonstrativpronomen hinweisen:\n\n„Meine Beine bewegten sich. Sehr gut, wie <u>die</u> <u>das</u> hinkriegten.”\n(a) die:\n(b) das:',model:"(a) die → die Beine\n(b) das → die Tatsache, dass die Beine sich bewegten",rule:"<div class=rbox>Demonstrativpronomen weisen auf zuvor Genanntes hin.</div>"},
-{sub:"Partizip – Bezugswort",type:"self",q:'Notieren Sie, welches Wort das unterstrichene Partizip jeweils näher beschreibt:\n(a) „Kotte hört <u>knackende</u> Geräusche.”\n(b) „Hörst du denn nichts, fragt er Karla <u>flüsternd</u>.”',model:"(a) knackende → Geräusche\n(b) flüsternd → beschreibt das Fragen (adverbial)",rule:"<div class=rbox>Partizipien können als Adjektive (Attribut) ein Nomen beschreiben oder adverbial die Tätigkeit des Verbs näher bestimmen.</div>"},
-{sub:"Bezugswort",type:"self",q:'Notieren Sie die Substantive, auf die sich die unterstrichenen Wörter jeweils beziehen:\n(a) „Arbeit, so <u>hart</u> sie auch sein mochte, …” → hart\n(b) „…Kunstfertigkeit verbunden, <u>die</u> Kinder nicht haben konnten.” → die',model:"(a) hart → Arbeit\n(b) die → Kunstfertigkeit",rule:"<div class=rbox>Adjektive und Relativpronomen beziehen sich auf ihr Bezugswort (Nomen).</div>"},
+{sub:'Redewendung + Stilmittel: Bedeutung', type:'self',
+q:'Erklären Sie die Bedeutung des folgenden Satzes.\n\n\u201eIch ließ den Satz in der Luft hängen.\u201c',
+model:'Ich sprach den Satz an, ließ ihn aber unvollendet oder unbeantwortet stehen \u2013 ich gab keine abschließende Reaktion.',
+rule:'<div class=rbox>\u201eIn der Luft hängen lassen\u201c bedeutet, etwas offen oder unbeantwortet zu lassen.</div>'},
+
+{sub:'Redewendung + Stilmittel: Stilmittel', type:'mc',
+q:'Kreuzen Sie das stilistische Mittel an, das in dem folgenden Satz verwendet wird.\n\n\u201eIch ließ den Satz in der Luft hängen.\u201c',
+o:['Vergleich','Metapher','Personifikation','Ellipse'],
+c:1,
+model:'Metapher',
+rule:'<div class=rbox>Metapher: bildlicher Ausdruck ohne Vergleichswort \u201ewie\u201c oder \u201eals\u201c. Der Satz hängt nicht wirklich in der Luft.</div>'},
+
+{sub:'Stilmittel zuordnen', type:'cross',
+q:'Ordnen Sie den folgenden Sätzen das jeweils entsprechende sprachliche Mittel zu.\n(1) Alliteration  (2) Personifikation  (3) Ellipse  (4) Metapher  (5) Vergleich',
+rows:['(a) Er beschäftigt sich mit den wirklich wichtigen Dingen.','(b) Ich mit Blockflöte an Weihnachten.','(c) Ich fühle mich wie ein Schirmständer.'],
+cols:['Alliteration','Personifikation','Ellipse','Metapher','Vergleich'],
+correct:[0,2,4],
+model:'(a) Alliteration · (b) Ellipse · (c) Vergleich',
+rule:'<div class=rbox>Alliteration: gleicher Anlaut aufeinanderfolgender Wörter (wirklich wichtigen). Ellipse: unvollständiger Satz (fehlendes Verb). Vergleich: mit \u201ewie\u201c oder \u201eals\u201c.</div>'},
+
+{sub:'Stilmittel zuordnen', type:'cross',
+q:'Ordnen Sie den folgenden Sätzen das jeweils entsprechende sprachliche Mittel zu.\n(1) Alliteration  (2) Metapher  (3) Vergleich',
+rows:['(a) Dann tauchte er in Paulas Duft ein.','(b) Tills Lieblingsspeise sind warme Wiener Würstchen.'],
+cols:['Alliteration','Metapher','Vergleich'],
+correct:[1,0],
+model:'(a) Metapher · (b) Alliteration',
+rule:'<div class=rbox>Metapher: \u201eeintauchen\u201c bildlich für \u201esich versenken in\u201c. Alliteration: warme Wiener Würstchen (gleicher Anlaut w).</div>'},
+
+{sub:'Stilmittel zuordnen', type:'cross',
+q:'Ordnen Sie den folgenden Beispielen die entsprechenden sprachlichen Mittel zu.\n(1) Ellipse  (2) Vergleich  (3) Metapher  (4) Alliteration',
+rows:['(a) Das Gemüse war weniger beliebt als das Gebäck.','(b) Er kredenzt Cracker, Kekse und Karotten.','(c) Und Kinderspielzeug.'],
+cols:['Ellipse','Vergleich','Metapher','Alliteration'],
+correct:[1,3,0],
+model:'(a) Vergleich · (b) Alliteration · (c) Ellipse',
+rule:'<div class=rbox>Vergleich mit \u201eals\u201c. Alliteration: Cracker, Kekse, Karotten (gleicher Anlaut k). Ellipse: kein Verb, unvollständiger Satz.</div>'},
+
+{sub:'Wertungswort & Erläuterung', type:'self',
+q:'Notieren Sie\n(a) das Wort, das im folgenden Satz eine Wertung zum Ausdruck bringt,\n(b) den Teil des Satzes, der eine nähere Erläuterung enthält.\n\n\u201eFür die Generation, die jetzt heranwächst, wird das leider nicht mehr gelten.\u201c',
+model:'(a) Wertungswort: leider\n(b) Erläuterung: die jetzt heranwächst',
+rule:'<div class=rbox>Wertungswörter (wie \u201eleider\u201c, \u201eglücklicherweise\u201c) drücken die Haltung des Sprechers aus. Relativsätze dienen oft als nähere Erläuterung zu einem Nomen.</div>'},
+
+{sub:'Einschränkung entfernen', type:'alt',
+q:'Formulieren Sie den folgenden Satz so um, dass er keine Einschränkung enthält.\n\n\u201eEigentlich habe ich die ganze Zeit positives Feedback bekommen.\u201c',
+a:['Ich habe die ganze Zeit positives Feedback bekommen.'],
+model:'Ich habe die ganze Zeit positives Feedback bekommen.',
+rule:'<div class=rbox>Einschränkungswörter wie \u201eeigentlich\u201c, \u201efast\u201c oder \u201emeistens\u201c schwächen eine Aussage ab. Durch Weglassen entsteht eine uneingeschränkte Aussage.</div>'},
+
 ]},
 
-{id:"msa_satzbau",title:"Satzbau & Komma",emoji:"📐",color:"#3d8f6b",qs:[
-{sub:"Kommaregel",type:"cross",q:'Ordnen Sie den folgenden Sätzen die entsprechende Begründung für die Kommasetzung zu.\n(1) Satzgefüge (2) Satzreihe (3) Entgegenstellung (4) Infinitivgruppe mit hinweisendem Wort',rows:[
-"(a) Nicht nur er liebte sie, sondern auch sie liebte ihn.",
-"(b) Er wusste, dass sie ihn liebte.",
-"(c) Sie dachte daran, ihn anzurufen."
-],cols:["Satzgefüge","Satzreihe","Entgegenstellung","Infinitivgruppe mit hinweisendem Wort"],correct:[2,0,3],model:"(a) Entgegenstellung · (b) Satzgefüge · (c) Infinitivgruppe mit hinweisendem Wort",rule:"<div class=rbox>Bei „nicht nur – sondern” steht ein Komma vor „sondern” (Entgegenstellung). In Satzgefügen trennt ein Komma Haupt- und Nebensatz. Infinitivgruppen werden durch Komma abgetrennt, wenn sie mit einem Korrelat (hinweisenden Wort) angekündigt werden.</div>"},
-{sub:"Kommaregel",type:"cross",q:'Ordnen Sie den Sätzen die entsprechende Begründung für die Kommasetzung zu.\n(1) Aufzählung (2) Satzgefüge (3) Satzreihe',rows:[
-"(a) Sie las ein Buch, er hörte Musik.",
-"(b) Weil es regnete, blieben wir zu Hause.",
-"(c) Er kaufte Äpfel, Birnen und Bananen."
-],cols:["Aufzählung","Satzgefüge","Satzreihe"],correct:[2,1,0],model:"(a) Satzreihe · (b) Satzgefüge · (c) Aufzählung",rule:"<div class=rbox>Bei Satzreihen trennt man Hauptsätze durch Komma (wenn sie nicht durch Konjunktionen verbunden sind). Vorangestellte Nebensätze werden durch Komma abgetrennt. Bei Aufzählungen gleichartiger Satzglieder setzt man Kommas.</div>"},
-{sub:"Kommaregel",type:"cross",q:'Ordnen Sie den folgenden Sätzen die entsprechende Begründung für die Kommasetzung zu.\n(1) Satzgefüge (2) Satzreihe (3) Infinitivgruppe mit Einleitewort',rows:[
-"(a) Sie spart, um ein Auto zu kaufen.",
-"(b) Das ist der Mann, der mir geholfen hat."
-],cols:["Satzgefüge/Relativsatz","Satzreihe","Infinitivgruppe mit um…zu"],correct:[2,0],model:"(a) Infinitivgruppe mit um…zu · (b) Satzgefüge (Relativsatz)",rule:"<div class=rbox>Infinitivgruppen mit „um zu”, „ohne zu”, „anstatt zu” werden durch Komma abgetrennt. Relativsätze (Nebensätze) werden durch Kommas vom Hauptsatz getrennt.</div>"},
-{sub:"Satzgefüge bilden",type:"alt",q:'Formulieren Sie die folgenden Sätze als Satzgefüge.\nDer Schrank passt nicht in die Ecke. Ein Bücherregal muss abgebaut werden.',a:["Da der Schrank nicht in die Ecke passt, muss ein Bücherregal abgebaut werden.","Weil der Schrank nicht in die Ecke passt, muss ein Bücherregal abgebaut werden."],model:"Da der Schrank nicht in die Ecke passt, muss ein Bücherregal abgebaut werden.",rule:"<div class=rbox>Ein Satzgefüge besteht aus Hauptsatz und Nebensatz. Hier bietet sich ein Kausalsatz (Begründung) mit „da” oder „weil” an.</div>"},
-{sub:"Gleichzeitigkeit",type:"alt",q:'Formen Sie den folgenden Satz so um, dass er Gleichzeitigkeit zum Ausdruck bringt.\nNachdem ich aufgelegt hatte, schluckte ich aufsteigende Tränen hinunter.',a:["Während ich auflegte, schluckte ich aufsteigende Tränen hinunter.","Als ich auflegte, schluckte ich aufsteigende Tränen hinunter."],model:"Während ich auflegte, schluckte ich aufsteigende Tränen hinunter.",rule:"<div class=rbox>„Nachdem” drückt Vorzeitigkeit aus. Für Gleichzeitigkeit verwendet man „während” oder bei einmaligen Ereignissen in der Vergangenheit „als”.</div>"},
-{sub:"Hauptsätze",type:"self",q:'Notieren Sie die Hauptsätze des folgenden Satzgefüges.\nUnd die Erde zitterte, und die Betten, in denen die Männer lagen, zitterten auch.',model:"• Und die Erde zitterte\n• und die Betten zitterten auch",rule:"<div class=rbox>Hauptsätze sind selbstständige Sätze, die auch allein stehen können. Der Relativsatz ist ein Nebensatz.</div>"},
-{sub:"Satzbauplan",type:"mc",q:'Kreuzen Sie an, welcher der unten aufgeführten Satzbaupläne auf den folgenden Satz zutrifft.\nDas bisschen Tee, das Billy mir heute Morgen in die Kajüte geschmuggelt hatte, wollte wieder heraus.',o:["HS, HS, NS","HS, NS, HS","HS, NS, NS","NS, HS, HS"],c:1,model:"HS, NS, HS",rule:"<div class=rbox>Der Hauptsatz wird durch einen eingeschobenen Relativsatz unterbrochen: HS (Anfang) – NS – HS (Fortsetzung).</div>"},
-{sub:"Satzbauplan",type:"cross",q:'Welche der folgenden Satzbaupläne treffen auf die folgenden Sätze zu? Ordnen Sie jedem Satz die richtige Nummer zu.\n1. HS/NS 2. NS/NS/HS 3. HS 4. HS/NS/HS',rows:[
-"(a) Er kam, als wir schon gegangen waren.",
-"(b) Die Sonne schien.",
-"(c) Der Mann, den ich gestern traf, war mein alter Lehrer."
-],cols:["HS/NS","HS","HS/NS/HS"],correct:[0,1,2],model:"(a) HS/NS · (b) HS · (c) HS/NS/HS",rule:"<div class=rbox>HS/NS: Hauptsatz + Nebensatz; HS: nur ein Hauptsatz; HS/NS/HS: eingeschobener Nebensatz.</div>"},
-{sub:"Satzgefüge",type:"alt",q:'Verbinden Sie die folgenden Sätze zu einem sinnentsprechenden Satzgefüge.\nShackleton holt Hilfe für die Mannschaft. Alle Mitglieder werden gerettet.',a:["Shackleton holt Hilfe für die Mannschaft, damit alle Mitglieder gerettet werden.","Shackleton holt Hilfe, sodass alle Mitglieder gerettet werden."],model:"Shackleton holt Hilfe für die Mannschaft, damit alle Mitglieder gerettet werden.",rule:"<div class=rbox>Ein Finalsatz (damit) drückt eine Absicht aus, ein Konsekutivsatz (sodass) eine Folge.</div>"},
 
-{sub:"Komma – Apposition",type:"mc",q:'Womit wird die Kommasetzung im folgenden Satz begründet?\n\n„Und Whitey, der Kleine aus Kansas, hat sich den Arm gebrochen.”',o:["Apposition","Satzgefüge","Aufzählung","Infinitivgruppe"],c:0,model:"Komma wegen der Apposition „der Kleine aus Kansas”",rule:"<div class=rbox>Eine Apposition ist ein eingeschobener Zusatz, der nähere Informationen zu einem Nomen gibt. Sie wird durch Kommas vom Rest des Satzes getrennt.</div>"},
+// ────────────────────────────────────────────────────────────────────
+// 2. REDEWENDUNGEN
+// ────────────────────────────────────────────────────────────────────
+{id:'msa_redewendungen_2022', title:'Redewendungen', emoji:'💡', color:'#c26d00', qs:[
 
-{sub:"Kausalsatz",type:"alt",q:'Formen Sie den folgenden Satz in ein Satzgefüge mit einem Kausalsatz um.\nScott hatte auf seiner ersten Expedition einen Mann wegen Ungehorsams einsperren lassen.',a:["Weil ein Mann ungehorsam war, ließ Scott ihn auf seiner ersten Expedition einsperren.","Da ein Mann ungehorsam war, ließ Scott ihn auf seiner ersten Expedition einsperren."],model:"Weil ein Mann ungehorsam war, ließ Scott ihn auf seiner ersten Expedition einsperren.",rule:"<div class=rbox>Ein Kausalsatz (Grund) wird mit „weil” oder „da” eingeleitet.</div>"},
-{sub:"Hauptsätze",type:"self",q:'Notieren Sie die beiden Hauptsätze in folgendem Satzgefüge:\n„Meine Mutter, um einmal ins Weite zu kommen, arbeitete als Kinderfräulein im zaristischen Russland, wovon sie öfter erzählt hat, und mein Vater war Architekt.”',model:"• Meine Mutter arbeitete als Kinderfräulein im zaristischen Russland\n• und mein Vater war Architekt",rule:"<div class=rbox>Hauptsätze sind die Teile, die ohne die Nebensätze (Infinitivgruppe, Relativsatz) bestehen können.</div>"},
-{sub:"Kommaregel",type:"cross",q:'Ordnen Sie jedem Satz die richtige Kommaregel zu.\n1. Aufzählung 2. Infinitivgruppe, die sich auf ein Substantiv bezieht 3. Apposition 4. Satzgefüge 5. Satzverbindung / Satzreihe',rows:[
-"(a) Herr Müller, unser Nachbar, ist sehr nett.",
-"(b) Ich weiß, dass er kommt.",
-"(c) Er hatte den Wunsch, einmal nach Paris zu reisen."
-],cols:["Aufzählung","Infinitivgruppe (Bezug auf Nomen)","Apposition","Satzgefüge"],correct:[2,3,1],model:"(a) Apposition · (b) Satzgefüge · (c) Infinitivgruppe",rule:"<div class=rbox>Appositionen werden durch Kommas abgetrennt. Relativsätze werden durch Komma abgetrennt. Infinitivgruppen, die sich auf ein Nomen beziehen, werden durch Komma abgetrennt.</div>"},
-{sub:"Satzbauplan",type:"cross",q:'Welche der folgenden Satzbaupläne entsprechen den folgenden Sätzen? Ordnen Sie jedem Satz die richtige Nummer zu.\n1. HS, NS, NS 2. HS, HS, NS 3. NS, NS, HS 4. HS, NS, HS 5. HS, HS, HS',rows:[
-"(a) Er sagte, dass er komme, wenn er Zeit habe.",
-"(b) Er kam, aber sie war schon weg, weil sie keine Geduld hatte.",
-"(c) Dass er kam, freute mich, weil ich ihn lange nicht gesehen hatte."
-],cols:["HS, NS, NS","HS, HS, NS","HS, NS, HS"],correct:[0,1,0],model:"(a) HS, NS, NS · (b) HS, HS, NS · (c) HS, NS, NS",rule:"<div class=rbox>Satzbaupläne notieren die Abfolge von Haupt- und Nebensätzen in der Reihenfolge ihres Auftretens.</div>"},
-{sub:"Kommaregel",type:"cross",q:'Ordnen Sie den folgenden Sätzen die entsprechende Begründung für die Kommasetzung zu.\n(1) Satzreihe (2) Aufzählung (3) Infinitivgruppe mit hinweisendem Wort (4) Apposition (5) Satzgefüge',rows:[
-"(a) Sie trank einen Schluck Kaffee, nahm ihren Mut zusammen und fing an zu reden.",
-"(b) Das war klar, ohne Internet würde sie ihr Leben wohl kaum ertragen.",
-"(c) Sie hatte wieder Kontakt zu Katie, ihrer Schulfreundin, aufgenommen."
-],cols:["Satzreihe","Aufzählung","Infinitivgruppe","Apposition","Satzgefüge"],correct:[1,4,3],model:"(a) Aufzählung · (b) Satzgefüge · (c) Apposition",rule:"<div class=rbox>Aufzählungen von Verben werden durch Kommas getrennt. Satzgefüge: Komma zwischen Haupt- und Nebensatz (Konditionalsatz). Appositionen werden in Kommas eingeschlossen.</div>"},
-{sub:"Satzbauplan",type:"mc",q:'Kreuzen Sie an, welcher der unten aufgeführten Satzbaupläne auf den folgenden Satz zutrifft.\nMein Kopf tat weh, meine Muskeln machten schlapp, und in meinem Magen rumorte der Hunger.',o:["HS, HS, HS","HS, NS, NS","HS, NS, HS","NS, HS, HS"],c:0,model:"HS, HS, HS",rule:"<div class=rbox>Eine Satzreihe besteht aus mehreren Hauptsätzen, die hier durch Kommas und „und” verbunden sind.</div>"},
-{sub:"Teilsätze bestimmen",type:"cross",q:'Bestimmen Sie die Art der Teilsätze des folgenden Satzes. Tragen Sie die entsprechenden Bezeichnungen für Hauptsatz (HS) und Nebensatz (NS) ein.\nAber ich bin fest davon überzeugt, wenn es eines Tages zur Rebellion der Maschinen kommt, dann wird es die Kommunikationselektronik sein.',rows:["Aber ich bin fest davon überzeugt","wenn es eines Tages zur Rebellion der Maschinen kommt","dann wird es die Kommunikationselektronik sein"],cols:["Hauptsatz (HS)","Nebensatz (NS)"],correct:[0,1,0],model:"HS · NS (Konditionalsatz) · HS",rule:"<div class=rbox>Der Satz beginnt mit einem Hauptsatz, dann folgt ein Konditionalsatz (NS), dann der zweite Teil des Hauptsatzes (mit „dann”).</div>"},
+{sub:'Redewendung erklären', type:'self',
+q:'Erklären Sie die Bedeutung der Redewendung \u201eeine Welle machen\u201c.',
+model:'Aufsehen erregen, viel Lärm um etwas machen, eine starke Reaktion hervorrufen.',
+rule:'<div class=rbox>Redewendungen haben eine übertragene Bedeutung, die sich nicht aus den Einzelwörtern erschließt.</div>'},
 
-{sub:"Hinweisendes Wort",type:"mc",q:'Welches ist das hinweisende Wort (Korrelat) im folgenden Satz?\n\n„Die Tiere zu versorgen, das macht bestimmt Spaß.”',o:["das","bestimmt","Spaß","Tiere"],c:0,model:"das",rule:"<div class=rbox>Ein Korrelat kündigt die Infinitivgruppe an. Infinitivgruppe mit Korrelat → Komma.</div>"},
+{sub:'Redewendung erklären', type:'self',
+q:'Erklären Sie die Bedeutung der markierten Redewendung im folgenden Satz.\n\n\u201eVielen Menschen wächst ihr Besitz [über den Kopf].\u201c',
+model:'Der Besitz wird zu viel und zu groß, sodass die Menschen die Kontrolle darüber verlieren \u2013 er überfordert sie.',
+rule:'<div class=rbox>\u201eJemandem über den Kopf wachsen\u201c = etwas wird zu groß oder zu viel, man kann es nicht mehr bewältigen.</div>'},
+
+{sub:'Redewendung erklären', type:'self',
+q:'Erklären Sie die metaphorische Bedeutung der Redewendung \u201ewie ein Wasserfall reden\u201c.',
+model:'Sehr viel, sehr schnell und pausenlos reden, ohne anderen die Möglichkeit zu geben, etwas zu sagen.',
+rule:'<div class=rbox>Der Vergleich mit einem Wasserfall (ununterbrochen fließendes Wasser) steht bildlich für das endlose Reden.</div>'},
+
+{sub:'Redewendung erklären', type:'self',
+q:'Notieren Sie die Bedeutung der Redewendung \u201ekeine Rolle spielen\u201c.',
+model:'Etwas ist unwichtig, bedeutungslos \u2013 es hat keinen Einfluss auf die Situation.',
+rule:'<div class=rbox>\u201eKeine Rolle spielen\u201c = keine Bedeutung haben, nicht relevant sein.</div>'},
+
 ]},
 
-{id:"msa_verben",title:"Tempus, Modus & Passiv",emoji:"⚙️",color:"#7c3d8f",qs:[
-{sub:"Aktiv → Passiv",type:"alt",q:'Formen Sie den folgenden Satz in einen Passivsatz um.\nSchätzungen zufolge nutzen rund vier Millionen Menschen den US-Dienst.',a:["Schätzungen zufolge wird der US-Dienst von rund vier Millionen Menschen genutzt."],model:"Schätzungen zufolge wird der US-Dienst von rund vier Millionen Menschen genutzt.",rule:"<div class=rbox>Aktivsatz mit Akkusativobjekt kann ins Vorgangspassiv gesetzt werden: Objekt wird Subjekt, Subjekt wird fakultative Präpositionalphrase mit „von”.</div>"},
-{sub:"Modus bestimmen",type:"cross",q:'Kreuzen Sie an, in welchem Modus die folgenden Sätze stehen.',rows:["(a) Als ob da ein Zwischenspeicher eingebaut wäre.","(b) Dann setz dich mal.","(c) Er gibt ihr die Hand.","(d) Einen Unterschied gebe es nicht."],cols:["Indikativ","Imperativ","Konjunktiv I","Konjunktiv II"],correct:[3,1,0,2],model:"(a) Konjunktiv II · (b) Imperativ · (c) Indikativ · (d) Konjunktiv I",rule:"<div class=rbox>Indikativ: Realität, Tatsache. Imperativ: Befehl, Aufforderung. Konjunktiv I: indirekte Rede, Möglichkeit. Konjunktiv II: Irrealis, Höflichkeit, Wunsch, irreale Vergleiche.</div>"},
-{sub:"Indirekte Rede",type:"alt",q:'Formen Sie den folgenden Satz in indirekte Rede um.\n„Ich stehe Menschen mit Rat und Tat zur Seite”, sagt er.',a:["Er sagt, er stehe Menschen mit Rat und Tat zur Seite."],model:"Er sagt, er stehe Menschen mit Rat und Tat zur Seite.",rule:"<div class=rbox>In der indirekten Rede wird der Konjunktiv I verwendet. Hier: „stehe” (Konjunktiv I von stehen).</div>"},
-{sub:"Direkte Rede",type:"alt",q:'Formen Sie den folgenden Satz in direkte Rede um.\nDie Autorin merkt an, dass viele große Denker Chaoten gewesen seien.',a:["Die Autorin merkt an: „Viele große Denker waren Chaoten.”"],model:'Die Autorin merkt an: „Viele große Denker waren Chaoten.”',rule:"<div class=rbox>In der direkten Rede wird der Originalwortlaut verwendet; der Konjunktiv entfällt. Anführungszeichen und Doppelpunkt oder Komma sind zu beachten.</div>"},
-{sub:"Passiv mit Modalverb",type:"alt",q:'Formen Sie den folgenden Satz in einen Satz im Passiv um.\nIch muss noch das Auto zurückbringen.',a:["Das Auto muss noch von mir zurückgebracht werden."],model:"Das Auto muss noch von mir zurückgebracht werden.",rule:"<div class=rbox>Bei Passiv mit Modalverb wird „werden” im Infinitiv an das Modalverb angehängt: Modalverb + Partizip II + werden.</div>"},
-{sub:"Modalverben",type:"self",q:'Formen Sie den folgenden Satz mithilfe von Modalverben so um, dass er Folgendes zum Ausdruck bringt: (a) eine Notwendigkeit. (b) eine Erlaubnis.\nIch räume meinen neuen Kleiderschrank ein.',model:"(a) Ich muss meinen neuen Kleiderschrank einräumen.\n(b) Ich darf meinen neuen Kleiderschrank einräumen.",rule:"<div class=rbox>Modalverben verändern die Aussage: müssen = Notwendigkeit, Zwang; dürfen = Erlaubnis.</div>"},
-{sub:"Realität ausdrücken",type:"alt",q:'Formulieren Sie den Satz so um, dass er eine Realität ausdrückt.\nDas freie Bett in dem Zimmer wird bis dahin bestimmt belegt sein.',a:["Das freie Bett in dem Zimmer ist bis dahin belegt."],model:"Das freie Bett in dem Zimmer ist bis dahin belegt.",rule:"<div class=rbox>„Bestimmt” drückt eine Annahme oder Wahrscheinlichkeit aus; für eine sichere Aussage (Realität) wird es weggelassen und der Indikativ Präsens verwendet.</div>"},
-{sub:"Gewissheit",type:"alt",q:'Formulieren Sie den folgenden Satz so um, dass er eine Gewissheit zum Ausdruck bringt.\nSpäter sollen Maschinen die Ernte übernehmen.',a:["Später werden Maschinen die Ernte übernehmen."],model:"Später werden Maschinen die Ernte übernehmen.",rule:"<div class=rbox>„Sollen” drückt eine Absicht, einen Plan oder eine Behauptung aus. Für eine sichere Vorhersage (Gewissheit) verwendet man Futur I mit „werden”.</div>"},
-{sub:"Passiv",type:"alt",q:'Setzen Sie den folgenden Satz ins Passiv.\nWir müssen seine Eltern verständigen.',a:["Seine Eltern müssen von uns verständigt werden."],model:"Seine Eltern müssen von uns verständigt werden.",rule:"<div class=rbox>Passiv mit Modalverb: Modalverb + Partizip II + werden.</div>"},
-{sub:"Direkte Rede",type:"alt",q:'Formulieren Sie den folgenden Satz in direkter Rede um.\nKempf sagte, dass das keineswegs eine Marotte von ihm sei.',a:["Kempf sagte: „Das ist keineswegs eine Marotte von mir.”"],model:'Kempf sagte: „Das ist keineswegs eine Marotte von mir.”',rule:"<div class=rbox>Direkte Rede: Konjunktiv entfällt, Pronomen anpassen.</div>"},
-{sub:"Partizip II – Funktion",type:"cross",q:'Das Partizip II kann unterschiedliche Funktionen erfüllen. Kreuzen Sie die Funktion in den folgenden Sätzen an.',rows:["(a) die <u>erregten</u> Gemüter","(b) Die Gemüter sind <u>erregt</u>.","(c) Er schrie <u>erregt</u>."],cols:["Teil des Prädikats","Attribut","Modalbestimmung"],correct:[1,0,2],model:"(a) Attribut · (b) Teil des Prädikats (Zustandspassiv) · (c) Modalbestimmung",rule:"<div class=rbox>Partizip II kann als Attribut (Adjektiv) vor einem Nomen, als Teil des Prädikats (Perfekt, Passiv) oder als adverbiale Bestimmung der Art und Weise (Modalbestimmung) verwendet werden.</div>"},
-{sub:"Aktiv / Passiv",type:"cross",q:'Kreuzen Sie an, ob die folgenden Sätze im Aktiv, Vorgangspassiv oder Zustandspassiv stehen.',rows:["(a) Ketchup wird meistens durch Kochen hergestellt.","(b) In der Grillsaison wird er noch mehr Ketchup verkaufen."],cols:["Aktiv","Vorgangspassiv","Zustandspassiv"],correct:[1,0],model:"(a) Vorgangspassiv · (b) Aktiv (Futur I)",rule:"<div class=rbox>Vorgangspassiv: „werden” + Partizip II; Zustandspassiv: „sein” + Partizip II; Aktiv: das Subjekt handelt.</div>"},
-{sub:"Tempusfunktion",type:"cross",q:'In den folgenden Sätzen steht das Verb sehen in unterschiedlichen Tempusformen. Notieren Sie, welcher Funktion diese Tempusformen jeweils entsprechen.',rows:["(a) Er <u>hatte gesehen</u>","(b) Er <u>sah</u>"],cols:["Vorzeitigkeit (Plusquamperfekt)","Einfache Vergangenheit (Präteritum)"],correct:[0,1],model:"(a) Plusquamperfekt: Vorzeitigkeit · (b) Präteritum: einfache Vergangenheit",rule:"<div class=rbox>Plusquamperfekt drückt Vorzeitigkeit in der Vergangenheit aus, Präteritum die einfache Vergangenheit.</div>"},
-{sub:"Modus bestimmen",type:"mc",q:'Kreuzen Sie an, in welchem Modus das Verb im folgenden Satz steht.\n„Und jetzt verschwindet!”',o:["Indikativ","Konjunktiv I","Imperativ","Konjunktiv II"],c:2,model:"Imperativ",rule:"<div class=rbox>Der Imperativ ist die Befehlsform. Bei „verschwindet” handelt es sich um die 2. Person Plural Imperativ.</div>"},
-{sub:"Modus – Konjunktiv II",type:"mc",q:'In welchem Modus steht die unterstrichene Verbform?\n„… brüllt manchmal auf, als <u>wäre</u> er tief getroffen.”',o:["Indikativ","Imperativ","Konjunktiv I","Konjunktiv II"],c:3,model:"Konjunktiv II",rule:"<div class=rbox>„als wäre” ist ein irrealer Vergleichssatz, der den Konjunktiv II erfordert.</div>"},
-{sub:"Modalverb – Wunsch",type:"alt",q:'Der folgende Satz drückt eine Verpflichtung aus: Ich muss mit Ihnen sprechen. Formulieren Sie den Satz so um, dass ein Wunsch ausgedrückt wird. Ersetzen Sie dafür das unterstrichene Modalverb durch ein anderes.',a:["Ich möchte mit Ihnen sprechen.","Ich würde gern mit Ihnen sprechen."],model:"Ich möchte mit Ihnen sprechen.",rule:"<div class=rbox>Wunsch wird oft mit „möchte” (Konjunktiv II von mögen) oder „würde gern” ausgedrückt.</div>"},
-{sub:"Passiv",type:"alt",q:'Setzen Sie den folgenden Satz ins Passiv.\nAktiv: Max Frisch schrieb den Roman „Homo faber”.',a:["Der Roman „Homo faber” wurde von Max Frisch geschrieben."],model:'Der Roman „Homo faber” wurde von Max Frisch geschrieben.',rule:"<div class=rbox>Passiv Präteritum: „wurde” + Partizip II.</div>"},
-{sub:"Direkte Rede",type:"alt",q:'Formen Sie den folgenden Satz in einen Satz mit direkter Rede und mit einem Redebegleitsatz um. Beachten Sie die Zeichensetzung.\nDie Autorin fragt die beiden Zirkuskinder, ob sie für ihre Auftritte eine Gage bekämen.',a:["Die Autorin fragt: „Bekommt ihr für eure Auftritte eine Gage?”"],model:'Die Autorin fragt: „Bekommt ihr für eure Auftritte eine Gage?”',rule:"<div class=rbox>Direkte Frage mit Fragesatz und Anführungszeichen. Der Konjunktiv entfällt.</div>"},
-{sub:"Präsens – Funktion",type:"cross",q:'Kreuzen Sie an, ob in den folgenden Sätzen gegenwärtiges, zukünftiges oder ein immer gültiges Geschehen zum Ausdruck gebracht wird.',rows:["(a) Nebenbei zupft er ein paar Blätter Kresse.","(b) Pflanzen wachsen ohne Erde und Sonnenlicht.","(c) Inform beliefert bald das 25hours-Hotel."],cols:["gegenwärtig","zukünftig","immer gültig"],correct:[0,2,1],model:"(a) gegenwärtig · (b) immer gültig · (c) zukünftig",rule:"<div class=rbox>Präsens kann gegenwärtig, zukünftig (mit Zeitadverb) oder immer gültig (allg. Wahrheit) ausdrücken.</div>"},
-{sub:"Partizip I und II",type:"self",q:'Notieren Sie aus dem folgenden Satz jeweils ein Partizip I und ein Partizip II.\nMein Vater, einen glänzenden blauen Sportwagen mit heruntergeklapptem Verdeck fahrend, lächelt verzückt.',model:"Partizip I: glänzenden, fahrend\nPartizip II: heruntergeklapptem, verzückt",rule:"<div class=rbox>Partizip I: Infinitiv + d (Gleichzeitigkeit); Partizip II: ge-…-t / ge-…-en (Vergangenheit/Passiv).</div>"},
+
+// ────────────────────────────────────────────────────────────────────
+// 3. WORTARTEN & BEZUGSWORT
+// ────────────────────────────────────────────────────────────────────
+{id:'msa_wortarten_2022', title:'Wortarten & Bezugswort', emoji:'🔤', color:'#3d6b8f', qs:[
+
+{sub:'Wortart bestimmen', type:'cross',
+q:'Bestimmen Sie die Wortart des markierten Wortes.\n\n\u201eFür die Generation, [die] jetzt heranwächst, wird das leider nicht mehr gelten.\u201c',
+rows:['[die]'],
+cols:['Artikel','Demonstrativpronomen','Relativpronomen'],
+correct:[2],
+model:'Relativpronomen; Bezugswort: Generation',
+rule:'<div class=rbox>Das Relativpronomen leitet einen Relativsatz ein und bezieht sich auf das Nomen \u201eGeneration\u201c. Probe: Ersatz durch \u201ewelche\u201c möglich \u2192 Relativpronomen.</div>'},
+
+{sub:'Bezugswort bestimmen', type:'self',
+q:'Notieren Sie jeweils das Bezugswort des markierten Wortes.\n\n(a) \u201eEin Bäcker rührt den ganzen Tag [die] leckersten Teige.\u201c\n(b) \u201eDa stand die Kiste, [die] die Fotos enthielt.\u201c',
+model:'(a) die \u2192 Teige\n(b) die \u2192 Kiste',
+rule:'<div class=rbox>Das Bezugswort eines Pronomens ist das Nomen, auf das es sich bezieht. Es steht meistens direkt davor im Satz.</div>'},
+
 ]},
 
-{id:"msa_stilmittel",title:"Stilmittel",emoji:"🎭",color:"#8f3d3d",qs:[
-{sub:"Metapher erklären",type:"self",q:'Der folgende Satz enthält eine Metapher. Erklären Sie diese Metapher.\nDer Film fesselt die Zuschauer.',model:"Die Metapher bedeutet, dass der Film die Zuschauer so stark in seinen Bann zieht, als ob er sie mit Fesseln binden würde.",rule:"<div class=rbox>Eine Metapher ist ein sprachlicher Ausdruck, bei dem ein Wort aus seinem eigentlichen Bedeutungszusammenhang in einen übertragenen übertragen wird.</div>"},
-{sub:"Stilmittel zuordnen",type:"cross",q:'Ordnen Sie den folgenden Sätzen das jeweils entsprechende sprachliche Mittel zu.\n(1) Alliteration (2) Personifikation (3) Ellipse (4) Metapher (5) Vergleich',rows:["(a) Er beschäftigt sich mit den wirklich wichtigen Dingen.","(b) Ich mit Blockflöte an Weihnachten.","(c) Ich fühle mich wie ein Schirmständer."],cols:["Alliteration","Personifikation","Ellipse","Metapher","Vergleich"],correct:[0,2,4],model:"(a) Alliteration · (b) Ellipse · (c) Vergleich",rule:"<div class=rbox>Ellipse: unvollständiger Satz, oft Auslassung des Verbs. Vergleich: mit „wie” oder „als”. Metapher: bildhafter Ausdruck ohne Vergleichswort.</div>"},
-{sub:"Stilmittel zuordnen",type:"cross",q:'Ordnen Sie den folgenden Sätzen das jeweils entsprechende sprachliche Mittel zu.\n(1) Alliteration (2) Metapher (3) Vergleich',rows:["(a) Dann tauchte er in Paulus Duft ein.","(b) Tills Lieblingsspeise sind warme Wiener Würstchen."],cols:["Alliteration","Metapher","Vergleich"],correct:[1,0],model:"(a) Metapher · (b) Alliteration",rule:"<div class=rbox>Alliteration: gleicher Anlaut bei benachbarten Wörtern. Metapher: bildhafter Ausdruck.</div>"},
-{sub:"Stilmittel zuordnen",type:"cross",q:'Ordnen Sie den folgenden Beispielen die entsprechenden sprachlichen Mittel zu.\n(1) Ellipse (2) Vergleich (3) Metapher (4) Alliteration',rows:["(a) Das Gemüse war weniger beliebt als das Gebäck.","(b) Er kredenzt Cracker, Kekse und Karotten.","(c) Und Kinderspielzeug."],cols:["Ellipse","Vergleich","Metapher","Alliteration"],correct:[1,3,0],model:"(a) Vergleich · (b) Alliteration · (c) Ellipse",rule:"<div class=rbox>Vergleich mit „als”; Alliteration: gleicher Anlaut; Ellipse: unvollständiger Satz.</div>"},
 
-{sub:"Klimax",type:"mc",q:'Handelt es sich bei der folgenden Aussage um eine Klimax?\n\n„Auf die Dächer fielen laut die ersten Regentropfen, mehrten sich, begannen zu trommeln.”',o:["Ja – es ist eine Klimax: stufenweise Steigerung von ersten Tropfen bis zum Trommeln.","Nein – es ist kein Stilmittel, nur eine Beschreibung.","Nein – es ist eine Metapher, da Regen vermenschlicht wird.","Ja – aber nur wegen der Lautmalerei (Onomatopoesie)."],c:0,model:"Ja, es ist eine Klimax. Stufenweise Steigerung: einzelne Tropfen → mehrten sich → begannen zu trommeln.",rule:"<div class=rbox>Klimax = stufenweise Steigerung (hier der Intensität des Regens).</div>"},
+// ────────────────────────────────────────────────────────────────────
+// 4. SYNONYME
+// ────────────────────────────────────────────────────────────────────
+{id:'msa_synonyme_2022', title:'Synonyme', emoji:'🔄', color:'#3d8f5a', qs:[
 
-{sub:"Stilmittel",type:"cross",q:'Ordnen Sie den folgenden Sätzen das jeweils entsprechende Stilmittel zu.\n1. Neologismus 2. Vergleich 3. Personifikation',rows:["(a) Vielleicht war es eine Nasenhalluzination.","(b) Als wäre ich dieser Typ aus der Bibel, spurtete ich los."],cols:["Neologismus","Vergleich","Personifikation"],correct:[0,1],model:"(a) Neologismus · (b) Vergleich",rule:"<div class=rbox>Neologismus = neu geschaffenes oder neu in die Sprache eingeführtes Wort.</div>"},
-{sub:"Stilmittel benennen",type:"self",q:'Notieren Sie zwei Stilmittel, die in dem folgenden Beispiel enthalten sind:\nLucindas Bett ist kein Bett. Es ist eine Höhle. Es ist ein Boot. Es ist ein Höhlenboot.',model:"• Anapher (Wiederholung von „Es ist” am Satzanfang)\n• Metapher (Vergleich des Bettes mit Höhle/Boot ohne Vergleichswort)",rule:"<div class=rbox>Anapher: Wiederholung eines Wortes oder einer Wortgruppe am Satzanfang. Metapher: bildhafter Ausdruck.</div>"},
-{sub:"Stilmittel zuordnen",type:"cross",q:'Ordnen Sie den folgenden Beispielen das entsprechende Stilmittel zu.\n(1) Ellipse (2) Vergleich (3) Lautmalerei',rows:["(a) Und zwar als Gefangene.","(b) Über mir knattern die Segel im Wind."],cols:["Ellipse","Vergleich","Lautmalerei"],correct:[0,2],model:"(a) Ellipse · (b) Lautmalerei",rule:"<div class=rbox>Lautmalerei (Onomatopoesie): Wörter, die Geräusche nachahmen.</div>"},
-{sub:"Stilmittel",type:"cross",q:'Im Text finden sich verschiedene Stilmittel. Ordnen Sie entsprechend zu.\n1. Metapher 2. Personifikation 3. Parallelismus 4. Vergleich',rows:["(a) Sie ist 15, ich bin 26.","(b) Meine SMS sehen aus wie kleine Briefe."],cols:["Metapher","Personifikation","Parallelismus","Vergleich"],correct:[2,3],model:"(a) Parallelismus · (b) Vergleich",rule:"<div class=rbox>Parallelismus: gleiche Satz- oder Satzgliedstruktur in aufeinanderfolgenden Sätzen.</div>"},
+{sub:'Standardsprachliches Synonym', type:'self',
+q:'Notieren Sie für das umgangssprachliche Wort \u201esatte\u201c im folgenden Satz ein standardsprachliches Synonym.\n\n\u201eDie Folge verspricht satte Quoten.\u201c',
+model:'hohe / beachtliche / beeindruckende',
+rule:'<div class=rbox>\u201eSatt\u201c kann umgangssprachlich im Sinne von \u201egroß, beachtlich, üppig\u201c verwendet werden.</div>'},
 
-{sub:"Anapher – Wirkung",type:"mc",q:'Welches Stilmittel verwendet der Autor in folgendem Satz?\n\n„[…] denn sie wollten ihn jetzt wiedersehen, sie wollten ihn im Augenblick des Schusses antreten sehen, sie wollten erfahren, wie er loskam.”',o:["Alliteration","Klimax","Anapher","Personifikation"],c:2,model:"Anapher. Wirkung: Die Wiederholung von „sie wollten” verstärkt die Dringlichkeit und Intensität des Wunsches der Personen.",rule:"<div class=rbox>Anapher: erzeugt Nachdruck und Rhythmus durch Wiederholung am Satzanfang.</div>"},
+{sub:'Synonym – kontextabhängig', type:'self',
+q:'Notieren Sie für das markierte Adjektiv jeweils ein passendes Synonym.\n\n(a) \u201eEr bewahrt einen [kühlen] Kopf.\u201c\n(b) \u201eEr kann bei der [kühlen] Witterung nicht bauen.\u201c',
+model:'(a) kühlen \u2192 ruhigen / besonnenen\n(b) kühlen \u2192 kalten / frischen',
+rule:'<div class=rbox>Das gleiche Adjektiv kann je nach Kontext unterschiedliche Bedeutungen haben und daher verschiedene Synonyme erfordern.</div>'},
 
-{sub:"Stilmittel bestimmen",type:"mc",q:'Kreuzen Sie das hier verwendete stilistische Mittel an.\n„Ich ließ den Satz in der Luft hängen.”',o:["Vergleich","Metapher","Personifikation","Ellipse"],c:1,model:"Metapher",rule:"<div class=rbox>„Satz in der Luft hängen lassen” = Metapher für „eine Pause machen, etwas unausgesprochen lassen”.</div>"},
-{sub:"Bildsprache",type:"cross",q:'Kreuzen Sie an, ob in den folgenden Sätzen ein bildsprachlicher oder ein nicht bildsprachlicher Ausdruck vorhanden ist.',rows:["(a) Ein junger Beamter fischt den Hut vom Fußende.","(b) Ein junger Beamter nimmt den Hut vom Fußende.","(c) Ein junger Beamter greift den Hut vom Fußende."],cols:["bildsprachlich","nicht bildsprachlich"],correct:[0,1,1],model:"(a) bildsprachlich (Metapher) · (b) nicht · (c) nicht",rule:"<div class=rbox>„fischen” ist eine Metapher – man fischt normalerweise keine Hüte.</div>"},
+{sub:'Synonym finden', type:'self',
+q:'Notieren Sie für das markierte Wort ein passendes Synonym.\n\n\u201eMein Vater [beäugt] das Regal.\u201c',
+model:'beobachtet / betrachtet / mustert',
+rule:'<div class=rbox>\u201eBeäugen\u201c bedeutet, etwas genau und kritisch anzusehen.</div>'},
+
 ]},
 
-{id:"msa_wortschatz",title:"Wortschatz & Bedeutung",emoji:"📚",color:"#5a7a3d",qs:[
-{sub:"Redewendung",type:"self",q:'Erklären Sie die Bedeutung der Redewendung „eine Welle machen”.',model:"Aufsehen erregen, für Unruhe oder Aufregung sorgen.",rule:"<div class=rbox>Redewendungen sind feste Wortverbindungen mit übertragener Bedeutung.</div>"},
-{sub:"Redewendung",type:"self",q:'Erklären Sie die metaphorische Bedeutung der Redewendung „wie ein Wasserfall reden”.',model:"Sehr viel und schnell reden, ohne Unterbrechung.",rule:"<div class=rbox>Das Bild des Wasserfalls (unaufhörlich, viel) wird auf das Sprechen übertragen.</div>"},
-{sub:"Synonym – kontextabhängig",type:"self",q:'Notieren Sie für die unterstrichenen Adjektive in den folgenden Sätzen jeweils ein passendes Synonym.\n(a) Er bewahrt einen <u>kühlen</u> Kopf.\n(b) Er kann bei der <u>kühlen</u> Witterung nicht bauen.',model:"(a) ruhigen, gelassenen\n(b) kalten, frischen",rule:"<div class=rbox>Wörter können je nach Kontext unterschiedliche Synonyme haben (Polysemie).</div>"},
 
-{sub:"Synonym",type:"mc",q:'Welches Wort kann das umgangssprachliche „satte” im folgenden Satz sinngemäß ersetzen?\n\n„Die Folge verspricht <u>satte</u> Quoten.”',o:["hohe","niedrige","schlechte","durchschnittliche"],c:0,model:"hohe",rule:"<div class=rbox>„satt” bedeutet hier „reichlich, hoch” (übertragene Bedeutung).</div>"},
+// ────────────────────────────────────────────────────────────────────
+// 5. FREMDWÖRTER & DEUTSCHE ENTSPRECHUNGEN
+// ────────────────────────────────────────────────────────────────────
+{id:'msa_fremdwoerter_2022', title:'Fremdwörter', emoji:'🌍', color:'#5a3d8f', qs:[
 
-{sub:"Wortbedeutung",type:"alt",q:'Erklären Sie die Bedeutung des folgenden Satzes.\nDas T-Shirt riecht streng.',a:["Das T-Shirt riecht unangenehm intensiv, modrig, schweißig oder beißend."],model:"Das T-Shirt riecht unangenehm intensiv, modrig, schweißig oder beißend.",rule:"<div class=rbox>„streng” bei Gerüchen = intensiv unangenehm.</div>"},
+{sub:'Fremdwörter zuordnen', type:'self',
+q:'Ordnen Sie den Fremdwörtern jeweils ihre deutsche Bezeichnung zu.\n(1) Beschränkung auf das Wesentliche  (2) Vorhaben  (3) Verbrauch  (4) Rückmeldung  (5) Beweglichkeit\n\n(a) Konsum\n(b) Resonanz\n(c) Minimalismus\n(d) Projekt\n(e) Flexibilität',
+model:'(a) Konsum \u2192 (3) Verbrauch\n(b) Resonanz \u2192 (4) Rückmeldung\n(c) Minimalismus \u2192 (1) Beschränkung auf das Wesentliche\n(d) Projekt \u2192 (2) Vorhaben\n(e) Flexibilität \u2192 (5) Beweglichkeit',
+rule:'<div class=rbox>Fremdwörter haben häufig direkte deutsche Entsprechungen. Minimalismus (lat. minimus = kleinst) steht für die Beschränkung auf das Wesentliche.</div>'},
 
-{sub:"Redewendung",type:"mc",q:'Was bedeutet die Redewendung „keine Rolle spielen”?',o:["Unwichtig sein, keine Bedeutung haben.","Im Theater eine wichtige Hauptrolle übernehmen.","Die Verantwortung für eine Angelegenheit tragen.","Sich aktiv in eine Diskussion einmischen."],c:0,model:"Unwichtig sein, keine Bedeutung haben.",rule:"<div class=rbox>Aus dem Theater: im Leben keine Bedeutung haben.</div>"},
+{sub:'Fremdwörter zuordnen', type:'cross',
+q:'Ordnen Sie den Fremdwörtern die entsprechende deutsche Bezeichnung zu.\n(1) Unterhaltung  (2) Hauptsendezeit  (3) Benutzerkonto',
+rows:['(a) Account','(b) Chat','(c) Primetime'],
+cols:['(1) Unterhaltung','(2) Hauptsendezeit','(3) Benutzerkonto'],
+correct:[2,0,1],
+model:'(a) Account \u2192 Benutzerkonto · (b) Chat \u2192 Unterhaltung · (c) Primetime \u2192 Hauptsendezeit',
+rule:'<div class=rbox>Anglizismen aus dem Medienbereich haben häufig deutsche Entsprechungen.</div>'},
 
-{sub:"Fremdwort",type:"cross",q:'Wählen Sie die passende deutsche Entsprechung für das unterstrichene Fremdwort:',rows:["(a) Das war ihr vorläufiges <u>Highlight</u> des Jahres.","(b) Sie haben ein <u>Faible</u> für Freikörperkultur."],cols:["Höhepunkt","Vorliebe","Wendepunkt","Leidenschaft"],correct:[0,1],model:"(a) Höhepunkt\n(b) Vorliebe",rule:"<div class=rbox>Fremdwörter haben oft eingedeutschte Entsprechungen.</div>"},
+{sub:'Fremdwörter zuordnen', type:'self',
+q:'Ordnen Sie den Fremdwörtern jeweils ihre deutsche Bedeutung zu.\n(1) abstufen  (2) haltbar machen  (3) veranschaulichen  (4) verringern  (5) anweisen\n\n(a) konservieren\n(b) nuancieren\n(c) reduzieren\n(d) demonstrieren',
+model:'(a) konservieren \u2192 (2) haltbar machen\n(b) nuancieren \u2192 (1) abstufen\n(c) reduzieren \u2192 (4) verringern\n(d) demonstrieren \u2192 (3) veranschaulichen',
+rule:'<div class=rbox>Viele Verben lateinischen oder französischen Ursprungs lassen sich durch treffende deutsche Entsprechungen ersetzen.</div>'},
 
-{sub:"Redewendung",type:"self",q:'Erklären Sie die Bedeutung der unterstrichenen Redewendung im Kontext des folgenden Satzes.\nVielen Menschen wächst ihr Besitz über den Kopf.',model:"Der Besitz wird ihnen zu viel, sie können ihn nicht mehr bewältigen.",rule:"<div class=rbox>„über den Kopf wachsen” bedeutet „überfordern, zu viel werden”.</div>"},
+{sub:'Deutsche Entsprechung', type:'self',
+q:'Notieren Sie für das markierte Wort jeweils die deutsche Entsprechung.\n\n(a) \u201eDas war ihr vorläufiges [Highlight] des Jahres.\u201c\n(b) \u201eSie haben ein [Faible] für Freikörperkultur.\u201c',
+model:'(a) Highlight \u2192 Höhepunkt\n(b) Faible \u2192 Vorliebe / Schwäche (für etwas)',
+rule:'<div class=rbox>Anglizismen (Highlight) und Gallizismen (Faible) können oft durch treffende deutsche Wörter ersetzt werden.</div>'},
 
-{sub:"Synonym",type:"mc",q:'Welches Wort kann das unterstrichene Wort sinngemäß ersetzen?\n\n„Mein Vater <u>beäugt</u> das Regal.”',o:["betrachtet","berührt","beeinflusst","beschreibt"],c:0,model:"betrachtet, mustert, begutachtet",rule:"<div class=rbox>„beäugen”: aufmerksam, oft kritisch betrachten.</div>"},
-
-{sub:"Redewendung",type:"self",q:'Erklären Sie, was mit der unterstrichenen Redewendung im folgenden Satz gemeint ist.\nIn Deutschland steckt die Forschung noch in den Kinderschuhen.',model:"Die Forschung befindet sich noch in einem frühen, unausgereiften Entwicklungsstadium.",rule:"<div class=rbox>„Kinderschuhe”: Metapher für den Anfang einer Entwicklung.</div>"},
-{sub:"Synonym",type:"mc",q:'Kreuzen Sie an, welches Wort das im folgenden Satz unterstrichene Wort sinngemäß ersetzen kann.\n„Was hast du dir dabei gedacht, Livia”, sagt meine Mutter <u>fassungslos</u>.',o:["erstaunt","beruhigt","gerührt","entsetzt"],c:3,model:"entsetzt",rule:"<div class=rbox>„fassungslos”: Sprachlosigkeit durch Schock = entsetzt.</div>"},
-{sub:"Betonung",type:"self",q:'Inwiefern ändert sich die Aussage des Satzes, wenn das jeweils unterstrichene Wort betont wird?\n(a) <u>Sie</u> wollte mir alles erzählen!\n(b) Sie wollte <u>mir</u> alles erzählen!',model:"(a) Betonung auf „Sie”: nicht jemand anders, sondern genau diese Person.\n(b) Betonung auf „mir”: nicht einer anderen Person, sondern mir persönlich.",rule:"<div class=rbox>Durch Betonung kann die Bedeutung eines Satzes verändert werden; sie lenkt die Aufmerksamkeit auf bestimmte Satzglieder.</div>"},
-{sub:"Polysemie",type:"self",q:'Nachfolgend wird der Begriff „umsonst” mit unterschiedlicher Bedeutung verwendet. Ersetzen Sie das jeweils unterstrichene Wort durch ein anderes hier passendes.\n(a) Jeder sollte sich <u>umsonst</u> bedienen können.\n(b) Tesla hatte sich <u>umsonst</u> bemüht.',model:"(a) kostenlos\n(b) vergeblich",rule:"<div class=rbox>Polysemie: Ein Wort hat mehrere Bedeutungen.</div>"},
-{sub:"Redewendung",type:"mc",q:'Was bedeutet die Redewendung „auf dem Schlauch stehen”?',o:["etwas nicht verstehen","sich auf etwas einstellen","sich für etwas aufstellen lassen","etwas ausbalancieren"],c:0,model:"etwas nicht verstehen",rule:"<div class=rbox>Keinen klaren Durchblick haben.</div>"},
-{sub:"Synonym",type:"mc",q:'Welches Verb kann das unterstrichene Verb im folgenden Satz sinngemäß ersetzen?\nAlleine, aber glücklich <u>streift</u> er durch die Stadt.',o:["schlittert","spurtet","sprintet","schlendert"],c:3,model:"schlendert",rule:"<div class=rbox>„streifen”: gemächlich, ziellos gehen = schlendern.</div>"},
-{sub:"Synonym",type:"mc",q:'Kreuzen Sie an, welches Wort das im folgenden Satz unterstrichene Wort sinngemäß ersetzen kann.\nNeben der Einfahrt plätschert ein <u>geborstenes</u> Regenrohr.',o:["verbogenes","geplatztes","verschmutztes","gebürstetes"],c:1,model:"geplatztes",rule:"<div class=rbox>„geborsten”: geplatzt, gerissen.</div>"},
-{sub:"Konnotation",type:"self",q:'Die folgenden Sätze unterscheiden sich durch die Verben. Erklären Sie, inwiefern sich die Aussage des zweiten Satzes dadurch verändert.\nDie meisten Pilze und Insekten leben in der Erde.\nDie meisten Pilze und Insekten lauern in der Erde.',model:"„Lauern” hat eine negative Konnotation (heimlich auflauern, auf Beute warten), während „leben” neutral ist. Der zweite Satz wirkt bedrohlicher.",rule:"<div class=rbox>Die Konnotation (Nebenbedeutung) verändert die Stimmung.</div>"},
-
-{sub:"Redewendung",type:"mc",q:'Was bedeutet die Redewendung „die Ohren spitzen”?',o:["Aufmerksam zuhören.","Sehr laut sprechen.","Schmerzen in den Ohren haben.","Jemandem nicht zuhören wollen."],c:0,model:"Aufmerksam zuhören.",rule:"<div class=rbox>Bild von Tieren, die Ohren aufrichten: konzentriertes Zuhören.</div>"},
 ]},
 
-{id:"msa_fremdwoerter",title:"Fremdwörter",emoji:"🌍",color:"#8f6b3d",qs:[
 
-{sub:"Fremdwörter zuordnen",type:"cross",q:"Ordnen Sie den Fremdwörtern jeweils ihre deutsche Bezeichnung zu.",rows:["Konsum","Resonanz","Minimalismus","Projekt","Flexibilität"],cols:["Verbrauch","Rückmeldung","Beschränkung auf das Wesentliche","Vorhaben","Beweglichkeit"],correct:[0,1,2,3,4],model:"Konsum → Verbrauch · Resonanz → Rückmeldung · Minimalismus → Beschränkung · Projekt → Vorhaben · Flexibilität → Beweglichkeit",rule:"<div class=rbox>Fremdwörter haben oft eingedeutschte Synonyme.</div>"},
+// ────────────────────────────────────────────────────────────────────
+// 6. WORTFAMILIEN & STAMMVERWANDTE WÖRTER
+// ────────────────────────────────────────────────────────────────────
+{id:'msa_wortfamilien_2022', title:'Wortfamilien', emoji:'🔧', color:'#6b3d8f', qs:[
 
-{sub:"Anglizismen",type:"cross",q:"Ordnen Sie den Anglizismen die entsprechende deutsche Bezeichnung zu.",rows:["Account","Chat","Primetime"],cols:["Benutzerkonto","Unterhaltung","Hauptsendezeit"],correct:[0,1,2],model:"Account → Benutzerkonto · Chat → Unterhaltung · Primetime → Hauptsendezeit",rule:"<div class=rbox>Anglizismen: aus dem Englischen übernommene Wörter.</div>"},
-
-{sub:"Fremdwörter zuordnen",type:"cross",q:"Ordnen Sie den Fremdwörtern jeweils ihre deutsche Bezeichnung zu.",rows:["konservieren","nuancieren","reduzieren","demonstrieren"],cols:["haltbar machen","abstufen","verringern","veranschaulichen"],correct:[0,1,2,3],model:"konservieren → haltbar machen · nuancieren → abstufen · reduzieren → verringern · demonstrieren → veranschaulichen",rule:"<div class=rbox>Verben auf „-ieren” sind oft Fremdwörter.</div>"},
-
-{sub:"Fremdwörter zuordnen",type:"cross",q:"Ordnen Sie den Fremdwörtern die entsprechende deutsche Bezeichnung zu.",rows:["Konzept","Investor","Restaurant","Substrat"],cols:["Entwurf","Geldgeber","Gaststätte","Nährboden"],correct:[0,1,2,3],model:"Konzept → Entwurf · Investor → Geldgeber · Restaurant → Gaststätte · Substrat → Nährboden",rule:"<div class=rbox>Fremdwörter aus Wirtschaft, Gastronomie und Biologie.</div>"},
-
-{sub:"Fremdwort im Kontext",type:"mc",q:'Welche Bedeutung hat das Fremdwort „subtil” im folgenden Satz?\n\n„Er machte einen subtilen Hinweis.”',o:["leise und schwer verständlich","fein und kaum wahrnehmbar","laut und deutlich","grob und offensichtlich"],c:1,model:"fein und kaum wahrnehmbar",rule:"<div class=rbox>„subtil” bedeutet fein, zart, nicht offensichtlich.</div>"},
-
-{sub:"Aussprache",type:"mc",q:'Welche Aussprache trifft für das Wort „brillant” zu?',o:["brielant","brijant","breilant","brilljant"],c:1,model:"brijant",rule:"<div class=rbox>„brillant” (Französisch) wird „brijant” ausgesprochen.</div>"},
-]},
-
-{id:"msa_wortbildung",title:"Wortbildung",emoji:"🔧",color:"#6b3d8f",qs:[
-
-{sub:"Stammverwandte Wörter",type:"worttabelle",
-q:"Ergänzen Sie die Tabelle mit stammverwandten Wörtern:",
-headers:["Nomen","Verb","Adjektiv"],
+{sub:'Stammverwandte Wörter', type:'worttabelle',
+q:'Ergänzen Sie die Tabelle, indem Sie stammverwandte Wörter bilden.',
+headers:['Nomen','Verb','Adjektiv'],
 rows:[
-  [null,"profitieren","profitabel"],
-  ["Freude","freuen",null],
-  [null,"erkennen","erkenntlich"]
+  [null, null, 'profitabel'],
+  [null, 'freuen', null],
+  ['Erkenntnis', null, null]
 ],
 blanks:[
-  {options:["Profit","Profiteur","Profitierung","Profitum"],correct:0},
-  {options:["erfreulich","freudig","erfreut","freuenswert"],correct:0},
-  {options:["Erkenntnis","Erkennung","Erkennungszeichen","Erkennbarkeit"],correct:0}
+  {options:['Profit','Profiteur','Profitierung','Profitum'], correct:0},
+  {options:['profitieren','profitabel sein','profitierend','profitigen'], correct:0},
+  {options:['Freude','Fröhlichkeit','Frohsinn','Freuung'], correct:0},
+  {options:['erfreulich','freudevoll','freuend','erfreut'], correct:0},
+  {options:['erkennen','erkennten','erkennigen','erkenntern'], correct:0},
+  {options:['erkennbar','erkenntend','erkennend','erkennterlich'], correct:0}
 ],
-model:"Profit | profitieren | profitabel\nFreude | freuen | erfreulich\nErkenntnis | erkennen | erkenntlich",
-rule:"<div class=rbox>Wortfamilien: -ung, -heit → Nomen; -bar, -lich → Adjektiv; -ieren → Verb.</div>"},
+model:'Profit | profitieren | profitabel\nFreude | freuen | erfreulich\nErkenntnis | erkennen | erkennbar',
+rule:'<div class=rbox>Suffixe für Nomen: -heit, -keit, -nis, -ung. Für Adjektive: -bar, -lich, -ig. Für Verben: -ieren, -en.</div>'},
 
-{sub:"Komposita",type:"cross",
-q:"Ist das Wort ein Kompositum (besteht es aus mindestens zwei eigenständigen Wörtern)?",
-rows:["Tellerrand","saugstark","Geschmack","Zukunft","Stadtgärtner","Quadratmeter","begrüßen"],
-cols:["Kompositum","kein Kompositum"],
-correct:[0,0,1,1,0,0,1],
-model:"Tellerrand (Teller+Rand), saugstark (saug+stark), Stadtgärtner (Stadt+Gärtner), Quadratmeter (Quadrat+Meter)",
-rule:"<div class=rbox>Ein Kompositum besteht aus mindestens zwei eigenständigen Wörtern.</div>"},
-
-{sub:"Stammverwandte Wörter",type:"worttabelle",
-q:"Ergänzen Sie die Tabelle mit stammverwandten Wörtern:",
-headers:["Nomen","Verb","Adjektiv"],
-rows:[
-  [null,"experimentieren","experimentell"],
-  ["Lösung",null,"lösbar"],
-  ["Übertragung","übertragen",null]
-],
-blanks:[
-  {options:["Experiment","Experimentierung","Experimentator","Experimentierer"],correct:0},
-  {options:["lösen","löschen","loslassen","löten"],correct:0},
-  {options:["übertragbar","übertraglich","übertragend","übertragend"],correct:0}
-],
-model:"Experiment | experimentieren | experimentell\nLösung | lösen | lösbar\nÜbertragung | übertragen | übertragbar",
-rule:"<div class=rbox>Adjektivsuffixe: „-ell”, „-bar”.</div>"},
-
-{sub:"Kompositum",type:"mc",q:'Welches Wort ist ein Kompositum?\nElektrizität · Entfernung · Feuerball · Dunkelheit',o:["Elektrizität","Entfernung","Feuerball","Dunkelheit"],c:2,model:"Feuerball",rule:"<div class=rbox>Feuerball: Feuer + Ball → zwei eigenständige Wörter.</div>"},
-
-{sub:"Stammverwandte Wörter",type:"worttabelle",
-q:"Ergänzen Sie die Tabelle mit stammverwandten Wörtern:",
-headers:["Nomen","Verb","Adjektiv"],
-rows:[
-  ["Risiko",null,null],
-  [null,"funktionieren","funktional"]
-],
-blanks:[
-  {options:["riskieren","riskant machen","riskieren lassen","riskos"],correct:0},
-  {options:["riskant","riskabel","risikohaft","risikobehaftet"],correct:0},
-  {options:["Funktion","Funktionär","Funktionierung","Funktionalität"],correct:0}
-],
-model:"Risiko | riskieren | riskant\nFunktion | funktionieren | funktional",
-rule:"<div class=rbox>Risiko → riskieren → riskant; Funktion → funktionieren → funktional.</div>"},
-
-{sub:"Komposita",type:"cross",
-q:"Ist das Wort ein Kompositum?",
-rows:["Abteilung","Geschwindigkeit","Bildschirm","Praktikant","Hartschaumstoff","Leistungssportler","Öffentlichkeit"],
-cols:["Kompositum","kein Kompositum"],
-correct:[1,1,0,1,0,0,1],
-model:"Bildschirm (Bild+Schirm), Hartschaumstoff (Hart+Schaum+Stoff), Leistungssportler (Leistung+Sportler)",
-rule:"<div class=rbox>Ableitungen (-ung, -igkeit, -keit) sind keine Komposita.</div>"},
 ]},
 
-{id:"msa_rechtschreibung",title:"Rechtschreibung",emoji:"✏️",color:"#8f5a3d",qs:[
-{sub:"Getrennt-/Zusammenschreibung",type:"cross",q:'Kreuzen Sie an, ob die unterstrichenen Wendungen getrennt oder zusammengeschrieben werden.\n(a) In meiner Freizeit kann ich stundenlang / Stunden lang Serien anschauen.\n(b) Lass mich diese Serie noch zwei stundenlang / Stunden lang anschauen.',rows:["(a)","(b)"],cols:["Getrenntschreibung","Zusammenschreibung"],correct:[1,0],model:"(a) stundenlang – zusammen · (b) zwei Stunden lang – getrennt",rule:"<div class=rbox>„stundenlang” als Adverb wird zusammengeschrieben. Bei Zahl + „Stunden lang” handelt es sich um eine Maßangabe, die getrennt geschrieben wird.</div>"},
-{sub:"Großschreibung",type:"cross",q:'Ordnen Sie der Schreibung des unterstrichenen Wortes die jeweilige Rechtschreibregel zu.\nRegel: 1. Verben werden kleingeschrieben. 2. Nominalisierte Verben werden großgeschrieben. 3. Nominalisierte Adjektive werden großgeschrieben. 4. Nominalisierte Numerale werden großgeschrieben.',rows:["(a) ANSEHEN","(b) BESSERES","(c) DRITTE"],cols:["Nom. Verb groß","Nom. Adjektiv groß","Nom. Numerale groß"],correct:[0,1,2],model:"(a) nominalisiertes Verb · (b) nominalisiertes Adjektiv · (c) nominalisiertes Numerale",rule:"<div class=rbox>Nominalisierungen werden immer großgeschrieben.</div>"},
-{sub:"Rechtschreibstrategie",type:"cross",q:'Welche Strategie wenden Sie an, um das Wort „geräumig” an der markierten Stelle richtig zu schreiben? Kreuzen Sie jeweils die zutreffende Rechtschreibstrategie an.\n(a) ä oder e? <u>geräumig</u>\n(b) g oder ch? <u>geräumig</u>',rows:["(a) ä oder e?","(b) g oder ch?"],cols:["Stammverwandtes Wort","Wort verlängern","Silben zerlegen"],correct:[0,1],model:"(a) Stammverwandtes Wort: Raum · (b) Verlängern: geräumige",rule:"<div class=rbox>ä-Strategie: Stammwort mit a suchen (Raum → räumig). g/ch: verlängern → geräumige.</div>"},
 
-{sub:"das oder dass",type:"cross",q:'Welche Schreibweise ist korrekt?\n\n_____ Streamingdienste Daten sammeln, ist kein Geheimnis.',rows:["_____ Streamingdienste Daten sammeln, ist kein Geheimnis."],cols:["das","dass"],correct:[1],model:"dass – leitet Nebensatz (Subjektsatz) ein, nicht durch „dieses” ersetzbar → Konjunktion.",rule:'<div class=rbox>Probe: durch „welches/dieses” ersetzbar? → „das”; nicht ersetzbar → „dass” (Konjunktion).</div>'},
+// ────────────────────────────────────────────────────────────────────
+// 7. UMGANGSSPRACHE & STANDARDSPRACHE
+// ────────────────────────────────────────────────────────────────────
+{id:'msa_standardsprache_2022', title:'Umgangssprache & Standardsprache', emoji:'💬', color:'#3d8f8f', qs:[
 
-{sub:"Getrennt-/Zusammenschreibung",type:"cross",q:'Kreuzen Sie an, ob die unterstrichenen Wörter getrennt geschrieben oder zusammengeschrieben werden.\n(a) Die Autos sind ins Rutschen gekommen und zusammen gefahren / zusammengefahren.\n(b) Vor Schreck bin ich gleich zusammen gefahren / zusammengefahren.',rows:["(a)","(b)"],cols:["Getrenntschreibung","Zusammenschreibung"],correct:[1,1],model:"(a) zusammen · (b) zusammen",rule:"<div class=rbox>Zusammenschreibung bei übertragener Bedeutung (zusammenzucken, kollidieren). Getrenntschreibung würde wörtliche Bedeutung betonen.</div>"},
-{sub:"Groß-/Kleinschreibung",type:"cross",q:'Ergänzen Sie die Tabelle, indem Sie der Schreibung der unterstrichenen Wörter die jeweilige Rechtschreibregel zuordnen.\nRegel: 1. Nomen werden großgeschrieben. 2. Adverbien werden kleingeschrieben. 3. Nominalisierte Adjektive werden großgeschrieben. 4. Adjektive werden kleingeschrieben.',rows:["(a) Diese Bettwäsche war nur die DRITTPEINLICHSTE.","(b) Er wollte bei diesem Projekt nicht den KÜRZEREN ziehen.","(c) Eines SONNTAGS kam Paula zu Besuch."],cols:["Nom. Adjektiv (groß)","Adverb (klein)","Nomen (groß)"],correct:[0,0,1],model:"(a) nom. Adjektiv → groß · (b) nom. Adjektiv → groß · (c) Adverb → klein",rule:"<div class=rbox>„sonntags” als Adverb → klein.</div>"},
+{sub:'Standardsprache', type:'alt',
+q:'Formulieren Sie den folgenden Satz in Standardsprache.\n\n\u201eIch habe mir alle Staffeln reingezogen.\u201c',
+a:['Ich habe alle Staffeln angesehen.','Ich habe mir alle Staffeln angesehen.'],
+model:'Ich habe alle Staffeln angesehen.',
+rule:'<div class=rbox>\u201eReingezogen\u201c ist umgangssprachlich für \u201ekonsumiert/angesehen\u201c. Standardsprache ist neutral und überregional verständlich.</div>'},
 
-{sub:"das oder dass",type:"cross",q:'Welche Schreibweise ist korrekt?\n\n_____ Unordnung zur Belastung werden kann, zeigt eine Studie.',rows:["_____ Unordnung zur Belastung werden kann, zeigt eine Studie."],cols:["das","dass"],correct:[1],model:"Dass – leitet Subjektsatz ein, nicht durch „dieses” ersetzbar.",rule:'<div class=rbox>„dass”: Konjunktion, leitet NS ein.</div>'},
+{sub:'Standardsprache', type:'alt',
+q:'Formulieren Sie den folgenden Satz in Standardsprache.\n\n\u201eDas zahlt sich eh nicht aus.\u201c',
+a:['Das lohnt sich ohnehin nicht.','Das lohnt sich sowieso nicht.'],
+model:'Das lohnt sich ohnehin nicht.',
+rule:'<div class=rbox>\u201eEh\u201c ist umgangssprachlich für \u201esowieso/ohnehin\u201c. \u201eSich auszahlen\u201c \u2192 \u201esich lohnen\u201c.</div>'},
 
-{sub:"Getrennt-/Zusammenschreibung",type:"cross",q:'Kreuzen Sie an, ob die unterstrichenen Wörter getrennt geschrieben oder zusammengeschrieben werden.\n(a) Ich habe nicht vor, den Schrank ans Fenster zu stellen / zustellen.\n(b) Der Postbote kann den Brief nicht zu stellen / zustellen.',rows:["(a)","(b)"],cols:["Getrenntschreibung","Zusammenschreibung"],correct:[0,1],model:"(a) zu stellen – getrennt · (b) zustellen – zusammen",rule:"<div class=rbox>Trennbares Verb → zusammen; zu + Infinitiv anderes Verb → getrennt.</div>"},
-{sub:"Groß-/Kleinschreibung",type:"cross",q:'Ergänzen Sie die Tabelle, indem Sie der Schreibung der unterstrichenen Wörter die jeweilige Rechtschreibregel zuordnen.\nRegel: 1. Nomen werden großgeschrieben. 2. Adverbien werden kleingeschrieben. 3. Adjektive werden kleingeschrieben.',rows:["(a) Ich räume meinen Kleiderschrank VORMITTAGS ein.","(b) Den Großteil des VORMITTAGS räumt sie auf."],cols:["Adverb (klein)","Nomen (groß)"],correct:[0,1],model:"(a) Adverb → klein: vormittags · (b) Nomen im Genitiv → groß: des Vormittags",rule:"<div class=rbox>„vormittags” als Adverb → klein; „des Vormittags” als Nomen → groß.</div>"},
-
-{sub:"das oder dass",type:"cross",q:'Welche Schreibweise ist korrekt?\n\nEs ist das größte Gummiwerk, _____ in Ungarn gebaut wurde.',rows:["Es ist das größte Gummiwerk, _____ in Ungarn gebaut wurde."],cols:["das","dass"],correct:[0],model:"das – Relativpronomen, bezieht sich auf „Gummiwerk”, ersetzbar durch „welches”.",rule:'<div class=rbox>Probe: durch „welches” ersetzbar? → „das” (Relativpronomen).</div>'},
-
-{sub:"Getrennt-/Zusammenschreibung",type:"self",q:'Begründen Sie die Getrennt- bzw. Zusammenschreibung der unterstrichenen Wörter in den folgenden Sätzen.\n(a) Ich achtete darauf, kleine Schritte <u>zu machen</u>.\n(b) Ich musste nur noch die Augen <u>zumachen</u>.',model:"(a) zu machen → getrennt, weil Infinitiv mit „zu”\n(b) zumachen → zusammen, weil trennbares Verb (ich mache zu)",rule:"<div class=rbox>Trennbares Verb → zusammen; zu + Infinitiv anderes Verb → getrennt.</div>"},
-{sub:"Apostroph",type:"cross",q:'Kreuzen Sie an, ob der Apostroph richtig oder falsch gesetzt ist.\n(a) Lewis\' Schweigen\n(b) meine Zebra\'s',rows:["(a) Lewis' Schweigen","(b) Zebra's"],cols:["richtig","falsch"],correct:[0,1],model:"(a) richtig · (b) falsch",rule:"<div class=rbox>Apostroph bei Genitiv von Eigennamen auf s/ß/x/z. Kein Apostroph beim Plural!</div>"},
-{sub:"wieder / wider",type:"self",q:'Erklären Sie die unterschiedliche Schreibung von „wieder” und „wider” in den folgenden Wörtern.\n(a) wiedersehen\n(b) widerwillig',model:"(a) wieder = erneut, zurück\n(b) wider = gegen",rule:"<div class=rbox>„wieder” bedeutet „noch einmal”, „zurück”; „wider” bedeutet „gegen”.</div>"},
-{sub:"Groß-/Kleinschreibung",type:"self",q:'Erklären Sie die Groß- bzw. Kleinschreibung der unterstrichenen Wörter.\n(a) <u>Olympische</u> Winterspiele\n(b) <u>olympische</u> Disziplinen',model:"(a) Olympische → groß: Teil eines Eigennamens\n(b) olympische → klein: allgemeines Adjektiv",rule:"<div class=rbox>Adjektive in Eigennamen → groß; allgemeine Adjektive → klein.</div>"},
-{sub:"Großschreibung",type:"cross",q:'Kreuzen Sie an, ob die unterstrichenen Wörter groß- oder kleingeschrieben werden.\n(a) Die Firma ist PLEITE.\n(b) Die ersten Flaschen kamen aus dem AMERIKANISCHEN.',rows:["(a) pleite","(b) Amerikanischen"],cols:["Großschreibung","Kleinschreibung"],correct:[1,0],model:"(a) pleite → klein (Adjektiv) · (b) Amerikanischen → groß (substantiviert)",rule:"<div class=rbox>Substantivierte Adjektive → groß; prädikativer Gebrauch → klein.</div>"},
 ]},
 
-{id:"msa_sprache",title:"Sprachvarianten & Sonstiges",emoji:"💬",color:"#3d6b8f",qs:[
-{sub:"Standardsprache",type:"alt",q:'Formulieren Sie den folgenden Satz in Standardsprache.\nIch habe mir alle Staffeln reingezogen.',a:["Ich habe mir alle Staffeln angesehen.","Ich habe alle Staffeln geschaut."],model:"Ich habe mir alle Staffeln angesehen.",rule:"<div class=rbox>Standardsprache: neutral, überregional verständlich.</div>"},
-{sub:"Standardsprache",type:"alt",q:'Formulieren Sie den folgenden Satz in Standardsprache.\nDas zahlt sich eh nicht aus.',a:["Das lohnt sich sowieso nicht.","Das lohnt sich ohnehin nicht."],model:"Das lohnt sich sowieso nicht.",rule:"<div class=rbox>„eh” = umgangssprachlich für „sowieso/ohnehin”.</div>"},
-{sub:"Ellipse",type:"self",q:'Der folgende Satz ist eine Ellipse.\nUnd rüttelt den Herrn an den Schultern.\n(a) Notieren Sie den vollständigen Satz.\n(b) Bestimmen Sie das ergänzte Satzglied.',model:"(a) Er/Sie rüttelt den Herrn an den Schultern.\n(b) Subjekt",rule:"<div class=rbox>Ellipse: unvollständiger Satz – hier fehlt das Subjekt.</div>"},
-{sub:"Unpersönliche Ausdrucksweise",type:"self",q:'Woran wird in den folgenden Beispielen die unpersönliche Ausdrucksweise deutlich?\n(a) Man hat mir meine Tasche gestohlen.\n(b) Mir wurde meine Tasche gestohlen.',model:"(a) durch das unpersönliche Pronomen „man”\n(b) durch das Passiv (Vorgangspassiv)",rule:"<div class=rbox>Unpersönlich: durch „man” oder durch Passiv.</div>"},
-{sub:"Nominalisierung auflösen",type:"alt",q:'Formen Sie den folgenden Satz so um, dass er keine Nominalisierung enthält.\n„Mein Mann ist beim Renovieren.”',a:["Mein Mann renoviert gerade.","Mein Mann renoviert."],model:"Mein Mann renoviert gerade.",rule:"<div class=rbox>„beim Renovieren” → „renoviert”</div>"},
-{sub:"Standardsprache",type:"alt",q:'Formen Sie den folgenden Satz in Standardsprache um.\nMeine Mutter ist sauer.',a:["Meine Mutter ist verärgert.","Meine Mutter ist wütend."],model:"Meine Mutter ist verärgert.",rule:"<div class=rbox>„sauer”: umgangssprachlich für „verärgert”.</div>"},
-{sub:"Adjektiv – Verwendung",type:"cross",q:'Kreuzen Sie an, ob die unterstrichenen Adjektive prädikativ, attributiv oder adverbial verwendet werden.\n(a) Das Flugzeug sackte ruckartig tiefer.\n(b) Wir setzten mit einem unsanften Ruck auf.',rows:["(a) ruckartig","(b) unsanften"],cols:["prädikativ","attributiv","adverbial"],correct:[2,1],model:"(a) adverbial · (b) attributiv",rule:"<div class=rbox>Prädikativ: nach sein/werden; attributiv: vor Nomen; adverbial: beschreibt das Verb.</div>"},
-{sub:"Aussage / Aufforderung / Möglichkeit",type:"cross",q:'Kreuzen Sie an, ob in den folgenden Sätzen jeweils eine Aussage, eine Aufforderung oder eine Möglichkeit zum Ausdruck gebracht wird.\n(a) Was Sie vorhaben, ist doch glatter Betrug.\n(b) Das freie Bett in dem Doppelzimmer könnte bis dahin belegt sein.\n(c) Bitte machen Sie kein Licht.',rows:["(a)","(b)","(c)"],cols:["Aussage","Aufforderung","Möglichkeit"],correct:[0,2,1],model:"(a) Aussage · (b) Möglichkeit · (c) Aufforderung",rule:"<div class=rbox>Möglichkeit: Konjunktiv II / „könnte”.</div>"},
-{sub:"Lokalbestimmung",type:"self",q:'Bei den unterstrichenen Satzgliedern handelt es sich um Lokalbestimmungen. Notieren Sie, was diese jeweils genau angeben.\nSatz 1: Meine Hand raste <u>in die Innentasche meiner Jacke</u>.\nSatz 2: <u>In der Innentasche meiner Jacke</u> steckte ein Zettel.',model:"Satz 1: gibt das Ziel der Bewegung an (Richtung)\nSatz 2: gibt den Ort an (wo etwas ist)",rule:"<div class=rbox>Lokalbestimmungen können den Ort (Wo?) oder die Richtung (Wohin?) angeben.</div>"},
-{sub:"Infinitiv mit zu",type:"alt",q:'Formulieren Sie den folgenden Satz so um, dass er keinen Infinitiv mit „zu” enthält.\nNoch in 20 Kilometern Entfernung war der krachende Donner zu hören.',a:["Noch in 20 Kilometern Entfernung hörte man den krachenden Donner."],model:"Noch in 20 Kilometern Entfernung hörte man den krachenden Donner.",rule:"<div class=rbox>„zu hören sein” → umformulieren mit „man + Verb”.</div>"},
-]}
+
+// ────────────────────────────────────────────────────────────────────
+// 8. DIREKTE & INDIREKTE REDE
+// ────────────────────────────────────────────────────────────────────
+{id:'msa_rede_2022', title:'Direkte & indirekte Rede', emoji:'🗣️', color:'#7c3d8f', qs:[
+
+{sub:'Indirekte Rede', type:'alt',
+q:'Formen Sie den folgenden Satz in indirekte Rede um.\n\n\u201eIch stehe Menschen mit Rat und Tat zur Seite\u201c, sagt er.',
+a:['Er sagt, er stehe Menschen mit Rat und Tat zur Seite.'],
+model:'Er sagt, er stehe Menschen mit Rat und Tat zur Seite.',
+rule:'<div class=rbox>In der indirekten Rede wird Konjunktiv I verwendet: \u201estehe\u201c (KI von stehen). Personalpronomen werden angepasst: ich \u2192 er.</div>'},
+
+{sub:'Direkte Rede', type:'alt',
+q:'Formen Sie den folgenden Satz in direkte Rede um.\n\nDie Autorin merkt an, dass viele große Denker Chaoten gewesen seien.',
+a:['\u201eDie Autorin merkt an: \u201eViele große Denker waren Chaoten.\u201c'],
+model:'Die Autorin merkt an: \u201eViele große Denker waren Chaoten.\u201c',
+rule:'<div class=rbox>In der direkten Rede fällt der Konjunktiv weg. Es werden Doppelpunkt und Anführungszeichen gesetzt. Pronomen ggf. anpassen.</div>'},
+
+]},
+
+
+// ────────────────────────────────────────────────────────────────────
+// 9. AKTIV & PASSIV
+// ────────────────────────────────────────────────────────────────────
+{id:'msa_passiv_2022', title:'Aktiv & Passiv', emoji:'⚙️', color:'#3d6b8f', qs:[
+
+{sub:'Aktiv \u2192 Passiv', type:'alt',
+q:'Formen Sie den folgenden Satz in einen Passivsatz um.\n\nSchätzungen zufolge nutzen rund vier Millionen Menschen den US-Dienst.',
+a:['Schätzungen zufolge wird der US-Dienst von rund vier Millionen Menschen genutzt.'],
+model:'Schätzungen zufolge wird der US-Dienst von rund vier Millionen Menschen genutzt.',
+rule:'<div class=rbox>Vorgangspassiv: Das Akkusativobjekt wird zum Subjekt; das Subjekt wird zur optionalen \u201evon\u201c-Phrase. Hilfsverb: werden + Partizip II.</div>'},
+
+{sub:'Passiv mit Modalverb', type:'alt',
+q:'Formen Sie den folgenden Satz in einen Satz im Passiv um.\n\n\u201eIch muss noch das Auto zurückbringen.\u201c',
+a:['Das Auto muss noch zurückgebracht werden.','Das Auto muss noch von mir zurückgebracht werden.'],
+model:'Das Auto muss noch zurückgebracht werden.',
+rule:'<div class=rbox>Passiv mit Modalverb: Modalverb + Partizip II + werden (im Infinitiv).</div>'},
+
+]},
+
+
+// ────────────────────────────────────────────────────────────────────
+// 10. SATZBAU & KOMMA
+// ────────────────────────────────────────────────────────────────────
+{id:'msa_satzbau_2022', title:'Satzbau & Komma', emoji:'📐', color:'#3d8f6b', qs:[
+
+{sub:'Kommaregel', type:'cross',
+q:'Ordnen Sie den Sätzen die entsprechende Begründung für die Kommasetzung zu.\n(1) Aufzählung  (2) Satzgefüge  (3) Satzreihe',
+rows:[
+  '(a) Das Internet war eine wichtige Quelle, nirgendwo sonst gab es so viel zu lesen.',
+  '(b) Was er für einen Weg einschlagen will, weiß er noch nicht.',
+  '(c) Er baute eine Website, drehte einen Film und schrieb Texte.'
+],
+cols:['Aufzählung','Satzgefüge','Satzreihe'],
+correct:[2,1,0],
+model:'(a) Satzreihe · (b) Satzgefüge · (c) Aufzählung',
+rule:'<div class=rbox>Satzreihe: zwei verbundene Hauptsätze. Satzgefüge: vorangestellter Nebensatz \u2192 Komma vor dem Hauptsatz. Aufzählung: gleichartige Verben durch Komma getrennt.</div>'},
+
+{sub:'Kommaregel', type:'cross',
+q:'Ordnen Sie den folgenden Sätzen die entsprechende Begründung für die Kommasetzung zu.\n(1) Satzgefüge  (2) Satzreihe  (3) Entgegenstellung  (4) Infinitivgruppe mit hinweisendem Wort',
+rows:[
+  '(a) Mein Vater fragte sie nicht nur zur Schule aus, sondern auch zu den Berufen ihrer Eltern.',
+  '(b) Ich muss zugeben, dass meine Mutter diesen Verdacht auch hatte.',
+  '(c) Sie hat keine Lust darauf, alten Leuten die Füße zu waschen.'
+],
+cols:['Satzgefüge','Satzreihe','Entgegenstellung','Infinitivgruppe m. hinweis. Wort'],
+correct:[2,0,3],
+model:'(a) Entgegenstellung · (b) Satzgefüge · (c) Infinitivgruppe mit hinweisendem Wort',
+rule:'<div class=rbox>Entgegenstellung: \u201enicht nur \u2013 sondern auch\u201c. Satzgefüge: Komma vor dem eingeleiteten Nebensatz. Infinitivgruppe mit Korrelat (darauf) \u2192 Komma obligatorisch.</div>'},
+
+{sub:'Kommaregel', type:'cross',
+q:'Ordnen Sie den folgenden Sätzen die entsprechende Begründung für die Kommasetzung zu.\n(1) Satzgefüge  (2) Satzreihe  (3) Infinitivgruppe mit Einleitewort',
+rows:[
+  '(a) Sie bückte sich, um die Hose aufzuheben.',
+  '(b) Seine Mutter, die gerade aus dem Zimmer gehen wollte, blieb stehen.'
+],
+cols:['Satzgefüge / Relativsatz','Satzreihe','Infinitivgruppe mit um \u2026 zu'],
+correct:[2,0],
+model:'(a) Infinitivgruppe mit um \u2026 zu · (b) Satzgefüge (eingeschobener Relativsatz)',
+rule:'<div class=rbox>Infinitivgruppen mit \u201eum zu\u201c, \u201eohne zu\u201c, \u201eanstatt zu\u201c werden durch Komma abgetrennt. Eingeschobene Relativsätze werden durch Kommas eingeschlossen.</div>'},
+
+{sub:'Satzgefüge bilden', type:'alt',
+q:'Formulieren Sie die folgenden Sätze als Satzgefüge.\n\n\u201eDer Schrank passt nicht in die Ecke. Ein Bücherregal muss abgebaut werden.\u201c',
+a:['Da der Schrank nicht in die Ecke passt, muss ein Bücherregal abgebaut werden.','Weil der Schrank nicht in die Ecke passt, muss ein Bücherregal abgebaut werden.'],
+model:'Da der Schrank nicht in die Ecke passt, muss ein Bücherregal abgebaut werden.',
+rule:'<div class=rbox>Ein Satzgefüge verbindet zwei Aussagen durch einen Nebensatz. Kausale Konjunktionen: \u201eda\u201c, \u201eweil\u201c.</div>'},
+
+{sub:'Gleichzeitigkeit ausdrücken', type:'alt',
+q:'Formen Sie den folgenden Satz so um, dass er Gleichzeitigkeit zum Ausdruck bringt.\n\n\u201eNachdem ich aufgelegt hatte, schluckte ich aufsteigende Tränen hinunter.\u201c',
+a:['Während ich auflegte, schluckte ich aufsteigende Tränen hinunter.','Als ich auflegte, schluckte ich aufsteigende Tränen hinunter.'],
+model:'Während ich auflegte, schluckte ich aufsteigende Tränen hinunter.',
+rule:'<div class=rbox>\u201eNachdem\u201c drückt Vorzeitigkeit aus. Gleichzeitigkeit: \u201ewährend\u201c (bei Dauer) oder \u201eals\u201c (bei einmaligem Ereignis in der Vergangenheit).</div>'},
+
+]},
+
+
+// ────────────────────────────────────────────────────────────────────
+// 11. VERBMODUS – KONJUNKTIV & IMPERATIV
+// ────────────────────────────────────────────────────────────────────
+{id:'msa_modus_2022', title:'Verbmodus', emoji:'🔀', color:'#8f6b3d', qs:[
+
+{sub:'Modus bestimmen', type:'cross',
+q:'Kreuzen Sie an, in welchem Modus die folgenden Sätze stehen.',
+rows:[
+  '(a) Als ob da ein Zwischenspeicher eingebaut wäre.',
+  '(b) Dann setz dich mal.',
+  '(c) Er gibt ihr die Hand.',
+  '(d) Einen Unterschied gebe es nicht.'
+],
+cols:['Indikativ','Imperativ','Konjunktiv I','Konjunktiv II'],
+correct:[3,1,0,2],
+model:'(a) Konjunktiv II · (b) Imperativ · (c) Indikativ · (d) Konjunktiv I',
+rule:'<div class=rbox>Indikativ: Aussage über die Realität. Imperativ: Aufforderung/Befehl. Konjunktiv I: indirekte Rede (gebe es). Konjunktiv II: Irrealis / hypothetischer Vergleich (wäre).</div>'},
+
+]},
+
+
+// ────────────────────────────────────────────────────────────────────
+// 12. MODALVERBEN
+// ────────────────────────────────────────────────────────────────────
+{id:'msa_modal_2022', title:'Modalverben', emoji:'🎯', color:'#3d5a8f', qs:[
+
+{sub:'Modalverben einsetzen', type:'self',
+q:'Formen Sie den folgenden Satz mithilfe von Modalverben so um, dass er Folgendes zum Ausdruck bringt:\n(a) eine Notwendigkeit\n(b) eine Erlaubnis\n\n\u201eIch räume meinen neuen Kleiderschrank ein.\u201c',
+model:'(a) Ich muss meinen neuen Kleiderschrank einräumen.\n(b) Ich darf meinen neuen Kleiderschrank einräumen.',
+rule:'<div class=rbox>Modalverben: müssen = Notwendigkeit/Zwang · dürfen = Erlaubnis · sollen = Fremdaufforderung · wollen = eigene Absicht · können = Fähigkeit/Möglichkeit.</div>'},
+
+]},
+
+
+// ────────────────────────────────────────────────────────────────────
+// 13. NOMINALISIERUNG
+// ────────────────────────────────────────────────────────────────────
+{id:'msa_nominal_2022', title:'Nominalisierung', emoji:'📝', color:'#6b8f3d', qs:[
+
+{sub:'Nominalisierung auflösen', type:'alt',
+q:'Formulieren Sie den folgenden Satz so um, dass er keine Nominalisierung enthält.\n\n\u201eDie Männer begannen mit dem Aufbauen der Möbel.\u201c',
+a:['Die Männer begannen, die Möbel aufzubauen.','Die Männer fingen an, die Möbel aufzubauen.'],
+model:'Die Männer begannen, die Möbel aufzubauen.',
+rule:'<div class=rbox>Nominalisierung: ein Verb wird zum Nomen (das Aufbauen \u2192 Verb aufbauen). Auflösen: das Nomen zurück ins Verb verwandeln und Satzkonstruktion anpassen.</div>'},
+
+]},
+
+
+// ────────────────────────────────────────────────────────────────────
+// 14. RECHTSCHREIBUNG
+// ────────────────────────────────────────────────────────────────────
+{id:'msa_rechtschreibung_2022', title:'Rechtschreibung', emoji:'✏️', color:'#8f5a3d', qs:[
+
+{sub:'Rechtschreibstrategie', type:'cross',
+q:'Welche Strategie wenden Sie an, um das Wort \u201egeräumig\u201c an der markierten Stelle richtig zu schreiben?\n(a) ä oder e?\n(b) g oder ch?',
+rows:['(a) ä oder e?','(b) g oder ch?'],
+cols:['Stammverwandtes Wort suchen','Wort verlängern','Wort in Silben zerlegen'],
+correct:[0,1],
+model:'(a) stammverwandtes Wort: Raum \u2192 ä · (b) verlängern: geräumige \u2192 g',
+rule:'<div class=rbox>ä/e-Strategie: Stammwort mit a finden (Raum \u2192 räumig). g/ch am Wortende: verlängern (geräumige \u2192 bleibt g).</div>'},
+
+{sub:'Rechtschreibstrategie', type:'cross',
+q:'Welche Strategie wenden Sie an, um das Wort \u201efahrlässig\u201c an der markierten Stelle richtig zu schreiben?\n(a) ss oder ß?\n(b) e oder ä?',
+rows:['(a) ss oder ß?','(b) e oder ä?'],
+cols:['Stammverwandtes Wort suchen','Wort verlängern','Wort in Silben zerlegen'],
+correct:[1,0],
+model:'(a) verlängern: fahrlässige \u2192 ss · (b) stammverwandtes Wort: lassen/Lässigkeit \u2192 ä',
+rule:'<div class=rbox>ss/ß: verlängern (fahrlässige \u2192 ss nach kurzem Vokal). ä/e: Stammwort mit a finden (lassen \u2192 lässig).</div>'},
+
+{sub:'Rechtschreibstrategie', type:'cross',
+q:'Welche Strategie wenden Sie an, um das Wort \u201eunabhängig\u201c an der markierten Stelle richtig zu schreiben?\n(a) U oder u?\n(b) g oder ch?',
+rows:['(a) U oder u?','(b) g oder ch?'],
+cols:['Stammverwandtes Wort suchen','Wort verlängern','Wort in Silben zerlegen'],
+correct:[2,1],
+model:'(a) Silben zerlegen: un-ab-hän-gig \u2192 kein Satzanfang \u2192 klein · (b) verlängern: unabhängige \u2192 g',
+rule:'<div class=rbox>Groß/Klein im Wortinnern: Silben zerlegen zeigt, dass kein Satzanfang vorliegt \u2192 Kleinschreibung. g/ch: verlängern (unabhängige \u2192 g).</div>'},
+
+{sub:'das oder dass', type:'cross',
+q:'Welche Schreibweise ist korrekt?\n\n_____ er noch viel reisen will, steht schon fest.',
+rows:['_____ er noch viel reisen will, steht schon fest.'],
+cols:['das','dass'],
+correct:[1],
+model:'dass \u2013 leitet einen Subjektsatz ein; nicht durch \u201edieses/welches\u201c ersetzbar \u2192 Konjunktion.',
+rule:'<div class=rbox>Probe: durch \u201edieses\u201c oder \u201ewelches\u201c ersetzbar? \u2192 \u201edas\u201c. Nicht ersetzbar \u2192 \u201edass\u201c (unterordnende Konjunktion).</div>'},
+
+{sub:'das oder dass', type:'cross',
+q:'Welche Schreibweise ist korrekt?\n\n_____ Streamingdienste Daten sammeln, ist kein Geheimnis.',
+rows:['_____ Streamingdienste Daten sammeln, ist kein Geheimnis.'],
+cols:['das','dass'],
+correct:[1],
+model:'dass \u2013 leitet Subjektsatz ein; nicht durch \u201edieses\u201c ersetzbar \u2192 Konjunktion.',
+rule:'<div class=rbox>\u201eDass\u201c: Konjunktion, leitet Nebensatz ein. Probe: nicht durch \u201ewelches/dieses\u201c ersetzbar.</div>'},
+
+{sub:'das oder dass', type:'cross',
+q:'Welche Schreibweise ist korrekt?\n\n_____ Unordnung zur Belastung werden kann, zeigt eine Studie.',
+rows:['_____ Unordnung zur Belastung werden kann, zeigt eine Studie.'],
+cols:['das','dass'],
+correct:[1],
+model:'dass \u2013 leitet Subjektsatz ein; nicht durch \u201edieses\u201c ersetzbar \u2192 Konjunktion.',
+rule:'<div class=rbox>\u201eDass\u201c: unterordnende Konjunktion. Probe: nicht durch \u201ewelches\u201c ersetzbar.</div>'},
+
+{sub:'Groß-/Kleinschreibung', type:'cross',
+q:'Ordnen Sie der Schreibung des unterstrichenen Wortes die jeweilige Rechtschreibregel zu.\n1. Verben werden kleingeschrieben.\n2. Nominalisierte Verben werden großgeschrieben.\n3. Nominalisierte Adjektive werden großgeschrieben.\n4. Nominalisierte Numerale werden großgeschrieben.',
+rows:[
+  '(a) Dauerhaftes ANSEHEN von Serien macht einsam.',
+  '(b) Man sollte am Samstagabend BESSERES vorhaben.',
+  '(c) Aus den Daten können DRITTE Schlussfolgerungen ziehen.'
+],
+cols:['Nom. Verb (Regel 2)','Nom. Adjektiv (Regel 3)','Nom. Numerale (Regel 4)'],
+correct:[0,1,2],
+model:'(a) nominalisiertes Verb \u2192 groß · (b) nominalisiertes Adjektiv \u2192 groß · (c) nominalisiertes Numerale \u2192 groß',
+rule:'<div class=rbox>Nominalisierungen werden stets großgeschrieben, egal ob aus Verben, Adjektiven oder Numeralen.</div>'},
+
+{sub:'Groß-/Kleinschreibung', type:'cross',
+q:'Ergänzen Sie die Tabelle, indem Sie der Schreibung der unterstrichenen Wörter die jeweilige Rechtschreibregel zuordnen.\nRegel: 1. Nomen werden großgeschrieben.  2. Adverbien werden kleingeschrieben.  3. Nominalisierte Adjektive werden großgeschrieben.',
+rows:[
+  '(a) Diese Bettwäsche war nur die DRITTPEINLICHSTE.',
+  '(b) Er wollte bei diesem Projekt nicht den KÜRZEREN ziehen.',
+  '(c) Eines SONNTAGS kam Paula zu Besuch.'
+],
+cols:['Nom. Adjektiv (groß)','Adverb (klein)','Nomen (groß)'],
+correct:[0,0,1],
+model:'(a) nom. Adjektiv \u2192 groß · (b) nom. Adjektiv \u2192 groß · (c) Adverb (sonntags) \u2192 klein',
+rule:'<div class=rbox>\u201eDie Drittpeinlichste\u201c / \u201eden Kürzeren\u201c sind nominalisierte Adjektive \u2192 groß. \u201eSonntags\u201c ist ein Zeitadverb \u2192 klein.</div>'},
+
+{sub:'Groß-/Kleinschreibung', type:'cross',
+q:'Ergänzen Sie die Tabelle, indem Sie der Schreibung der unterstrichenen Wörter die jeweilige Rechtschreibregel zuordnen.\nRegel: 1. Nomen werden großgeschrieben.  2. Adverbien werden kleingeschrieben.  3. Adjektive werden kleingeschrieben.',
+rows:[
+  '(a) Ich räume meinen Kleiderschrank VORMITTAGS ein.',
+  '(b) Den Großteil des VORMITTAGS räumt sie auf.'
+],
+cols:['Adverb (klein)','Nomen (groß)'],
+correct:[0,1],
+model:'(a) vormittags \u2192 Adverb \u2192 klein · (b) des Vormittags \u2192 Nomen im Genitiv \u2192 groß',
+rule:'<div class=rbox>\u201eVormittags\u201c als Zeitadverb \u2192 klein; \u201eder Vormittag\u201c als Nomen, hier im Genitiv \u2192 groß.</div>'},
+
+{sub:'Getrennt-/Zusammenschreibung', type:'cross',
+q:'Kreuzen Sie an, ob die unterstrichenen Wendungen getrennt oder zusammengeschrieben werden.\n(a) In meiner Freizeit kann ich stundenlang / Stunden lang Serien anschauen.\n(b) Lass mich diese Serie noch zwei stundenlang / Stunden lang anschauen.',
+rows:['(a)','(b)'],
+cols:['Getrenntschreibung','Zusammenschreibung'],
+correct:[1,0],
+model:'(a) stundenlang \u2013 zusammen · (b) zwei Stunden lang \u2013 getrennt',
+rule:'<div class=rbox>\u201eStundenlang\u201c als Adverb \u2192 zusammen. Mit einer Zahlenangabe (zwei Stunden lang) handelt es sich um eine Maßangabe \u2192 getrennt.</div>'},
+
+{sub:'Getrennt-/Zusammenschreibung', type:'cross',
+q:'Kreuzen Sie an, ob die unterstrichenen Wörter getrennt geschrieben oder zusammengeschrieben werden.\n(a) Die Autos sind ins Rutschen gekommen und zusammen gefahren / zusammengefahren.\n(b) Vor Schreck bin ich gleich zusammen gefahren / zusammengefahren.',
+rows:['(a)','(b)'],
+cols:['Getrenntschreibung','Zusammenschreibung'],
+correct:[1,1],
+model:'(a) zusammengefahren (= kollidiert) \u2013 zusammen · (b) zusammengefahren (= zusammengezuckt) \u2013 zusammen',
+rule:'<div class=rbox>Bei übertragener oder erweiterter Bedeutung wird das Verb zusammengeschrieben. Beide Fälle haben eine übertragene Bedeutung.</div>'},
+
+{sub:'Getrennt-/Zusammenschreibung', type:'cross',
+q:'Kreuzen Sie an, ob die unterstrichenen Wörter getrennt geschrieben oder zusammengeschrieben werden.\n(a) Ich habe nicht vor, den Schrank ans Fenster zu stellen / zustellen.\n(b) Der Postbote kann den Brief nicht zu stellen / zustellen.',
+rows:['(a)','(b)'],
+cols:['Getrenntschreibung','Zusammenschreibung'],
+correct:[0,1],
+model:'(a) zu stellen \u2013 getrennt (Infinitiv mit zu) · (b) zustellen \u2013 zusammen (trennbares Verb)',
+rule:'<div class=rbox>Trennbares Verb (zustellen = liefern, z.\u00a0B. \u201eer stellt zu\u201c) \u2192 zusammengeschrieben. Infinitiv mit zu bei nicht-trennbarem Verb \u2192 getrennt.</div>'},
+
+{sub:'Doppelkonsonant', type:'self',
+q:'Notieren Sie die Rechtschreibregel oder Rechtschreibstrategie, mit der die Schreibung des Doppelkonsonanten im folgenden Wort begründet wird.\n\nschnorren',
+model:'Nach einem kurzen betonten Vokal (o in schnorren) wird der folgende Konsonant verdoppelt. Strategie: Silbentrennung zeigt schnor-ren \u2192 Doppel-r.',
+rule:'<div class=rbox>Regel: Nach einem kurzen, betonten Vokal wird der folgende Konsonant verdoppelt. Die Silbentrennung (schnor-ren) macht dies sichtbar.</div>'},
+
+]},
+
 ];
 
 // Alias
