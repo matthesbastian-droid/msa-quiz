@@ -1,30 +1,87 @@
 /**
- * update.js – Update-Mechanismus für externe JS-Dateien
- * Lädt Skripte nacheinander, sammelt Fehler und zeigt Fallback-UI.
+ * update.js – Vollständiger Update-Mechanismus
+ *
+ * Was dieser Button jetzt tut:
+ *  1. Alle Daten-JS-Dateien neu laden (Fragen, Regeln, Themen)
+ *  2. Alle fehlenden MSA- und BBR-Moduldateien ergänzt
+ *  3. style.css neu laden (ohne Seiten-Reload, via <link> tauschen)
+ *  4. index.html auf Änderungen prüfen → bei Änderung automatisch
+ *     einen sauberen Seiten-Reload auslösen (nur dann!)
+ *  5. Logik-Skripte (main.js, quiz-logik.js, …) werden NICHT
+ *     neu geladen – das würde den laufenden App-Zustand zerstören.
+ *     Änderungen daran erfordern einen manuellen Reload.
  */
 
 'use strict';
 
+/* ─── Alle Datendateien (vollständig) ───────────────────────── */
 const UPDATE_SCRIPTS = [
+  // Regeln
   'regeln.js',
   'regeln-bbr.js',
+
+  // MSA Hauptaufgaben
   'msa-aufgaben.js',
-  'bbr-aufgaben.js',
-  'msa-extra-aufgaben.js',
   'msa-ueberarbeitung.js',
-  'bbr-extra-aufgaben.js',
+
+  // MSA Extra-Module
+  'msa-extra-grossschreibung.js',
+  'msa-extra-komma.js',
+  'msa-extra-indirekte-rede.js',
+  'msa-extra-passiv.js',
+  'msa-extra-satzglieder.js',
+  'msa-extra-slaut.js',
+  'msa-extra-wortarten.js',
+  'msa-extra-getrennt.js',
+  'msa-extra-satzbau.js',
+  'msa-extra-stilmittel.js',
+  'msa-extra-zeitformen.js',
+
+  // BBR Hauptaufgaben
+  'bbr-aufgaben.js',
+
+  // BBR Extra-Module
   'bbr-rechtschreibung.js',
   'bbr-extra-wieder.js',
   'bbr-extra-getrennt.js',
   'bbr-extra-wortarten.js',
   'bbr-extra-großschreibung.js',
   'bbr-extra-komma.js',
+  'bbr-extra-satzbau.js',
+  'bbr-extra-zeitformen.js',
+  'bbr-extra-faelle.js',
+  'bbr-extra-passiv.js',
+  'bbr-extra-worttrennung.js',
 ];
 
+/* MSA-Module, die window.MSA_EXTRA_THEMES befüllen */
+const MSA_MODULE_SCRIPTS = [
+  'msa-extra-grossschreibung.js',
+  'msa-extra-komma.js',
+  'msa-extra-indirekte-rede.js',
+  'msa-extra-passiv.js',
+  'msa-extra-satzglieder.js',
+  'msa-extra-slaut.js',
+  'msa-extra-wortarten.js',
+  'msa-extra-getrennt.js',
+  'msa-extra-satzbau.js',
+  'msa-extra-stilmittel.js',
+  'msa-extra-zeitformen.js',
+];
+
+/* BBR-Module, die window.BBR_EXTRA_THEMES befüllen */
 const BBR_MODULE_SCRIPTS = [
-  'bbr-extra-aufgaben.js', 'bbr-rechtschreibung.js', 'bbr-extra-wieder.js',
-  'bbr-extra-getrennt.js', 'bbr-extra-wortarten.js', 'bbr-extra-großschreibung.js',
+  'bbr-rechtschreibung.js',
+  'bbr-extra-wieder.js',
+  'bbr-extra-getrennt.js',
+  'bbr-extra-wortarten.js',
+  'bbr-extra-großschreibung.js',
   'bbr-extra-komma.js',
+  'bbr-extra-satzbau.js',
+  'bbr-extra-zeitformen.js',
+  'bbr-extra-faelle.js',
+  'bbr-extra-passiv.js',
+  'bbr-extra-worttrennung.js',
 ];
 
 /* ─── Toast ─────────────────────────────────────────────────── */
@@ -51,7 +108,7 @@ function setUpdateBtn(state) {
   switch (state) {
     case 'loading':
       btn.classList.add('loading');
-      icon.innerHTML = '<span class="update-spin">↻</span>';
+      icon.innerHTML    = '<span class="update-spin">↻</span>';
       label.textContent = 'Lädt …';
       break;
     case 'success':
@@ -64,7 +121,6 @@ function setUpdateBtn(state) {
       btn.classList.add('error');
       icon.textContent  = '⚠';
       label.textContent = 'Fehler';
-      // "Wiederholen"-Schaltfläche im Toast
       setTimeout(() => setUpdateBtn('idle'), 5000);
       break;
     default:
@@ -73,22 +129,65 @@ function setUpdateBtn(state) {
   }
 }
 
+/* ─── CSS neu laden (ohne Seiten-Reload) ────────────────────── */
+function reloadCSS(ts) {
+  const existing = document.querySelector('link[rel="stylesheet"][href^="style.css"]');
+  if (!existing) return;
+  const fresh = document.createElement('link');
+  fresh.rel  = 'stylesheet';
+  fresh.href = `style.css?v=${ts}`;
+  fresh.onload = () => existing.remove();
+  document.head.appendChild(fresh);
+}
+
+/* ─── HTML auf Änderungen prüfen → ggf. Seiten-Reload ──────── */
+async function checkHTMLAndReloadIfChanged(ts) {
+  try {
+    const res = await fetch(`index.html?v=${ts}`, { cache: 'no-store' });
+    if (!res.ok) return false;
+    const freshHTML = await res.text();
+
+    // Einfacher Größen-/Hash-Vergleich: normalisierter Text ohne Whitespace
+    const normalize = str => str.replace(/\s+/g, ' ').trim();
+    const current   = normalize(document.documentElement.outerHTML);
+    const incoming  = normalize(freshHTML);
+
+    if (current !== incoming) {
+      showToast('Neue Seitenstruktur gefunden – Seite wird neu geladen …', '', 2500);
+      setTimeout(() => location.reload(true), 2600);
+      return true; // Reload eingeleitet
+    }
+  } catch (e) {
+    devWarn('HTML-Prüfung fehlgeschlagen:', e);
+  }
+  return false;
+}
+
 /* ─── Hauptfunktion ─────────────────────────────────────────── */
-function doUpdate() {
+async function doUpdate() {
   setUpdateBtn('loading');
   showToast('Neue Inhalte werden geladen …', '', 30000);
 
-  const ts           = Date.now();
-  const scripts      = UPDATE_SCRIPTS.slice();
-  const failed       = [];
-  const bbrSnapshots = [];
+  const ts            = Date.now();
+  const scripts       = UPDATE_SCRIPTS.slice();
+  const failed        = [];
+  const msaSnapshots  = [];
+  const bbrSnapshots  = [];
 
-  function mergeBBR() {
-    if (bbrSnapshots.length === 0) return;
-    const all  = bbrSnapshots.flat();
+  /* CSS sofort im Hintergrund aktualisieren */
+  reloadCSS(ts);
+
+  /* HTML prüfen – falls Reload nötig, bricht das hier ab */
+  const reloadPending = await checkHTMLAndReloadIfChanged(ts);
+  if (reloadPending) return;
+
+  /* Themes zusammenführen und Duplikate entfernen */
+  function mergeThemes(snapshots, globalKey) {
+    if (snapshots.length === 0) return;
+    const all  = snapshots.flat();
     const seen = {};
-    window.BBR_EXTRA_THEMES = all.filter(t => {
-      if (seen[t.id]) return false;
+    window[globalKey] = all.filter(t => {
+      if (!t || !t.id || seen[t.id]) return false;
       seen[t.id] = true;
       return true;
     });
@@ -96,7 +195,9 @@ function doUpdate() {
 
   function loadNext() {
     if (scripts.length === 0) {
-      mergeBBR();
+      mergeThemes(msaSnapshots, 'MSA_EXTRA_THEMES');
+      mergeThemes(bbrSnapshots, 'BBR_EXTRA_THEMES');
+
       if (failed.length > 0) {
         setUpdateBtn('error');
         showToast(
@@ -107,24 +208,28 @@ function doUpdate() {
         devWarn('Update fehlgeschlagen für:', failed);
         return;
       }
+
       setUpdateBtn('success');
-      showToast('Inhalte aktualisiert!', 'ok', 2500);
-      // Kalender-Cache invalidieren
-      AppState.calendarCacheKey = null;
-      renderStart();
-      showPage('start');
+      showToast('Alle Inhalte aktualisiert!', 'ok', 2500);
+
+      // Kalender-Cache invalidieren und Startseite neu rendern
+      if (typeof AppState !== 'undefined') AppState.calendarCacheKey = null;
+      if (typeof renderStart === 'function') renderStart();
+      if (typeof showPage   === 'function') showPage('start');
       return;
     }
 
     const src = scripts.shift();
     const url = `${src}?v=${ts}`;
 
-    // Altes Skript-Element entfernen, um Caching zu umgehen
-    const existing = document.querySelector(`script[src^="${src}"]`);
-    if (existing) existing.remove();
+    // Altes Skript-Element entfernen, um Browser-Caching zu umgehen
+    document.querySelectorAll(`script[src^="${src}"]`).forEach(s => s.remove());
 
-    const s = document.createElement('script');
+    const s      = document.createElement('script');
     s.onload = () => {
+      if (MSA_MODULE_SCRIPTS.includes(src) && typeof window.MSA_EXTRA_THEMES !== 'undefined') {
+        msaSnapshots.push(window.MSA_EXTRA_THEMES.slice());
+      }
       if (BBR_MODULE_SCRIPTS.includes(src) && typeof window.BBR_EXTRA_THEMES !== 'undefined') {
         bbrSnapshots.push(window.BBR_EXTRA_THEMES.slice());
       }
