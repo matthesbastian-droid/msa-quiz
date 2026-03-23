@@ -18,7 +18,7 @@ var MSA_EXTRA_GROSSSCHREIBUNG = [
   {
     sub: "Substantivierte Adjektive & Adjektive vor Nomen",
     type: "cross",
-    q: "Groß oder klein schreiben?",
+    q: "<b>Entscheide</b>: Wird das Wort groß- oder kleingeschrieben? <b>Ordne</b> durch Klick in die richtige Spalte ein.",
     rows: [
       "alles (gute / Gute) zum Geburtstag",
       "etwas (neues / Neues) lernen",
@@ -36,7 +36,7 @@ var MSA_EXTRA_GROSSSCHREIBUNG = [
   {
     sub: "Nominalisierte Infinitive",
     type: "cross",
-    q: "Verb (klein) oder Nomen (groß)?",
+    q: "<b>Entscheide</b>: Handelt es sich um ein Verb (→ klein) oder ein nominalisiertes Nomen (→ groß)? <b>Ordne</b> durch Klick zu.",
     rows: [
       "Wir gehen heute (schwimmen / Schwimmen).",
       "Beim (laufen / Laufen) höre ich Musik.",
@@ -54,7 +54,7 @@ var MSA_EXTRA_GROSSSCHREIBUNG = [
   {
     sub: "Tageszeiten, Wochentage & Begleiter",
     type: "cross",
-    q: "Groß oder klein?",
+    q: "<b>Entscheide</b>: Wird das jeweilige Wort groß- oder kleingeschrieben? <b>Ordne</b> durch Klick zu.",
     rows: [
       "Wir treffen uns morgen (abend / Abend).",
       "Er kommt (nächsten / Nächsten) Montag.",
@@ -72,7 +72,7 @@ var MSA_EXTRA_GROSSSCHREIBUNG = [
   {
     sub: "Adjektiv: attributiv vs. substantiviert",
     type: "cross",
-    q: "Adjektiv (klein) oder substantiviertes Adjektiv (groß)?",
+    q: "<b>Entscheide</b>: Handelt es sich um ein Adjektiv (→ klein) oder ein substantiviertes Adjektiv (→ groß)? <b>Ordne</b> durch Klick zu.",
     rows: [
       "Das (böse / Böse) in der Welt existiert.",
       "Ein (böser / Böser) Mensch lebt hier.",
@@ -90,7 +90,7 @@ var MSA_EXTRA_GROSSSCHREIBUNG = [
   {
     sub: "Feste Wendungen & am + Superlativ",
     type: "cross",
-    q: "Groß oder klein?",
+    q: "<b>Entscheide</b>: Wird das Wort in der festen Wendung groß- oder kleingeschrieben? <b>Ordne</b> durch Klick zu.",
     rows: [
       "am (besten / Besten) schläft er im Dunkeln",
       "im (allgemeinen / Allgemeinen) stimme ich zu",
@@ -108,7 +108,7 @@ var MSA_EXTRA_GROSSSCHREIBUNG = [
   {
     sub: "Schulfächer, Sprachen & Nationalitäten",
     type: "cross",
-    q: "Groß oder klein?",
+    q: "<b>Entscheide</b>: Wird das Wort groß- oder kleingeschrieben? <b>Ordne</b> durch Klick zu.",
     rows: [
       "Sie lernt (mathematik / Mathematik).",
       "Das (biologische / Biologische) Experiment klappte.",
@@ -126,7 +126,7 @@ var MSA_EXTRA_GROSSSCHREIBUNG = [
   {
     sub: "recht / Recht – schuld / Schuld – schade",
     type: "cross",
-    q: "Groß oder klein?",
+    q: "<b>Entscheide</b>: Wird das Wort groß- oder kleingeschrieben? <b>Ordne</b> durch Klick zu.",
     rows: [
       "Du hast (recht / Recht).",
       "Das (recht / Recht) auf Bildung.",
@@ -146,7 +146,7 @@ var MSA_EXTRA_GROSSSCHREIBUNG = [
   {
     sub: "Ordinalzahl: mit oder ohne Nomen?",
     type: "mc",
-    q: "'Sie kam als ___ an.' – Welche Schreibung ist korrekt?",
+    q: "<b>Wähle</b> die korrekte Schreibung: 'Sie kam als ___ an.'",
     o: ["als erste", "als Erste", "Als Erste"],
     c: 1,
     model: "B – als Erste: kein Nomen dahinter → substantivierte Ordinalzahl → groß",
@@ -156,7 +156,7 @@ var MSA_EXTRA_GROSSSCHREIBUNG = [
   {
     sub: "Eigenname: geografisch",
     type: "mc",
-    q: "Welche Schreibung ist korrekt?",
+    q: "<b>Wähle</b> die korrekte Groß-/Kleinschreibung des geografischen Eigennamens.",
     o: ["das schwarze Meer", "Das Schwarze Meer", "das Schwarze meer"],
     c: 1,
     model: "B – Das Schwarze Meer: Adjektiv in geografischem Eigennamen → groß",
@@ -166,7 +166,7 @@ var MSA_EXTRA_GROSSSCHREIBUNG = [
   {
     sub: "Farbe: Nomen oder Adjektiv?",
     type: "mc",
-    q: "In welchem Satz ist die Farbe richtig großgeschrieben?",
+    q: "<b>Wähle</b> den Satz, in dem die Farbe richtig großgeschrieben ist.",
     o: ["Das Kleid ist Blau.", "Sie mag Blau sehr gerne.", "Ein Blaues Auto fährt vorbei."],
     c: 1,
     model: "B – Sie mag Blau: Farbe als Nomen (Objekt) → groß",
@@ -176,7 +176,7 @@ var MSA_EXTRA_GROSSSCHREIBUNG = [
   {
     sub: "Welche Schreibung ist FALSCH?",
     type: "mc",
-    q: "Welche der folgenden Schreibungen ist FALSCH?",
+    q: "<b>Erkenne</b> den Fehler: Welche der folgenden Schreibungen ist FALSCH?",
     o: ["beim Kochen", "zum lachen", "vom Tanzen"],
     c: 1,
     model: "B – 'zum lachen' ist falsch → muss 'zum Lachen' heißen",
@@ -186,7 +186,7 @@ var MSA_EXTRA_GROSSSCHREIBUNG = [
   {
     sub: "Satzanfang nach Doppelpunkt",
     type: "mc",
-    q: "Was ist korrekt?\n(a) Er rief: ___ komme morgen.\n(b) Ergebnis: ___ zu drei.",
+    q: "<b>Entscheide</b>: Groß- oder Kleinschreibung nach dem Doppelpunkt?\n(a) Er rief: ___ komme morgen.\n(b) Ergebnis: ___ zu drei.",
     o: ["(a) Ich – (b) sechs", "(a) ich – (b) Sechs", "(a) Ich – (b) Sechs"],
     c: 0,
     model: "A – (a) Ich: vollständiger Satz nach Doppelpunkt → groß. (b) sechs: nur Zahlenangabe → klein.",
@@ -196,7 +196,7 @@ var MSA_EXTRA_GROSSSCHREIBUNG = [
   {
     sub: "Knifflig: 'des Öfteren'",
     type: "mc",
-    q: "Welche Schreibung ist korrekt? 'Sie kommt ___ vorbei.'",
+    q: "<b>Wähle</b> die korrekte Schreibung: 'Sie kommt ___ vorbei.'",
     o: ["des öfteren", "des Öfteren", "Des Öfteren"],
     c: 1,
     model: "B – des Öfteren: Genitivkonstruktion mit substantiviertem Adjektiv → groß",
@@ -206,7 +206,7 @@ var MSA_EXTRA_GROSSSCHREIBUNG = [
   {
     sub: "Welcher Satz ist komplett korrekt?",
     type: "mc",
-    q: "Welcher Satz ist in Groß-/Kleinschreibung vollständig korrekt?",
+    q: "<b>Wähle</b> den Satz, der in der Groß-/Kleinschreibung vollständig korrekt ist.",
     o: [
       "Er hat sie aufs Beste begrüßt.",
       "Sie kam als erste an.",
@@ -222,7 +222,7 @@ var MSA_EXTRA_GROSSSCHREIBUNG = [
   {
     sub: "Richtige Schreibform wählen (I)",
     type: "mc3",
-    q: "Wähle jeweils die richtige Schreibung:",
+    q: "<b>Wähle</b> für jede Zeile die korrekte Groß- oder Kleinschreibung.",
     rows: [
       ["nichts Gutes", "nichts gutes"],
       ["beim laufen", "beim Laufen"],
@@ -239,7 +239,7 @@ var MSA_EXTRA_GROSSSCHREIBUNG = [
   {
     sub: "Richtige Schreibform wählen (II)",
     type: "mc3",
-    q: "Wähle die korrekte Schreibung:",
+    q: "<b>Wähle</b> für jede Zeile die korrekte Schreibung.",
     rows: [
       ["das Reisen macht Spaß", "das reisen macht Spaß"],
       ["ich gehe heute schwimmen", "ich gehe heute Schwimmen"],
@@ -258,7 +258,7 @@ var MSA_EXTRA_GROSSSCHREIBUNG = [
   {
     sub: "Regel zuordnen",
     type: "match",
-    q: "Ordne jedem Beispiel die passende Regel zu:",
+    q: "<b>Ordne zu</b>: Verbinde jedes Beispiel mit der passenden Regel zur Groß-/Kleinschreibung.",
     pairs: [
       ["beim Schreiben", "nominalisierter Infinitiv → groß"],
       ["am schnellsten", "am + Superlativ → klein"],
@@ -274,7 +274,7 @@ var MSA_EXTRA_GROSSSCHREIBUNG = [
   {
     sub: "Beispiele zuordnen",
     type: "match",
-    q: "Ordne zu: Welche Kategorie gilt?",
+    q: "<b>Ordne zu</b>: Verbinde jedes Beispiel mit der passenden Kategorie der Groß-/Kleinschreibung.",
     pairs: [
       ["das Schwarze Meer", "Eigenname → groß"],
       ["das blaue Kleid", "Adjektiv vor Nomen → klein"],

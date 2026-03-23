@@ -23,7 +23,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "Satzreihe",
     type: "komma",
-    q: 'Setzen Sie das fehlende Komma im folgenden Satz:\n\nDie Sonne scheint der Himmel ist blau.',
+    q: '<b>Setze</b> das fehlende Komma im folgenden Satz, indem du auf die richtige Stelle klickst:\n\nDie Sonne scheint der Himmel ist blau.',
     sentence: 'Die Sonne scheint der Himmel ist blau.',
     correctPositions: [18],
     acceptedAnswers: ['Die Sonne scheint, der Himmel ist blau.'],
@@ -34,7 +34,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "Satzreihe",
     type: "komma",
-    q: 'Setzen Sie das fehlende Komma im folgenden Satz:\n\nDer Zug kam pünktlich die Reisenden stiegen ein.',
+    q: '<b>Setze</b> das fehlende Komma im folgenden Satz, indem du auf die richtige Stelle klickst:\n\nDer Zug kam pünktlich die Reisenden stiegen ein.',
     sentence: 'Der Zug kam pünktlich die Reisenden stiegen ein.',
     correctPositions: [21],
     acceptedAnswers: ['Der Zug kam pünktlich, die Reisenden stiegen ein.'],
@@ -45,7 +45,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "Satzreihe",
     type: "komma",
-    q: 'Setzen Sie das fehlende Komma im folgenden Satz:\n\nSie öffnete die Tür ein kalter Wind strömte herein.',
+    q: '<b>Setze</b> das fehlende Komma im folgenden Satz, indem du auf die richtige Stelle klickst:\n\nSie öffnete die Tür ein kalter Wind strömte herein.',
     sentence: 'Sie öffnete die Tür ein kalter Wind strömte herein.',
     correctPositions: [19],
     acceptedAnswers: ['Sie öffnete die Tür, ein kalter Wind strömte herein.'],
@@ -56,7 +56,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "Satzreihe",
     type: "komma",
-    q: 'Setzen Sie die fehlenden Kommas im folgenden Satz:\n\nDie Kinder spielten im Garten die Eltern saßen auf der Terrasse die Großeltern ruhten im Haus.',
+    q: '<b>Setze</b> die fehlenden Kommas im folgenden Satz, indem du auf die richtigen Stellen klickst:\n\nDie Kinder spielten im Garten die Eltern saßen auf der Terrasse die Großeltern ruhten im Haus.',
     sentence: 'Die Kinder spielten im Garten die Eltern saßen auf der Terrasse die Großeltern ruhten im Haus.',
     correctPositions: [29, 62],
     acceptedAnswers: ['Die Kinder spielten im Garten, die Eltern saßen auf der Terrasse, die Großeltern ruhten im Haus.'],
@@ -69,7 +69,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "Satzgefüge",
     type: "komma",
-    q: 'Setzen Sie das fehlende Komma im folgenden Satz:\n\nWir gehen spazieren obwohl es heute regnet.',
+    q: '<b>Setze</b> das fehlende Komma im folgenden Satz, indem du auf die richtige Stelle klickst:\n\nWir gehen spazieren obwohl es heute regnet.',
     sentence: 'Wir gehen spazieren obwohl es heute regnet.',
     correctPositions: [19],
     acceptedAnswers: ['Wir gehen spazieren, obwohl es heute regnet.'],
@@ -80,7 +80,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "Satzgefüge",
     type: "komma",
-    q: 'Setzen Sie das fehlende Komma im folgenden Satz:\n\nNachdem sie das Buch gelesen hatte gab sie es ihrer Freundin.',
+    q: '<b>Setze</b> das fehlende Komma im folgenden Satz, indem du auf die richtige Stelle klickst:\n\nNachdem sie das Buch gelesen hatte gab sie es ihrer Freundin.',
     sentence: 'Nachdem sie das Buch gelesen hatte gab sie es ihrer Freundin.',
     correctPositions: [34],
     acceptedAnswers: ['Nachdem sie das Buch gelesen hatte, gab sie es ihrer Freundin.'],
@@ -91,7 +91,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "Satzgefüge",
     type: "komma",
-    q: 'Setzen Sie die fehlenden Kommas im folgenden Satz:\n\nDas Mädchen das jeden Tag übte gewann schließlich den Wettbewerb.',
+    q: '<b>Setze</b> die fehlenden Kommas im folgenden Satz, indem du auf die richtigen Stellen klickst:\n\nDas Mädchen das jeden Tag übte gewann schließlich den Wettbewerb.',
     sentence: 'Das Mädchen das jeden Tag übte gewann schließlich den Wettbewerb.',
     correctPositions: [11, 29],
     acceptedAnswers: ['Das Mädchen, das jeden Tag übte, gewann schließlich den Wettbewerb.'],
@@ -102,7 +102,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "Satzgefüge",
     type: "komma",
-    q: 'Setzen Sie das fehlende Komma im folgenden Satz:\n\nEr arbeitete konzentriert weil die Abgabe morgen war.',
+    q: '<b>Setze</b> das fehlende Komma im folgenden Satz, indem du auf die richtige Stelle klickst:\n\nEr arbeitete konzentriert weil die Abgabe morgen war.',
     sentence: 'Er arbeitete konzentriert weil die Abgabe morgen war.',
     correctPositions: [23],
     acceptedAnswers: ['Er arbeitete konzentriert, weil die Abgabe morgen war.'],
@@ -115,7 +115,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "Aufzählung",
     type: "komma",
-    q: 'Setzen Sie die fehlenden Kommas im folgenden Satz:\n\nAuf dem Markt kaufte sie frische rote aromatische Tomaten.',
+    q: '<b>Setze</b> die fehlenden Kommas im folgenden Satz, indem du auf die richtigen Stellen klickst:\n\nAuf dem Markt kaufte sie frische rote aromatische Tomaten.',
     sentence: 'Auf dem Markt kaufte sie frische rote aromatische Tomaten.',
     correctPositions: [35, 40],
     acceptedAnswers: ['Auf dem Markt kaufte sie frische, rote, aromatische Tomaten.'],
@@ -126,7 +126,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "Aufzählung",
     type: "komma",
-    q: 'Setzen Sie die fehlenden Kommas im folgenden Satz:\n\nEr packte Brot Käse Äpfel und eine Flasche Wasser ein.',
+    q: '<b>Setze</b> die fehlenden Kommas im folgenden Satz, indem du auf die richtigen Stellen klickst:\n\nEr packte Brot Käse Äpfel und eine Flasche Wasser ein.',
     sentence: 'Er packte Brot Käse Äpfel und eine Flasche Wasser ein.',
     correctPositions: [14, 20],
     acceptedAnswers: ['Er packte Brot, Käse, Äpfel und eine Flasche Wasser ein.'],
@@ -137,7 +137,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "Aufzählung",
     type: "komma",
-    q: 'Setzen Sie das fehlende Komma im folgenden Satz:\n\nSie ist eine kluge fleißige Schülerin.',
+    q: '<b>Setze</b> das fehlende Komma im folgenden Satz, indem du auf die richtige Stelle klickst:\n\nSie ist eine kluge fleißige Schülerin.',
     sentence: 'Sie ist eine kluge fleißige Schülerin.',
     correctPositions: [20],
     acceptedAnswers: ['Sie ist eine kluge, fleißige Schülerin.'],
@@ -148,7 +148,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "Aufzählung",
     type: "komma",
-    q: 'Setzen Sie die fehlenden Kommas im folgenden Satz:\n\nDie große grüne alte Eiche steht mitten im Dorf.',
+    q: '<b>Setze</b> die fehlenden Kommas im folgenden Satz, indem du auf die richtigen Stellen klickst:\n\nDie große grüne alte Eiche steht mitten im Dorf.',
     sentence: 'Die große grüne alte Eiche steht mitten im Dorf.',
     correctPositions: [10, 17],
     acceptedAnswers: ['Die große, grüne, alte Eiche steht mitten im Dorf.'],
@@ -161,7 +161,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "Infinitivgruppe mit hinweisendem Fürwort",
     type: "komma",
-    q: 'Setzen Sie das fehlende Komma im folgenden Satz:\n\nSie war davon überzeugt ihre große Liebe gefunden zu haben.',
+    q: '<b>Setze</b> das fehlende Komma, indem du auf die richtige Stelle klickst. im folgenden Satz:\n\nSie war davon überzeugt ihre große Liebe gefunden zu haben.',
     sentence: 'Sie war davon überzeugt ihre große Liebe gefunden zu haben.',
     correctPositions: [21],
     acceptedAnswers: ['Sie war davon überzeugt, ihre große Liebe gefunden zu haben.'],
@@ -172,7 +172,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "Infinitivgruppe mit hinweisendem Fürwort",
     type: "komma",
-    q: 'Setzen Sie das fehlende Komma im folgenden Satz:\n\nEr hatte es sich vorgenommen jeden Tag Sport zu treiben.',
+    q: '<b>Setze</b> das fehlende Komma, indem du auf die richtige Stelle klickst. im folgenden Satz:\n\nEr hatte es sich vorgenommen jeden Tag Sport zu treiben.',
     sentence: 'Er hatte es sich vorgenommen jeden Tag Sport zu treiben.',
     correctPositions: [27],
     acceptedAnswers: ['Er hatte es sich vorgenommen, jeden Tag Sport zu treiben.'],
@@ -183,7 +183,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "Infinitivgruppe mit hinweisendem Fürwort",
     type: "komma",
-    q: 'Setzen Sie das fehlende Komma im folgenden Satz:\n\nWir freuten uns darauf endlich Urlaub zu machen.',
+    q: '<b>Setze</b> das fehlende Komma, indem du auf die richtige Stelle klickst. im folgenden Satz:\n\nWir freuten uns darauf endlich Urlaub zu machen.',
     sentence: 'Wir freuten uns darauf endlich Urlaub zu machen.',
     correctPositions: [21],
     acceptedAnswers: ['Wir freuten uns darauf, endlich Urlaub zu machen.'],
@@ -194,7 +194,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "Infinitivgruppe mit hinweisendem Fürwort",
     type: "komma",
-    q: 'Setzen Sie das fehlende Komma im folgenden Satz:\n\nSie dachte nicht daran pünktlich zu erscheinen.',
+    q: '<b>Setze</b> das fehlende Komma, indem du auf die richtige Stelle klickst. im folgenden Satz:\n\nSie dachte nicht daran pünktlich zu erscheinen.',
     sentence: 'Sie dachte nicht daran pünktlich zu erscheinen.',
     correctPositions: [21],
     acceptedAnswers: ['Sie dachte nicht daran, pünktlich zu erscheinen.'],
@@ -205,7 +205,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "Infinitivgruppe mit hinweisendem Fürwort",
     type: "komma",
-    q: 'Setzen Sie das fehlende Komma im folgenden Satz:\n\nEr war damit beschäftigt sein Zimmer aufzuräumen.',
+    q: '<b>Setze</b> das fehlende Komma, indem du auf die richtige Stelle klickst. im folgenden Satz:\n\nEr war damit beschäftigt sein Zimmer aufzuräumen.',
     sentence: 'Er war damit beschäftigt sein Zimmer aufzuräumen.',
     correctPositions: [22],
     acceptedAnswers: ['Er war damit beschäftigt, sein Zimmer aufzuräumen.'],
@@ -218,7 +218,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "Apposition",
     type: "komma",
-    q: 'Setzen Sie die fehlenden Kommas im folgenden Satz:\n\nFrau Müller die Leiterin der Abteilung ist im Urlaub.',
+    q: '<b>Setze</b> die fehlenden Kommas, indem du auf die richtigen Stellen klickst. im folgenden Satz:\n\nFrau Müller die Leiterin der Abteilung ist im Urlaub.',
     sentence: 'Frau Müller die Leiterin der Abteilung ist im Urlaub.',
     correctPositions: [11, 36],
     acceptedAnswers: ['Frau Müller, die Leiterin der Abteilung, ist im Urlaub.'],
@@ -229,7 +229,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "Apposition",
     type: "komma",
-    q: 'Setzen Sie die fehlenden Kommas im folgenden Satz:\n\nBerlin die Hauptstadt Deutschlands ist eine lebendige Stadt.',
+    q: '<b>Setze</b> die fehlenden Kommas, indem du auf die richtigen Stellen klickst. im folgenden Satz:\n\nBerlin die Hauptstadt Deutschlands ist eine lebendige Stadt.',
     sentence: 'Berlin die Hauptstadt Deutschlands ist eine lebendige Stadt.',
     correctPositions: [7, 30],
     acceptedAnswers: ['Berlin, die Hauptstadt Deutschlands, ist eine lebendige Stadt.'],
@@ -240,7 +240,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "Apposition",
     type: "komma",
-    q: 'Setzen Sie die fehlenden Kommas im folgenden Satz:\n\nMein Bruder ein begeisterter Sportler läuft jeden Morgen.',
+    q: '<b>Setze</b> die fehlenden Kommas, indem du auf die richtigen Stellen klickst. im folgenden Satz:\n\nMein Bruder ein begeisterter Sportler läuft jeden Morgen.',
     sentence: 'Mein Bruder ein begeisterter Sportler läuft jeden Morgen.',
     correctPositions: [11, 35],
     acceptedAnswers: ['Mein Bruder, ein begeisterter Sportler, läuft jeden Morgen.'],
@@ -251,7 +251,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "Apposition",
     type: "komma",
-    q: 'Setzen Sie die fehlenden Kommas im folgenden Satz:\n\nDer Schüler Moritz der Klassensprecher meldete sich als Erster.',
+    q: '<b>Setze</b> die fehlenden Kommas, indem du auf die richtigen Stellen klickst. im folgenden Satz:\n\nDer Schüler Moritz der Klassensprecher meldete sich als Erster.',
     sentence: 'Der Schüler Moritz der Klassensprecher meldete sich als Erster.',
     correctPositions: [18, 37],
     acceptedAnswers: ['Der Schüler Moritz, der Klassensprecher, meldete sich als Erster.'],
@@ -266,7 +266,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "Komma-Regel: Anrede",
     type: "mc",
-    q: "Welcher Satz ist richtig interpunktiert?",
+    q: "<b>Wähle</b> den richtig interpunktierten Satz aus.",
     o: ["Komm wir essen Opa!", "Komm, wir essen, Opa!", "Komm, wir essen Opa!"],
     c: 1,
     model: "B – Komm, wir essen, Opa! (Anrede 'Opa' wird mit Komma abgetrennt)",
@@ -276,7 +276,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "entweder … oder – Komma?",
     type: "mc",
-    q: "Welcher Satz ist korrekt?",
+    q: "<b>Wähle</b> den korrekten Satz aus.",
     o: ["Entweder wir gehen, oder wir bleiben.", "Entweder wir gehen oder wir bleiben.", "Entweder, wir gehen oder wir bleiben."],
     c: 1,
     model: "B – kein Komma bei 'entweder … oder' (zweiteilige Konjunktion)",
@@ -286,7 +286,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "dass vs. das – Komma davor?",
     type: "mc",
-    q: "Welcher Satz braucht zwingend ein Komma vor dem markierten Wort?\n(a) Er glaubt ___ alles gut wird.\n(b) Das Buch ___ er kaufte ___ ist interessant.",
+    q: "<b>Entscheide</b>: Welcher der folgenden Sätze braucht zwingend ein Komma vor dem markierten Wort?\n(a) Er glaubt ___ alles gut wird.\n(b) Das Buch ___ er kaufte ___ ist interessant.",
     o: ["Nur (a) braucht Komma vor 'dass'", "Nur (b) braucht Komma", "Beide brauchen Komma"],
     c: 2,
     model: "C – Beide: 'dass' (Konjunktion) → Komma davor; 'das' (Relativpronomen) → NS in Kommas einschließen",
@@ -296,7 +296,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "Verknüpfungsadverb: deshalb",
     type: "mc",
-    q: "'Es regnete ( ) deshalb ( ) blieben wir.' – Welche Kommasetzung ist korrekt?",
+    q: "<b>Wähle</b> die korrekte Kommasetzung: 'Es regnete ( ) deshalb ( ) blieben wir.'",
     o: ["Es regnete, deshalb, blieben wir.", "Es regnete, deshalb blieben wir.", "Es regnete deshalb, blieben wir."],
     c: 1,
     model: "B – Komma vor 'deshalb', kein Komma nach 'deshalb'",
@@ -306,7 +306,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "Infinitiv mit 'zu' – Komma nötig?",
     type: "mc",
-    q: "'Er versucht ( ) zu schlafen.' – Komma nötig?",
+    q: "<b>Entscheide</b>: Ist bei 'Er versucht ( ) zu schlafen.' ein Komma nötig?",
     o: ["Ja, immer: Er versucht, zu schlafen.", "Nein, nicht zwingend bei einfachem Infinitiv.", "Nein, nie ein Komma vor 'zu'."],
     c: 1,
     model: "B – Einfache Infinitivgruppen ohne Signalwort (versuchen, beginnen) → Komma optional",
@@ -320,7 +320,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "Komma oder kein Komma? (Schnelltest)",
     type: "mc3",
-    q: "Komma an der markierten Stelle?",
+    q: "<b>Entscheide</b> für jede Zeile: Steht an der markierten Stelle ein Komma oder nicht? <b>Wähle</b> die richtige Spalte.",
     rows: [
       ["Komma", "kein Komma"],
       ["Komma", "kein Komma"],
@@ -349,7 +349,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "Kommaregel → Beispiel zuordnen",
     type: "match",
-    q: "Ordne der Kommaregel ein passendes Beispiel zu:",
+    q: "<b>Ordne zu</b>: Verbinde jede Kommaregel mit einem passenden Beispiel.",
     pairs: [
       ["Anrede → Komma", "Komm, Opa!"],
       ["Nebensatz → Komma", "Ich lerne, weil es wichtig ist."],
@@ -365,7 +365,7 @@ var MSA_EXTRA_KOMMA = [
   {
     sub: "Satzstruktur → Kommaregel zuordnen",
     type: "match",
-    q: "Ordne dem Satztyp die Kommaregel zu:",
+    q: "<b>Ordne zu</b>: Verbinde jeden Satztyp mit der zugehörigen Kommaregel.",
     pairs: [
       ["Relativsatz", "wird in Kommas eingeschlossen"],
       ["Konditionalsatz (wenn)", "Komma zwischen NS und HS"],

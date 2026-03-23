@@ -11,7 +11,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Anredepronomen (Höflichkeitsform)",
         type: "cross",
-        q: "Entscheide: groß oder klein?",
+        q: "<b>Entscheide</b>: groß oder klein?",
         rows: [
           "Können ___ Sie mir helfen?",
           "Ich danke ___ Ihnen herzlich.",
@@ -27,7 +27,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Substantivierte Adjektive",
         type: "cross",
-        q: "Entscheide: groß oder klein?",
+        q: "<b>Entscheide</b>: groß oder klein?",
         rows: [
           "Er hat etwas ___ Neues gelernt.",
           "Wir wünschen dir alles ___ Gute.",
@@ -44,7 +44,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Substantivierte Verben",
         type: "cross",
-        q: "Entscheide: groß oder klein?",
+        q: "<b>Entscheide</b>: groß oder klein?",
         rows: [
           "Beim ___ Laufen fühle ich mich frei.",
           "Zum ___ Essen gehe ich ins Restaurant.",
@@ -61,7 +61,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Feste Wendungen mit Nomen",
         type: "cross",
-        q: "Entscheide: groß oder klein?",
+        q: "<b>Entscheide</b>: groß oder klein?",
         rows: [
           "Er fährt gerne ___ Rad.",
           "Sie hat ___ Schuld an dem Unfall.",
@@ -78,7 +78,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Eigennamen und geografische Namen",
         type: "cross",
-        q: "Entscheide: groß oder klein?",
+        q: "<b>Entscheide</b>: groß oder klein?",
         rows: [
           "der ___ Große Wagen (Sternbild)",
           "das ___ Rote Meer",
@@ -94,7 +94,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Zahlen und Buchstaben",
         type: "cross",
-        q: "Entscheide: groß oder klein?",
+        q: "<b>Entscheide</b>: groß oder klein?",
         rows: [
           "Er hat eine ___ Eins in Mathe.",
           "Das Wort beginnt mit einem ___ A.",
@@ -110,7 +110,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Sprachen und Nationalitäten",
         type: "cross",
-        q: "Entscheide: groß oder klein?",
+        q: "<b>Entscheide</b>: groß oder klein?",
         rows: [
           "Er spricht fließend ___ Deutsch.",
           "Das ist ein ___ deutsches Auto.",
@@ -126,7 +126,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Farbbezeichnungen",
         type: "cross",
-        q: "Entscheide: groß oder klein?",
+        q: "<b>Entscheide</b>: groß oder klein?",
         rows: [
           "Das Auto ist ___ rot.",
           "Sie mag die Farbe ___ Rot.",
@@ -142,7 +142,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Uhrzeiten",
         type: "cross",
-        q: "Entscheide: groß oder klein?",
+        q: "<b>Entscheide</b>: groß oder klein?",
         rows: [
           "Wir treffen uns um ___ drei.",
           "Um ___ halb vier ist Pause.",
@@ -158,7 +158,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Indefinitpronomen",
         type: "cross",
-        q: "Entscheide: groß oder klein?",
+        q: "<b>Entscheide</b>: groß oder klein?",
         rows: [
           "___ Alles ist gut. (Satzanfang)",
           "Sie hat ___ alles versucht.",
@@ -174,7 +174,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Gemischte Übung",
         type: "cross",
-        q: "Entscheide: groß oder klein?",
+        q: "<b>Entscheide</b>: groß oder klein?",
         rows: [
           "Er hat ___ Recht.",
           "Sie ist ___ Ärztin.",
@@ -201,7 +201,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Verb + bleiben / lassen",
         type: "cross",
-        q: "Getrennt oder zusammen?",
+        q: "<b>Entscheide</b>: Getrennt oder zusammen?",
         rows: [
           "Er wird zu Hause ___ (bleiben lassen)",
           "Sie ist vor dem Kino ___ (stehen geblieben)",
@@ -217,7 +217,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Adjektiv + Verb",
         type: "cross",
-        q: "Getrennt oder zusammen?",
+        q: "<b>Entscheide</b>: Getrennt oder zusammen?",
         rows: [
           "Sie will ___ (fern sehen)",
           "Er ist ___ (krank geschrieben)",
@@ -233,7 +233,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Substantiv + Verb (Auto fahren etc.)",
         type: "cross",
-        q: "Getrennt oder zusammen?",
+        q: "<b>Entscheide</b>: Getrennt oder zusammen?",
         rows: [
           "Er lernt ___ (Auto fahren)",
           "Sie geht gerne ___ (Rad fahren)",
@@ -249,7 +249,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Verb + Verb (feste Verbindungen)",
         type: "cross",
-        q: "Getrennt oder zusammen?",
+        q: "<b>Entscheide</b>: Getrennt oder zusammen?",
         rows: [
           "Er will ___ (stehen bleiben)",
           "Sie ist ___ (sitzen geblieben)",
@@ -265,7 +265,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Trennbare Verben",
         type: "cross",
-        q: "Getrennt oder zusammen?",
+        q: "<b>Entscheide</b>: Getrennt oder zusammen?",
         rows: [
           "Morgen muss ich ___ (aufstehen)",
           "Er will ___ (einkaufen)",
@@ -282,7 +282,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Untrennbare Verben",
         type: "cross",
-        q: "Getrennt oder zusammen?",
+        q: "<b>Entscheide</b>: Getrennt oder zusammen?",
         rows: [
           "Er will ___ (bekommen)",
           "Sie kann ___ (verstehen)",
@@ -299,7 +299,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Verbindungen mit 'wieder'",
         type: "cross",
-        q: "Getrennt oder zusammen?",
+        q: "<b>Entscheide</b>: Getrennt oder zusammen?",
         rows: [
           "Er wird ___ (wiederkommen)",
           "Sie will das Buch ___ (wieder holen)",
@@ -315,7 +315,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Partizipien trennbarer Verben",
         type: "cross",
-        q: "Getrennt oder zusammen?",
+        q: "<b>Entscheide</b>: Getrennt oder zusammen?",
         rows: [
           "Er ist ___ (aufgestanden)",
           "Sie hat ___ (eingekauft)",
@@ -332,7 +332,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Infinitiv mit 'zu' bei trennbaren Verben",
         type: "cross",
-        q: "Getrennt oder zusammen?",
+        q: "<b>Entscheide</b>: Getrennt oder zusammen?",
         rows: [
           "Er hofft, ___ (aufzustehen)",
           "Sie versucht, ___ (einzukaufen)",
@@ -349,7 +349,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Zusammengesetzte Nomen",
         type: "cross",
-        q: "Getrennt oder zusammen?",
+        q: "<b>Entscheide</b>: Getrennt oder zusammen?",
         rows: [
           "Das ist ein ___ (Hausboot)",
           "Sie trägt eine ___ (Sonnenbrille)",
@@ -366,7 +366,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Verbindungen mit 'zusammen'",
         type: "cross",
-        q: "Getrennt oder zusammen? (Achte auf die Bedeutung: gemeinsam = getrennt, festes Verb = zusammen)",
+        q: "<b>Entscheide</b>: Getrennt oder zusammen? (Achte auf die Bedeutung: gemeinsam = getrennt, festes Verb = zusammen)",
         rows: [
           "Du musst deine Schulsachen ___ (zusammen packen / zusammenpacken).",
           "___ (Zusammen packen / Zusammenpacken) wir das!",
@@ -382,7 +382,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Verbindungen mit 'sein'",
         type: "cross",
-        q: "Getrennt oder zusammen? (Als Verb immer getrennt, nur als Nomen zusammen.)",
+        q: "<b>Entscheide</b>: Getrennt oder zusammen? (Als Verb immer getrennt, nur als Nomen zusammen.)",
         rows: [
           "Als Stewardess muss man immer ___ (freundlich sein / freundlichsein).",
           "Das ___ (Freundlichsein / Freundlich sein) fällt ihr leicht.",
@@ -398,7 +398,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Gemischte Übung",
         type: "cross",
-        q: "Getrennt oder zusammen?",
+        q: "<b>Entscheide</b>: Getrennt oder zusammen?",
         rows: [
           "Er wird ___ (teilnehmen)",
           "Sie geht ___ (spazieren gehen)",
@@ -425,7 +425,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Aufzählungen",
         type: "cross",
-        q: "Komma ja oder nein? (markiere die Stelle mit () )",
+        q: "<b>Entscheide</b>: Komma ja oder nein? (markiere die Stelle mit () )",
         rows: [
           "Er kaufte Äpfel () Birnen und Bananen.",
           "Sie ist klug () fleißig und hilfsbereit.",
@@ -442,7 +442,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Appositionen",
         type: "cross",
-        q: "Komma ja oder nein? (markiere die Stelle mit () )",
+        q: "<b>Entscheide</b>: Komma ja oder nein? (markiere die Stelle mit () )",
         rows: [
           "Herr Müller () unser Nachbar ist sehr nett.", // nur eine Lücke nach Müller
           "Herr Müller unser Nachbar () ist sehr nett.", // Lücke nach Nachbar
@@ -464,7 +464,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Infinitivgruppen mit um/anstatt/ohne",
         type: "cross",
-        q: "Komma ja oder nein? (markiere die Stelle mit () )",
+        q: "<b>Entscheide</b>: Komma ja oder nein? (markiere die Stelle mit () )",
         rows: [
           "Er spart () um ein Auto zu kaufen.",
           "Anstatt zu lernen () spielt er Computer.",
@@ -481,7 +481,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Einfache Infinitivgruppen",
         type: "cross",
-        q: "Komma ja oder nein? (markiere die Stelle mit () )",
+        q: "<b>Entscheide</b>: Komma ja oder nein? (markiere die Stelle mit () )",
         rows: [
           "Er versucht () zu kommen.",
           "Sie hofft () ihn zu sehen.",
@@ -498,7 +498,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Partizipgruppen",
         type: "cross",
-        q: "Komma ja oder nein? (markiere die Stelle mit () )",
+        q: "<b>Entscheide</b>: Komma ja oder nein? (markiere die Stelle mit () )",
         rows: [
           "Er kam () lachend ins Zimmer.",
           "Vom Regen durchnässt () betraten sie das Haus.",
@@ -514,7 +514,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Hauptsatzreihen",
         type: "cross",
-        q: "Komma ja oder nein? (markiere die Stelle mit () )",
+        q: "<b>Entscheide</b>: Komma ja oder nein? (markiere die Stelle mit () )",
         rows: [
           "Er ging nach Hause () und sie blieb im Büro.",
           "Sie ist klug () aber manchmal faul.",
@@ -530,7 +530,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Einschübe",
         type: "cross",
-        q: "Komma ja oder nein? (markiere die Stelle mit () )",
+        q: "<b>Entscheide</b>: Komma ja oder nein? (markiere die Stelle mit () )",
         rows: [
           "Er ist () wie du weißt mein bester Freund.",
           "Er ist wie du weißt () mein bester Freund.",
@@ -551,7 +551,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Anreden",
         type: "cross",
-        q: "Komma ja oder nein? (markiere die Stelle mit () )",
+        q: "<b>Entscheide</b>: Komma ja oder nein? (markiere die Stelle mit () )",
         rows: [
           "Guten Tag () Frau Müller!",
           "Kinder () hört mal zu!",
@@ -577,7 +577,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Ausrufe",
         type: "cross",
-        q: "Komma ja oder nein? (markiere die Stelle mit () )",
+        q: "<b>Entscheide</b>: Komma ja oder nein? (markiere die Stelle mit () )",
         rows: [
           "Oh () das tut weh!",
           "Ach () vergiss es.",
@@ -593,7 +593,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Nachgestellte Erläuterungen",
         type: "cross",
-        q: "Komma ja oder nein? (markiere die Stelle mit () )",
+        q: "<b>Entscheide</b>: Komma ja oder nein? (markiere die Stelle mit () )",
         rows: [
           "Er kommt morgen () nämlich um 10 Uhr.",
           "Sie ist sehr klug () insbesondere in Mathe.",
@@ -609,7 +609,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Gemischte Übung",
         type: "cross",
-        q: "Komma ja oder nein? (markiere die Stelle mit () )",
+        q: "<b>Entscheide</b>: Komma ja oder nein? (markiere die Stelle mit () )",
         rows: [
           "Ich hoffe () dass du kommst.",
           "Er ist nett () aber manchmal laut.",
@@ -638,7 +638,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Stellung der Verbzusätze (trennbare Verben)",
         type: "cross",
-        q: "Ist die Stellung des Verbzusatzes korrekt?",
+        q: "<b>Entscheide</b>: Ist die Stellung des Verbzusatzes korrekt?",
         rows: [
           "Er aufsteht morgen früh.",
           "Sie ruft heute Abend an.",
@@ -654,7 +654,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Objektstellung (Dativ vor Akkusativ)",
         type: "cross",
-        q: "Ist die Reihenfolge der Objekte korrekt?",
+        q: "<b>Entscheide</b>: Ist die Reihenfolge der Objekte korrekt?",
         rows: [
           "Ich gebe dem Kind den Ball.",
           "Ich gebe den Ball dem Kind.",
@@ -670,7 +670,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Adverbiale (Zeit vor Ort)",
         type: "cross",
-        q: "Ist die Reihenfolge der Angaben korrekt?",
+        q: "<b>Entscheide</b>: Ist die Reihenfolge der Angaben korrekt?",
         rows: [
           "Er geht morgen ins Kino.",
           "Er geht ins Kino morgen.",
@@ -686,7 +686,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Inversion (Subjekt nach Verb)",
         type: "cross",
-        q: "Ist der Satz korrekt gebildet?",
+        q: "<b>Entscheide</b>: Ist der Satz korrekt gebildet?",
         rows: [
           "Morgen gehe ich ins Kino.",
           "Morgen ich gehe ins Kino.",
@@ -702,7 +702,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Nebensatz mit 'dass'",
         type: "cross",
-        q: "Ist der Satz korrekt?",
+        q: "<b>Entscheide</b>: Ist der Satz korrekt?",
         rows: [
           "Ich glaube, dass er kommt.",
           "Ich glaube, dass er kommt? (Frage)",
@@ -718,7 +718,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "weil-Satz (Verbendstellung)",
         type: "cross",
-        q: "Ist der Satz korrekt? (Achte auf die Verbposition im weil-Satz.)",
+        q: "<b>Entscheide</b>: Ist der Satz korrekt? (Achte auf die Verbposition im weil-Satz.)",
         rows: [
           "Weil er krank ist, bleibt er zu Hause.",
           "Weil er ist krank, bleibt er zu Hause.",
@@ -734,7 +734,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Indirekte Fragesätze",
         type: "cross",
-        q: "Ist der Satz korrekt?",
+        q: "<b>Entscheide</b>: Ist der Satz korrekt?",
         rows: [
           "Ich frage, ob er kommt.",
           "Ich frage, ob kommt er.",
@@ -750,7 +750,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Relativsätze",
         type: "cross",
-        q: "Ist der Relativsatz korrekt gebildet?",
+        q: "<b>Entscheide</b>: Ist der Relativsatz korrekt gebildet?",
         rows: [
           "Das ist der Mann, der mir geholfen hat.",
           "Das ist der Mann, der hat mir geholfen.",
@@ -766,7 +766,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Verbposition in verschiedenen Satzarten",
         type: "cross",
-        q: "Wo steht das Verb in den folgenden Sätzen?",
+        q: "<b>Entscheide</b>: Wo steht das Verb in den folgenden Sätzen?",
         rows: [
           "Er kommt morgen.",
           "weil er krank ist",
@@ -782,7 +782,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Gemischte Übung Satzbau",
         type: "cross",
-        q: "Ist der Satz korrekt?",
+        q: "<b>Entscheide</b>: Ist der Satz korrekt?",
         rows: [
           "Ich gehe morgen einkaufen.",
           "Morgen gehe ich einkaufen.",
@@ -809,7 +809,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Artikel",
         type: "cross",
-        q: "Bestimme die Wortart: (bestimmter Artikel, unbestimmter Artikel, kein Artikel)",
+        q: "<b>Entscheide</b>: Bestimme die Wortart: (bestimmter Artikel, unbestimmter Artikel, kein Artikel)",
         rows: [
           "‚der' in ‚der Hund'",
           "‚ein' in ‚ein Haus'",
@@ -825,7 +825,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Personalpronomen",
         type: "cross",
-        q: "Bestimme die Wortart:",
+        q: "<b>Entscheide</b>: Bestimme die Wortart:",
         rows: [
           "‚ich'",
           "‚du'",
@@ -841,7 +841,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Possessivpronomen",
         type: "cross",
-        q: "Bestimme die Wortart:",
+        q: "<b>Entscheide</b>: Bestimme die Wortart:",
         rows: [
           "‚mein' in ‚mein Buch'",
           "‚dein' in ‚dein Auto'",
@@ -857,7 +857,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Demonstrativpronomen",
         type: "cross",
-        q: "Bestimme die Wortart:",
+        q: "<b>Entscheide</b>: Bestimme die Wortart:",
         rows: [
           "‚dieser' in ‚dieser Mann'",
           "‚jener' in ‚jene Frau'",
@@ -873,7 +873,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Präpositionen",
         type: "cross",
-        q: "Bestimme die Wortart:",
+        q: "<b>Entscheide</b>: Bestimme die Wortart:",
         rows: [
           "‚in' in ‚in der Schule'",
           "‚auf' in ‚auf dem Tisch'",
@@ -889,7 +889,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Nebenordnende Konjunktionen",
         type: "cross",
-        q: "Bestimme die Wortart:",
+        q: "<b>Entscheide</b>: Bestimme die Wortart:",
         rows: [
           "‚und'",
           "‚oder'",
@@ -905,7 +905,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Unterordnende Konjunktionen",
         type: "cross",
-        q: "Bestimme die Wortart:",
+        q: "<b>Entscheide</b>: Bestimme die Wortart:",
         rows: [
           "‚weil'",
           "‚dass'",
@@ -921,7 +921,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Adverbien",
         type: "cross",
-        q: "Bestimme die Wortart:",
+        q: "<b>Entscheide</b>: Bestimme die Wortart:",
         rows: [
           "‚heute'",
           "‚dort'",
@@ -937,7 +937,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Interjektionen",
         type: "cross",
-        q: "Bestimme die Wortart:",
+        q: "<b>Entscheide</b>: Bestimme die Wortart:",
         rows: [
           "‚Ach'",
           "‚Oh'",
@@ -953,7 +953,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Gemischte Wortarten",
         type: "mc",
-        q: "Welche Wortart hat das unterstrichene Wort?\n\n(a) Er <u>läuft</u> schnell.\n(b) Das ist ein <u>schöner</u> Tag.\n(c) Ich habe <u>ihn</u> gesehen.\n(d) <u>Und</u> dann ging er.\n(e) <u>Wegen</u> des Regens bleiben wir zu Hause.",
+        q: "<b>Bestimme</b> die Wortart:\nWelche Wortart hat das unterstrichene Wort?\n\n(a) Er <u>läuft</u> schnell.\n(b) Das ist ein <u>schöner</u> Tag.\n(c) Ich habe <u>ihn</u> gesehen.\n(d) <u>Und</u> dann ging er.\n(e) <u>Wegen</u> des Regens bleiben wir zu Hause.",
         o: [
           "(a) Verb, (b) Adjektiv, (c) Pronomen, (d) Konjunktion, (e) Präposition",
           "(a) Adjektiv, (b) Nomen, (c) Verb, (d) Adverb, (e) Konjunktion",
@@ -967,7 +967,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Zahlwörter",
         type: "cross",
-        q: "Bestimme die Wortart: (Grundzahl, Ordnungszahl, unbestimmtes Zahlwort)",
+        q: "<b>Entscheide</b>: Bestimme die Wortart: (Grundzahl, Ordnungszahl, unbestimmtes Zahlwort)",
         rows: [
           "‚eins'",
           "‚zwei'",
@@ -994,7 +994,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Zeitform erkennen (3)",
         type: "cross",
-        q: "Bestimme die Zeitform des unterstrichenen Verbs:",
+        q: "<b>Entscheide</b>: Bestimme die Zeitform des unterstrichenen Verbs:",
         rows: [
           "Er <u>singt</u>.",
           "Sie <u>sang</u>.",
@@ -1010,7 +1010,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Futur II",
         type: "cross",
-        q: "Bestimme die Zeitform:",
+        q: "<b>Entscheide</b>: Bestimme die Zeitform:",
         rows: [
           "Er <u>wird gesungen haben</u>.",
           "Sie <u>wird gekommen sein</u>.",
@@ -1026,7 +1026,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Hilfsverb im Perfekt",
         type: "cross",
-        q: "Welches Hilfsverb wird für das Perfekt benötigt?",
+        q: "<b>Entscheide</b>: Welches Hilfsverb wird für das Perfekt benötigt?",
         rows: [
           "Er ___ gelaufen.",
           "Sie ___ gegessen.",
@@ -1042,7 +1042,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Präteritum starker Verben",
         type: "cross",
-        q: "Ist die Präteritum-Form korrekt?",
+        q: "<b>Entscheide</b>: Ist die Präteritum-Form korrekt?",
         rows: [
           "Er singte (statt sang)",
           "Sie lief",
@@ -1058,7 +1058,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Partizip II",
         type: "cross",
-        q: "Ist das Partizip II korrekt gebildet?",
+        q: "<b>Entscheide</b>: Ist das Partizip II korrekt gebildet?",
         rows: [
           "gesungen",
           "gelaufen",
@@ -1074,7 +1074,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Zeitformen im Satz",
         type: "cross",
-        q: "Bestimme die Zeitform des unterstrichenen Verbs:",
+        q: "<b>Entscheide</b>: Bestimme die Zeitform des unterstrichenen Verbs:",
         rows: [
           "Er <u>wird</u> morgen kommen.",
           "Sie <u>hat</u> gestern angerufen.",
@@ -1090,7 +1090,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Futur I vs Futur II",
         type: "cross",
-        q: "Futur I oder Futur II?",
+        q: "<b>Entscheide</b>: Futur I oder Futur II?",
         rows: [
           "Er <u>wird kommen</u>.",
           "Er <u>wird gekommen sein</u>.",
@@ -1106,7 +1106,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Konjunktiv II",
         type: "cross",
-        q: "Ist die Form Konjunktiv II?",
+        q: "<b>Entscheide</b>: Ist die Form Konjunktiv II?",
         rows: [
           "Er würde kommen.",
           "Sie käme.",
@@ -1122,7 +1122,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Gemischte Übung",
         type: "cross",
-        q: "Bestimme die Zeitform:",
+        q: "<b>Entscheide</b>: Bestimme die Zeitform:",
         rows: [
           "‚Ich habe gegessen.'",
           "‚Du wirst schlafen.'",
@@ -1138,7 +1138,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Zeitformen erkennen (schwer)",
         type: "cross",
-        q: "Bestimme die Zeitform:",
+        q: "<b>Entscheide</b>: Bestimme die Zeitform:",
         rows: [
           "‚Er ist gelaufen.'",
           "‚Sie wird gekocht haben.'",
@@ -1154,7 +1154,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Zeitformen im Aktiv/Passiv (Vorgriff)",
         type: "cross",
-        q: "Bestimme die Zeitform (auch im Passiv):",
+        q: "<b>Entscheide</b>: Bestimme die Zeitform (auch im Passiv):",
         rows: [
           "Das Haus wird gebaut.",
           "Das Haus wurde gebaut.",
@@ -1181,7 +1181,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Nominativ",
         type: "cross",
-        q: "Bestimme den Fall des unterstrichenen Wortes: (wer? was?)",
+        q: "<b>Entscheide</b>: Bestimme den Fall des unterstrichenen Wortes: (wer? was?)",
         rows: [
           "<u>Der Hund</u> bellt.",
           "<u>Ein Auto</u> fährt.",
@@ -1197,7 +1197,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Akkusativ",
         type: "cross",
-        q: "Bestimme den Fall des unterstrichenen Wortes: (wen? was?)",
+        q: "<b>Entscheide</b>: Bestimme den Fall des unterstrichenen Wortes: (wen? was?)",
         rows: [
           "Ich sehe <u>den Hund</u>.",
           "Er kauft <u>ein Auto</u>.",
@@ -1213,7 +1213,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Dativ",
         type: "cross",
-        q: "Bestimme den Fall des unterstrichenen Wortes: (wem?)",
+        q: "<b>Entscheide</b>: Bestimme den Fall des unterstrichenen Wortes: (wem?)",
         rows: [
           "Ich helfe <u>dem Hund</u>.",
           "Er gibt <u>dem Kind</u> ein Buch.",
@@ -1229,7 +1229,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Genitiv",
         type: "cross",
-        q: "Bestimme den Fall des unterstrichenen Wortes: (wessen?)",
+        q: "<b>Entscheide</b>: Bestimme den Fall des unterstrichenen Wortes: (wessen?)",
         rows: [
           "Das Haus <u>des Nachbarn</u> ist groß.",
           "Die Farbe <u>der Blume</u> ist rot.",
@@ -1245,7 +1245,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Präpositionen mit Akkusativ",
         type: "cross",
-        q: "Welcher Fall folgt auf die Präposition?",
+        q: "<b>Entscheide</b>: Welcher Fall folgt auf die Präposition?",
         rows: [
           "für ___ (der Freund)",
           "durch ___ (das Fenster)",
@@ -1261,7 +1261,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Präpositionen mit Dativ",
         type: "cross",
-        q: "Welcher Fall folgt auf die Präposition?",
+        q: "<b>Entscheide</b>: Welcher Fall folgt auf die Präposition?",
         rows: [
           "mit ___ (der Hund)",
           "nach ___ (die Schule)",
@@ -1277,7 +1277,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Präpositionen mit Genitiv",
         type: "cross",
-        q: "Welcher Fall folgt auf die Präposition?",
+        q: "<b>Entscheide</b>: Welcher Fall folgt auf die Präposition?",
         rows: [
           "trotz ___ (der Regen)",
           "wegen ___ (der Stau)",
@@ -1293,7 +1293,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Wechselpräpositionen",
         type: "cross",
-        q: "Bestimme den Fall (Akkusativ bei Bewegung, Dativ bei Ort):",
+        q: "<b>Entscheide</b>: Bestimme den Fall (Akkusativ bei Bewegung, Dativ bei Ort):",
         rows: [
           "Er geht in ___ (der Park). (wohin?)",
           "Er spielt in ___ (der Park). (wo?)",
@@ -1309,7 +1309,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Verben mit Dativ oder Akkusativ",
         type: "cross",
-        q: "Welcher Fall folgt auf das Verb?",
+        q: "<b>Entscheide</b>: Welcher Fall folgt auf das Verb?",
         rows: [
           "Ich helfe ___ (der Freund).",
           "Er fragt ___ (der Lehrer).",
@@ -1325,7 +1325,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Gemischte Übung",
         type: "cross",
-        q: "Bestimme den Fall des unterstrichenen Wortes:",
+        q: "<b>Entscheide</b>: Bestimme den Fall des unterstrichenen Wortes:",
         rows: [
           "Ich gebe <u>dem Kind</u> einen Ball.",
           "Das Auto <u>des Nachbarn</u> ist neu.",
@@ -1341,7 +1341,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Präpositionen und Fälle gemischt",
         type: "cross",
-        q: "Bestimme den Fall des Nomens nach der Präposition:",
+        q: "<b>Entscheide</b>: Bestimme den Fall des Nomens nach der Präposition:",
         rows: [
           "mit dem Hund",
           "für den Hund",
@@ -1368,7 +1368,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Aktiv oder Passiv? (2)",
         type: "cross",
-        q: "Aktiv oder Passiv?",
+        q: "<b>Entscheide</b>: Aktiv oder Passiv?",
         rows: [
           "Der Brief wird geschrieben.",
           "Die Kinder spielen im Garten.",
@@ -1384,7 +1384,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Passiv mit Modalverben",
         type: "cross",
-        q: "Ist der Satz im Passiv korrekt?",
+        q: "<b>Entscheide</b>: Ist der Satz im Passiv korrekt?",
         rows: [
           "Der Brief muss geschrieben werden.",
           "Das Haus kann gebaut werden.",
@@ -1400,7 +1400,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Zustandspassiv",
         type: "cross",
-        q: "Liegt Zustandspassiv (sein + Partizip) vor?",
+        q: "<b>Entscheide</b>: Liegt Zustandspassiv (sein + Partizip) vor?",
         rows: [
           "Die Tür ist geöffnet.",
           "Das Fenster wird geöffnet.",
@@ -1416,7 +1416,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Unpersönliches Passiv",
         type: "cross",
-        q: "Ist der Satz ein unpersönliches Passiv?",
+        q: "<b>Entscheide</b>: Ist der Satz ein unpersönliches Passiv?",
         rows: [
           "Es wird getanzt.",
           "Hier wird gearbeitet.",
@@ -1432,7 +1432,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Passiv-Zeitformen bestimmen",
         type: "cross",
-        q: "Welche Passiv-Zeitform liegt vor?",
+        q: "<b>Entscheide</b>: Welche Passiv-Zeitform liegt vor?",
         rows: [
           "Das Haus wird gebaut.",
           "Das Haus wurde gebaut.",
@@ -1448,7 +1448,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Aktiv → Passiv Umwandlung",
         type: "cross",
-        q: "Ist die Umwandlung korrekt?",
+        q: "<b>Entscheide</b>: Ist die Umwandlung korrekt?",
         rows: [
           "Aktiv: Der Hund beißt den Mann. → Passiv: Der Mann wird vom Hund gebissen.",
           "Aktiv: Die Mutter kocht das Essen. → Passiv: Das Essen wird von der Mutter gekocht.",
@@ -1464,7 +1464,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Passiv mit zwei Objekten",
         type: "cross",
-        q: "Ist die Passiv-Umwandlung korrekt?",
+        q: "<b>Entscheide</b>: Ist die Passiv-Umwandlung korrekt?",
         rows: [
           "Aktiv: Er schenkt ihr Blumen. → Passiv: Ihr werden Blumen geschenkt.",
           "Aktiv: Er schenkt ihr Blumen. → Passiv: Blumen werden ihr geschenkt.",
@@ -1480,7 +1480,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Passiv mit Modalverb und zwei Objekten",
         type: "cross",
-        q: "Ist der Satz korrekt?",
+        q: "<b>Entscheide</b>: Ist der Satz korrekt?",
         rows: [
           "Ihm muss geholfen werden.",
           "Der Brief muss geschrieben werden.",
@@ -1496,7 +1496,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Passiv Präteritum vs Perfekt",
         type: "cross",
-        q: "Präteritum Passiv oder Perfekt Passiv?",
+        q: "<b>Entscheide</b>: Präteritum Passiv oder Perfekt Passiv?",
         rows: [
           "Das Haus wurde gebaut.",
           "Das Haus ist gebaut worden.",
@@ -1512,7 +1512,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Passiv im Futur",
         type: "cross",
-        q: "Futur I Passiv oder Futur II Passiv?",
+        q: "<b>Entscheide</b>: Futur I Passiv oder Futur II Passiv?",
         rows: [
           "Das Haus wird gebaut werden.",
           "Das Haus wird gebaut worden sein.",
@@ -1528,7 +1528,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Passiv erkennen (Multiple Choice)",
         type: "mc",
-        q: "Welche Sätze stehen im Passiv?\n\n(A) Der Hund wird gebürstet.\n(B) Die Katze schläft.\n(C) Das Haus wurde gestrichen.\n(D) Er hat das Buch gelesen.\n(E) Es wird getanzt.",
+        q: "<b>Wähle</b> die richtige Antwort aus:\nWelche Sätze stehen im Passiv?\n\n(A) Der Hund wird gebürstet.\n(B) Die Katze schläft.\n(C) Das Haus wurde gestrichen.\n(D) Er hat das Buch gelesen.\n(E) Es wird getanzt.",
         o: ["A, C und E", "A, B und C", "nur A und C", "alle außer B"],
         c: 0,
         model: "A, C, E sind Passiv.",
@@ -1548,7 +1548,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Einfache Wörter trennen (3)",
         type: "cross",
-        q: "Ist die Trennung korrekt?",
+        q: "<b>Beurteile</b>: Ist die Trennung korrekt?",
         rows: [
           "Ampel: Am-pel",
           "Brücke: Brü-cke",
@@ -1564,7 +1564,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Zusammengesetzte Wörter",
         type: "cross",
-        q: "Ist die Trennung korrekt?",
+        q: "<b>Beurteile</b>: Ist die Trennung korrekt?",
         rows: [
           "Hausaufgaben: Haus-auf-ga-ben",
           "Hausaufgaben: Hausauf-ga-ben",
@@ -1580,7 +1580,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Fremdwörter",
         type: "cross",
-        q: "Ist die Trennung korrekt?",
+        q: "<b>Beurteile</b>: Ist die Trennung korrekt?",
         rows: [
           "Pädagogik: Pä-da-go-gik",
           "Philosophie: Phi-lo-so-phie",
@@ -1596,7 +1596,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Doppelkonsonanten (2)",
         type: "cross",
-        q: "Ist die Trennung korrekt?",
+        q: "<b>Beurteile</b>: Ist die Trennung korrekt?",
         rows: [
           "kommen: kom-men",
           "rennen: ren-nen",
@@ -1612,7 +1612,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "ck, sch, ß",
         type: "cross",
-        q: "Ist die Trennung korrekt?",
+        q: "<b>Beurteile</b>: Ist die Trennung korrekt?",
         rows: [
           "backen: ba-cken",
           "backen: bak-ken",
@@ -1628,7 +1628,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Vorsilben",
         type: "cross",
-        q: "Ist die Trennung korrekt?",
+        q: "<b>Beurteile</b>: Ist die Trennung korrekt?",
         rows: [
           "verstehen: ver-ste-hen",
           "verstehen: vers-te-hen",
@@ -1644,7 +1644,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Endungen",
         type: "cross",
-        q: "Ist die Trennung korrekt?",
+        q: "<b>Beurteile</b>: Ist die Trennung korrekt?",
         rows: [
           "Hunde: Hun-de",
           "Hunde: Hund-e",
@@ -1660,7 +1660,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Gemischte Übung",
         type: "cross",
-        q: "Ist die Trennung korrekt?",
+        q: "<b>Beurteile</b>: Ist die Trennung korrekt?",
         rows: [
           "Ampel: Am-pel",
           "Ofen: O-fen",
@@ -1676,7 +1676,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Schwierige Wörter",
         type: "cross",
-        q: "Ist die Trennung korrekt?",
+        q: "<b>Beurteile</b>: Ist die Trennung korrekt?",
         rows: [
           "Schifffahrt: Schif-fahrt",
           "Schifffahrt: Schiff-fahrt",
@@ -1692,7 +1692,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "st und sp",
         type: "cross",
-        q: "Ist die Trennung korrekt?",
+        q: "<b>Beurteile</b>: Ist die Trennung korrekt?",
         rows: [
           "Kasten: Kas-ten",
           "Kasten: Ka-sten",
@@ -1708,7 +1708,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Gemischte Übung (Multiple Choice)",
         type: "mc",
-        q: "Welche Trennung ist korrekt?\n\n(A) Fa-hren\n(B) Fah-ren\n(C) Kin-der\n(D) Kind-er\n(E) Ba-cken",
+        q: "<b>Wähle</b> die richtige Antwort aus:\nWelche Trennung ist korrekt?\n\n(A) Fa-hren\n(B) Fah-ren\n(C) Kin-der\n(D) Kind-er\n(E) Ba-cken",
         o: ["B, C und E", "A, C und D", "nur B", "nur E"],
         c: 0,
         model: "Fah-ren, Kin-der, Ba-cken sind korrekt.",

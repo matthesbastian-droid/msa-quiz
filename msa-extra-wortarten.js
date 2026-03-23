@@ -38,7 +38,7 @@ var MSA_EXTRA_WORTARTEN = [
   {
     sub: "Wortarten anklicken",
     type: "wortart",
-    q: "Klicke jedes Wort an und wähle die richtige Wortart.",
+    q: "<b>Bestimme</b> die Wortart: <b>Klicke</b> jedes Wort an und <b>wähle</b> die richtige Wortart aus dem Dropdown-Menü.",
     sentence: "Der alte Mann liest heute ein Buch.",
     options: ["Nomen","Verb","Adjektiv","Artikel","Pronomen","Numerale","Adverb","Präposition","Konjunktion","Interjektion"],
     correct: {
@@ -58,7 +58,7 @@ var MSA_EXTRA_WORTARTEN = [
   {
     sub: "Wortarten anklicken",
     type: "wortart",
-    q: "Klicke jedes Wort an und wähle die richtige Wortart.",
+    q: "<b>Bestimme</b> die Wortart: <b>Klicke</b> jedes Wort an und <b>wähle</b> die richtige Wortart aus dem Dropdown-Menü.",
     sentence: "Zwei kleine Kinder spielen draußen und lachen laut.",
     options: ["Nomen","Verb","Adjektiv","Artikel","Pronomen","Numerale","Adverb","Präposition","Konjunktion","Interjektion"],
     correct: {
@@ -79,7 +79,7 @@ var MSA_EXTRA_WORTARTEN = [
   {
     sub: "Wortarten anklicken",
     type: "wortart",
-    q: "Klicke jedes Wort an und wähle die richtige Wortart.",
+    q: "<b>Bestimme</b> die Wortart: <b>Klicke</b> jedes Wort an und <b>wähle</b> die richtige Wortart aus dem Dropdown-Menü.",
     sentence: "Oh, sie freut sich sehr über das Geschenk!",
     options: ["Nomen","Verb","Adjektiv","Artikel","Pronomen","Numerale","Adverb","Präposition","Konjunktion","Interjektion"],
     correct: {
@@ -101,7 +101,7 @@ var MSA_EXTRA_WORTARTEN = [
   {
     sub: "Wortarten anklicken",
     type: "wortart",
-    q: "Klicke jedes Wort an und wähle die richtige Wortart.",
+    q: "<b>Bestimme</b> die Wortart: <b>Klicke</b> jedes Wort an und <b>wähle</b> die richtige Wortart aus dem Dropdown-Menü.",
     sentence: "Weil er müde war, blieb er zu Hause.",
     options: ["Nomen","Verb","Adjektiv","Artikel","Pronomen","Numerale","Adverb","Präposition","Konjunktion","Interjektion"],
     correct: {
@@ -121,7 +121,7 @@ var MSA_EXTRA_WORTARTEN = [
   {
     sub: "Wortarten anklicken",
     type: "wortart",
-    q: "Klicke jedes Wort an und wähle die richtige Wortart.",
+    q: "<b>Bestimme</b> die Wortart: <b>Klicke</b> jedes Wort an und <b>wähle</b> die richtige Wortart aus dem Dropdown-Menü.",
     sentence: "Mit dem Fahrrad fährt er täglich zur Schule.",
     options: ["Nomen","Verb","Adjektiv","Artikel","Pronomen","Numerale","Adverb","Präposition","Konjunktion","Interjektion"],
     correct: {
@@ -142,7 +142,7 @@ var MSA_EXTRA_WORTARTEN = [
   {
     sub: "Wortarten anklicken",
     type: "wortart",
-    q: "Klicke jedes Wort an und wähle die richtige Wortart.",
+    q: "<b>Bestimme</b> die Wortart: <b>Klicke</b> jedes Wort an und <b>wähle</b> die richtige Wortart aus dem Dropdown-Menü.",
     sentence: "Die dritte Stunde war langweilig, aber wir haben trotzdem aufgepasst.",
     options: ["Nomen","Verb","Adjektiv","Artikel","Pronomen","Numerale","Adverb","Präposition","Konjunktion","Interjektion"],
     correct: {
@@ -165,7 +165,7 @@ var MSA_EXTRA_WORTARTEN = [
   {
     sub: "Wortarten anklicken",
     type: "wortart",
-    q: "Klicke jedes Wort an und wähle die richtige Wortart.",
+    q: "<b>Bestimme</b> die Wortart: <b>Klicke</b> jedes Wort an und <b>wähle</b> die richtige Wortart aus dem Dropdown-Menü.",
     sentence: "Huch, das ist ja ein riesiges Tier!",
     options: ["Nomen","Verb","Adjektiv","Artikel","Pronomen","Numerale","Adverb","Präposition","Konjunktion","Interjektion"],
     correct: {
@@ -185,7 +185,7 @@ var MSA_EXTRA_WORTARTEN = [
   {
     sub: "Wortarten anklicken",
     type: "wortart",
-    q: "Klicke jedes Wort an und wähle die richtige Wortart.",
+    q: "<b>Bestimme</b> die Wortart: <b>Klicke</b> jedes Wort an und <b>wähle</b> die richtige Wortart aus dem Dropdown-Menü.",
     sentence: "Ohne dich gehe ich nicht auf die Party.",
     options: ["Nomen","Verb","Adjektiv","Artikel","Pronomen","Numerale","Adverb","Präposition","Konjunktion","Interjektion"],
     correct: {
@@ -206,7 +206,7 @@ var MSA_EXTRA_WORTARTEN = [
   {
     sub: "Wortarten anklicken",
     type: "wortart",
-    q: "Klicke jedes Wort an und wähle die richtige Wortart.",
+    q: "<b>Bestimme</b> die Wortart: <b>Klicke</b> jedes Wort an und <b>wähle</b> die richtige Wortart aus dem Dropdown-Menü.",
     sentence: "Alle fünf Schüler haben ihre Hausaufgaben gemacht.",
     options: ["Nomen","Verb","Adjektiv","Artikel","Pronomen","Numerale","Adverb","Präposition","Konjunktion","Interjektion"],
     correct: {
@@ -226,7 +226,7 @@ var MSA_EXTRA_WORTARTEN = [
   {
     sub: "Wortarten anklicken",
     type: "wortart",
-    q: "Klicke jedes Wort an und wähle die richtige Wortart.",
+    q: "<b>Bestimme</b> die Wortart: <b>Klicke</b> jedes Wort an und <b>wähle</b> die richtige Wortart aus dem Dropdown-Menü.",
     sentence: "Nach dem langen Weg setzten wir uns erschöpft hin.",
     options: ["Nomen","Verb","Adjektiv","Artikel","Pronomen","Numerale","Adverb","Präposition","Konjunktion","Interjektion"],
     correct: {
@@ -282,7 +282,7 @@ var MSA_EXTRA_WORTARTEN = [
   {
     sub: "Adverb oder Adjektiv?",
     type: "mc",
-    q: "'Ein **sehr** schöner Tag.' – Wortart von 'sehr'?",
+    q: "<b>Bestimme</b> die Wortart von 'sehr' in: 'Ein **sehr** schöner Tag.'",
     o: ["Adjektiv", "Adverb", "Numerale"],
     c: 1,
     model: "B – Adverb / Gradpartikel (steigert das Adjektiv 'schön')",
@@ -292,7 +292,7 @@ var MSA_EXTRA_WORTARTEN = [
   {
     sub: "Reflexivpronomen",
     type: "mc",
-    q: "'Er wäscht **sich**.' – Wortart von 'sich'?",
+    q: "<b>Bestimme</b> die Wortart von 'sich' in: 'Er wäscht **sich**.'",
     o: ["Personalpronomen", "Reflexivpronomen", "Possessivpronomen"],
     c: 1,
     model: "B – Reflexivpronomen (bezieht sich auf das Subjekt zurück)",
@@ -302,7 +302,7 @@ var MSA_EXTRA_WORTARTEN = [
   {
     sub: "Numerale – Ordinalzahl",
     type: "mc",
-    q: "'Sie gewann den **ersten** Platz.' – Wortart von 'ersten'?",
+    q: "<b>Bestimme</b> die Wortart von 'ersten' in: 'Sie gewann den **ersten** Platz.'",
     o: ["Adjektiv", "Numerale", "Nomen"],
     c: 1,
     model: "B – Numerale (Ordinalzahl: erste, zweite, dritte …)",
@@ -312,7 +312,7 @@ var MSA_EXTRA_WORTARTEN = [
   {
     sub: "Konjunktion oder Adverb?",
     type: "mc",
-    q: "'Er war krank, **trotzdem** kam er.' – Wortart von 'trotzdem'?",
+    q: "<b>Bestimme</b> die Wortart von 'trotzdem' in: 'Er war krank, **trotzdem** kam er.'",
     o: ["Konjunktion (NS-Einleiter)", "Adverb / Konjunktionaladverb", "Präposition"],
     c: 1,
     model: "B – Konjunktionaladverb / Adverb (verbindet zwei HS; Verb auf Pos. 2 nach trotzdem)",
@@ -322,7 +322,7 @@ var MSA_EXTRA_WORTARTEN = [
   {
     sub: "Präposition oder Konjunktion?",
     type: "mc",
-    q: "'Ich gehe, **weil** ich müde bin.' – Wortart von 'weil'?",
+    q: "<b>Bestimme</b> die Wortart von 'weil' in: 'Ich gehe, **weil** ich müde bin.'",
     o: ["Präposition", "Adverb", "Konjunktion"],
     c: 2,
     model: "C – Konjunktion (leitet Nebensatz ein, Verb ans Ende)",
@@ -336,7 +336,7 @@ var MSA_EXTRA_WORTARTEN = [
   {
     sub: "Nomen / Verb / Adjektiv / Adverb",
     type: "cross",
-    q: "Bestimme die Wortart der markierten Wörter:",
+    q: "<b>Bestimme</b> die Wortart der markierten Wörter: <b>Ordne</b> sie durch Klick in die richtige Spalte ein.",
     rows: [
       "'Das **Lachen** ist ansteckend.' – Lachen",
       "'Er **läuft** schnell.' – läuft",
@@ -354,7 +354,7 @@ var MSA_EXTRA_WORTARTEN = [
   {
     sub: "Pronomenarten",
     type: "cross",
-    q: "Handelt es sich um ein Personalpronomen oder ein anderes Pronomen?",
+    q: "<b>Entscheide</b>: Handelt es sich um ein Personalpronomen oder ein anderes Pronomen? <b>Ordne</b> durch Klick zu.",
     rows: [
       "'Er hilft **ihr**.' – ihr",
       "'**Das** ist mein Haus.' – Das (zeigt auf etwas)",
@@ -372,7 +372,7 @@ var MSA_EXTRA_WORTARTEN = [
   {
     sub: "Konjunktion oder Präposition oder Adverb?",
     type: "cross",
-    q: "Ist das Wort Konjunktion (leitet NS ein), Präposition (mit Kasus) oder Adverb?",
+    q: "<b>Bestimme</b>: Ist das markierte Wort Konjunktion (leitet Nebensatz ein), Präposition (mit Kasus) oder Adverb? <b>Ordne</b> durch Klick zu.",
     rows: [
       "'Ich gehe, **weil** ich müde bin.' – weil",
       "'**Mit** dem Hund.' – mit",
@@ -394,7 +394,7 @@ var MSA_EXTRA_WORTARTEN = [
   {
     sub: "Wortart bestimmen (gemischt)",
     type: "mc3",
-    q: "Wähle die richtige Wortart:",
+    q: "<b>Bestimme</b> die Wortart: <b>Wähle</b> für jede Zeile die richtige Wortart aus den drei Optionen.",
     rows: [
       ["Nomen", "Verb", "Adjektiv"],
       ["Adverb", "Adjektiv", "Nomen"],
@@ -423,7 +423,7 @@ var MSA_EXTRA_WORTARTEN = [
   {
     sub: "Wortart → Beispiel zuordnen",
     type: "match",
-    q: "Ordne der Wortart ein passendes Beispiel zu:",
+    q: "<b>Ordne zu</b>: Verbinde jede Wortart mit einem passenden Beispiel.",
     pairs: [
       ["Nomen",        "Tisch, Freude, Lachen, Berlin"],
       ["Verb",         "laufen, ist, hat gegessen, werden"],
@@ -443,7 +443,7 @@ var MSA_EXTRA_WORTARTEN = [
   {
     sub: "Präposition → Kasus zuordnen",
     type: "match",
-    q: "Ordne der Präposition den Kasus zu, den sie regiert:",
+    q: "<b>Ordne zu</b>: Verbinde jede Präposition mit dem Kasus, den sie regiert.",
     pairs: [
       ["wegen", "Genitiv"],
       ["mit",   "Dativ"],

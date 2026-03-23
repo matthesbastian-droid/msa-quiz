@@ -18,7 +18,7 @@ var MSA_EXTRA_SATZBAU = [
   {
     sub: "NS-Konjunktion oder HS-Verbinder?",
     type: "cross",
-    q: "Leitet das Wort einen Nebensatz ein (Verb ans Ende) oder verbindet es Hauptsätze (Verb auf Pos. 2)?",
+    q: "<b>Entscheide</b>: Leitet das Wort einen Nebensatz ein (Verb ans Ende) oder verbindet es Hauptsätze (Verb auf Position 2)? <b>Ordne</b> durch Klick zu.",
     rows: [
       "'weil' – Ich bleibe, ___ es regnet.",
       "'deshalb' – Es regnet, ___ bleibe ich.",
@@ -36,7 +36,7 @@ var MSA_EXTRA_SATZBAU = [
   {
     sub: "Kausale oder konzessive Verbindung?",
     type: "cross",
-    q: "Drückt der Satz einen Grund (kausal) oder einen Gegensatz/Einräumung (konzessiv) aus?",
+    q: "<b>Bestimme</b>: Drückt der Satz einen Grund (kausal) oder einen Gegensatz/Einräumung (konzessiv) aus? <b>Ordne</b> durch Klick zu.",
     rows: [
       "Er blieb zu Hause, weil er erkältet war.",
       "Wir gingen spazieren, obwohl es regnete.",
@@ -54,7 +54,7 @@ var MSA_EXTRA_SATZBAU = [
   {
     sub: "'als' oder 'wenn'? – temporal",
     type: "cross",
-    q: "Wähle: 'als' (einmalig Vergangenheit) oder 'wenn' (Wiederholung / Zukunft)?",
+    q: "<b>Entscheide</b>: Verwendet man 'als' (einmaliges Ereignis in der Vergangenheit) oder 'wenn' (Wiederholung / Zukunft / Bedingung)? <b>Ordne</b> durch Klick zu.",
     rows: [
       "___ ich Kind war, spielte ich viel. (einmaliger Zeitraum)",
       "___ es regnet, nehme ich den Schirm. (immer wieder)",
@@ -74,7 +74,7 @@ var MSA_EXTRA_SATZBAU = [
   {
     sub: "Finalsatz oder Kausalsatz?",
     type: "mc",
-    q: "'Ich lerne viel, ___ ich die Prüfung bestehe.'",
+    q: "<b>Ergänze</b> die passende Konjunktion: 'Ich lerne viel, ___ ich die Prüfung bestehe.'",
     o: ["weil", "damit", "obwohl"],
     c: 1,
     model: "B – damit (Ziel/Absicht → Finalsatz)",
@@ -84,7 +84,7 @@ var MSA_EXTRA_SATZBAU = [
   {
     sub: "Konsekutivsatz",
     type: "mc",
-    q: "'Er rennt, ___ er den Bus kriegt.'",
+    q: "<b>Ergänze</b> die passende Konjunktion: 'Er rennt, ___ er den Bus kriegt.'",
     o: ["sodass", "weil", "obwohl"],
     c: 0,
     model: "A – sodass (Folge → Konsekutivsatz)",
@@ -94,7 +94,7 @@ var MSA_EXTRA_SATZBAU = [
   {
     sub: "Temporalsatz: Vorzeitigkeit",
     type: "mc",
-    q: "'___ es aufgehört hatte zu regnen, gingen sie raus.' (zuerst: Regen hört auf, dann: rausgehen)",
+    q: "<b>Ergänze</b> die passende Konjunktion (Vorzeitigkeit): '___ es aufgehört hatte zu regnen, gingen sie raus.'",
     o: ["Als", "Nachdem", "Sobald"],
     c: 1,
     model: "B – Nachdem (Vorzeitigkeit: erst A, dann B → Plusquamperfekt im NS)",
@@ -104,7 +104,7 @@ var MSA_EXTRA_SATZBAU = [
   {
     sub: "Konditionalsatz",
     type: "mc",
-    q: "'___ du Zeit hast, hilf mir.'",
+    q: "<b>Ergänze</b> die passende Konjunktion: '___ du Zeit hast, hilf mir.'",
     o: ["Wenn", "Ob", "Dass"],
     c: 0,
     model: "A – Wenn (Bedingung → Konditionalsatz)",
@@ -114,7 +114,7 @@ var MSA_EXTRA_SATZBAU = [
   {
     sub: "denn vs. weil",
     type: "mc",
-    q: "'Ich gehe schlafen, ___ ich bin müde.' – Was passt, wenn das Verb auf Pos. 2 bleiben soll?",
+    q: "<b>Ergänze</b> die passende Konjunktion für einen Hauptsatz (Verb bleibt auf Position 2): 'Ich gehe schlafen, ___ ich bin müde.'",
     o: ["weil", "denn", "obwohl"],
     c: 1,
     model: "B – denn (Hauptsatz-Konjunktion: Verb bleibt auf Pos. 2)",
@@ -124,7 +124,7 @@ var MSA_EXTRA_SATZBAU = [
   {
     sub: "nicht … sondern",
     type: "mc",
-    q: "'Nicht nur ich, ___ auch du bist da.'",
+    q: "<b>Ergänze</b> die passende Konjunktion: 'Nicht nur ich, ___ auch du bist da.'",
     o: ["sondern", "aber", "oder"],
     c: 0,
     model: "A – sondern (nicht nur…sondern auch = Erweiterung nach Verneinung)",
@@ -134,7 +134,7 @@ var MSA_EXTRA_SATZBAU = [
   {
     sub: "Indirekter Fragesatz: ob vs. wann",
     type: "mc",
-    q: "'Ich fragte mich, ___ das alles enden würde.' (Zeitfrage)",
+    q: "<b>Ergänze</b> die passende Konjunktion für die indirekte Zeitfrage: 'Ich fragte mich, ___ das alles enden würde.'",
     o: ["ob", "wenn", "wann"],
     c: 2,
     model: "C – wann (Zeitfrage → indirekter Fragesatz mit Fragewort)",
@@ -144,7 +144,7 @@ var MSA_EXTRA_SATZBAU = [
   {
     sub: "um…zu oder damit?",
     type: "mc",
-    q: "'Er arbeitet, ___ Geld zu verdienen.' (gleiches Subjekt)",
+    q: "<b>Ergänze</b> die passende Konjunktion bei gleichem Subjekt: 'Er arbeitet, ___ Geld zu verdienen.'",
     o: ["um", "damit", "weil"],
     c: 0,
     model: "A – um (zu verdienen) → Infinitivkonstruktion bei gleichem Subjekt",
@@ -154,7 +154,7 @@ var MSA_EXTRA_SATZBAU = [
   {
     sub: "Relativsatz: Genus des Relativpronomens",
     type: "mc",
-    q: "'Das ist der Schüler, ___ morgen eine Prüfung hat.'",
+    q: "<b>Ergänze</b> das richtige Relativpronomen: 'Das ist der Schüler, ___ morgen eine Prüfung hat.'",
     o: ["den", "der", "dem"],
     c: 1,
     model: "B – der (Schüler = mask., Subjekt im RS → Nominativ → der)",
@@ -164,7 +164,7 @@ var MSA_EXTRA_SATZBAU = [
   {
     sub: "Parataxe oder Hypotaxe?",
     type: "mc",
-    q: "'Er lachte, weil er die Lösung kannte.' – Struktur?",
+    q: "<b>Bestimme</b> die Satzstruktur: 'Er lachte, weil er die Lösung kannte.' – Parataxe oder Hypotaxe?",
     o: ["Parataxe (HS + HS gleichwertig)", "Hypotaxe (HS + NS untergeordnet)"],
     c: 1,
     model: "B – Hypotaxe (HS: Er lachte + NS: weil er die Lösung kannte)",
@@ -174,7 +174,7 @@ var MSA_EXTRA_SATZBAU = [
   {
     sub: "Verb-End-Stellung im NS",
     type: "mc",
-    q: "Welcher Satz ist grammatikalisch korrekt formuliert?",
+    q: "<b>Wähle</b> den grammatikalisch korrekt formulierten Satz (Achtung: Wortstellung im Nebensatz).",
     o: ["Ich weiß, dass er morgen kommt.", "Ich weiß, dass er kommt morgen.", "Ich weiß, er kommt morgen dass."],
     c: 0,
     model: "A – Im Nebensatz steht das Verb am Ende (nach 'dass').",
@@ -184,7 +184,7 @@ var MSA_EXTRA_SATZBAU = [
   {
     sub: "Verb-Zweit-Stellung im HS",
     type: "mc",
-    q: "Welcher Satz ist korrekt?",
+    q: "<b>Wähle</b> den korrekten Satz (Achtung: Verb-Zweit-Stellung im Hauptsatz).",
     o: ["Gestern bin ich in die Stadt gegangen.", "Gestern ich bin in die Stadt gegangen.", "In die Stadt gegangen ich bin gestern."],
     c: 0,
     model: "A – Verb an Position 2 (Gestern [1] – bin [2] – ich…)",
@@ -196,7 +196,7 @@ var MSA_EXTRA_SATZBAU = [
   {
     sub: "Passende Konjunktion wählen",
     type: "mc3",
-    q: "Wähle die passende Konjunktion:",
+    q: "<b>Wähle</b> für jede Zeile die passende Konjunktion aus.",
     rows: [
       ["weil", "damit", "obwohl"],
       ["als", "wenn", "während"],
@@ -223,7 +223,7 @@ var MSA_EXTRA_SATZBAU = [
   {
     sub: "Satztyp → Konjunktion zuordnen",
     type: "match",
-    q: "Ordne dem Satztyp eine passende Konjunktion zu:",
+    q: "<b>Ordne zu</b>: Verbinde jeden Satztyp mit einer passenden Konjunktion.",
     pairs: [
       ["Kausalsatz (Grund)", "weil / da"],
       ["Konzessivsatz (Einräumung)", "obwohl / obgleich"],
@@ -239,7 +239,7 @@ var MSA_EXTRA_SATZBAU = [
   {
     sub: "HS-Satz → Satzgefüge umformen",
     type: "match",
-    q: "Ordne den Paaren zu, wie man zwei Sätze verbinden kann:",
+    q: "<b>Ordne zu</b>: Verbinde die Satzpaare mit der richtigen Satzkombination.",
     pairs: [
       ["Er duschte. Dann frühstückte er.", "Nachdem er geduscht hatte, frühstückte er."],
       ["Ich lerne. Ich will bestehen.", "Ich lerne, damit ich bestehe."],

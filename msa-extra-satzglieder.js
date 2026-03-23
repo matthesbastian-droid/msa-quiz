@@ -14,7 +14,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     // ── ehem. tap-Aufgaben → sort ──────────────────────────────
 
     { sub:"Satzglieder zuordnen (Marathonläufer)", type:"sort",
-      q:"Ordne jeden Satzteil dem richtigen Satzglied zu.\nSatz: Der erschöpfte Marathonläufer erreicht nach Stunden das Ziel.",
+      q:"<b>Ordne zu</b>: Weise jedem Satzteil das richtige Satzglied zu, indem du ihn in die passende Spalte ziehst.\nSatz: Der erschöpfte Marathonläufer erreicht nach Stunden das Ziel.",
       rows:["Der erschöpfte Marathonläufer","erreicht","nach Stunden","das Ziel"],
       cols:["Akkusativobjekt","Adv. Bestimmung","Prädikat","Subjekt"],
       correct:[3,2,1,0],
@@ -23,7 +23,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"Satzglieder zuordnen (Schülerin)", type:"sort",
-      q:"Ordne jeden Satzteil dem richtigen Satzglied zu.\nSatz: Die neugierige Schülerin stellt dem Lehrer eine schwierige Frage.",
+      q:"<b>Ordne zu</b>: Weise jedem Satzteil das richtige Satzglied zu, indem du ihn in die passende Spalte ziehst.\nSatz: Die neugierige Schülerin stellt dem Lehrer eine schwierige Frage.",
       rows:["Die neugierige Schülerin","stellt","dem Lehrer","eine schwierige Frage"],
       cols:["Dativobjekt","Akkusativobjekt","Subjekt","Prädikat"],
       correct:[2,3,0,1],
@@ -32,7 +32,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"Satzglieder zuordnen (Ring)", type:"sort",
-      q:"Ordne jeden Satzteil dem richtigen Satzglied zu.\nSatz: Mein älterer Bruder hat seiner Freundin einen teuren Ring gekauft.",
+      q:"<b>Ordne zu</b>: Weise jedem Satzteil das richtige Satzglied zu, indem du ihn in die passende Spalte ziehst.\nSatz: Mein älterer Bruder hat seiner Freundin einen teuren Ring gekauft.",
       rows:["Mein älterer Bruder","hat … gekauft","seiner Freundin","einen teuren Ring"],
       cols:["Akkusativobjekt","Prädikat","Dativobjekt","Subjekt"],
       correct:[3,1,2,0],
@@ -41,7 +41,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"Satzglieder zuordnen (Chefin)", type:"sort",
-      q:"Ordne jeden Satzteil dem richtigen Satzglied zu.\nSatz: Jeden Morgen liest die Chefin ihre E-Mails.",
+      q:"<b>Ordne zu</b>: Weise jedem Satzteil das richtige Satzglied zu, indem du ihn in die passende Spalte ziehst.\nSatz: Jeden Morgen liest die Chefin ihre E-Mails.",
       rows:["Jeden Morgen","liest","die Chefin","ihre E-Mails"],
       cols:["Subjekt","Prädikat","Akkusativobjekt","Adv. Bestimmung"],
       correct:[3,1,0,2],
@@ -50,7 +50,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"Satzglieder zuordnen (Futur I – Unternehmen)", type:"sort",
-      q:"Ordne jeden Satzteil dem richtigen Satzglied zu.\nSatz: Das Unternehmen wird seine Mitarbeiter nächste Woche informieren.",
+      q:"<b>Ordne zu</b>: Weise jedem Satzteil das richtige Satzglied zu, indem du ihn in die passende Spalte ziehst.\nSatz: Das Unternehmen wird seine Mitarbeiter nächste Woche informieren.",
       rows:["Das Unternehmen","wird … informieren","seine Mitarbeiter","nächste Woche"],
       cols:["Adv. Bestimmung","Akkusativobjekt","Subjekt","Prädikat"],
       correct:[2,3,1,0],
@@ -59,7 +59,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"Satzglieder zuordnen (Bibliothek)", type:"sort",
-      q:"Ordne jeden Satzteil dem richtigen Satzglied zu.\nSatz: Die Bibliothek verleiht interessierten Lesern kostenlos Bücher.",
+      q:"<b>Ordne zu</b>: Weise jedem Satzteil das richtige Satzglied zu, indem du ihn in die passende Spalte ziehst.\nSatz: Die Bibliothek verleiht interessierten Lesern kostenlos Bücher.",
       rows:["Die Bibliothek","verleiht","interessierten Lesern","kostenlos","Bücher"],
       cols:["Akkusativobjekt","Adv. Bestimmung","Prädikat","Dativobjekt","Subjekt"],
       correct:[4,2,3,1,0],
@@ -68,7 +68,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"Satzglieder zuordnen (Arzt)", type:"sort",
-      q:"Ordne jeden Satzteil dem richtigen Satzglied zu.\nSatz: Der Arzt empfiehlt dem Patienten dringend mehr Bewegung.",
+      q:"<b>Ordne zu</b>: Weise jedem Satzteil das richtige Satzglied zu, indem du ihn in die passende Spalte ziehst.\nSatz: Der Arzt empfiehlt dem Patienten dringend mehr Bewegung.",
       rows:["Der Arzt","empfiehlt","dem Patienten","dringend","mehr Bewegung"],
       cols:["Adv. Bestimmung","Subjekt","Akkusativobjekt","Prädikat","Dativobjekt"],
       correct:[1,3,4,0,2],
@@ -77,7 +77,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"Satzglieder zuordnen (Perfekt – Mannschaft)", type:"sort",
-      q:"Ordne jeden Satzteil dem richtigen Satzglied zu.\nSatz: Die Mannschaft hat gestern das wichtige Spiel gewonnen.",
+      q:"<b>Ordne zu</b>: Weise jedem Satzteil das richtige Satzglied zu, indem du ihn in die passende Spalte ziehst.\nSatz: Die Mannschaft hat gestern das wichtige Spiel gewonnen.",
       rows:["Die Mannschaft","hat … gewonnen","gestern","das wichtige Spiel"],
       cols:["Prädikat","Akkusativobjekt","Adv. Bestimmung","Subjekt"],
       correct:[3,0,2,1],
@@ -86,7 +86,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"Satzglieder zuordnen (gefallen)", type:"sort",
-      q:"Ordne jeden Satzteil dem richtigen Satzglied zu.\nSatz: Dem kleinen Kind gefällt das neue Spielzeug.",
+      q:"<b>Ordne zu</b>: Weise jedem Satzteil das richtige Satzglied zu, indem du ihn in die passende Spalte ziehst.\nSatz: Dem kleinen Kind gefällt das neue Spielzeug.",
       rows:["Dem kleinen Kind","gefällt","das neue Spielzeug"],
       cols:["Subjekt","Prädikat","Dativobjekt"],
       correct:[2,1,0],
@@ -95,7 +95,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"Satzglieder zuordnen (Brief)", type:"sort",
-      q:"Ordne jeden Satzteil dem richtigen Satzglied zu.\nSatz: Der Schüler schreibt seiner Lehrerin einen langen Brief.",
+      q:"<b>Ordne zu</b>: Weise jedem Satzteil das richtige Satzglied zu, indem du ihn in die passende Spalte ziehst.\nSatz: Der Schüler schreibt seiner Lehrerin einen langen Brief.",
       rows:["Der Schüler","schreibt","seiner Lehrerin","einen langen Brief"],
       cols:["Akkusativobjekt","Dativobjekt","Prädikat","Subjekt"],
       correct:[3,2,1,0],
@@ -104,7 +104,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"Satzglieder zuordnen (versprechen)", type:"sort",
-      q:"Ordne jeden Satzteil dem richtigen Satzglied zu.\nSatz: Der Politiker verspricht den Bürgern mehr Gerechtigkeit.",
+      q:"<b>Ordne zu</b>: Weise jedem Satzteil das richtige Satzglied zu, indem du ihn in die passende Spalte ziehst.\nSatz: Der Politiker verspricht den Bürgern mehr Gerechtigkeit.",
       rows:["Der Politiker","verspricht","den Bürgern","mehr Gerechtigkeit"],
       cols:["Dativobjekt","Subjekt","Prädikat","Akkusativobjekt"],
       correct:[1,2,0,3],
@@ -113,7 +113,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"Satzglieder zuordnen (Modalverb – Aufsätze)", type:"sort",
-      q:"Ordne jeden Satzteil dem richtigen Satzglied zu.\nSatz: Die Schülerinnen sollen ihre Aufsätze morgen abgeben.",
+      q:"<b>Ordne zu</b>: Weise jedem Satzteil das richtige Satzglied zu, indem du ihn in die passende Spalte ziehst.\nSatz: Die Schülerinnen sollen ihre Aufsätze morgen abgeben.",
       rows:["Die Schülerinnen","sollen … abgeben","ihre Aufsätze","morgen"],
       cols:["Adv. Bestimmung","Subjekt","Akkusativobjekt","Prädikat"],
       correct:[1,3,2,0],
@@ -122,7 +122,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"Satzglieder zuordnen (Pronomen Wir)", type:"sort",
-      q:"Ordne jeden Satzteil dem richtigen Satzglied zu.\nSatz: Wir müssen das Projekt bis Freitag abgeben.",
+      q:"<b>Ordne zu</b>: Weise jedem Satzteil das richtige Satzglied zu, indem du ihn in die passende Spalte ziehst.\nSatz: Wir müssen das Projekt bis Freitag abgeben.",
       rows:["Wir","müssen … abgeben","das Projekt","bis Freitag"],
       cols:["Prädikat","Adv. Bestimmung","Akkusativobjekt","Subjekt"],
       correct:[3,0,2,1],
@@ -131,7 +131,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"Satzglieder zuordnen (Richter)", type:"sort",
-      q:"Ordne jeden Satzteil dem richtigen Satzglied zu.\nSatz: Der Richter hat dem Zeugen mehrere Fragen gestellt.",
+      q:"<b>Ordne zu</b>: Weise jedem Satzteil das richtige Satzglied zu, indem du ihn in die passende Spalte ziehst.\nSatz: Der Richter hat dem Zeugen mehrere Fragen gestellt.",
       rows:["Der Richter","hat … gestellt","dem Zeugen","mehrere Fragen"],
       cols:["Akkusativobjekt","Subjekt","Prädikat","Dativobjekt"],
       correct:[1,2,3,0],
@@ -140,7 +140,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"Satzglieder zuordnen (Professor)", type:"sort",
-      q:"Ordne jeden Satzteil dem richtigen Satzglied zu.\nSatz: Der alte Professor erklärt seinen Studenten die komplizierte Theorie.",
+      q:"<b>Ordne zu</b>: Weise jedem Satzteil das richtige Satzglied zu, indem du ihn in die passende Spalte ziehst.\nSatz: Der alte Professor erklärt seinen Studenten die komplizierte Theorie.",
       rows:["Der alte Professor","erklärt","seinen Studenten","die komplizierte Theorie"],
       cols:["Akkusativobjekt","Prädikat","Subjekt","Dativobjekt"],
       correct:[2,1,3,0],
@@ -151,7 +151,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     // ── ehem. sort-Aufgaben ────────────────────────────────────
 
     { sub:"Satzglieder zuordnen (geben)", type:"sort",
-      q:"Ordne jeden Satzteil dem richtigen Satzglied zu.\nSatz: Die engagierte Lehrerin gab ihren Schülern heute ein Lob.",
+      q:"<b>Ordne zu</b>: Weise jedem Satzteil das richtige Satzglied zu, indem du ihn in die passende Spalte ziehst.\nSatz: Die engagierte Lehrerin gab ihren Schülern heute ein Lob.",
       rows:["Die engagierte Lehrerin","gab","ihren Schülern","heute","ein Lob"],
       cols:["Dativobjekt","Subjekt","Adv. Bestimmung","Prädikat","Akkusativobjekt"],
       correct:[1,3,0,2,4],
@@ -160,7 +160,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"Satzglieder zuordnen (Futur I – Moderatorin)", type:"sort",
-      q:"Ordne jeden Satzteil dem richtigen Satzglied zu.\nSatz: Die Moderatorin wird dem Publikum täglich die aktuellen Zahlen vorstellen.",
+      q:"<b>Ordne zu</b>: Weise jedem Satzteil das richtige Satzglied zu, indem du ihn in die passende Spalte ziehst.\nSatz: Die Moderatorin wird dem Publikum täglich die aktuellen Zahlen vorstellen.",
       rows:["Die Moderatorin","wird … vorstellen","dem Publikum","täglich","die aktuellen Zahlen"],
       cols:["Prädikat","Adv. Bestimmung","Akkusativobjekt","Subjekt","Dativobjekt"],
       correct:[3,0,4,1,2],
@@ -169,7 +169,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"Satzglieder zuordnen (zeigen)", type:"sort",
-      q:"Ordne jeden Satzteil dem richtigen Satzglied zu.\nSatz: Der Erfinder zeigte seinem Team gestern seine neueste Erfindung.",
+      q:"<b>Ordne zu</b>: Weise jedem Satzteil das richtige Satzglied zu, indem du ihn in die passende Spalte ziehst.\nSatz: Der Erfinder zeigte seinem Team gestern seine neueste Erfindung.",
       rows:["Der Erfinder","zeigte","seinem Team","gestern","seine neueste Erfindung"],
       cols:["Adv. Bestimmung","Prädikat","Dativobjekt","Akkusativobjekt","Subjekt"],
       correct:[4,1,2,0,3],
@@ -178,7 +178,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"Satzglieder zuordnen (erklären – Direktorin)", type:"sort",
-      q:"Ordne jeden Satzteil dem richtigen Satzglied zu.\nSatz: Die Direktorin erklärt den Eltern ruhig die neue Schulregel.",
+      q:"<b>Ordne zu</b>: Weise jedem Satzteil das richtige Satzglied zu, indem du ihn in die passende Spalte ziehst.\nSatz: Die Direktorin erklärt den Eltern ruhig die neue Schulregel.",
       rows:["Die Direktorin","erklärt","den Eltern","ruhig","die neue Schulregel"],
       cols:["Akkusativobjekt","Prädikat","Dativobjekt","Adv. Bestimmung","Subjekt"],
       correct:[4,1,2,3,0],
@@ -187,7 +187,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"Satzglieder zuordnen (übergeben – Staatsanwalt)", type:"sort",
-      q:"Ordne jeden Satzteil dem richtigen Satzglied zu.\nSatz: Der Staatsanwalt übergab dem Richter vertraulich das wichtige Dokument.",
+      q:"<b>Ordne zu</b>: Weise jedem Satzteil das richtige Satzglied zu, indem du ihn in die passende Spalte ziehst.\nSatz: Der Staatsanwalt übergab dem Richter vertraulich das wichtige Dokument.",
       rows:["Der Staatsanwalt","übergab","dem Richter","vertraulich","das wichtige Dokument"],
       cols:["Dativobjekt","Subjekt","Akkusativobjekt","Adv. Bestimmung","Prädikat"],
       correct:[1,4,0,3,2],
@@ -198,7 +198,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     // ── MC-Aufgaben ────────────────────────────────────────────
 
     { sub:"MC: Dativobjekt (empfehlen)", type:"mc",
-      q:"Die freundliche Verkäuferin empfiehlt der Kundin ein neues Parfüm.\n\nWelches Satzglied ist \"der Kundin\"?",
+      q:"Die freundliche Verkäuferin empfiehlt der Kundin ein neues Parfüm.\n\n<b>Bestimme</b> das Satzglied: \"der Kundin\"?",
       o:["Subjekt","Akkusativobjekt","Dativobjekt","Adverbiale Bestimmung"],
       c:2,
       model:"Dativobjekt: Wem empfiehlt sie? → der Kundin (Dativ).",
@@ -206,7 +206,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"MC: Subjekt bei 'gefallen'", type:"mc",
-      q:"Das Konzert hat dem Publikum sehr gut gefallen.\n\nWelches Satzglied ist \"Das Konzert\"?",
+      q:"Das Konzert hat dem Publikum sehr gut gefallen.\n\n<b>Bestimme</b> das Satzglied: \"Das Konzert\"?",
       o:["Dativobjekt","Adverbiale Bestimmung","Akkusativobjekt","Subjekt"],
       c:3,
       model:"Subjekt: Was hat gefallen? → Das Konzert (Nominativ). 'dem Publikum' ist das Dativobjekt!",
@@ -214,7 +214,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"MC: Prädikat (Modalverb)", type:"mc",
-      q:"Sie kann die schwierige Aufgabe leider nicht lösen.\n\nWelche Wörter bilden das Prädikat?",
+      q:"Sie kann die schwierige Aufgabe leider nicht lösen.\n\n<b>Bestimme</b> das Prädikat: Welche Wörter bilden das Prädikat?",
       o:["kann … lösen","Sie … lösen","nicht … lösen","kann … nicht"],
       c:0,
       model:"Prädikat: kann … lösen (Modalverb + Infinitiv = Satzklammer).",
@@ -222,7 +222,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"MC: Genitivattribut", type:"mc",
-      q:"Das Haus des Architekten wurde mehrfach ausgezeichnet.\n\nWelches Satzglied ist \"des Architekten\"?",
+      q:"Das Haus des Architekten wurde mehrfach ausgezeichnet.\n\n<b>Bestimme</b> das Satzglied: \"des Architekten\"?",
       o:["Akkusativobjekt","Subjekt","Genitivattribut","Dativobjekt"],
       c:2,
       model:"Genitivattribut: Wessen Haus? → des Architekten (Genitiv).",
@@ -230,7 +230,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"MC: Akkusativobjekt (übergeben)", type:"mc",
-      q:"Der Bürgermeister übergibt dem Verein eine großzügige Spende.\n\nWelches Satzglied ist \"eine großzügige Spende\"?",
+      q:"Der Bürgermeister übergibt dem Verein eine großzügige Spende.\n\n<b>Bestimme</b> das Satzglied: \"eine großzügige Spende\"?",
       o:["Adverbiale Bestimmung","Akkusativobjekt","Dativobjekt","Subjekt"],
       c:1,
       model:"Akkusativobjekt: Was übergibt er? → eine großzügige Spende (Akkusativ).",
@@ -238,7 +238,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"MC: Adverbiale Best. (konzessiv)", type:"mc",
-      q:"Trotz des Streiks fährt die Straßenbahn regulär.\n\nWelches Satzglied ist \"Trotz des Streiks\"?",
+      q:"Trotz des Streiks fährt die Straßenbahn regulär.\n\n<b>Bestimme</b> das Satzglied: \"Trotz des Streiks\"?",
       o:["Genitivattribut","Dativobjekt","Akkusativobjekt","Adverbiale Bestimmung"],
       c:3,
       model:"Adverbiale Bestimmung (konzessiv): obwohl es einen Streik gibt.",
@@ -246,7 +246,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"MC: Adverbiale Best. der Art", type:"mc",
-      q:"Der Sportler trainiert täglich intensiv.\n\nWelches Satzglied ist \"intensiv\"?",
+      q:"Der Sportler trainiert täglich intensiv.\n\n<b>Bestimme</b> das Satzglied: \"intensiv\"?",
       o:["Akkusativobjekt","Prädikativ","Adverbiale Bestimmung","Attribut"],
       c:2,
       model:"Adverbiale Bestimmung der Art: Wie trainiert er? → intensiv.",
@@ -254,7 +254,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"MC: Dativobjekt im Passiv", type:"mc",
-      q:"Dem alten Lehrer wurde ein Preis verliehen.\n\nWelches Satzglied ist \"Dem alten Lehrer\"?",
+      q:"Dem alten Lehrer wurde ein Preis verliehen.\n\n<b>Bestimme</b> das Satzglied: \"Dem alten Lehrer\"?",
       o:["Adverbiale Bestimmung","Subjekt","Akkusativobjekt","Dativobjekt"],
       c:3,
       model:"Dativobjekt: Wem wurde ein Preis verliehen? → Dem alten Lehrer. Das Subjekt ist 'ein Preis'.",
@@ -262,7 +262,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"MC: Dativobjekt (helfen)", type:"mc",
-      q:"Der Sozialarbeiter hilft den Jugendlichen bei ihren Problemen.\n\nWelches Satzglied ist \"den Jugendlichen\"?",
+      q:"Der Sozialarbeiter hilft den Jugendlichen bei ihren Problemen.\n\n<b>Bestimme</b> das Satzglied: \"den Jugendlichen\"?",
       o:["Dativobjekt","Akkusativobjekt","Adverbiale Bestimmung","Subjekt"],
       c:0,
       model:"Dativobjekt: Wem hilft er? → den Jugendlichen. 'helfen' fordert immer Dativ.",
@@ -270,7 +270,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"MC: Adverbiale Best. (kausal)", type:"mc",
-      q:"Wegen des schlechten Wetters findet das Konzert nicht statt.\n\nWelches Satzglied ist \"Wegen des schlechten Wetters\"?",
+      q:"Wegen des schlechten Wetters findet das Konzert nicht statt.\n\n<b>Bestimme</b> das Satzglied: \"Wegen des schlechten Wetters\"?",
       o:["Akkusativobjekt","Attribut","Adverbiale Bestimmung","Dativobjekt"],
       c:2,
       model:"Adverbiale Bestimmung des Grundes: Warum findet es nicht statt?",
@@ -278,7 +278,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"Dativ oder Akkusativ? (kaufen)", type:"mc",
-      q:"Der Vater kauft seinem Sohn ein Fahrrad.\n\nMit welcher Frage erschließt man \"seinem Sohn\"?",
+      q:"Der Vater kauft seinem Sohn ein Fahrrad.\n\n<b>Erschließe</b> das Satzglied: Mit welcher Frage erschließt man \"seinem Sohn\"?",
       o:["Wer oder was?","Womit?","Wen oder was?","Wem?"],
       c:3,
       model:"Wem? → Dativobjekt. Der Sohn ist die Person, der etwas gekauft wird.",
@@ -286,7 +286,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"Dativ oder Akkusativ? (erklären)", type:"mc",
-      q:"Die Trainerin erklärt den Spielern die neue Taktik.\n\nMit welcher Frage erschließt man \"die neue Taktik\"?",
+      q:"Die Trainerin erklärt den Spielern die neue Taktik.\n\n<b>Erschließe</b> das Satzglied: Mit welcher Frage erschließt man \"die neue Taktik\"?",
       o:["Wem?","Wen oder was?","Wessen?","Wer oder was?"],
       c:1,
       model:"Wen oder was? → Akkusativobjekt. Die Taktik ist das, was erklärt wird.",
@@ -294,7 +294,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"Dativ oder Akkusativ? (danken)", type:"mc",
-      q:"Er dankt seiner Mutter für alles.\n\nWelches Satzglied ist \"seiner Mutter\"?",
+      q:"Er dankt seiner Mutter für alles.\n\n<b>Bestimme</b> das Satzglied: \"seiner Mutter\"?",
       o:["Subjekt (Wer?)","Adverbiale Bestimmung","Dativobjekt (Wem?)","Akkusativobjekt (Wen oder was?)"],
       c:2,
       model:"Dativobjekt: 'danken' fordert immer Dativ – Wem dankt er? → seiner Mutter.",
@@ -302,7 +302,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"Dativ oder Akkusativ? (übergeben)", type:"mc",
-      q:"Die Studentin übergibt ihrem Professor die fertige Hausarbeit.\n\nWelche Objekte verlangt \"übergeben\"?",
+      q:"Die Studentin übergibt ihrem Professor die fertige Hausarbeit.\n\n<b>Bestimme</b>: Welche Objekte verlangt \"übergeben\"?",
       o:["kein Objekt","nur ein Akkusativobjekt","nur ein Dativobjekt","ein Dativobjekt UND ein Akkusativobjekt"],
       c:3,
       model:"Dativ + Akkusativ: Wem? → ihrem Professor | Was? → die Hausarbeit.",
@@ -310,7 +310,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"Dativ oder Akkusativ? (helfen – Begründung)", type:"mc",
-      q:"Wir helfen dem Nachbarn beim Umzug.\n\nWarum ist \"dem Nachbarn\" ein Dativobjekt?",
+      q:"Wir helfen dem Nachbarn beim Umzug.\n\n<b>Begründe</b>: Warum ist \"dem Nachbarn\" ein Dativobjekt?",
       o:["Weil es keine Akkusativform gibt","Weil es direkt hinter dem Verb steht","Weil 'dem' zufällig ein Dativartikel ist","Weil 'helfen' grammatisch immer ein Dativobjekt fordert"],
       c:3,
       model:"'helfen' ist ein Dativverb: Es ordnet dem Objekt grammatisch den Dativ zu.",
@@ -320,7 +320,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     // ── Lückentexte ────────────────────────────────────────────
 
     { sub:"Lückentext: Dat. + Akk. benennen", type:"fill",
-      q:"Tragen Sie die Satzglied-Bezeichnung ein:\nSatz: Das Unternehmen hat seinen Mitarbeitern eine Prämie ausgezahlt.",
+      q:"<b>Trage</b> die Satzglied-Bezeichnung in die Lücke ein:\nSatz: Das Unternehmen hat seinen Mitarbeitern eine Prämie ausgezahlt.",
       sentences:[
         "\"Das Unternehmen\" ist das ____.",
         "\"hat … ausgezahlt\" ist das ____.",
@@ -333,7 +333,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"Lückentext: Fragewörter nennen", type:"fill",
-      q:"Ergänzen Sie die richtige Satzglied-Frage:\nSatz: Der Trainer belobigt die Klasse ausdrücklich.",
+      q:"<b>Ergänze</b> die richtige Fragewort-Frage für das jeweilige Satzglied:\nSatz: Der Trainer belobigt die Klasse ausdrücklich.",
       sentences:[
         "Nach dem Subjekt fragt man: ____?",
         "Nach dem Akkusativobjekt fragt man: ____?",
@@ -345,7 +345,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"Lückentext: Passiv-Satz", type:"fill",
-      q:"Tragen Sie die Satzglied-Bezeichnung ein:\nSatz: Das Protokoll wurde dem Vorstand vorgelesen.",
+      q:"<b>Trage</b> die Satzglied-Bezeichnung in die Lücke ein:\nSatz: Das Protokoll wurde dem Vorstand vorgelesen.",
       sentences:[
         "\"Das Protokoll\" ist das ____.",
         "\"wurde … vorgelesen\" ist das ____.",
@@ -357,7 +357,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"Lückentext: Futur I mit zwei Objekten", type:"fill",
-      q:"Tragen Sie die Satzglied-Bezeichnung ein:\nSatz: Die Direktorin wird den Schülern morgen das Ergebnis mitteilen.",
+      q:"<b>Trage</b> die Satzglied-Bezeichnung in die Lücke ein:\nSatz: Die Direktorin wird den Schülern morgen das Ergebnis mitteilen.",
       sentences:[
         "\"Die Direktorin\" ist das ____.",
         "\"wird … mitteilen\" ist das ____.",
@@ -370,7 +370,7 @@ var MSA_EXTRA_SATZGLIEDER = [
     },
 
     { sub:"Lückentext: Subjekt bei 'gelingen'", type:"fill",
-      q:"Tragen Sie die Satzglied-Bezeichnung ein:\nSatz: Dem Schriftsteller gelang ein großer Erfolg.\nVorsicht: Was gelang – nicht wem!",
+      q:"<b>Trage</b> die Satzglied-Bezeichnung in die Lücke ein. <b>Beachte</b>: Was gelang – nicht wem!\nSatz: Dem Schriftsteller gelang ein großer Erfolg.",
       sentences:[
         "\"Dem Schriftsteller\" ist das ____.",
         "\"gelang\" ist das ____.",

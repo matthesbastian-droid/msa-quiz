@@ -364,7 +364,7 @@ function renderQ() {
       qText.style.display = 'none';
     } else {
       qText.style.display = '';
-      qText.textContent = cur.q || '';
+      qText.innerHTML = cur.q || '';
     }
   }
 
@@ -921,9 +921,13 @@ function renderWortklick(q) {
   // Aufgabentext anzeigen (wird in renderQ für NEW_TYPES ausgeblendet)
   const qp = document.createElement('p');
   qp.style.cssText = 'font-size:.93rem;margin-bottom:12px;font-weight:600;white-space:pre-line;';
-  // Nur den Aufgabenteil vor dem Satz anzeigen (vor dem \n\n)
-  const qParts = (q.q || '').split('\n\n');
-  qp.textContent = qParts[0] || q.q || '';
+  // operator-Feld hat Vorrang (Überarbeitungsaufgaben), sonst q.q
+  if (q.operator) {
+    qp.innerHTML = q.operator;
+  } else {
+    const qParts = (q.q || '').split('\n\n');
+    qp.textContent = qParts[0] || q.q || '';
+  }
   aw.appendChild(qp);
 
   // Satz: entweder explizites sentence-Feld oder aus q nach \n\n extrahieren
@@ -1356,7 +1360,11 @@ function renderKomma(q) {
 
   const hint = document.createElement('p');
   hint.style.cssText = 'font-size:.83rem;opacity:.55;margin-bottom:10px;';
-  hint.textContent   = 'Klicken Sie auf die Stelle im Satz und setzen Sie das fehlende Komma.';
+  if (q.operator) {
+    hint.innerHTML = q.operator;
+  } else {
+    hint.textContent = 'Klicken Sie auf die Stelle im Satz und setzen Sie das fehlende Komma.';
+  }
   aw.appendChild(hint);
 
   // Satz anzeigen

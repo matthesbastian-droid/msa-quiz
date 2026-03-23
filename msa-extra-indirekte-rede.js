@@ -18,7 +18,7 @@ var MSA_EXTRA_INDIREKTE_REDE = [
   {
     sub: "Konjunktiv I – Formen erkennen",
     type: "cross",
-    q: "Welche Verbform ist Konjunktiv I (nicht Indikativ, nicht Konjunktiv II)?",
+    q: "<b>Bestimme</b>: Welche Verbform ist Konjunktiv I (nicht Indikativ, nicht Konjunktiv II)? <b>Ordne</b> durch Klick zu.",
     rows: [
       "sein → er ___",
       "kommen → er ___",
@@ -36,7 +36,7 @@ var MSA_EXTRA_INDIREKTE_REDE = [
   {
     sub: "Konjunktiv I oder II? – Ersetzen nötig?",
     type: "cross",
-    q: "Kann Konjunktiv I direkt verwendet werden, oder muss man auf KII ausweichen?",
+    q: "<b>Entscheide</b>: Kann der Konjunktiv I direkt verwendet werden, oder muss man auf Konjunktiv II ausweichen? <b>Ordne</b> durch Klick zu.",
     rows: [
       "er → sagen (er sagt / er sage)",
       "wir → gehen (wir gehen / wir gingen)",
@@ -56,7 +56,7 @@ var MSA_EXTRA_INDIREKTE_REDE = [
   {
     sub: "Konjunktiv I bilden: sein",
     type: "mc",
-    q: "'Er ist müde.' → Er sagt, er ___ müde.",
+    q: "<b>Ergänze</b> die Lücke in der indirekten Rede: 'Er ist müde.' → Er sagt, er ___ müde.",
     o: ["ist", "sei", "wäre"],
     c: 1,
     model: "B – sei (Konjunktiv I von 'sein')",
@@ -66,7 +66,7 @@ var MSA_EXTRA_INDIREKTE_REDE = [
   {
     sub: "Konjunktiv I bilden: kommen",
     type: "mc",
-    q: "'Ich komme morgen.' → Er sagt, er ___ am nächsten Tag.",
+    q: "<b>Ergänze</b> die Lücke in der indirekten Rede: 'Ich komme morgen.' → Er sagt, er ___ am nächsten Tag.",
     o: ["kommt", "käme", "komme"],
     c: 2,
     model: "C – komme (Konjunktiv I von 'kommen')",
@@ -76,7 +76,7 @@ var MSA_EXTRA_INDIREKTE_REDE = [
   {
     sub: "Konjunktiv II als Ersatz (wir-Form)",
     type: "mc",
-    q: "'Wir haben kein Geld.' → Sie behaupten, sie ___ kein Geld.",
+    q: "<b>Ergänze</b> die Lücke in der indirekten Rede: 'Wir haben kein Geld.' → Sie behaupten, sie ___ kein Geld.",
     o: ["haben", "hätten", "habet"],
     c: 1,
     model: "B – hätten (KII als Ersatz: KI 'haben' = Indikativ bei 'wir')",
@@ -86,7 +86,7 @@ var MSA_EXTRA_INDIREKTE_REDE = [
   {
     sub: "Konjunktiv I Perfekt",
     type: "mc",
-    q: "'Ich habe das Geld gefunden.' → Er sagt, er ___ das Geld gefunden.",
+    q: "<b>Ergänze</b> die Lücke in der indirekten Rede: 'Ich habe das Geld gefunden.' → Er sagt, er ___ das Geld gefunden.",
     o: ["hat", "habe", "hätte"],
     c: 1,
     model: "B – habe … gefunden (Konjunktiv I Perfekt: habe + Partizip II)",
@@ -96,7 +96,7 @@ var MSA_EXTRA_INDIREKTE_REDE = [
   {
     sub: "Konjunktiv I Perfekt mit 'sein'",
     type: "mc",
-    q: "'Er ist abgereist.' → Sie meldet, er ___ abgereist.",
+    q: "<b>Ergänze</b> die Lücke in der indirekten Rede: 'Er ist abgereist.' → Sie meldet, er ___ abgereist.",
     o: ["sei", "wäre", "ist"],
     c: 0,
     model: "A – sei abgereist (Konjunktiv I mit 'sein': Bewegungsverb)",
@@ -106,7 +106,7 @@ var MSA_EXTRA_INDIREKTE_REDE = [
   {
     sub: "Pronomenanpassung",
     type: "mc",
-    q: "'Ich habe dich vermisst.' → Er sagt, er ___ ___ vermisst.",
+    q: "<b>Ergänze</b> die Lücke und <b>beachte</b> die Pronomenanpassung: 'Ich habe dich vermisst.' → Er sagt, er ___ ___ vermisst.",
     o: ["habe sie vermisst (Pronomen angepasst)", "hätte dich vermisst", "habe mich vermisst"],
     c: 0,
     model: "A – habe sie vermisst: 'ich' → 'er', 'dich' → 'sie' (oder 'ihn')",
@@ -116,7 +116,7 @@ var MSA_EXTRA_INDIREKTE_REDE = [
   {
     sub: "Modalverb in indirekter Rede",
     type: "mc",
-    q: "'Ich kann das erklären.' → Sie sagt, sie ___ das erklären.",
+    q: "<b>Ergänze</b> die Lücke in der indirekten Rede: 'Ich kann das erklären.' → Sie sagt, sie ___ das erklären.",
     o: ["kann", "könne", "könnte"],
     c: 1,
     model: "B – könne (Konjunktiv I von 'können')",
@@ -126,7 +126,7 @@ var MSA_EXTRA_INDIREKTE_REDE = [
   {
     sub: "Konjunktiv II als Ersatz: laufen",
     type: "mc",
-    q: "'Sie laufen täglich.' → Er sagt, sie ___ täglich.",
+    q: "<b>Ergänze</b> die Lücke in der indirekten Rede: 'Sie laufen täglich.' → Er sagt, sie ___ täglich.",
     o: ["laufen", "liefen", "laufen würden"],
     c: 1,
     model: "B – liefen (KII als Ersatz: KI 'laufen' = Indikativ bei 'sie')",
@@ -136,7 +136,7 @@ var MSA_EXTRA_INDIREKTE_REDE = [
   {
     sub: "Konjunktiv I: mögen",
     type: "mc",
-    q: "'Ich mag Pizza.' → Sie sagt, sie ___ Pizza.",
+    q: "<b>Ergänze</b> die Lücke in der indirekten Rede: 'Ich mag Pizza.' → Sie sagt, sie ___ Pizza.",
     o: ["mag", "möge", "möchte"],
     c: 1,
     model: "B – möge (Konjunktiv I von 'mögen')",
@@ -146,7 +146,7 @@ var MSA_EXTRA_INDIREKTE_REDE = [
   {
     sub: "Konjunktiv I: müssen",
     type: "mc",
-    q: "'Die Arbeit muss fertig sein.' → Er sagt, die Arbeit ___ fertig sein.",
+    q: "<b>Ergänze</b> die Lücke in der indirekten Rede: 'Die Arbeit muss fertig sein.' → Er sagt, die Arbeit ___ fertig sein.",
     o: ["müsse", "muss", "müsste"],
     c: 0,
     model: "A – müsse (Konjunktiv I von 'müssen')",
@@ -156,7 +156,7 @@ var MSA_EXTRA_INDIREKTE_REDE = [
   {
     sub: "Konjunktiv II als Ersatz: wissen",
     type: "mc",
-    q: "'Wir wissen es nicht.' → Er sagt, sie ___ es nicht.",
+    q: "<b>Ergänze</b> die Lücke in der indirekten Rede: 'Wir wissen es nicht.' → Er sagt, sie ___ es nicht.",
     o: ["wissen", "wüssten", "wisset"],
     c: 1,
     model: "B – wüssten (KII: KI 'wissen' = Indikativ bei 'wir/sie')",
@@ -166,7 +166,7 @@ var MSA_EXTRA_INDIREKTE_REDE = [
   {
     sub: "KI vs. KII: gehen",
     type: "mc",
-    q: "Welche Form ist Konjunktiv I von 'gehen' (3. Pers. Sg.)?",
+    q: "<b>Bestimme</b>: Welche Form ist Konjunktiv I von 'gehen' (3. Person Singular)?",
     o: ["geht", "gehe", "ginge"],
     c: 1,
     model: "B – gehe (KI, 3. Pers. Sg.)",
@@ -178,7 +178,7 @@ var MSA_EXTRA_INDIREKTE_REDE = [
   {
     sub: "Konjunktiv-Formen wählen",
     type: "mc3",
-    q: "Wähle die richtige Verbform für die indirekte Rede:",
+    q: "<b>Wähle</b> für jede Zeile die richtige Verbform für die indirekte Rede.",
     rows: [
       ["er sei", "er ist", "er wäre"],
       ["sie komme", "sie kommt", "sie käme"],
@@ -197,7 +197,7 @@ var MSA_EXTRA_INDIREKTE_REDE = [
   {
     sub: "Direkter Satz → Indirekte Rede zuordnen",
     type: "match",
-    q: "Ordne den direkten Sätzen die richtige indirekte Rede zu:",
+    q: "<b>Ordne zu</b>: Verbinde jeden direkten Satz mit der korrekten indirekten Rede.",
     pairs: [
       ["Er sagt: 'Ich bin krank.'", "Er sagt, er sei krank."],
       ["Sie fragt: 'Hast du Zeit?'", "Sie fragt, ob er Zeit habe."],
@@ -213,7 +213,7 @@ var MSA_EXTRA_INDIREKTE_REDE = [
   {
     sub: "Verb → Konjunktiv-I-Form zuordnen",
     type: "match",
-    q: "Ordne die Verben ihren Konjunktiv-I-Formen (er/sie Sg.) zu:",
+    q: "<b>Ordne zu</b>: Verbinde jedes Verb mit seiner Konjunktiv-I-Form (er/sie Singular).",
     pairs: [
       ["sein", "er sei"],
       ["haben", "er habe"],
@@ -231,7 +231,7 @@ var MSA_EXTRA_INDIREKTE_REDE = [
   {
     sub: "Konjunktiv I: Futur",
     type: "mc",
-    q: "'Es wird bald besser.' → Sie hofft, es ___ bald besser.",
+    q: "<b>Ergänze</b> die Lücke in der indirekten Rede: 'Es wird bald besser.' → Sie hofft, es ___ bald besser.",
     o: ["wird", "werde", "würde"],
     c: 1,
     model: "B – werde (Konjunktiv I von 'werden')",
@@ -241,7 +241,7 @@ var MSA_EXTRA_INDIREKTE_REDE = [
   {
     sub: "KI Perfekt – Frage",
     type: "mc",
-    q: "'Warst du da?' → Er fragt, ob er ___ gewesen ___.",
+    q: "<b>Ergänze</b> die Lücke in der indirekten Frage: 'Warst du da?' → Er fragt, ob er ___ gewesen ___.",
     o: ["war … –", "sei … –", "wäre … –"],
     c: 1,
     model: "B – sei gewesen (Konjunktiv I Perfekt von 'sein')",
@@ -251,7 +251,7 @@ var MSA_EXTRA_INDIREKTE_REDE = [
   {
     sub: "Aufforderung in indirekter Rede",
     type: "mc",
-    q: "'Bleibt hier!', rief er. → Er forderte uns auf, dass wir hier ___.",
+    q: "<b>Ergänze</b> die Lücke: 'Bleibt hier!', rief er. → Er forderte uns auf, dass wir hier ___.",
     o: ["bleiben", "blieben", "bleibet"],
     c: 1,
     model: "B – blieben (Konjunktiv II bei Aufforderung)",

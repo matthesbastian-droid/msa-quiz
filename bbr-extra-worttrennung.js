@@ -9,7 +9,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Einfache Wörter trennen",
         type: "mc",
-        q: "Ist die Trennung 'Ampel: Am-pel' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'Ampel: Am-pel' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, 'Am-pel' ist die korrekte Trennung nach Sprechsilben.",
@@ -18,7 +18,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Einfache Wörter trennen",
         type: "mc",
-        q: "Ist die Trennung 'Brücke: Brü-cke' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'Brücke: Brü-cke' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, 'Brü-cke' ist die korrekte Trennung (ü als Umlaut bleibt beim ersten Teil).",
@@ -27,7 +27,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Einfache Wörter trennen",
         type: "mc",
-        q: "Ist die Trennung 'Ofen: O-fen' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'Ofen: O-fen' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, einzelne Vokale am Wortanfang dürfen abgetrennt werden: O-fen.",
@@ -36,7 +36,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Einfache Wörter trennen",
         type: "mc",
-        q: "Ist die Trennung 'Abend: A-bend' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'Abend: A-bend' korrekt?",
         o: ["korrekt", "falsch"],
         c: 1,
         model: "Falsch, richtig ist 'Ab-end', weil die Vorsilbe 'ab-' zusammenbleibt.",
@@ -45,7 +45,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Einfache Wörter trennen",
         type: "mc",
-        q: "Ist die Trennung 'Igel: I-gel' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'Igel: I-gel' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, einzelne Vokale am Wortanfang dürfen abgetrennt werden: I-gel.",
@@ -56,7 +56,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Zusammengesetzte Wörter",
         type: "mc",
-        q: "Ist die Trennung 'Hausaufgaben: Haus-auf-ga-ben' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'Hausaufgaben: Haus-auf-ga-ben' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, Trennung nach Bestandteilen (Haus, auf) und dann Sprechsilben (ga-ben).",
@@ -65,7 +65,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Zusammengesetzte Wörter",
         type: "mc",
-        q: "Ist die Trennung 'Hausaufgaben: Hausauf-ga-ben' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'Hausaufgaben: Hausauf-ga-ben' korrekt?",
         o: ["korrekt", "falsch"],
         c: 1,
         model: "Falsch, 'Hausauf' ist kein Bestandteil. Richtig: Haus-auf-ga-ben.",
@@ -74,7 +74,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Zusammengesetzte Wörter",
         type: "mc",
-        q: "Ist die Trennung 'Schreibtisch: Schreib-tisch' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'Schreibtisch: Schreib-tisch' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, Zusammensetzung aus 'schreib' und 'tisch'.",
@@ -83,7 +83,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Zusammengesetzte Wörter",
         type: "mc",
-        q: "Ist die Trennung 'Fahrrad: Fahr-rad' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'Fahrrad: Fahr-rad' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, 'Fahr' und 'rad'.",
@@ -92,7 +92,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Zusammengesetzte Wörter",
         type: "mc",
-        q: "Ist die Trennung 'Apfelbaum: Ap-fel-baum' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'Apfelbaum: Ap-fel-baum' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, 'Ap-fel' (Sprechsilben) und 'baum'.",
@@ -103,7 +103,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Doppelkonsonanten",
         type: "mc",
-        q: "Ist die Trennung 'kommen: kom-men' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'kommen: kom-men' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, Doppelkonsonanten werden getrennt: kom-men.",
@@ -112,7 +112,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Doppelkonsonanten",
         type: "mc",
-        q: "Ist die Trennung 'rennen: ren-nen' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'rennen: ren-nen' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, ren-nen.",
@@ -121,7 +121,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Doppelkonsonanten",
         type: "mc",
-        q: "Ist die Trennung 'schwimmen: schwim-men' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'schwimmen: schwim-men' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, schwim-men.",
@@ -130,7 +130,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Doppelkonsonanten",
         type: "mc",
-        q: "Ist die Trennung 'wissen: wis-sen' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'wissen: wis-sen' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, wis-sen.",
@@ -139,7 +139,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Doppelkonsonanten",
         type: "mc",
-        q: "Ist die Trennung 'Küsse: Küs-se' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'Küsse: Küs-se' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, Küs-se.",
@@ -150,7 +150,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "ck, sch, ß",
         type: "mc",
-        q: "Ist die Trennung 'backen: ba-cken' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'backen: ba-cken' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, 'ck' bleibt zusammen: ba-cken.",
@@ -159,7 +159,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "ck, sch, ß",
         type: "mc",
-        q: "Ist die Trennung 'backen: bak-ken' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'backen: bak-ken' korrekt?",
         o: ["korrekt", "falsch"],
         c: 1,
         model: "Falsch, 'ck' darf nicht getrennt werden. Richtig: ba-cken.",
@@ -168,7 +168,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "ck, sch, ß",
         type: "mc",
-        q: "Ist die Trennung 'waschen: wa-schen' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'waschen: wa-schen' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, 'sch' bleibt zusammen: wa-schen.",
@@ -177,7 +177,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "ck, sch, ß",
         type: "mc",
-        q: "Ist die Trennung 'waschen: was-chen' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'waschen: was-chen' korrekt?",
         o: ["korrekt", "falsch"],
         c: 1,
         model: "Falsch, 'sch' darf nicht getrennt werden. Richtig: wa-schen.",
@@ -186,7 +186,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "ck, sch, ß",
         type: "mc",
-        q: "Ist die Trennung 'Straße: Stra-ße' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'Straße: Stra-ße' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, 'ß' bleibt zusammen: Stra-ße.",
@@ -197,7 +197,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Vorsilben",
         type: "mc",
-        q: "Ist die Trennung 'verstehen: ver-ste-hen' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'verstehen: ver-ste-hen' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, Vorsilbe 'ver-' bleibt zusammen.",
@@ -206,7 +206,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Vorsilben",
         type: "mc",
-        q: "Ist die Trennung 'verstehen: vers-te-hen' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'verstehen: vers-te-hen' korrekt?",
         o: ["korrekt", "falsch"],
         c: 1,
         model: "Falsch, 'vers' ist keine Vorsilbe. Richtig: ver-ste-hen.",
@@ -215,7 +215,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Vorsilben",
         type: "mc",
-        q: "Ist die Trennung 'abholen: ab-ho-len' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'abholen: ab-ho-len' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, Vorsilbe 'ab-' bleibt zusammen.",
@@ -224,7 +224,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Vorsilben",
         type: "mc",
-        q: "Ist die Trennung 'abholen: a-bho-len' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'abholen: a-bho-len' korrekt?",
         o: ["korrekt", "falsch"],
         c: 1,
         model: "Falsch, 'a' ist nicht die Vorsilbe. Richtig: ab-ho-len.",
@@ -233,7 +233,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Vorsilben",
         type: "mc",
-        q: "Ist die Trennung 'einkaufen: ein-kau-fen' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'einkaufen: ein-kau-fen' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, Vorsilbe 'ein-' bleibt zusammen.",
@@ -244,7 +244,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Endungen",
         type: "mc",
-        q: "Ist die Trennung 'Hunde: Hun-de' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'Hunde: Hun-de' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, Trennung nach Sprechsilben: Hun-de.",
@@ -253,7 +253,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Endungen",
         type: "mc",
-        q: "Ist die Trennung 'Hunde: Hund-e' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'Hunde: Hund-e' korrekt?",
         o: ["korrekt", "falsch"],
         c: 1,
         model: "Falsch, nicht nach Morphemen trennen. Richtig: Hun-de.",
@@ -262,7 +262,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Endungen",
         type: "mc",
-        q: "Ist die Trennung 'Blumen: Blu-men' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'Blumen: Blu-men' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, Blu-men.",
@@ -271,7 +271,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Endungen",
         type: "mc",
-        q: "Ist die Trennung 'Blumen: Blum-en' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'Blumen: Blum-en' korrekt?",
         o: ["korrekt", "falsch"],
         c: 1,
         model: "Falsch, richtig: Blu-men.",
@@ -280,7 +280,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Endungen",
         type: "mc",
-        q: "Ist die Trennung 'Garten: Gar-ten' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'Garten: Gar-ten' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, Gar-ten.",
@@ -291,7 +291,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "st und sp",
         type: "mc",
-        q: "Ist die Trennung 'Kasten: Kas-ten' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'Kasten: Kas-ten' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, 'st' wird getrennt: Kas-ten.",
@@ -300,7 +300,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "st und sp",
         type: "mc",
-        q: "Ist die Trennung 'Kasten: Ka-sten' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'Kasten: Ka-sten' korrekt?",
         o: ["korrekt", "falsch"],
         c: 1,
         model: "Falsch, 'st' muss getrennt werden: Kas-ten.",
@@ -309,7 +309,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "st und sp",
         type: "mc",
-        q: "Ist die Trennung 'Wespe: Wes-pe' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'Wespe: Wes-pe' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, 'sp' wird getrennt: Wes-pe.",
@@ -318,7 +318,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "st und sp",
         type: "mc",
-        q: "Ist die Trennung 'Wespe: We-spe' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'Wespe: We-spe' korrekt?",
         o: ["korrekt", "falsch"],
         c: 1,
         model: "Falsch, richtig: Wes-pe.",
@@ -327,7 +327,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "st und sp",
         type: "mc",
-        q: "Ist die Trennung 'Fenster: Fens-ter' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'Fenster: Fens-ter' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, 'st' wird getrennt: Fens-ter.",
@@ -338,7 +338,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Fremdwörter",
         type: "mc",
-        q: "Ist die Trennung 'Pädagogik: Pä-da-go-gik' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'Pädagogik: Pä-da-go-gik' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, Trennung nach Sprechsilben.",
@@ -347,7 +347,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Fremdwörter",
         type: "mc",
-        q: "Ist die Trennung 'Philosophie: Phi-lo-so-phie' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'Philosophie: Phi-lo-so-phie' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, Phi-lo-so-phie.",
@@ -356,7 +356,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Fremdwörter",
         type: "mc",
-        q: "Ist die Trennung 'Physik: Phy-sik' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'Physik: Phy-sik' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, Phy-sik.",
@@ -365,7 +365,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Fremdwörter",
         type: "mc",
-        q: "Ist die Trennung 'Rhythmus: Rhyth-mus' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'Rhythmus: Rhyth-mus' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, Rhyth-mus.",
@@ -374,7 +374,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Fremdwörter",
         type: "mc",
-        q: "Ist die Trennung 'Atmosphäre: At-mo-sphä-re' korrekt?",
+        q: "<b>Beurteile</b>:\nIst die Trennung 'Atmosphäre: At-mo-sphä-re' korrekt?",
         o: ["korrekt", "falsch"],
         c: 0,
         model: "Richtig, At-mo-sphä-re.",
@@ -385,7 +385,7 @@ var BBR_EXTRA_THEMES = [
       {
         sub: "Gemischte Übung",
         type: "mc",
-        q: "Welche Trennungen sind korrekt?\n\n(A) Fah-ren\n(B) Kin-der\n(C) Ba-cken\n(D) Kind-er\n(E) Ka-sten",
+        q: "<b>Wähle</b> die richtige Antwort aus:\nWelche Trennungen sind korrekt?\n\n(A) Fah-ren\n(B) Kin-der\n(C) Ba-cken\n(D) Kind-er\n(E) Ka-sten",
         o: [
           "A, B und C",
           "A, C und D",

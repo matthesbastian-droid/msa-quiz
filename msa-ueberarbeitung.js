@@ -44,6 +44,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Zeichensetzung – Komma",
     type:"komma",
+    operator:"<b>Klicken Sie auf die Stelle im Satz und setzen Sie das fehlende Komma ein.</b>",
     sentence:'Die Spargelstange ist der Stängelspross der Spargelpflanze die zur Familie der Liliengewächse gehört.',
     correctPositions:[44],
     acceptedAnswers:['Die Spargelstange ist der Stängelspross der Spargelpflanze, die zur Familie der Liliengewächse gehört.'],
@@ -54,6 +55,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Rechtschreibung",
     type:"rs",
+    operator:"<b>Klicken Sie auf das falsch geschriebene Wort und geben Sie die richtige Schreibweise ein.</b>",
     sentence:'Viele alt bekannte Sorten werden heute kaum noch angebaut.',
     errorWord:'alt bekannte',
     correctWord:'altbekannte',
@@ -65,6 +67,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Grammatikfehler – Konjunktion",
     type:"satzbau",
+    operator:"<b>Klicken Sie auf den fehlerhaften Ausdruck und geben Sie die korrekte Version ein.</b>",
     sentence:'Spargelkulturen sollen über viele Jahre gute Erträge bringen, weil der Standort sorgfältig ausgewählt werden sollte.',
     errorWord:'weil',
     correctWord:'sodass',
@@ -76,6 +79,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Ausdrucksfehler – Umgangssprache",
     type:"ausdruck",
+    operator:"<b>Klicken Sie auf den umgangssprachlichen Ausdruck und ersetzen Sie ihn durch einen standardsprachlichen Begriff.</b>",
     sentence:'Zur Ernte werden die Spargelstangen gestochen, was nach wie vor knüppelharte Handarbeit ist.',
     errorWord:'knüppelharte',
     correctWord:'äußerst harte',
@@ -87,6 +91,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Ausdrucksfehler – Umgangssprache",
     type:"ausdruck",
+    operator:"<b>Klicken Sie auf den umgangssprachlichen Ausdruck und ersetzen Sie ihn durch einen standardsprachlichen Begriff.</b>",
     sentence:'Spargel ist ein Gemüse, welches in seinem Geschmack einzigartig und deshalb bei Feinschmeckern voll beliebt ist.',
     errorWord:'voll',
     correctWord:'sehr',
@@ -98,6 +103,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Zeichensetzung – Komma",
     type:"komma",
+    operator:"<b>Klicken Sie auf die Stelle im Satz und setzen Sie das fehlende Komma ein.</b>",
     sentence:'Früher wurden die Spargelstangen die noch nicht zerkleinert waren relativ umständlich mit den Fingern gegessen.',
     correctPositions:[33, 55],
     acceptedAnswers:['Früher wurden die Spargelstangen, die noch nicht zerkleinert waren, relativ umständlich mit den Fingern gegessen.'],
@@ -108,6 +114,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Rechtschreibung – Groß-/Kleinschreibung",
     type:"rs",
+    operator:"<b>Klicken Sie auf das falsch geschriebene Wort und geben Sie die richtige Schreibweise ein.</b>",
     sentence:'Deshalb wurde zum spargelessen immer ein mit warmem Wasser gefülltes Fingerschälchen gereicht.',
     errorWord:'spargelessen',
     correctWord:'Spargelessen',
@@ -119,6 +126,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Grammatikfehler – Kasus",
     type:"kasus",
+    operator:"<b>Klicken Sie auf das falsche Wort und geben Sie die korrekte Form ein.</b>",
     sentence:'Für die aus heutiger Sicht unsinnig erscheinende Sitte gab es ein einfachen Grund.',
     errorWord:'ein',
     correctWord:'einen',
@@ -130,6 +138,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Grammatikfehler – Satzbau",
     type:"satzbau",
+    operator:"<b>Klicken Sie auf den fehlerhaften Ausdruck und geben Sie die korrekte Version ein.</b>",
     sentence:'Wurde der Spargel geschnitten mit dem Messer, fing dieses stark zu rosten an.',
     errorWord:'geschnitten mit dem Messer',
     correctWord:'mit dem Messer geschnitten',
@@ -141,6 +150,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Rechtschreibung – ß/ss",
     type:"rs",
+    operator:"<b>Klicken Sie auf das falsch geschriebene Wort und geben Sie die richtige Schreibweise ein.</b>",
     sentence:'Heute können sich Spargelliebhaber über rostfreie Messer freuen und Spargel zu jedem Anlaß bedenkenlos mit Messer und Gabel essen.',
     errorWord:'Anlaß',
     correctWord:'Anlass',
@@ -163,6 +173,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Zeichensetzung – Komma",
     type:"komma",
+    operator:"<b>Klicken Sie auf die Stelle im Satz und setzen Sie das fehlende Komma ein.</b>",
     sentence:'Der Traumberuf ist gefunden aber der Ausbildungsplatz fehlt noch.',
     correctPositions:[26],
     acceptedAnswers:['Der Traumberuf ist gefunden, aber der Ausbildungsplatz fehlt noch.'],
@@ -173,6 +184,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Rechtschreibung – Groß-/Kleinschreibung",
     type:"rs",
+    operator:"<b>Klicken Sie auf das falsch geschriebene Wort und geben Sie die richtige Schreibweise ein.</b>",
     sentence:'Hier finden Sie ein Paar Tipps, die zu Beginn der Suche eine gute Orientierung bieten.',
     errorWord:'Paar',
     correctWord:'paar',
@@ -184,6 +196,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Rechtschreibung – Groß-/Kleinschreibung",
     type:"rs",
+    operator:"<b>Klicken Sie auf das falsch geschriebene Wort und geben Sie die richtige Schreibweise ein.</b>",
     sentence:'Betriebe planen oft weit im Voraus und schreiben Ihre Stellen schon Monate vorher aus.',
     errorWord:'Ihre',
     correctWord:'ihre',
@@ -195,6 +208,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Grammatikfehler – Kasus",
     type:"kasus",
+    operator:"<b>Klicken Sie auf das falsche Wort und geben Sie die korrekte Form ein.</b>",
     sentence:'Ausbildungsbörsen im Internet bieten ein großes Angebot an Ausbildungsplätze.',
     errorWord:'Ausbildungsplätze',
     correctWord:'Ausbildungsplätzen',
@@ -206,6 +220,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Ausdrucksfehler – Umgangssprache",
     type:"ausdruck",
+    operator:"<b>Klicken Sie auf den umgangssprachlichen Ausdruck und ersetzen Sie ihn durch einen standardsprachlichen Begriff.</b>",
     sentence:'Wer eine passende Stelle gefunden hat, kriegt gleich die wichtigsten Informationen zum Betrieb.',
     errorWord:'kriegt',
     correctWord:'bekommt',
@@ -217,6 +232,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Grammatikfehler – Kasus",
     type:"kasus",
+    operator:"<b>Klicken Sie auf das falsche Wort und geben Sie die korrekte Form ein.</b>",
     sentence:'Die Bundesagentur für Arbeit bietet Ausbildungssuchenden ein kostenlosen Vermittlungsservice an.',
     errorWord:'ein',
     correctWord:'einen',
@@ -228,6 +244,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Grammatikfehler – Satzbau (trennbares Verb)",
     type:"satzbau",
+    operator:"<b>Klicken Sie auf den fehlerhaften Ausdruck und geben Sie die korrekte Version ein.</b>",
     sentence:'In einem individuellen Gespräch geben die Service-Berater weiter die Kontaktdaten von Betrieben.',
     errorWord:'weiter die Kontaktdaten',
     correctWord:'die Kontaktdaten weiter',
@@ -239,6 +256,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Zeichensetzung – Komma",
     type:"komma",
+    operator:"<b>Klicken Sie auf die Stelle im Satz und setzen Sie das fehlende Komma ein.</b>",
     sentence:'Berufsmessen sind eine der besten Möglichkeiten sich einen Überblick über Ausbildungsbetriebe in der Region zu verschaffen.',
     correctPositions:[42],
     acceptedAnswers:['Berufsmessen sind eine der besten Möglichkeiten, sich einen Überblick über Ausbildungsbetriebe in der Region zu verschaffen.'],
@@ -249,6 +267,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Ausdrucksfehler – Umgangssprache",
     type:"ausdruck",
+    operator:"<b>Klicken Sie auf den umgangssprachlichen Ausdruck und ersetzen Sie ihn durch einen standardsprachlichen Begriff.</b>",
     sentence:'Man kann die Personalverantwortlichen der Betriebe anquatschen und sogar gleich seine Bewerbungsunterlagen abgeben.',
     errorWord:'anquatschen',
     correctWord:'ansprechen',
@@ -260,6 +279,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Rechtschreibung",
     type:"rs",
+    operator:"<b>Klicken Sie auf das falsch geschriebene Wort und geben Sie die richtige Schreibweise ein.</b>",
     sentence:'Jugendliche solten auch immer Augen und Ohren offen halten, ob jemand im eigenen Umfeld einen Azubi sucht.',
     errorWord:'solten',
     correctWord:'sollten',
@@ -282,6 +302,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Grammatikfehler – Tempus",
     type:"satzbau",
+    operator:"<b>Klicken Sie auf den fehlerhaften Ausdruck und geben Sie die korrekte Version ein.</b>",
     sentence:'Im 8. Jahrhundert entwickelt sich aus den kleinen Inseln einer sumpfigen Lagune die See- und Handelsmacht Venedig.',
     errorWord:'entwickelt',
     correctWord:'entwickelte',
@@ -293,6 +314,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Rechtschreibung – Groß-/Kleinschreibung",
     type:"rs",
+    operator:"<b>Klicken Sie auf das falsch geschriebene Wort und geben Sie die richtige Schreibweise ein.</b>",
     sentence:'Heute gehört die Stadt zum Weltkulturerbe und ist nicht ohne grund Europas beliebtestes Städtereiseziel.',
     errorWord:'grund',
     correctWord:'Grund',
@@ -304,6 +326,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Zeichensetzung – Komma",
     type:"komma",
+    operator:"<b>Klicken Sie auf die Stelle im Satz und setzen Sie das fehlende Komma ein.</b>",
     sentence:'Der Canal Grande Venedigs großer Kanal durchfließt die Stadt in zwei großen Bogen und ist die wichtigste Verkehrsader.',
     correctPositions:[16, 37],
     acceptedAnswers:['Der Canal Grande, Venedigs großer Kanal, durchfließt die Stadt in zwei großen Bogen und ist die wichtigste Verkehrsader.'],
@@ -314,6 +337,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Rechtschreibung",
     type:"rs",
+    operator:"<b>Klicken Sie auf das falsch geschriebene Wort und geben Sie die richtige Schreibweise ein.</b>",
     sentence:'Moderne Schnellboote und mit Frischwahren beladene Boote sorgen für ein bewegtes Treiben auf dem Kanal.',
     errorWord:'Frischwahren',
     correctWord:'Frischwaren',
@@ -325,6 +349,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Rechtschreibung",
     type:"rs",
+    operator:"<b>Klicken Sie auf das falsch geschriebene Wort und geben Sie die richtige Schreibweise ein.</b>",
     sentence:'Auf dem Markusplatz zaubern fantastische Bauwerke gemeinsam mit zahlllosen Tauben ein ganz besonderes Ambiente.',
     errorWord:'zahlllosen',
     correctWord:'zahllosen',
@@ -336,6 +361,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Grammatikfehler – Kasus",
     type:"kasus",
+    operator:"<b>Klicken Sie auf das falsche Wort und geben Sie die korrekte Form ein.</b>",
     sentence:'Der Glockenturm mit einer Höhe von 99 Meter ermöglicht einen herrlichen Blick über die Lagunenstadt.',
     errorWord:'Meter',
     correctWord:'Metern',
@@ -347,6 +373,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Ausdrucksfehler – Umgangssprache",
     type:"ausdruck",
+    operator:"<b>Klicken Sie auf den umgangssprachlichen Ausdruck und ersetzen Sie ihn durch einen standardsprachlichen Begriff.</b>",
     sentence:'Viele Besucher gucken den herrlichen Markusdom und den Dogenpalast an.',
     errorWord:'gucken',
     correctWord:'betrachten',
@@ -358,6 +385,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Grammatikfehler – Satzbau (Verbstellung)",
     type:"satzbau",
+    operator:"<b>Klicken Sie auf den fehlerhaften Ausdruck und geben Sie die korrekte Version ein.</b>",
     sentence:'Auch Venedigs Cafés sind beliebt, weil man kann dort guten Kaffee trinken.',
     errorWord:'kann',
     correctWord:'trinken kann',
@@ -369,6 +397,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Zeichensetzung – Komma",
     type:"komma",
+    operator:"<b>Klicken Sie auf die Stelle im Satz und setzen Sie das fehlende Komma ein.</b>",
     sentence:'Den Abend lässt man am besten in einem exquisiten Restaurant ausklingen wo man mit regionalen Köstlichkeiten verwöhnt wird.',
     correctPositions:[68],
     acceptedAnswers:['Den Abend lässt man am besten in einem exquisiten Restaurant ausklingen, wo man mit regionalen Köstlichkeiten verwöhnt wird.'],
@@ -379,6 +408,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Grammatikfehler – Konjunktion",
     type:"satzbau",
+    operator:"<b>Klicken Sie auf den fehlerhaften Ausdruck und geben Sie die korrekte Version ein.</b>",
     sentence:'Doch die Stadt wird durch die gigantischen Kreuzfahrtschiffe bedroht, obwohl diese die Bausubstanz zerstören.',
     errorWord:'obwohl',
     correctWord:'weil',
@@ -401,6 +431,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Zeichensetzung – Komma",
     type:"komma",
+    operator:"<b>Klicken Sie auf die Stelle im Satz und setzen Sie das fehlende Komma ein.</b>",
     sentence:'Es ist nicht leicht ein passendes Geschenk für einen Freund zu finden.',
     correctPositions:[18],
     acceptedAnswers:['Es ist nicht leicht, ein passendes Geschenk für einen Freund zu finden.'],
@@ -411,6 +442,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Rechtschreibung",
     type:"rs",
+    operator:"<b>Klicken Sie auf das falsch geschriebene Wort und geben Sie die richtige Schreibweise ein.</b>",
     sentence:'Hier erhalten Sie einige Tipps, die Ihnen die Suche erleichtern solen.',
     errorWord:'solen',
     correctWord:'sollen',
@@ -422,6 +454,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Grammatikfehler – Kasus",
     type:"kasus",
+    operator:"<b>Klicken Sie auf das falsche Wort und geben Sie die korrekte Form ein.</b>",
     sentence:'In Gespräche mit dem Freund erfahren Sie etwas über dessen Geschmack.',
     errorWord:'Gespräche',
     correctWord:'Gesprächen',
@@ -433,6 +466,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Grammatikfehler – Kongruenz (Numerus)",
     type:"satzbau",
+    operator:"<b>Klicken Sie auf den fehlerhaften Ausdruck und geben Sie die korrekte Version ein.</b>",
     sentence:'Auch die Kenntnis seiner Interessen und Hobbys können Ihnen helfen, die richtige Entscheidung zu treffen.',
     errorWord:'können',
     correctWord:'kann',
@@ -444,6 +478,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Rechtschreibung – Fremdwort",
     type:"rs",
+    operator:"<b>Klicken Sie auf das falsch geschriebene Wort und geben Sie die richtige Schreibweise ein.</b>",
     sentence:'Verschenken Sie zum Beispiel ein Abonement der zum Hobby passenden Fachzeitschrift.',
     errorWord:'Abonement',
     correctWord:'Abonnement',
@@ -455,6 +490,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Rechtschreibung",
     type:"rs",
+    operator:"<b>Klicken Sie auf das falsch geschriebene Wort und geben Sie die richtige Schreibweise ein.</b>",
     sentence:'Je nach Interessenlage können auch Konzert- oder Kinokarten ein willkomenes Geschenk sein.',
     errorWord:'willkomenes',
     correctWord:'willkommenes',
@@ -466,6 +502,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Ausdrucksfehler – Umgangssprache",
     type:"ausdruck",
+    operator:"<b>Klicken Sie auf den umgangssprachlichen Ausdruck und ersetzen Sie ihn durch einen standardsprachlichen Begriff.</b>",
     sentence:'Total in sind auch Gutscheine für Shopping-Center.',
     errorWord:'Total in',
     correctWord:'Im Trend',
@@ -477,6 +514,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Grammatikfehler – Konjunktion",
     type:"satzbau",
+    operator:"<b>Klicken Sie auf den fehlerhaften Ausdruck und geben Sie die korrekte Version ein.</b>",
     sentence:'Geldgeschenke sollten Sie jedoch vermeiden, weil diese sehr beliebt sind.',
     errorWord:'weil',
     correctWord:'obwohl',
@@ -488,6 +526,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Zeichensetzung – Komma",
     type:"komma",
+    operator:"<b>Klicken Sie auf die Stelle im Satz und setzen Sie das fehlende Komma ein.</b>",
     sentence:'Sie wirken unpersönlich bequem und einfallslos.',
     correctPositions:[20],
     acceptedAnswers:['Sie wirken unpersönlich, bequem und einfallslos.'],
@@ -498,6 +537,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Ausdrucksfehler – Umgangssprache",
     type:"ausdruck",
+    operator:"<b>Klicken Sie auf den umgangssprachlichen Ausdruck und ersetzen Sie ihn durch einen standardsprachlichen Begriff.</b>",
     sentence:'Lassen Sie sich also was Besonderes einfallen, wenn Sie Ihren Freund überraschen wollen.',
     errorWord:'was',
     correctWord:'etwas',
@@ -520,6 +560,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Zeichensetzung – Komma",
     type:"komma",
+    operator:"<b>Klicken Sie auf die Stelle im Satz und setzen Sie das fehlende Komma ein.</b>",
     sentence:'Die Firma „Gartenglück" bietet einen Ausbildungsplatz zum Gärtner der Fachrichtung Landschaftsbau.',
     correctPositions:[52],
     acceptedAnswers:['Die Firma „Gartenglück" bietet einen Ausbildungsplatz zum Gärtner, der Fachrichtung Landschaftsbau.'],
@@ -530,6 +571,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Grammatikfehler – Kasus",
     type:"kasus",
+    operator:"<b>Klicken Sie auf das falsche Wort und geben Sie die korrekte Form ein.</b>",
     sentence:'Interessenten müssen mindestens ein Abschluss, z. B. den der Berufsbildungsreife, vorweisen können.',
     errorWord:'ein',
     correctWord:'einen',
@@ -541,6 +583,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Rechtschreibung",
     type:"rs",
+    operator:"<b>Klicken Sie auf das falsch geschriebene Wort und geben Sie die richtige Schreibweise ein.</b>",
     sentence:'Außerdem wird eine gute köperliche Belastbarkeit erwartet.',
     errorWord:'köperliche',
     correctWord:'körperliche',
@@ -552,6 +595,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Grammatikfehler – Kongruenz (Numerus)",
     type:"satzbau",
+    operator:"<b>Klicken Sie auf den fehlerhaften Ausdruck und geben Sie die korrekte Version ein.</b>",
     sentence:'Auch technisches Verständnis und Teamfähigkeit ist von Vorteil.',
     errorWord:'ist',
     correctWord:'sind',
@@ -563,6 +607,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Rechtschreibung",
     type:"rs",
+    operator:"<b>Klicken Sie auf das falsch geschriebene Wort und geben Sie die richtige Schreibweise ein.</b>",
     sentence:'Die Bewerbungsunterlagen sind vollstendig einzureichen.',
     errorWord:'vollstendig',
     correctWord:'vollständig',
@@ -574,6 +619,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Zeichensetzung – Komma",
     type:"komma",
+    operator:"<b>Klicken Sie auf die Stelle im Satz und setzen Sie das fehlende Komma ein.</b>",
     sentence:'Dazu gehören Kopien der letzten beiden Zeugnisse der Praktikumsnachweise und ein tabellarischer Lebenslauf.',
     correctPositions:[51],
     acceptedAnswers:['Dazu gehören Kopien der letzten beiden Zeugnisse, der Praktikumsnachweise und ein tabellarischer Lebenslauf.'],
@@ -584,6 +630,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Ausdrucksfehler – falsche Verbkonstruktion",
     type:"ausdruck",
+    operator:"<b>Klicken Sie auf den umgangssprachlichen Ausdruck und ersetzen Sie ihn durch einen standardsprachlichen Begriff.</b>",
     sentence:'Der Bewerbungszeitraum endet bis zum 15. Januar 2015.',
     errorWord:'endet bis zum',
     correctWord:'endet am',
@@ -595,6 +642,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Rechtschreibung",
     type:"rs",
+    operator:"<b>Klicken Sie auf das falsch geschriebene Wort und geben Sie die richtige Schreibweise ein.</b>",
     sentence:'Unsere Ansprechpartnerinen für die Bewerbungen sind Frau Strauch und Frau Baum.',
     errorWord:'Ansprechpartnerinen',
     correctWord:'Ansprechpartnerinnen',
@@ -606,6 +654,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Grammatikfehler – Modus",
     type:"satzbau",
+    operator:"<b>Klicken Sie auf den fehlerhaften Ausdruck und geben Sie die korrekte Version ein.</b>",
     sentence:'Die Bewerbungsunterlagen wären an folgende Adresse zu richten.',
     errorWord:'wären',
     correctWord:'sind',
@@ -617,6 +666,7 @@ var MSA_UEBERARBEITUNG_THEMES = [
   {
     sub:"Rechtschreibung – Eigenname",
     type:"rs",
+    operator:"<b>Klicken Sie auf das falsch geschriebene Wort und geben Sie die richtige Schreibweise ein.</b>",
     sentence:'An der wiese 4',
     errorWord:'wiese',
     correctWord:'Wiese',

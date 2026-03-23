@@ -36,7 +36,7 @@ var MSA_EXTRA_GETRENNT = [
   {
     sub: "Partikelverben: Infinitiv vs. Konjugation",
     type: "cross",
-    q: "Im Infinitiv zusammen oder konjugiert getrennt?",
+    q: "<b>Entscheide</b>: Wird das Partikelverb im Infinitiv zusammen oder in der konjugierten Form getrennt geschrieben? <b>Ordne</b> durch Klick zu.",
     rows: [
       "Er will (losfahren / los fahren). (Infinitiv)",
       "Er fährt (los / losfahren). (Präsens 3. Sg.)",
@@ -54,7 +54,7 @@ var MSA_EXTRA_GETRENNT = [
   {
     sub: "Nomen + Verb: getrennt oder zusammen?",
     type: "cross",
-    q: "Bleibt das Nomen eigenständig (getrennt) oder hat es seine Eigenständigkeit verloren (zusammen)?",
+    q: "<b>Entscheide</b>: Bleibt das Nomen eigenständig (→ getrennt) oder hat es seine Eigenständigkeit verloren (→ zusammen)? <b>Ordne</b> durch Klick zu.",
     rows: [
       "Lass uns heute (eislaufen / Eis laufen). (Sportart)",
       "Er kann gut (Klavier spielen / Klavierspielen). (Nomen als Objekt)",
@@ -72,7 +72,7 @@ var MSA_EXTRA_GETRENNT = [
   {
     sub: "Adjektiv/Adverb + Verb: übertragen vs. wörtlich",
     type: "cross",
-    q: "Getrennt oder zusammen?",
+    q: "<b>Entscheide</b>: Wird die Verbindung getrennt oder zusammengeschrieben? <b>Ordne</b> durch Klick zu.",
     rows: [
       "Das kann ich (gutheißen / gut heißen). (= zustimmen)",
       "Er hat mich (gut heißen / gutheißen). (= freundlich begrüßt – wörtlich)",
@@ -90,7 +90,7 @@ var MSA_EXTRA_GETRENNT = [
   {
     sub: "Zusammensetzungen mit 'irgend-', 'wohl-', 'hoch-'",
     type: "cross",
-    q: "Getrennt oder zusammen?",
+    q: "<b>Entscheide</b>: Wird die Verbindung getrennt oder zusammengeschrieben? <b>Ordne</b> durch Klick zu.",
     rows: [
       "(Irgendwer / Irgend wer) hat das getan.",
       "(Irgendwie / Irgend wie) klappt das schon.",
@@ -110,7 +110,7 @@ var MSA_EXTRA_GETRENNT = [
   {
     sub: "'kennenlernen' – beide korrekt?",
     type: "mc",
-    q: "'Ich möchte dich gerne ___.' – Was stimmt?",
+    q: "<b>Wähle</b> die korrekte Schreibweise: 'Ich möchte dich gerne ___.'",
     o: ["kennen lernen", "kennenlernen", "Beides ist korrekt laut Duden"],
     c: 2,
     model: "C – Beides korrekt (Empfehlung: kennenlernen)",
@@ -120,7 +120,7 @@ var MSA_EXTRA_GETRENNT = [
   {
     sub: "beisammen + sein",
     type: "mc",
-    q: "'Wir wollen ___ sein.' – getrennt oder zusammen?",
+    q: "<b>Entscheide</b>: Getrennt- oder Zusammenschreibung? 'Wir wollen ___ sein.'",
     o: ["beisammensein", "beisammen sein", "Beides korrekt"],
     c: 1,
     model: "B – beisammen sein → Adverb + sein → getrennt",
@@ -130,7 +130,7 @@ var MSA_EXTRA_GETRENNT = [
   {
     sub: "'zu' bei Partikelverben",
     type: "mc",
-    q: "'Es ist wichtig, ___.' – Infinitiv mit 'zu' bei Partikelverb",
+    q: "<b>Wähle</b> die korrekte Schreibweise des Infinitivs mit 'zu': 'Es ist wichtig, ___.'",
     o: ["zusammen zu arbeiten", "zusammenzuarbeiten", "zu zusammenarbeiten"],
     c: 1,
     model: "B – zusammenzuarbeiten: 'zu' tritt zwischen Partikel und Verbstamm",
@@ -140,7 +140,7 @@ var MSA_EXTRA_GETRENNT = [
   {
     sub: "so + genannt",
     type: "mc",
-    q: "'Das war das ___ Glück.' – getrennt oder zusammen?",
+    q: "<b>Entscheide</b>: Getrennt- oder Zusammenschreibung? 'Das war das ___ Glück.'",
     o: ["so genannte", "sogenannte", "so-genannte"],
     c: 1,
     model: "B – sogenannte → feste Verbindung → zusammen",
@@ -150,7 +150,7 @@ var MSA_EXTRA_GETRENNT = [
   {
     sub: "Nominalisierter Infinitiv",
     type: "mc",
-    q: "'Das ___ war schön.' – nominalisierter Infinitiv von 'zusammen kommen'",
+    q: "<b>Wähle</b> die korrekte Schreibweise des nominalisierten Infinitivs: 'Das ___ war schön.'",
     o: ["Zusammen kommen", "zusammenkommen", "Zusammenkommen"],
     c: 2,
     model: "C – Zusammenkommen → nominalisierter Infinitiv → zusammen und groß",
@@ -160,7 +160,7 @@ var MSA_EXTRA_GETRENNT = [
   {
     sub: "völlig + wertlos",
     type: "mc",
-    q: "'Er ist ___ sinnlos.' – Adverb + Adjektiv",
+    q: "<b>Entscheide</b>: Getrennt- oder Zusammenschreibung? 'Er ist ___ sinnlos.' (Adverb + Adjektiv)",
     o: ["völligsinnlos", "völlig sinnlos", "Beides korrekt"],
     c: 1,
     model: "B – völlig sinnlos → Adverb + Adjektiv → getrennt",
@@ -172,7 +172,7 @@ var MSA_EXTRA_GETRENNT = [
   {
     sub: "Getrennt oder zusammen? (Gemischte Fälle)",
     type: "mc3",
-    q: "Wähle: getrennt oder zusammen?",
+    q: "<b>Wähle</b> für jede Zeile: Wird getrennt oder zusammengeschrieben?",
     rows: [
       ["eislaufen (Sportart)", "Eis laufen"],
       ["Klavier spielen (Nomen+Verb)", "Klavierspielen"],
@@ -191,7 +191,7 @@ var MSA_EXTRA_GETRENNT = [
   {
     sub: "Regel → Beispiel zuordnen",
     type: "match",
-    q: "Ordne der Regel ein passendes Beispiel zu:",
+    q: "<b>Ordne zu</b>: Verbinde jede Regel zur Getrennt-/Zusammenschreibung mit einem passenden Beispiel.",
     pairs: [
       ["übertragene Bedeutung → zusammen", "sitzenbleiben (nicht versetzt)"],
       ["wörtliche Bedeutung → getrennt", "liegen lassen (wörtlich auf Boden)"],

@@ -18,7 +18,7 @@ var MSA_EXTRA_PASSIV = [
   {
     sub: "Vorgangspassiv oder Zustandspassiv?",
     type: "cross",
-    q: "Welche Passivform liegt vor?",
+    q: "<b>Bestimme</b>: Welche Passivform liegt vor – Vorgangspassiv oder Zustandspassiv? <b>Ordne</b> durch Klick zu.",
     rows: [
       "Der Kuchen wird gerade gebacken.",
       "Die Tür ist geschlossen.",
@@ -36,7 +36,7 @@ var MSA_EXTRA_PASSIV = [
   {
     sub: "Passiv erkennen oder nicht?",
     type: "cross",
-    q: "Ist der Satz ein Passiv (Vorgangs- oder Zustandspassiv)?",
+    q: "<b>Entscheide</b>: Handelt es sich um ein Passiv (Vorgangs- oder Zustandspassiv) oder kein Passiv? <b>Ordne</b> durch Klick zu.",
     rows: [
       "Das Buch wird gelesen.",
       "Das Buch liegt auf dem Tisch.",
@@ -54,7 +54,7 @@ var MSA_EXTRA_PASSIV = [
   {
     sub: "Tempus im Passiv bestimmen",
     type: "cross",
-    q: "Welches Tempus liegt vor?",
+    q: "<b>Bestimme</b> das Tempus des Passivsatzes und <b>ordne</b> durch Klick in die richtige Spalte ein.",
     rows: [
       "Die Fenster werden geputzt.",
       "Das Haus wurde renoviert.",
@@ -74,7 +74,7 @@ var MSA_EXTRA_PASSIV = [
   {
     sub: "Aktiv → Passiv (Präsens)",
     type: "mc",
-    q: "'Der Koch bereitet das Essen zu.' → Passiv?",
+    q: "<b>Forme</b> den Aktivsatz in den Passivsatz (Präsens) um: 'Der Koch bereitet das Essen zu.'",
     o: ["Das Essen wird zubereitet.", "Der Koch wird zubereitet.", "Das Essen zubereitet der Koch."],
     c: 0,
     model: "A – Das Essen wird zubereitet.",
@@ -84,7 +84,7 @@ var MSA_EXTRA_PASSIV = [
   {
     sub: "Aktiv → Passiv (Präteritum)",
     type: "mc",
-    q: "'Man baute das Haus 1990.' → Passiv?",
+    q: "<b>Forme</b> den Aktivsatz in den Passivsatz (Präteritum) um: 'Man baute das Haus 1990.'",
     o: ["Das Haus wird gebaut.", "Das Haus wurde gebaut.", "Das Haus ist gebaut worden."],
     c: 1,
     model: "B – Das Haus wurde gebaut. (Präteritum Passiv)",
@@ -94,7 +94,7 @@ var MSA_EXTRA_PASSIV = [
   {
     sub: "Perfekt Passiv",
     type: "mc",
-    q: "'Man hat die Brücke gebaut.' → Passiv?",
+    q: "<b>Forme</b> den Aktivsatz in den Passivsatz (Perfekt) um: 'Man hat die Brücke gebaut.'",
     o: ["Die Brücke wurde gebaut.", "Die Brücke ist gebaut worden.", "Die Brücke wird gebaut."],
     c: 1,
     model: "B – Die Brücke ist gebaut worden. (Perfekt Passiv)",
@@ -104,7 +104,7 @@ var MSA_EXTRA_PASSIV = [
   {
     sub: "Agens im Passiv",
     type: "mc",
-    q: "'Der Baum wurde vom Sturm gefällt.' – Wer ist der Handelnde?",
+    q: "<b>Bestimme</b> das Agens (den Handelnden) im Passivsatz: 'Der Baum wurde vom Sturm gefällt.'",
     o: ["Der Baum", "Der Sturm", "Der Wald"],
     c: 1,
     model: "B – Der Sturm (von + Dativ = Agens)",
@@ -114,7 +114,7 @@ var MSA_EXTRA_PASSIV = [
   {
     sub: "Passiv mit Modalverb",
     type: "mc",
-    q: "'Man darf hier nicht rauchen.' → Passiv?",
+    q: "<b>Forme</b> den Aktivsatz in das Passiv mit Modalverb um: 'Man darf hier nicht rauchen.'",
     o: ["Hier darf nicht geraucht werden.", "Hier wird nicht geraucht.", "Rauchen ist hier verboten worden."],
     c: 0,
     model: "A – Hier darf nicht geraucht werden.",
@@ -124,7 +124,7 @@ var MSA_EXTRA_PASSIV = [
   {
     sub: "Futur Passiv",
     type: "mc",
-    q: "'Man wird das Problem lösen.' → Passiv?",
+    q: "<b>Forme</b> den Aktivsatz in den Passivsatz (Futur) um: 'Man wird das Problem lösen.'",
     o: ["Das Problem wird gelöst.", "Das Problem wird gelöst werden.", "Das Problem wurde gelöst."],
     c: 1,
     model: "B – Das Problem wird gelöst werden. (Futur Passiv)",
@@ -134,7 +134,7 @@ var MSA_EXTRA_PASSIV = [
   {
     sub: "Passivierbarkeit – welcher Satz geht?",
     type: "mc",
-    q: "Welcher Satz lässt sich ins Passiv setzen?",
+    q: "<b>Entscheide</b>: Welcher Satz lässt sich ins Passiv setzen?",
     o: ["Das Wasser kocht.", "Sie schläft tief.", "Der Lehrer erklärt die Aufgabe."],
     c: 2,
     model: "C – Die Aufgabe wird (vom Lehrer) erklärt.",
@@ -144,7 +144,7 @@ var MSA_EXTRA_PASSIV = [
   {
     sub: "Dativpassiv",
     type: "mc",
-    q: "'Man hat mir geholfen.' → Passiv?",
+    q: "<b>Forme</b> den Aktivsatz in das Passiv um: 'Man hat mir geholfen.'",
     o: ["Mir ist geholfen worden.", "Ich wurde geholfen.", "Mir wird geholfen."],
     c: 0,
     model: "A – Mir ist geholfen worden. (Dativobjekt bleibt im Dativ)",
@@ -154,7 +154,7 @@ var MSA_EXTRA_PASSIV = [
   {
     sub: "Passiv → Aktiv umwandeln",
     type: "mc",
-    q: "'Der Brief wird vom Boten überbracht.' → Aktiv?",
+    q: "<b>Forme</b> den Passivsatz in den Aktivsatz um: 'Der Brief wird vom Boten überbracht.'",
     o: ["Der Bote überbringt den Brief.", "Der Brief überbringt den Boten.", "Den Brief überbringt man."],
     c: 0,
     model: "A – Der Bote überbringt den Brief.",
@@ -164,7 +164,7 @@ var MSA_EXTRA_PASSIV = [
   {
     sub: "Warum wird Passiv benutzt?",
     type: "mc",
-    q: "Warum wird Passiv oft ohne 'von'-Angabe verwendet?",
+    q: "<b>Erkläre</b>: Warum wird das Passiv oft ohne 'von'-Angabe (Agens) verwendet?",
     o: ["Der Handelnde ist unwichtig oder unbekannt.", "Es gibt kein Subjekt.", "Das Passiv braucht immer einen Handelnden."],
     c: 0,
     model: "A – Der Handelnde ist unwichtig oder unbekannt.",
@@ -174,7 +174,7 @@ var MSA_EXTRA_PASSIV = [
   {
     sub: "Passiv mit 'müssen' (Modalverb)",
     type: "mc",
-    q: "'Man muss das Fenster öffnen.' → Passiv?",
+    q: "<b>Forme</b> den Aktivsatz in das Passiv mit Modalverb um: 'Man muss das Fenster öffnen.'",
     o: ["Das Fenster muss geöffnet werden.", "Das Fenster wird geöffnet werden.", "Das Fenster muss geöffnet sein."],
     c: 0,
     model: "A – Das Fenster muss geöffnet werden.",
@@ -184,7 +184,7 @@ var MSA_EXTRA_PASSIV = [
   {
     sub: "Richtige Passivform erkennen",
     type: "mc",
-    q: "Welcher Satz ist ein korrekter Passivsatz?",
+    q: "<b>Erkenne</b>: Welcher der folgenden Sätze ist ein korrekter Passivsatz?",
     o: ["Das Buch liegt auf dem Tisch.", "Das Buch wird gelesen.", "Das Buch ist interessant."],
     c: 1,
     model: "B – Das Buch wird gelesen. (werden + Partizip II)",
@@ -196,7 +196,7 @@ var MSA_EXTRA_PASSIV = [
   {
     sub: "Passivform auswählen",
     type: "mc3",
-    q: "Wähle die korrekte Passivform:",
+    q: "<b>Wähle</b> für jede Zeile die korrekte Passivform aus.",
     rows: [
       ["Das Rad wird repariert.", "Das Rad wurde reparieren.", "Das Rad ist reparieren."],
       ["Das Haus wurde gebaut.", "Das Haus wird gebaut worden.", "Das Haus wird gebaut sein."],
@@ -213,7 +213,7 @@ var MSA_EXTRA_PASSIV = [
   {
     sub: "Aktiv-Passivsatz-Paare zuordnen",
     type: "match",
-    q: "Ordne den Aktivsätzen den passenden Passivsatz zu:",
+    q: "<b>Ordne zu</b>: Verbinde jeden Aktivsatz mit dem passenden Passivsatz.",
     pairs: [
       ["Er liest das Buch.", "Das Buch wird gelesen."],
       ["Man stahl das Gemälde.", "Das Gemälde wurde gestohlen."],
@@ -229,7 +229,7 @@ var MSA_EXTRA_PASSIV = [
   {
     sub: "Passivform → Tempus zuordnen",
     type: "match",
-    q: "Ordne die Passivform dem Tempus zu:",
+    q: "<b>Ordne zu</b>: Verbinde jede Passivform mit dem passenden Tempus.",
     pairs: [
       ["wird gebaut", "Präsens Passiv"],
       ["wurde gebaut", "Präteritum Passiv"],

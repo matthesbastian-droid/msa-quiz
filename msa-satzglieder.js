@@ -9,14 +9,14 @@
 //   "fill"       – Lückentext: Satzglied-Bezeichnung eintragen
 // ================================================================
 
-var MSA_SATZGLIEDER_THEMES = [
+var MSA_EXTRA_SATZGLIEDER = [
 
 {
-  id:"satzglieder",
-  title:"Satzglieder",
-  emoji:"🔍",
-  color:"#2d6b9e",
-  qs:[
+  id: "extra_satzglieder",  // ⬅️ geändert von "satzglieder"
+  title: "Satzglieder",
+  emoji: "🔍",
+  color: "#2d6b9e",
+  qs: [
 
     // ── Typ: satzglied (Wörter anklicken) ─────────────────────────
 
@@ -201,7 +201,7 @@ var MSA_SATZGLIEDER_THEMES = [
     { sub:"Lückentext: Satzglied oder Attribut?", type:"fill",
       q:"<b>Trage</b> ein: Handelt es sich um ein Satzglied oder ein Attribut?\n\n„Das schnelle Auto meines Bruders steht draußen."",
       sentences:[
-        "„Das" ist ein ____ zum Nomen „Auto".",
+        "„Das" ist ein ____ zum Nomen „Auto\".",
         "„schnelle" ist ein ____ zum Nomen „Auto\".",
         "„meines Bruders" ist ein ____ (Genitiv) zum Nomen \"Auto\".",
         "„draußen" ist eine adverbiale Bestimmung des ____."
@@ -214,4 +214,4 @@ var MSA_SATZGLIEDER_THEMES = [
   ]
 }
 
-]; // Ende MSA_SATZGLIEDER_THEMES
+]; // Ende MSA_EXTRA_SATZGLIEDER

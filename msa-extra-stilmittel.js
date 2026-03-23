@@ -18,7 +18,7 @@ var MSA_EXTRA_STILMITTEL = [
   {
     sub: "Grundstilmittel zuordnen",
     type: "cross",
-    q: "Ordne jedem Beispiel das passende Stilmittel zu.",
+    q: "<b>Ordne zu</b>: Verbinde jedes Beispiel mit dem passenden Stilmittel, indem du die richtige Spalte anklickst.",
     rows: [
       "(a) Das Internet verschluckt Zeit.",
       "(b) Er ist so dünn wie ein Zahnstocher.",
@@ -34,7 +34,7 @@ var MSA_EXTRA_STILMITTEL = [
   {
     sub: "Ironie oder keine Ironie?",
     type: "cross",
-    q: "Ist der Satz ironisch gemeint?",
+    q: "<b>Entscheide</b>: Ist der jeweilige Satz ironisch gemeint oder nicht? Klicke die passende Spalte an.",
     rows: [
       "(a) 'Na toll, schon wieder alles perfekt hingekriegt.' (nach einem Fehler)",
       "(b) 'Du hast das wirklich super gemacht!' (nach echtem Erfolg)",
@@ -50,7 +50,7 @@ var MSA_EXTRA_STILMITTEL = [
   {
     sub: "Rhetorische Mittel in Gedichtzeilen",
     type: "cross",
-    q: "Ordne zu.",
+    q: "<b>Ordne zu</b>: Verbinde jede Zeile mit dem passenden rhetorischen Mittel.",
     rows: [
       "(a) 'Komm, komm, komm zu mir!'",
       "(b) 'Die Nacht birgt tausend Augen.'",
@@ -66,7 +66,7 @@ var MSA_EXTRA_STILMITTEL = [
   {
     sub: "Stilmittel in der Werbung",
     type: "cross",
-    q: "Ordne die Werbeslogan den Stilmitteln zu.",
+    q: "<b>Ordne zu</b>: Verbinde jeden Werbeslogan mit dem passenden Stilmittel.",
     rows: [
       "(a) 'Geiz ist geil.'",
       "(b) 'Think different.'",
@@ -84,7 +84,7 @@ var MSA_EXTRA_STILMITTEL = [
   {
     sub: "Metapher oder Vergleich?",
     type: "mc",
-    q: "'Er ist so stark wie ein Bär.' – Stilmittel?",
+    q: "<b>Bestimme</b> das Stilmittel: 'Er ist so stark wie ein Bär.'",
     o: ["Metapher", "Vergleich", "Personifikation"],
     c: 1,
     model: "B – Vergleich (mit 'wie')",
@@ -94,7 +94,7 @@ var MSA_EXTRA_STILMITTEL = [
   {
     sub: "Ellipse erkennen",
     type: "mc",
-    q: "'Ende gut, alles gut.' – Stilmittel?",
+    q: "<b>Bestimme</b> das Stilmittel: 'Ende gut, alles gut.'",
     o: ["Ellipse", "Metapher", "Vergleich"],
     c: 0,
     model: "A – Ellipse (Verb fehlt: '[Ist das] Ende gut, [ist] alles gut')",
@@ -104,7 +104,7 @@ var MSA_EXTRA_STILMITTEL = [
   {
     sub: "Klimax oder Antiklimax?",
     type: "mc",
-    q: "'Er seufzte, jammerte, schrie.' – Stilmittel?",
+    q: "<b>Bestimme</b> das Stilmittel: 'Er seufzte, jammerte, schrie.'",
     o: ["Klimax (Steigerung)", "Antiklimax (Abstieg)", "Repetitio"],
     c: 0,
     model: "A – Klimax (seufzen → jammern → schreien = Steigerung)",
@@ -114,7 +114,7 @@ var MSA_EXTRA_STILMITTEL = [
   {
     sub: "Parallelismus erkennen",
     type: "mc",
-    q: "'Er lacht, sie lacht, alle lachen.' – Stilmittel?",
+    q: "<b>Bestimme</b> das Stilmittel: 'Er lacht, sie lacht, alle lachen.'",
     o: ["Anapher", "Parallelismus", "Klimax"],
     c: 1,
     model: "B – Parallelismus (gleiche Satzstruktur wiederholt: S-V-Schema)",
@@ -124,7 +124,7 @@ var MSA_EXTRA_STILMITTEL = [
   {
     sub: "Lautmalerei erkennen",
     type: "mc",
-    q: "'Das Feuer knisterte und prasselte.' – Stilmittel?",
+    q: "<b>Bestimme</b> das Stilmittel: 'Das Feuer knisterte und prasselte.'",
     o: ["Metapher", "Lautmalerei (Onomatopoesie)", "Alliteration"],
     c: 1,
     model: "B – Lautmalerei (knistern, prasseln klingen wie das Geräusch)",
@@ -134,7 +134,7 @@ var MSA_EXTRA_STILMITTEL = [
   {
     sub: "Symbol erkennen",
     type: "mc",
-    q: "'Eine weiße Taube flog auf.' (im Friedenskontext) – Stilmittel?",
+    q: "<b>Bestimme</b> das Stilmittel: 'Eine weiße Taube flog auf.' (im Friedenskontext)",
     o: ["Metapher", "Symbol", "Vergleich"],
     c: 1,
     model: "B – Symbol (weiße Taube = Frieden)",
@@ -144,7 +144,7 @@ var MSA_EXTRA_STILMITTEL = [
   {
     sub: "Euphemismus erkennen",
     type: "mc",
-    q: "'Die Firma musste einige Mitarbeiter freisetzen.' (für: entlassen) – Stilmittel?",
+    q: "<b>Bestimme</b> das Stilmittel: 'Die Firma musste einige Mitarbeiter freisetzen.' (für: entlassen)",
     o: ["Euphemismus", "Ironie", "Metapher"],
     c: 0,
     model: "A – Euphemismus (Beschönigung von 'entlassen')",
@@ -154,7 +154,7 @@ var MSA_EXTRA_STILMITTEL = [
   {
     sub: "Litotes erkennen",
     type: "mc",
-    q: "'Das ist nicht das Schlechteste.' (gemeint: gut) – Stilmittel?",
+    q: "<b>Bestimme</b> das Stilmittel: 'Das ist nicht das Schlechteste.' (gemeint: gut)",
     o: ["Hyperbel", "Litotes", "Ironie"],
     c: 1,
     model: "B – Litotes (doppelte Verneinung verstärkt positiv: 'nicht schlecht' = gut)",
@@ -164,7 +164,7 @@ var MSA_EXTRA_STILMITTEL = [
   {
     sub: "Oxymoron oder Antithese?",
     type: "mc",
-    q: "'Beredtes Schweigen.' – Stilmittel?",
+    q: "<b>Bestimme</b> das Stilmittel: 'Beredtes Schweigen.'",
     o: ["Antithese", "Oxymoron", "Metapher"],
     c: 1,
     model: "B – Oxymoron (zwei gegensätzliche Begriffe direkt verbunden)",
@@ -174,7 +174,7 @@ var MSA_EXTRA_STILMITTEL = [
   {
     sub: "Chiasmus",
     type: "mc",
-    q: "'Der Mensch denkt, Gott lenkt.' – Stilmittel?",
+    q: "<b>Bestimme</b> das Stilmittel: 'Der Mensch denkt, Gott lenkt.'",
     o: ["Parallelismus", "Chiasmus", "Antithese"],
     c: 1,
     model: "B – Chiasmus (überkreuzte Struktur: Mensch-denkt / Gott-lenkt → S-V / S-V gespiegelt)",
@@ -184,7 +184,7 @@ var MSA_EXTRA_STILMITTEL = [
   {
     sub: "Neologismus",
     type: "mc",
-    q: "'Das war ein totales Handy-Versagen.' – Was ist 'Handy-Versagen'?",
+    q: "<b>Bestimme</b> die Wortbildungsart: Was ist 'Handy-Versagen' in 'Das war ein totales Handy-Versagen.'?",
     o: ["Metapher", "Neologismus", "Ellipse"],
     c: 1,
     model: "B – Neologismus (Wortneuschöpfung / neue Zusammensetzung)",
@@ -194,7 +194,7 @@ var MSA_EXTRA_STILMITTEL = [
   {
     sub: "Personifikation oder Metapher?",
     type: "mc",
-    q: "'Der Winter zieht seinen Mantel aus.' – Stilmittel?",
+    q: "<b>Bestimme</b> das Stilmittel: 'Der Winter zieht seinen Mantel aus.'",
     o: ["Vergleich", "Personifikation", "Metapher"],
     c: 1,
     model: "B – Personifikation (Winter handelt wie ein Mensch: zieht Mantel aus)",
@@ -204,7 +204,7 @@ var MSA_EXTRA_STILMITTEL = [
   {
     sub: "Alliteration vs. Anapher",
     type: "mc",
-    q: "'Viele Versuche verursachten Verwirrung.' – Stilmittel?",
+    q: "<b>Bestimme</b> das Stilmittel: 'Viele Versuche verursachten Verwirrung.'",
     o: ["Anapher", "Alliteration", "Parallelismus"],
     c: 1,
     model: "B – Alliteration (gleicher Anlaut V an aufeinanderfolgenden Wörtern)",
@@ -214,7 +214,7 @@ var MSA_EXTRA_STILMITTEL = [
   {
     sub: "Hyperbel oder Ironie?",
     type: "mc",
-    q: "'Ich habe es dir tausendmal gesagt!' – Stilmittel?",
+    q: "<b>Bestimme</b> das Stilmittel: 'Ich habe es dir tausendmal gesagt!'",
     o: ["Hyperbel", "Ironie", "Symbol"],
     c: 0,
     model: "A – Hyperbel (bewusste Übertreibung: nicht wirklich 1000 Mal)",
@@ -224,7 +224,7 @@ var MSA_EXTRA_STILMITTEL = [
   {
     sub: "Antithese in Sprichwort",
     type: "mc",
-    q: "'Himmel und Hölle.' – Stilmittel?",
+    q: "<b>Bestimme</b> das Stilmittel: 'Himmel und Hölle.'",
     o: ["Oxymoron", "Symbol", "Antithese"],
     c: 2,
     model: "C – Antithese (Gegensatzpaar: Himmel ↔ Hölle)",
@@ -236,7 +236,7 @@ var MSA_EXTRA_STILMITTEL = [
   {
     sub: "Stilmittel erkennen (Gemischt)",
     type: "mc3",
-    q: "Welches Stilmittel liegt vor?",
+    q: "<b>Bestimme</b> für jede Zeile das passende Stilmittel: <b>Wähle</b> aus den drei Optionen.",
     rows: [
       ["Metapher", "Vergleich", "Personifikation"],
       ["Ellipse", "Klimax", "Anapher"],
@@ -263,7 +263,7 @@ var MSA_EXTRA_STILMITTEL = [
   {
     sub: "Definition → Stilmittel zuordnen",
     type: "match",
-    q: "Ordne der Definition das passende Stilmittel zu:",
+    q: "<b>Ordne zu</b>: Verbinde jede Definition mit dem passenden Stilmittel.",
     pairs: [
       ["Übertragung ohne 'wie'", "Metapher"],
       ["Expliziter Vergleich mit 'wie'", "Vergleich"],
@@ -279,7 +279,7 @@ var MSA_EXTRA_STILMITTEL = [
   {
     sub: "Beispiel → Stilmittel zuordnen",
     type: "match",
-    q: "Ordne dem Beispiel das Stilmittel zu:",
+    q: "<b>Ordne zu</b>: Verbinde jedes Beispiel mit dem passenden Stilmittel.",
     pairs: [
       ["'Väterchen Frost'", "Personifikation"],
       ["'Beredtes Schweigen'", "Oxymoron"],

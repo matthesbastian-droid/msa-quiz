@@ -18,7 +18,7 @@ var MSA_EXTRA_SLAUT = [
   {
     sub: "Die Grundregel: kurzer Vokal = ss, langer Vokal/Diphthong = ß",
     type: "mc3",
-    q: "Wähle ss oder ß für jedes Wort:",
+    q: "<b>Wähle</b> für jede Zeile die richtige Schreibweise: Klicke auf die korrekte Form (ss oder ß).",
     rows: [
       ["Fluss", "Fluß"],
       ["groß", "gross"],
@@ -37,7 +37,7 @@ var MSA_EXTRA_SLAUT = [
   {
     sub: "Wörter mit Diphthong",
     type: "mc3",
-    q: "ss oder ß? (Diphthonge: ei, au, eu, ie)",
+    q: "<b>Wähle</b> für jede Zeile die richtige Schreibweise (ss oder ß). Beachte dabei die Diphthonge: ei, au, eu, ie.",
     rows: [
       ["Er rei__t die Zeitung. → reißt", "Er rei__t die Zeitung. → reisst"],
       ["drau__en → draußen", "drau__en → draussen"],
@@ -54,7 +54,7 @@ var MSA_EXTRA_SLAUT = [
   {
     sub: "Präsens vs. Präteritum (Vokalwechsel)",
     type: "mc3",
-    q: "ss oder ß? Achte auf Präsens/Präteritum:",
+    q: "<b>Wähle</b> für jede Zeile die richtige Schreibweise (ss oder ß). <b>Beachte</b> dabei den Unterschied zwischen Präsens und Präteritum.",
     rows: [
       ["er i__t (Präsens: essen) → isst", "er i__t → iß"],
       ["er a__ (Präteritum: essen) → aß", "er a__ → ass"],
@@ -73,7 +73,7 @@ var MSA_EXTRA_SLAUT = [
   {
     sub: "Gemischte Wörter: Grundregel anwenden",
     type: "cross",
-    q: "ss oder ß?",
+    q: "<b>Ordne zu</b>: Schreibe das Wort mit ss oder ß? Klicke in der richtigen Spalte an.",
     rows: [
       "Stra__e (Straße?)",
       "Ga__e (Gasse?)",
@@ -93,7 +93,7 @@ var MSA_EXTRA_SLAUT = [
   {
     sub: "Komposita behalten die Schreibung",
     type: "cross",
-    q: "ss oder ß im Kompositum? (Grundwort beachten)",
+    q: "<b>Ordne zu</b>: ss oder ß im Kompositum? Klicke die richtige Spalte an. <b>Beachte</b> das Grundwort.",
     rows: [
       "Stra__enbahn",
       "Flu__ufer",
@@ -111,7 +111,7 @@ var MSA_EXTRA_SLAUT = [
   {
     sub: "Pluralformen – Vokal beachten",
     type: "cross",
-    q: "ss oder ß im Plural?",
+    q: "<b>Ordne zu</b>: ss oder ß im Plural? Klicke die richtige Spalte an.",
     rows: [
       "Fü__e (Plural von Fuß)",
       "Bu__e (Plural von Bus)",
@@ -131,7 +131,7 @@ var MSA_EXTRA_SLAUT = [
   {
     sub: "Rechtschreibreform: Gebiss",
     type: "mc",
-    q: "Wie schreibt man korrekt nach der Rechtschreibreform?",
+    q: "<b>Wähle</b> die korrekte Schreibweise nach der Rechtschreibreform aus.",
     o: ["Gebiß", "Gebiss", "Gebis"],
     c: 1,
     model: "B – Gebiss (kurzes i → ss; ß am Wortende nach kurzem Vokal nicht mehr erlaubt)",
@@ -141,7 +141,7 @@ var MSA_EXTRA_SLAUT = [
   {
     sub: "Großschreibung: ß wird zu SS",
     type: "mc",
-    q: "In der GROSSSCHREIBUNG schreibt man statt ß immer:",
+    q: "<b>Entscheide</b>: Was schreibt man in der GROSSSCHREIBUNG statt ß?",
     o: ["SS", "SZ", "ß (bleibt gleich)"],
     c: 0,
     model: "A – SS (z.B. STRASSE, GENIESSEN, MASS)",
@@ -151,7 +151,7 @@ var MSA_EXTRA_SLAUT = [
   {
     sub: "Russland – ss oder ß?",
     type: "mc",
-    q: "Wie schreibt man korrekt: 'Ru__land' und 'ru__isch'?",
+    q: "<b>Wähle</b> die korrekte Schreibweise: 'Ru__land' und 'ru__isch'.",
     o: ["Rußland / rußisch", "Russland / russisch", "Russland / rußisch"],
     c: 1,
     model: "B – Russland / russisch (ss – kurzes u)",
@@ -161,7 +161,7 @@ var MSA_EXTRA_SLAUT = [
   {
     sub: "bloß – lang oder kurz?",
     type: "mc",
-    q: "'Das war doch blo__ ein Missverständnis.' – Was passt?",
+    q: "<b>Ergänze</b> die Lücke mit der richtigen Schreibweise: 'Das war doch blo__ ein Missverständnis.'",
     o: ["bloss", "bloß", "blos"],
     c: 1,
     model: "B – bloß (langer o-Vokal → ß)",
@@ -171,7 +171,7 @@ var MSA_EXTRA_SLAUT = [
   {
     sub: "Reißverschluss: Zusammensetzung",
     type: "mc",
-    q: "'Der Rei__verschlu__ ist kaputt.' – Was passt für die beiden Lücken?",
+    q: "<b>Ergänze</b> die beiden Lücken: 'Der Rei__verschlu__ ist kaputt.' <b>Wähle</b> die richtige Kombination.",
     o: ["ß + ß", "ß + ss", "ss + ß"],
     c: 1,
     model: "B – Reißverschluss: reißen (Diphthong ei → ß) + Verschluss (kurzes u → ss)",
@@ -183,7 +183,7 @@ var MSA_EXTRA_SLAUT = [
   {
     sub: "Wort → Regel zuordnen",
     type: "match",
-    q: "Ordne jedem Wort die zutreffende Regel zu:",
+    q: "<b>Ordne zu</b>: Verbinde jedes Wort mit der zutreffenden Rechtschreibregel.",
     pairs: [
       ["Fluss", "kurzer Vokal u → ss"],
       ["groß", "langer Vokal o → ß"],
